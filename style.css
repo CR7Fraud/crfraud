@@ -200,6 +200,7 @@ nav ul li select option {
   width: 100%;
   display: flex;
   gap: 2rem;
+  padding-bottom: 30px;
 }
 
 #mainLeftDiv {
