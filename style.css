@@ -34,8 +34,7 @@ nav ul li {
   transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 6px;
 }
-nav ul li:hover {
-}
+
 nav ul li:hover a,
 nav ul li a:hover {
   color: #1da1f2;
@@ -91,9 +90,6 @@ section h2 {
   border-radius: 15px;
   box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.15);
   padding: 0.5rem 0;
-}
-
-.year-menu li {
 }
 
 .year-btn {
@@ -475,4 +471,106 @@ img {
 .btn:disabled {
   box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
     rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #181f2a;
+}
+
+.carousel-slide img {
+  width: 100%;
+  max-width: 540px;
+  max-height: 60vh;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #161c23;
+}
+.carousel img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 760px; /* Adjust for your desired carousel height */
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Keeps entire image visible and centered */
+  background: #151c23; /* Adds a subtle background for non-square images */
+  border-radius: 8px;
+  transition: box-shadow 0.25s;
+  box-shadow: 0 3px 10px #0004;
+}
+@media (max-width: 700px) {
+  .carousel img {
+    max-height: 220px; /* Automatically scales down for mobile */
+  }
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  background: #232c43ee;
+  color: #fafafa;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-size: 1.6em;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background 0.2s;
+}
+.carousel-btn:hover {
+  background: #60b5fa;
+  color: #212d3a;
+}
+.carousel-btn.prev {
+  left: 12px;
+}
+.carousel-btn.next {
+  right: 12px;
+}
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px 0;
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+}
+.carousel-dots button {
+  border: none;
+  background: #393e5c;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.carousel-dots button.active {
+  background: #60b5fa;
+}
+
+@media (max-width: 700px) {
+  .carousel {
+    max-width: 100%;
+  }
 }

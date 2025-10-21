@@ -1,370 +1,514 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CRFraud</title>
-  <!-- Fonte moderna -->
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css">
-  <!-- Ícones opcionais -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRFraud</title>
+    <!-- Fonte moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones opcionais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 
 </head>
+
 <body>
     <div id="intro-overlay" style="
     position:fixed;
     top:0; left:0;  height:100vh;
     background:#000100;; z-index:9999; display:flex; align-items:center; justify-content:center;">
-    <video id="intro-video" autoplay muted playsinline onended="showMainContent()" style="max-width:80vw;max-height:80vh;">
-        <source src="img/loading.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+        <video id="intro-video" autoplay muted playsinline onended="showMainContent()"
+            style="max-width:80vw;max-height:80vh;">
+            <source src="img/loading.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 
     <nav class="main-nav">
-    <div class="nav-container" style="justify-content: center">
-        <a href="#home" class="home-btn"><i class="fa-solid fa-house"></i></a>
-        <button class="hamburger" id="hamburger-menu" aria-label="Open menu">
-            <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-list">
-            <li><a href="#ballondor">Ballon d'Or</a></li>
-            <li><a href="#champions">Champions League</a></li>
-            <li><a href="#coaches">Coaches Fired</a></li>
-            <li><a href="#selfishness">Selfishness</a></li>
-            <li><a href="#carried">Carried by National Team</a></li>
-            <li><a href="#crying">Crying Online</a></li>
-            <li><a href="#hypocrisy">Hypocrisy</a></li>
+        <div class="nav-container" style="justify-content: center">
+            <a href="#home" class="home-btn"><i class="fa-solid fa-house"></i></a>
+            <button class="hamburger" id="hamburger-menu" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-list">
+                <li><a href="#ballondor">Ballon d'Or</a></li>
+                <li><a href="#champions">Champions League</a></li>
+                <li><a href="#coaches">Coaches Fired</a></li>
+                <li><a href="#selfishness">Selfishness</a></li>
+                <li><a href="#carried">Carried by National Team</a></li>
+                <li><a href="#crying">Crying Online</a></li>
+                <li><a href="#hypocrisy">Hypocrisy</a></li>
 
-            <select id="language-select" style=" position: absolute;right: 15px;">
-                <option value="en">English</option>
-                <option value="pt">Português</option>
-                <option value="es">Español</option>
-                <option value="fr">Français</option>
-                <option value="de">Deutsch</option>
-                <option value="it">Italiano</option>
-                <option value="zh-CN">中文</option>
-                <option value="ar">العربية</option>
-                <option value="hi">हिन्दी</option>
-                <option value="ru">Русский</option>
-                <option value="ja">日本語</option>
-                <option value="ko">한국어</option>
-            </select>
+                <select id="language-select" style=" position: absolute;right: 15px;">
+                    <option value="en">English</option>
+                    <option value="pt">Português</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="it">Italiano</option>
+                    <option value="zh-CN">中文</option>
+                    <option value="ar">العربية</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="ru">Русский</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                </select>
 
-        </ul>
-    </div>
-    <div id="google_translate_element" style="display:none;"></div>
-</nav>
+            </ul>
+        </div>
+        <div id="google_translate_element" style="display:none;"></div>
+    </nav>
 
 
-     <script type="text/javascript">
+    <script type="text/javascript">
         function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'en'
-        }, 'google_translate_element');
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
         }
 
         // Disparar troca de idioma pelo valor do <select>
-        document.getElementById('language-select').addEventListener('change', function() {
-        var lang = this.value;
-        var $googleCombo = document.querySelector('.goog-te-combo');
-        if ($googleCombo) {
-            $googleCombo.value = lang;
-            // disparar evento de mudança
-            $googleCombo.dispatchEvent(new Event('change'));
-        }
+        document.getElementById('language-select').addEventListener('change', function () {
+            var lang = this.value;
+            var $googleCombo = document.querySelector('.goog-te-combo');
+            if ($googleCombo) {
+                $googleCombo.value = lang;
+                // disparar evento de mudança
+                $googleCombo.dispatchEvent(new Event('change'));
+            }
         });
-        </script>
+    </script>
 
     <div class="navBar" style="display: none;">
-      <img class="img" src="./img/logo.png" alt="CR7 Fraud Logo">
+        <img class="img" src="./img/logo.png" alt="CR7 Fraud Logo">
     </div>
     <main>
-      <section id="home">
-        <h2 style="font-size:2em; margin-bottom:0.5em;">About Us</h2>
+        <section id="home">
+            <div class="carousel">
+                <div class="carousel-track">
+                    <div class="carousel-slide"><img
+                            src="            https://media.discordapp.net/attachments/1202958284756361236/1408011281541238834/Gy1Hf5-XQAAdtYV.png?ex=68f7f2f1&is=68f6a171&hm=102a4b53b4c8ec383b251c55bda213f6af2479257d8aae378aed2bb52e871f1b&=&format=webp&quality=lossless"
+                            alt="image1"></div>
+                    <div class="carousel-slide"><img
+                            src="https://media.discordapp.net/attachments/1202958284756361236/1202959462714056814/image0.png?ex=68f781cd&is=68f6304d&hm=ebe520a475e652325bac54b31be5b867703b7efd6592f73210e06641a370ce77&=&format=webp&quality=lossless"
+                            alt="image1"></div>
+                    <div class="carousel-slide"><img
+                            src="https://media.discordapp.net/attachments/1202958284756361236/1202959519995531344/image0.png?ex=68f781db&is=68f6305b&hm=f6d00d41017552fec9243938f627e52e4bc02ed2ec970d640f65f543cc5e6014&=&format=webp&quality=lossless"
+                            alt="image2"></div>
+                    <div class="carousel-slide"><img
+                            src="https://media.discordapp.net/attachments/1202958284756361236/1202963040287461466/E0VYhiLUcAEjCEa.png?ex=68f78522&is=68f633a2&hm=2a874e4339e912c517ee0d9eff256479b69b1c384d5150b497dff6513dfc6e7f&=&format=webp&quality=lossless&width=525&height=350"
+                            alt="image3"></div>
+                    <div class="carousel-slide"><img
+                            src="https://media.discordapp.net/attachments/1202958284756361236/1203440936672301086/IMG_4855.png?ex=68f7f0b6&is=68f69f36&hm=faaed1f145075de65a976fde68f37da540d63cf1fe66dad58c5f170b9ee5f633&=&format=webp&quality=lossless&width=714&height=960"
+                            alt="image3"></div>
+                    <div class="carousel-slide"><img
+                            src="https://media.discordapp.net/attachments/1202958284756361236/1204108755415859250/image0.jpg?ex=68f7bbaa&is=68f66a2a&hm=ce7f14bcea041f29b9c97b6485b574590d251b8f4b5f8888e8ab89123d280b30&=&format=webp"
+                            alt="image3"></div>
+                    <div class="carousel-slide"><img
+                            src="https://media.discordapp.net/attachments/1202958284756361236/1205092594179379261/image0.jpg?ex=68f8042f&is=68f6b2af&hm=7c5821b64576b4e0e92af30e8f573009135f4b1f0b967d54dc88aad173f2b886&=&format=webp&width=1522&height=856"
+                            alt="image3"></div>
+                    <div class="carousel-slide"><img
+                            src="https://media.discordapp.net/attachments/1202958284756361236/1211018804453449748/IMG_5267.png?ex=68f7d2a6&is=68f68126&hm=bcd6d4f6043cea912f7aac3b6c900dc82bcfee651aa7af22969bc48eab66261b&=&format=webp&quality=lossless&width=770&height=960"
+                            alt="image3"></div>
+                    <div class="carousel-slide"><img
+                            src="https://media.discordapp.net/attachments/1202958284756361236/1252908544244715551/image0.jpg?ex=68f7f242&is=68f6a0c2&hm=fd44196f7061722dbcabd7be79159618ffed15e10cb2e5f9975ed5afaffdd7af&=&format=webp&width=922&height=960"
+                            alt="image3"></div>
 
-        <div id="mainDiv">
-            
-            <div>
-                <img src="img/logo.png" alt="">
-            </div>
-        
-        <div id="mainRightDiv">
-            <p style="font-size:1.20em; line-height:1.6;">
-                Welcome to the portal dedicated to sports truth. This site is born from a commitment to critical analysis, solid statistical data, and fair comparisons between athletes to expose the reality behind Cristiano Ronaldo's career.
-                <br><br>
-                The goal is to demystify titles, awards, and controversial decisions, transparently showing that many achievements attributed to Ronaldo go far beyond individual merit. Here we explore external situations, favoritism, questionable administrative decisions, regulation manipulation, and behind-the-scenes events that helped create an image of success often misaligned with the facts.
-                <br><br>
-                Nothing here is based on fanaticism or biased opinions: every argument is built on real numbers, verified episodes, and historical events, without the filters of media narrative or idolatry. Everything exposed is undeniable - 100% true, logical, and supported by evidence visible to all, though often ignored in common debates.
-                <br><br>
-                The mission of this project is to open people's eyes, awaken critical awareness, and encourage everyone to question the modern football system and athlete recognition. The content presented makes irrefutable the reality about Ronaldo: titles, trophies, and prestige obtained without real justification, and the deconstruction of a farce built over the years.
-                <br><br>
-                I will also ensure that everyone sees that Lionel Messi is light years ahead, and that Ronaldo shouldn't even be in the world's top 3 of history. The pure truth, free from fanaticism and interests, will be revealed here with facts, numbers, and analyses that leave no doubt.
-                <br><br>
-                Reject illusions and reflect on sports justice. This portal invites you to see the facts, far from blind beliefs or external interests - because truth alone is enough.
-            </p>
-        </div>
-
-        </div>
-      </section>
-
-      <section id="ballondor" style="display: none;">
-
-        <div><h2>Ballon d’Or</h2></div>
-
-        <div style="display: flex; gap: 2rem; margin: auto;">
-
-            <ul class="year-menu">
-            <li><button type="button" class="year-btn" data-target="year-2008"><i class="fa-solid fa-calendar"></i> 2008</button></li>
-            <li><button type="button" class="year-btn" data-target="year-2013"><i class="fa-solid fa-calendar"></i> 2013</button></li>
-            <li><button type="button" class="year-btn" data-target="year-2014"><i class="fa-solid fa-calendar"></i> 2014</button></li>
-            <li><button type="button" class="year-btn" data-target="year-2016"><i class="fa-solid fa-calendar"></i> 2016</button></li>
-            <li><button type="button" class="year-btn" data-target="year-2017"><i class="fa-solid fa-calendar"></i> 2017</button></li>
-            <li><button type="button" class="year-btn" data-target="year-summary"><i class="fa-solid fa-file-lines"></i> Summary</button></li>
-            </ul>
-
-            <div style="flex-grow: 1; color: #eee; min-height: 300px;">
-
-            <article id="year-2008" class="year-content" style="display: none;">
-                <h3>Fair Ballon D’or</h3>
-                <p>Nothing to say, Premier league champion, Champions League winner, Golden Boot winner, fair.</p>
-            </article>
-
-           <article id="year-2013" class="year-content" style="display: none;">
-                <h3>ZERO Trophies & Ballon d’Or Voting Dates Change</h3>
-                <div class="container">
-                    <div class="nav-buttons" style="margin-bottom: 5px;">
-                        <button class="btn" onclick="showCard2013(-1)">&#60; Previous</button>
-                        <button class="btn" onclick="showCard2013(1)">Next &#62;</button>
-                    </div>
-
-                    <!-- Card 1 -->
-                    <div id="card2013-1" class="card card-sm  active">
-                        <div class="card-title">Ronaldo: Ballon d'Or Without Trophies</div>
-                        <div class="card-content">
-                            Ronaldo won his second Ballon d'Or in 2013, with the extraordinary record of <strong>ZERO trophies won that season 🤡</strong>.<br><br>
-                            Meanwhile, the other two nominees (Messi and Ribéry) won several trophies and had excellent individual numbers.<br><br>
-                            Ronaldo was <strong>not the best player in any competition</strong>. 
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div id="card2013-2" class="card card-sm ">
-                        <div class="card-title">Impact in Champions League & National Team</div>
-                        <div class="card-content">
-                            In the Champions League semifinals, he lost 4-1 to Borussia Dortmund in the first leg, scoring one goal, but in the second leg, Ronaldo didn’t score and Real Madrid were eliminated.<br><br>
-                            For the national team, in the 2014 World Cup qualifiers, he wasn't the top scorer in the group stage (27th place, 8 matches, 4 goals) nor in the playoffs (2 matches, 4 goals).<br><br>
-                            Ronaldo was only truly decisive in the playoffs, scoring a hat-trick against Sweden to qualify Portugal for the 2014 World Cup.
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div id="card2013-3" class="card card-sm ">
-                        <div class="card-title">Voting Deadline and Controversy</div>
-                        <div class="card-content">
-                            <strong>
-                                For the first time </strong>, the Ballon d’Or voting deadline was postponed - right up to the Portugal vs Sweden game. 
-                                Strange, isn't it? It seemed the eligibility period was stretched just to give Ronaldo credit for those crucial goals.
-                            <br><br>
-                            How did Ronaldo win that Ballon d’Or? It could have gone to Ribéry or Messi, since both had years full of achievements and good stats, but the award went to someone who won nothing.<br><br>
-                            Did he win it just because of his 69 goals? If that’s the case, it makes no sense - that’s what the Golden Boot is for.
-                        </div>
-                    </div>
-                    </div>
-                    <img src="img/2013-Bdor.png" alt="Ballon d'Or 2013 Data" loading="lazy" width="700" height="auto">
-                
-                <script>
-                    let current2013 = 1;
-                    function showCard2013(offset) {
-                        document.getElementById('card2013-' + current2013).classList.remove('active');
-                        current2013 += offset;
-                        if (current2013 < 1) current2013 = 1;
-                        if (current2013 > 3) current2013 = 3;
-                        document.getElementById('card2013-' + current2013).classList.add('active');
-                    }
-                </script>
-            </article>
-
-            <article id="year-2014" class="year-content" style="display: none;">
-                <h3>Ronaldo, Just "Another" Winner - Messi Had No Luck</h3>
-                <div class="container">
-                  <div class="nav-buttons" style="margin-bottom: 5px;">
-                      <button class="btn" onclick="showCard(-1)">&#60; Previous</button>
-                      <button class="btn" onclick="showCard(1)">Next &#62;</button>
-                  </div>
-                <div id="card1" class="card active">
-                      <div class="card-title">Unlucky Messi</div>
-                      <div class="card-content">
-                          2014 was another year full of <strong>controversy</strong> about Ronaldo winning the Ballon d'Or – and it is indeed debatable.<br><br>
-                          Beyond Messi’s great numbers and the fact he reached the 2014 World Cup final, which was lost with a lot of controversy, including: <br> 
-                          - <a href="https://www.youtube.com/watch?v=9s3kSfx3wZc" target="_blank"><strong>missed red card [WATCH VIDEO 🔗]</strong></a><br> 
-                           - <a href="https://www.youtube.com/watch?v=z9XYzG2nyYk" target="_blank"><strong>uncalled penalty (and maybe a red card) [WATCH VIDEO 🔗]</strong></a> <br><br> 
-                          He won <strong>best player at the World Cup</strong> witch is one of the most important individual trophy to win.<br>
-                      </div>
-                  </div>
-                  <!-- Card 2 -->
-                  <div id="card2" class="card">
-                      <div class="card-title">Champions League and Decisive Moments</div>
-                      <div class="card-content">
-                          Still, it would have been tough for Messi to win because Ronaldo had better numbers, was the <strong>Champions League top scorer</strong>, broke the goals record, won the Spanish Cup, La Liga, and the Champions League.<br><br>
-                          But in third place, Neuer was the world’s best goalkeeper that year, winning the league, cup, super cup, reaching the Champions League semifinals, and winning the 2014 World Cup (as <strong>best goalkeeper</strong>).<br><br>
-                          So the controversy is that Ronaldo just had better numbers, winning the Champions League best player and top scorer awards solely because of goals.<br>
-                          That Real Madrid team had other key players making much bigger impacts: Gareth Bale was more decisive in the Champions League and King’s Cup finals, Sergio Ramos scored a vital goal in the Champions final, and Di María won man of the match in that final. Sure, Ronaldo scored as well - from the penalty spot 😂 - so he was clearly <strong>not the main figure</strong>. And let’s not mention the disastrous World Cup campaign for Portugal, which ended at the group stage in a group with Ghana and the USA 😂.<br>
-                      </div>
-                  </div>
-                  <!-- Card 3 -->
-                  <div id="card3" class="card">
-                      <div class="card-title">Debate: Who Truly Deserved it?</div>
-                      <div class="card-content">
-                          Did Ronaldo deserve this Ballon d'Or? Neuer was <strong>more important</strong> and won the whole World Cup (except for the Champions League) and did it as the top goalkeeper. Messi was the best player at the World Cup and had a strong year stats-wise.<br>
-                          Ronaldo was <strong>not decisive</strong>, with the whole Real Madrid team deserving merit, and he was eliminated at the World Cup group stage.<br><br>
-                          So it matters a lot: Neuer was the key man and <strong>best goalkeeper in all competitions</strong> and at the World Cup. Messi was the best player at the World Cup.<br>
-                          Ronaldo? He was just <strong>"another" player to win the Champions League</strong>, with Di María as MVP in the final and the rest having crucial roles. Sure, he scored a lot, but what about those who created those plays? <strong>Golden Boot ≠ Ballon d’Or</strong>.<br><br>
-                          Messi was unlucky that year - maybe if he had won the league and/or the World Cup it would have been different. I think Neuer deserved it too, at least it is understandable.
-                      </div>
-                  </div>
-                  
-              </div>
-
-            <script>
-                let current = 1;
-                function showCard(offset) {
-                    document.getElementById('card' + current).classList.remove('active');
-                    current += offset;
-                    if (current < 1) current = 1;
-                    if (current > 3) current = 3;
-                    document.getElementById('card' + current).classList.add('active');
-                }
-            </script>
-
-            <img src="img/2014-Bdor.png" alt="" loading="lazy" width="700" height="auto">
-
-            </article>
-
-            <article id="year-2016" class="year-content" style="display: none;">
-                <h3>Team Glory vs Individual Brilliance</h3>
-                <div class="container">
-                    <div class="nav-buttons" style="margin-bottom: 5px;">
-                        <button class="btn" onclick="showCard2016(-1)">&#60; Previous</button>
-                        <button class="btn" onclick="showCard2016(1)">Next &#62;</button>
-                    </div>
-                    <!-- Card 1 -->
-                    <div id="card2016-1" class="card card-xsm active">
-                        <div class="card-title">Ronaldo: Trophies but Controversy</div>
-                        <div class="card-content">
-                            2016 was an “easy” year for Cristiano Ronaldo because he won the Champions League and Euro 2016… but let’s look at the stats and facts.<br><br>
-                            Real Madrid won the Champions League again (rigged? topic for another article). Ronaldo scored 16 goals in the Champions League, with 11 in the group stage against Malmö and Shakhtar.<br>
-                            <br>He only scored against Roma and Wolfsburg in knockouts, <strong>nothing in the semifinal and final</strong>. Sergio Ramos was the MVP of the final.<br>
-                        </div>
-                    </div>
-                    <!-- Card 2 -->
-                    <div id="card2016-2" class="card card-xsm">
-                        <div class="card-title">Euro 2016 & Ronaldo's Impact</div>
-                        <div class="card-content">
-                            In Euro 2016, Ronaldo missed a penalty against Austria and Portugal had a poor group stage, advancing in 3rd place with zero wins.<br><br>
-                            He showed up against Hungary (2 goals) and Wales (1 goal). In the final versus France, he left injured after 25 minutes, and Portugal still won 1-0.<br><br>
-                            The Euro’s best player was Antoine Griezmann. It’s always the same pattern: Ronaldo is rarely the main figure at major tournaments.
-                        </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div id="card2016-3" class="card card-xsm">
-                        <div class="card-title">Messi's Year & The Ballon d'Or Debate</div>
-                        <div class="card-content">
-                            On the other side, <b>Messi</b> had better stats than Ronaldo in 2016, won <strong>La Liga</strong> and the <strong>cup</strong>, reached the <strong>Copa America final</strong>, and won <strong>Spain’s best forward award</strong>.<br>
-                            <b>Suarez</b> was <strong>top scorer</strong>, <b>Griezmann</b> was <strong>Euro’s best player.</strong><br>
-                            So why did Ronaldo win the Ballon d'Or? Mostly for team trophies-Champions League and Euros-while Messi was not only super important in Copa America and the league with 91 goals/assists, but arguably better on individual merit.<br>
-                            Ronaldo wasn’t the key player. His Ballon d’Or was based on important team trophies, but he was not the best on the pitch. Messi stood out in all competitions.
-                        </div>
-                    </div>
                 </div>
-                <script>
-                    let current2016 = 1;
-                    function showCard2016(offset) {
-                        document.getElementById('card2016-' + current2016).classList.remove('active');
-                        current2016 += offset;
-                        if (current2016 < 1) current2016 = 1;
-                        if (current2016 > 3) current2016 = 3;
-                        document.getElementById('card2016-' + current2016).classList.add('active');
-                    }
-                </script>
-                <img src="img/2016-Bdor.png" alt="Ballon d'Or 2016 Data" loading="lazy" width="350" height="auto">
-
-            </article>
-
-
-            <article id="year-2017" class="year-content" style="display: none;">
-                <h3>2017</h3>
-                <p>
-                    Both had good seasons, <b>Messi</b> won the best player trophy at one or more awarding organizations (like Spanish Sports Newspaper <b>Marca</b>, etc..), won the <strong>IFFHS best playmaker award</strong>, and win the <strong>Golden Boot</strong> but only win the Spanish Cup. <br><br>Even though Real Madrid had another suspicious Champions League (discussed elsewhere), <b>Ronaldo</b> scored more in the Champions League including two in the final, <strong>won the Champions League</strong>, <strong>La Liga</strong>, <strong>Spanish Supercup</strong>, <strong>European Supercup</strong>, and<strong> Club World Cup</strong>, and had almost as many goals as Messi but won more titles. <br><br> Messi stood out a bit more for goals and assists, but <strong>Ronaldo won so many trophies</strong> it was hard not to give it to him-it was a <strong>good season for both</strong>.
-                </p>
-            </article>
-
-            <article id="year-summary" class="year-content" style="display: none;">
-                <h3>Summary</h3>
-                <p>
-                    This says a lot about their careers~, without Real Madrid and its suspicious Champions League campaigns, Ronaldo would have at least half the Ballon d'Ors he owns-and that's discussed later in the "Champions League" section. <br><br> Messi has always been the more complete player, with as <strong>many or more goals than Ronaldo</strong>, more <strong>Golden Boots</strong> even though Ronaldo played more time as a striker (Messi almost never did), <strong>more assists</strong>, more <strong>best player awards</strong>. <br><br> Ronaldo only stands out for the Champions League and Champions League top scorer awards-all of this across his first and last Ballon d’Or.
-                </p>
-            </article>
+                <button class="carousel-btn prev">&#10094;</button>
+                <button class="carousel-btn next">&#10095;</button>
+                <div class="carousel-dots"></div>
             </div>
-        </div>
-      </section>
 
-      <section id="champions" class="fade-in" style="display: none;">
-        <h2>Champions League</h2>
-        <p>
-          Apesar dos gols, em finais decisivas o destaque do Real Madrid era Bale, Sergio Ramos e Di María.
-          CR7 marcou de pênalti, mas não foi MVP em nenhuma das finais, mostrando que o mérito é coletivo.<br>
-          Nas semifinais e finais, Ronaldo nem sempre foi decisivo; os títulos vieram principalmente do poder do Real Madrid.
-        </p>
-      </section>
-      <!-- Coaches Fired -->
-      <section id="coaches" class="fade-in" style="display: none;">
-        <h2>Coaches Fired</h2>
-        <p>
-          Ao longo da carreira, CR7 esteve envolvido em episódios de influência sobre treinadores, com rumores e bastidores apontando para instabilidade durante suas passagens por clubes, especialmente no Real Madrid e Juventus.
-        </p>
-      </section>
-      <!-- Egoísmo -->
-      <section id="selfishness" class="fade-in" style="display: none;">
-        <h2>Selfishness</h2>
-        <p>
-          Estatísticas mostram que Messi supera Cristiano em assistências, criação de chances e dribles. Ronaldo tem fama de priorizar números individuais, enquanto Messi atua sempre pelo coletivo.
-        </p>
-      </section>
-      <!-- Seleção -->
-      <section id="carried" class="fade-in" style="display: none;">
-        <h2>Carried By National Team</h2>
-        <p>
-          No Euro 2016, CR7 saiu lesionado na final, e Portugal venceu sem ele. O melhor jogador do torneio foi Griezmann. A atuação de Ronaldo pela seleção é marcada por muitos jogos sem influência dominante.
-        </p>
-      </section>
-      <!-- Chorar online -->
-      <section id="crying" class="fade-in" style="display: none;">
-        <h2>Crying Online</h2>
-        <p>
-          Cristiano tem histórico de reclamar de prêmios e decisões em público e nas redes, criticando a FIFA e a Bola de Ouro quando não ganha.
-        </p>
-      </section>
-      <!-- Hipocrisia -->
-      <section id="hypocrisy" class="fade-in" style="display: none;">
-        <h2>Hypocrisy</h2>
-        <p>
-          Diversas polêmicas extracampo, desde acusações, acordos judiciais secretos, até evasão fiscal, mostram divergência entre discurso público de humildade e prática.
-        </p>
-      </section>
-      <!-- Conclusão -->
-      <section id="conclusion" class="fade-in" style="display: none;">
-        <h2>Summary</h2>
-        <p>
-          Messi apresenta números superiores em quase todas as métricas relevantes. CR7 dependeu de grandes equipas e campanhas questionáveis para inflar seus títulos e estatísticas.<br>
-          <strong>Messi sempre foi mais completo, decisivo e ético dentro e fora de campo.</strong>
-        </p>
-      </section>
+            <h2 style="font-size:2em; margin-bottom:0.5em;">About Us</h2>
+
+            <div id="mainDiv">
+
+                <div>
+                    <img src="img/logo.png" alt="">
+                </div>
+
+                <div id="mainRightDiv">
+                    <p style="font-size:1.20em; line-height:1.6;">
+                        Welcome to the portal dedicated to sports truth. This site is born from a commitment to critical
+                        analysis, solid statistical data, and fair comparisons between athletes to expose the reality
+                        behind Cristiano Ronaldo's career.
+                        <br><br>
+                        The goal is to demystify titles, awards, and controversial decisions, transparently showing that
+                        many achievements attributed to Ronaldo go far beyond individual merit. Here we explore external
+                        situations, favoritism, questionable administrative decisions, regulation manipulation, and
+                        behind-the-scenes events that helped create an image of success often misaligned with the facts.
+                        <br><br>
+                        Nothing here is based on fanaticism or biased opinions: every argument is built on real numbers,
+                        verified episodes, and historical events, without the filters of media narrative or idolatry.
+                        Everything exposed is undeniable - 100% true, logical, and supported by evidence visible to all,
+                        though often ignored in common debates.
+                        <br><br>
+                        The mission of this project is to open people's eyes, awaken critical awareness, and encourage
+                        everyone to question the modern football system and athlete recognition. The content presented
+                        makes irrefutable the reality about Ronaldo: titles, trophies, and prestige obtained without
+                        real justification, and the deconstruction of a farce built over the years.
+                        <br><br>
+                        I will also ensure that everyone sees that Lionel Messi is light years ahead, and that Ronaldo
+                        shouldn't even be in the world's top 3 of history. The pure truth, free from fanaticism and
+                        interests, will be revealed here with facts, numbers, and analyses that leave no doubt.
+                        <br><br>
+                        Reject illusions and reflect on sports justice. This portal invites you to see the facts, far
+                        from blind beliefs or external interests - because truth alone is enough.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="ballondor" style="display: none;">
+
+            <div>
+                <h2>Ballon d’Or</h2>
+            </div>
+
+            <div style="display: flex; gap: 2rem; margin: auto;">
+
+                <ul class="year-menu">
+                    <li><button type="button" class="year-btn" data-target="year-2008"><i
+                                class="fa-solid fa-calendar"></i> 2008</button></li>
+                    <li><button type="button" class="year-btn" data-target="year-2013"><i
+                                class="fa-solid fa-calendar"></i> 2013</button></li>
+                    <li><button type="button" class="year-btn" data-target="year-2014"><i
+                                class="fa-solid fa-calendar"></i> 2014</button></li>
+                    <li><button type="button" class="year-btn" data-target="year-2016"><i
+                                class="fa-solid fa-calendar"></i> 2016</button></li>
+                    <li><button type="button" class="year-btn" data-target="year-2017"><i
+                                class="fa-solid fa-calendar"></i> 2017</button></li>
+                    <li><button type="button" class="year-btn" data-target="year-summary"><i
+                                class="fa-solid fa-file-lines"></i> Summary</button></li>
+                </ul>
+
+                <div style="flex-grow: 1; color: #eee; min-height: 300px;">
+
+                    <article id="year-2008" class="year-content" style="display: none;">
+                        <h3>Fair Ballon D’or</h3>
+                        <p>Nothing to say, Premier league champion, Champions League winner, Golden Boot winner, fair.
+                        </p>
+                    </article>
+
+                    <article id="year-2013" class="year-content" style="display: none;">
+                        <h3>ZERO Trophies & Ballon d’Or Voting Dates Change</h3>
+                        <div class="container">
+                            <div class="nav-buttons" style="margin-bottom: 5px;">
+                                <button class="btn" onclick="showCard2013(-1)">&#60; Previous</button>
+                                <button class="btn" onclick="showCard2013(1)">Next &#62;</button>
+                            </div>
+
+                            <!-- Card 1 -->
+                            <div id="card2013-1" class="card card-sm  active">
+                                <div class="card-title">Ronaldo: Ballon d'Or Without Trophies</div>
+                                <div class="card-content">
+                                    Ronaldo won his second Ballon d'Or in 2013, with the extraordinary record of
+                                    <strong>ZERO trophies won that season 🤡</strong>.<br><br>
+                                    Meanwhile, the other two nominees (Messi and Ribéry) won several trophies and had
+                                    excellent individual numbers.<br><br>
+                                    Ronaldo was <strong>not the best player in any competition</strong>.
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div id="card2013-2" class="card card-sm ">
+                                <div class="card-title">Impact in Champions League & National Team</div>
+                                <div class="card-content">
+                                    In the Champions League semifinals, he lost 4-1 to Borussia Dortmund in the first
+                                    leg, scoring one goal, but in the second leg, Ronaldo didn’t score and Real Madrid
+                                    were eliminated.<br><br>
+                                    For the national team, in the 2014 World Cup qualifiers, he wasn't the top scorer in
+                                    the group stage (27th place, 8 matches, 4 goals) nor in the playoffs (2 matches, 4
+                                    goals).<br><br>
+                                    Ronaldo was only truly decisive in the playoffs, scoring a hat-trick against Sweden
+                                    to qualify Portugal for the 2014 World Cup.
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div id="card2013-3" class="card card-sm ">
+                                <div class="card-title">Voting Deadline and Controversy</div>
+                                <div class="card-content">
+                                    <strong>
+                                        For the first time </strong>, the Ballon d’Or voting deadline was postponed -
+                                    right up to the Portugal vs Sweden game.
+                                    Strange, isn't it? It seemed the eligibility period was stretched just to give
+                                    Ronaldo credit for those crucial goals.
+                                    <br><br>
+                                    How did Ronaldo win that Ballon d’Or? It could have gone to Ribéry or Messi, since
+                                    both had years full of achievements and good stats, but the award went to someone
+                                    who won nothing.<br><br>
+                                    Did he win it just because of his 69 goals? If that’s the case, it makes no sense -
+                                    that’s what the Golden Boot is for.
+                                </div>
+                            </div>
+                        </div>
+                        <img src="img/2013-Bdor.png" alt="Ballon d'Or 2013 Data" loading="lazy" width="700"
+                            height="auto">
+
+                        <script>
+                            let current2013 = 1;
+                            function showCard2013(offset) {
+                                document.getElementById('card2013-' + current2013).classList.remove('active');
+                                current2013 += offset;
+                                if (current2013 < 1) current2013 = 1;
+                                if (current2013 > 3) current2013 = 3;
+                                document.getElementById('card2013-' + current2013).classList.add('active');
+                            }
+                        </script>
+                    </article>
+
+                    <article id="year-2014" class="year-content" style="display: none;">
+                        <h3>Ronaldo, Just "Another" Winner - Messi Had No Luck</h3>
+                        <div class="container">
+                            <div class="nav-buttons" style="margin-bottom: 5px;">
+                                <button class="btn" onclick="showCard(-1)">&#60; Previous</button>
+                                <button class="btn" onclick="showCard(1)">Next &#62;</button>
+                            </div>
+                            <div id="card1" class="card active">
+                                <div class="card-title">Unlucky Messi</div>
+                                <div class="card-content">
+                                    2014 was another year full of <strong>controversy</strong> about Ronaldo winning the
+                                    Ballon d'Or – and it is indeed debatable.<br><br>
+                                    Beyond Messi’s great numbers and the fact he reached the 2014 World Cup final, which
+                                    was lost with a lot of controversy, including: <br>
+                                    - <a href="https://www.youtube.com/watch?v=9s3kSfx3wZc"
+                                        target="_blank"><strong>missed red card [WATCH VIDEO 🔗]</strong></a><br>
+                                    - <a href="https://www.youtube.com/watch?v=z9XYzG2nyYk"
+                                        target="_blank"><strong>uncalled penalty (and maybe a red card) [WATCH VIDEO
+                                            🔗]</strong></a> <br><br>
+                                    He won <strong>best player at the World Cup</strong> witch is one of the most
+                                    important individual trophy to win.<br>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div id="card2" class="card">
+                                <div class="card-title">Champions League and Decisive Moments</div>
+                                <div class="card-content">
+                                    Still, it would have been tough for Messi to win because Ronaldo had better numbers,
+                                    was the <strong>Champions League top scorer</strong>, broke the goals record, won
+                                    the Spanish Cup, La Liga, and the Champions League.<br><br>
+                                    But in third place, Neuer was the world’s best goalkeeper that year, winning the
+                                    league, cup, super cup, reaching the Champions League semifinals, and winning the
+                                    2014 World Cup (as <strong>best goalkeeper</strong>).<br><br>
+                                    So the controversy is that Ronaldo just had better numbers, winning the Champions
+                                    League best player and top scorer awards solely because of goals.<br>
+                                    That Real Madrid team had other key players making much bigger impacts: Gareth Bale
+                                    was more decisive in the Champions League and King’s Cup finals, Sergio Ramos scored
+                                    a vital goal in the Champions final, and Di María won man of the match in that
+                                    final. Sure, Ronaldo scored as well - from the penalty spot 😂 - so he was clearly
+                                    <strong>not the main figure</strong>. And let’s not mention the disastrous World Cup
+                                    campaign for Portugal, which ended at the group stage in a group with Ghana and the
+                                    USA 😂.<br>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div id="card3" class="card">
+                                <div class="card-title">Debate: Who Truly Deserved it?</div>
+                                <div class="card-content">
+                                    Did Ronaldo deserve this Ballon d'Or? Neuer was <strong>more important</strong> and
+                                    won the whole World Cup (except for the Champions League) and did it as the top
+                                    goalkeeper. Messi was the best player at the World Cup and had a strong year
+                                    stats-wise.<br>
+                                    Ronaldo was <strong>not decisive</strong>, with the whole Real Madrid team deserving
+                                    merit, and he was eliminated at the World Cup group stage.<br><br>
+                                    So it matters a lot: Neuer was the key man and <strong>best goalkeeper in all
+                                        competitions</strong> and at the World Cup. Messi was the best player at the
+                                    World Cup.<br>
+                                    Ronaldo? He was just <strong>"another" player to win the Champions League</strong>,
+                                    with Di María as MVP in the final and the rest having crucial roles. Sure, he scored
+                                    a lot, but what about those who created those plays? <strong>Golden Boot ≠ Ballon
+                                        d’Or</strong>.<br><br>
+                                    Messi was unlucky that year - maybe if he had won the league and/or the World Cup it
+                                    would have been different. I think Neuer deserved it too, at least it is
+                                    understandable.
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <script>
+                            let current = 1;
+                            function showCard(offset) {
+                                document.getElementById('card' + current).classList.remove('active');
+                                current += offset;
+                                if (current < 1) current = 1;
+                                if (current > 3) current = 3;
+                                document.getElementById('card' + current).classList.add('active');
+                            }
+                        </script>
+
+                        <img src="img/2014-Bdor.png" alt="" loading="lazy" width="700" height="auto">
+
+                    </article>
+
+                    <article id="year-2016" class="year-content" style="display: none;">
+                        <h3>Team Glory vs Individual Brilliance</h3>
+                        <div class="container">
+                            <div class="nav-buttons" style="margin-bottom: 5px;">
+                                <button class="btn" onclick="showCard2016(-1)">&#60; Previous</button>
+                                <button class="btn" onclick="showCard2016(1)">Next &#62;</button>
+                            </div>
+                            <!-- Card 1 -->
+                            <div id="card2016-1" class="card card-xsm active">
+                                <div class="card-title">Ronaldo: Trophies but Controversy</div>
+                                <div class="card-content">
+                                    2016 was an “easy” year for Cristiano Ronaldo because he won the Champions League
+                                    and Euro 2016… but let’s look at the stats and facts.<br><br>
+                                    Real Madrid won the Champions League again (rigged? topic for another article).
+                                    Ronaldo scored 16 goals in the Champions League, with 11 in the group stage against
+                                    Malmö and Shakhtar.<br>
+                                    <br>He only scored against Roma and Wolfsburg in knockouts, <strong>nothing in the
+                                        semifinal and final</strong>. Sergio Ramos was the MVP of the final.<br>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div id="card2016-2" class="card card-xsm">
+                                <div class="card-title">Euro 2016 & Ronaldo's Impact</div>
+                                <div class="card-content">
+                                    In Euro 2016, Ronaldo missed a penalty against Austria and Portugal had a poor group
+                                    stage, advancing in 3rd place with zero wins.<br><br>
+                                    He showed up against Hungary (2 goals) and Wales (1 goal). In the final versus
+                                    France, he left injured after 25 minutes, and Portugal still won 1-0.<br><br>
+                                    The Euro’s best player was Antoine Griezmann. It’s always the same pattern: Ronaldo
+                                    is rarely the main figure at major tournaments.
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div id="card2016-3" class="card card-xsm">
+                                <div class="card-title">Messi's Year & The Ballon d'Or Debate</div>
+                                <div class="card-content">
+                                    On the other side, <b>Messi</b> had better stats than Ronaldo in 2016, won
+                                    <strong>La Liga</strong> and the <strong>cup</strong>, reached the <strong>Copa
+                                        America final</strong>, and won <strong>Spain’s best forward award</strong>.<br>
+                                    <b>Suarez</b> was <strong>top scorer</strong>, <b>Griezmann</b> was <strong>Euro’s
+                                        best player.</strong><br>
+                                    So why did Ronaldo win the Ballon d'Or? Mostly for team trophies-Champions League
+                                    and Euros-while Messi was not only super important in Copa America and the league
+                                    with 91 goals/assists, but arguably better on individual merit.<br>
+                                    Ronaldo wasn’t the key player. His Ballon d’Or was based on important team trophies,
+                                    but he was not the best on the pitch. Messi stood out in all competitions.
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            let current2016 = 1;
+                            function showCard2016(offset) {
+                                document.getElementById('card2016-' + current2016).classList.remove('active');
+                                current2016 += offset;
+                                if (current2016 < 1) current2016 = 1;
+                                if (current2016 > 3) current2016 = 3;
+                                document.getElementById('card2016-' + current2016).classList.add('active');
+                            }
+                        </script>
+                        <img src="img/2016-Bdor.png" alt="Ballon d'Or 2016 Data" loading="lazy" width="350"
+                            height="auto">
+
+                    </article>
+
+
+                    <article id="year-2017" class="year-content" style="display: none;">
+                        <h3>2017</h3>
+                        <p>
+                            Both had good seasons, <b>Messi</b> won the best player trophy at one or more awarding
+                            organizations (like Spanish Sports Newspaper <b>Marca</b>, etc..), won the <strong>IFFHS
+                                best playmaker award</strong>, and win the <strong>Golden Boot</strong> but only win the
+                            Spanish Cup. <br><br>Even though Real Madrid had another suspicious Champions League
+                            (discussed elsewhere), <b>Ronaldo</b> scored more in the Champions League including two in
+                            the final, <strong>won the Champions League</strong>, <strong>La Liga</strong>,
+                            <strong>Spanish Supercup</strong>, <strong>European Supercup</strong>, and<strong> Club
+                                World Cup</strong>, and had almost as many goals as Messi but won more titles. <br><br>
+                            Messi stood out a bit more for goals and assists, but <strong>Ronaldo won so many
+                                trophies</strong> it was hard not to give it to him-it was a <strong>good season for
+                                both</strong>.
+                        </p>
+                    </article>
+
+                    <article id="year-summary" class="year-content" style="display: none;">
+                        <h3>Summary</h3>
+                        <p>
+                            This says a lot about their careers~, without Real Madrid and its suspicious Champions
+                            League campaigns, Ronaldo would have at least half the Ballon d'Ors he owns-and that's
+                            discussed later in the "Champions League" section. <br><br> Messi has always been the more
+                            complete player, with as <strong>many or more goals than Ronaldo</strong>, more
+                            <strong>Golden Boots</strong> even though Ronaldo played more time as a striker (Messi
+                            almost never did), <strong>more assists</strong>, more <strong>best player awards</strong>.
+                            <br><br> Ronaldo only stands out for the Champions League and Champions League top scorer
+                            awards-all of this across his first and last Ballon d’Or.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="champions" class="fade-in" style="display: none;">
+            <h2>Champions League</h2>
+            <p>
+                Apesar dos gols, em finais decisivas o destaque do Real Madrid era Bale, Sergio Ramos e Di María.
+                CR7 marcou de pênalti, mas não foi MVP em nenhuma das finais, mostrando que o mérito é coletivo.<br>
+                Nas semifinais e finais, Ronaldo nem sempre foi decisivo; os títulos vieram principalmente do poder do
+                Real Madrid.
+            </p>
+        </section>
+        <!-- Coaches Fired -->
+        <section id="coaches" class="fade-in" style="display: none;">
+            <h2>Coaches Fired</h2>
+            <p>
+                Ao longo da carreira, CR7 esteve envolvido em episódios de influência sobre treinadores, com rumores e
+                bastidores apontando para instabilidade durante suas passagens por clubes, especialmente no Real Madrid
+                e Juventus.
+            </p>
+        </section>
+        <!-- Egoísmo -->
+        <section id="selfishness" class="fade-in" style="display: none;">
+            <h2>Selfishness</h2>
+            <p>
+                Estatísticas mostram que Messi supera Cristiano em assistências, criação de chances e dribles. Ronaldo
+                tem fama de priorizar números individuais, enquanto Messi atua sempre pelo coletivo.
+            </p>
+        </section>
+        <!-- Seleção -->
+        <section id="carried" class="fade-in" style="display: none;">
+            <h2>Carried By National Team</h2>
+            <p>
+                No Euro 2016, CR7 saiu lesionado na final, e Portugal venceu sem ele. O melhor jogador do torneio foi
+                Griezmann. A atuação de Ronaldo pela seleção é marcada por muitos jogos sem influência dominante.
+            </p>
+        </section>
+        <!-- Chorar online -->
+        <section id="crying" class="fade-in" style="display: none;">
+            <h2>Crying Online</h2>
+            <p>
+                Cristiano tem histórico de reclamar de prêmios e decisões em público e nas redes, criticando a FIFA e a
+                Bola de Ouro quando não ganha.
+            </p>
+        </section>
+        <!-- Hipocrisia -->
+        <section id="hypocrisy" class="fade-in" style="display: none;">
+            <h2>Hypocrisy</h2>
+            <p>
+                Diversas polêmicas extracampo, desde acusações, acordos judiciais secretos, até evasão fiscal, mostram
+                divergência entre discurso público de humildade e prática.
+            </p>
+        </section>
+        <!-- Conclusão -->
+        <section id="conclusion" class="fade-in" style="display: none;">
+            <h2>Summary</h2>
+            <p>
+                Messi apresenta números superiores em quase todas as métricas relevantes. CR7 dependeu de grandes
+                equipas e campanhas questionáveis para inflar seus títulos e estatísticas.<br>
+                <strong>Messi sempre foi mais completo, decisivo e ético dentro e fora de campo.</strong>
+            </p>
+        </section>
     </main>
     <script src="main.js"></script>
 
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
+
 </html>

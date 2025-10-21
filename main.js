@@ -1,4 +1,42 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".carousel-track");
+  const imgs = Array.from(track.children);
+  const prevBtn = document.querySelector(".carousel-btn.prev");
+  const nextBtn = document.querySelector(".carousel-btn.next");
+  const dotsContainer = document.querySelector(".carousel-dots");
+  let currentIdx = 0;
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${currentIdx * 100}%)`;
+    dotsContainer.childNodes.forEach((dot, i) => {
+      dot.classList.toggle("active", i === currentIdx);
+    });
+  }
+
+  function makeDots() {
+    dotsContainer.innerHTML = "";
+    imgs.forEach((_, i) => {
+      const dot = document.createElement("button");
+      dot.addEventListener("click", () => {
+        currentIdx = i;
+        updateCarousel();
+      });
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  prevBtn.onclick = () => {
+    currentIdx = currentIdx === 0 ? imgs.length - 1 : currentIdx - 1;
+    updateCarousel();
+  };
+  nextBtn.onclick = () => {
+    currentIdx = (currentIdx + 1) % imgs.length;
+    updateCarousel();
+  };
+
+  makeDots();
+  updateCarousel();
+
   // Fade-in on scroll (modern, minimal)
   const faders = document.querySelectorAll(".fade-in");
   const appearOnScroll = new IntersectionObserver(
