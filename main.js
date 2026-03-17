@@ -1,143 +1,205 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const mainContent = document.getElementById("main-content");
+  const overlay = document.getElementById("intro-overlay");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function showMainContent() {
+    if (overlay) {
+      overlay.classList.add("hide");
+      setTimeout(() => {
+        overlay.style.display = "none";
+      }, reduceMotion ? 0 : 700);
+    }
+    if (mainContent) {
+      mainContent.classList.add("visible");
+    }
+  }
+  window.showMainContent = showMainContent;
+
+  try {
+    if (!localStorage.getItem("visited")) {
+      localStorage.setItem("visited", "true");
+    } else {
+      if (overlay) overlay.style.display = "none";
+      if (mainContent) mainContent.classList.add("visible");
+    }
+  } catch {
+    if (overlay) overlay.style.display = "none";
+    if (mainContent) mainContent.classList.add("visible");
+  }
+
+  const languageSelect = document.getElementById("language-select");
+  if (languageSelect) {
+    languageSelect.addEventListener("change", function () {
+      const googleCombo = document.querySelector(".goog-te-combo");
+      if (googleCombo) {
+        googleCombo.value = this.value;
+        googleCombo.dispatchEvent(new Event("change"));
+      }
+    });
+  }
+
   const track = document.querySelector(".carousel-track");
-  const imgs = Array.from(track.children);
   const prevBtn = document.querySelector(".carousel-btn.prev");
   const nextBtn = document.querySelector(".carousel-btn.next");
   const dotsContainer = document.querySelector(".carousel-dots");
-  let currentIdx = 0;
 
-  function updateCarousel() {
-    track.style.transform = `translateX(-${currentIdx * 100}%)`;
-    dotsContainer.childNodes.forEach((dot, i) => {
-      dot.classList.toggle("active", i === currentIdx);
+  if (track && prevBtn && nextBtn && dotsContainer) {
+    const slides = Array.from(track.children);
+    let currentIdx = 0;
+
+    const updateCarousel = () => {
+      track.style.transform = `translateX(-${currentIdx * 100}%)`;
+      Array.from(dotsContainer.children).forEach((dot, i) => {
+        dot.classList.toggle("active", i === currentIdx);
+      });
+    };
+
+    const makeDots = () => {
+      dotsContainer.innerHTML = "";
+      slides.forEach((_, i) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.setAttribute("aria-label", `Go to slide ${i + 1}`);
+        dot.addEventListener("click", () => {
+          currentIdx = i;
+          updateCarousel();
+        });
+        dotsContainer.appendChild(dot);
+      });
+    };
+
+    prevBtn.addEventListener("click", () => {
+      currentIdx = currentIdx === 0 ? slides.length - 1 : currentIdx - 1;
+      updateCarousel();
     });
+
+    nextBtn.addEventListener("click", () => {
+      currentIdx = (currentIdx + 1) % slides.length;
+      updateCarousel();
+    });
+
+    makeDots();
+    updateCarousel();
   }
 
-  function makeDots() {
-    dotsContainer.innerHTML = "";
-    imgs.forEach((_, i) => {
-      const dot = document.createElement("button");
-      dot.addEventListener("click", () => {
-        currentIdx = i;
-        updateCarousel();
-      });
-      dotsContainer.appendChild(dot);
-    });
-  }
-
-  prevBtn.onclick = () => {
-    currentIdx = currentIdx === 0 ? imgs.length - 1 : currentIdx - 1;
-    updateCarousel();
-  };
-  nextBtn.onclick = () => {
-    currentIdx = (currentIdx + 1) % imgs.length;
-    updateCarousel();
-  };
-
-  makeDots();
-  updateCarousel();
-
-  // Fade-in on scroll (modern, minimal)
-  const faders = document.querySelectorAll(".fade-in");
-  const appearOnScroll = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    },
-    { threshold: 0.3 }
-  );
-  faders.forEach((fader) => appearOnScroll.observe(fader));
-
-  // Hamburger menu logic
   const hamburgerBtn = document.getElementById("hamburger-menu");
   const navList = document.querySelector(".nav-list");
   if (hamburgerBtn && navList) {
     hamburgerBtn.addEventListener("click", () => {
-      navList.classList.toggle("open");
-      hamburgerBtn.classList.toggle("active");
+      const isOpen = navList.classList.toggle("open");
+      hamburgerBtn.classList.toggle("active", isOpen);
+      hamburgerBtn.setAttribute("aria-expanded", String(isOpen));
     });
+
     document.querySelectorAll(".nav-list a, .nav-list select").forEach((el) => {
       el.addEventListener("click", () => {
         navList.classList.remove("open");
         hamburgerBtn.classList.remove("active");
+        hamburgerBtn.setAttribute("aria-expanded", "false");
       });
     });
   }
 
-  // Section navigation
   const navLinks = document.querySelectorAll("nav .home-btn, nav ul li a");
   const allSections = document.querySelectorAll("main > section");
-  function showSection(sectionID) {
-    allSections.forEach((s) => {
-      s.style.display = s.id === sectionID ? "block" : "none";
+
+  const showSection = (sectionID) => {
+    allSections.forEach((section) => {
+      section.style.display = section.id === sectionID ? "block" : "none";
     });
-  }
-  showSection("home");
-  navLinks.forEach((l, idx) => l.classList.toggle("active", idx === 0));
+  };
+
+  const applyActiveNav = (activeHref) => {
+    navLinks.forEach((link) => {
+      link.classList.toggle("active", link.getAttribute("href") === activeHref);
+    });
+  };
+
+  const initialHash = window.location.hash || "#home";
+  showSection(initialHash.replace("#", ""));
+  applyActiveNav(initialHash);
+
   navLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      navLinks.forEach((l) => l.classList.remove("active"));
-      link.classList.add("active");
-      showSection(link.getAttribute("href").replace("#", ""));
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const targetHref = link.getAttribute("href");
+      if (!targetHref) return;
+      showSection(targetHref.replace("#", ""));
+      applyActiveNav(targetHref);
+      history.replaceState(null, "", targetHref);
     });
   });
 
-  // Ballon d'Or years (tabs)
-  const buttons = document.querySelectorAll(".year-btn");
-  const contents = document.querySelectorAll(".year-content");
-  contents.forEach((c) => (c.style.display = "none"));
-  if (contents[0]) contents[0].style.display = "block";
-  buttons.forEach((b, idx) => {
-    b.style.backgroundColor = "";
-    b.style.color = "";
-    if (idx === 0) {
-      b.style.backgroundColor = "#1da1f2";
-      b.style.color = "#fff";
-    }
+  const yearButtons = document.querySelectorAll(".year-btn");
+  const yearContents = document.querySelectorAll(".year-content");
+
+  yearContents.forEach((content) => {
+    content.style.display = "none";
   });
-  buttons.forEach((button) => {
+  if (yearContents[0]) yearContents[0].style.display = "block";
+
+  yearButtons.forEach((button, index) => {
+    button.classList.toggle("active", index === 0);
     button.addEventListener("click", () => {
-      contents.forEach((c) => (c.style.display = "none"));
-      buttons.forEach((b) => {
-        b.style.backgroundColor = "";
-        b.style.color = "";
+      yearButtons.forEach((btn) => btn.classList.remove("active"));
+      yearContents.forEach((content) => {
+        content.style.display = "none";
       });
-      const targetId = button.getAttribute("data-target");
-      const target = document.getElementById(targetId);
+      const target = document.getElementById(button.dataset.target || "");
       if (target) {
         target.style.display = "block";
-        button.style.backgroundColor = "#1da1f2";
-        button.style.color = "#fff";
-        setTimeout(() => {
-          target.scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 12);
+        button.classList.add("active");
+        target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
       }
     });
   });
 
-  // Video intro transition
-  function showMainContent() {
-    var overlay = document.getElementById("intro-overlay");
-    if (overlay) {
-      overlay.classList.add("hide");
-      setTimeout(function () {
-        overlay.style.display = "none";
-        var content = document.getElementById("main-content");
-        if (content) content.classList.add("visible");
-      }, 800);
-    }
-  }
-  // Only show intro on first visit
-  if (!localStorage.getItem("visited")) {
-    localStorage.setItem("visited", "true");
-    // overlay/frame will run normally
+  const cardState = {};
+  const cardGroups = document.querySelectorAll("[data-group][data-index]");
+  cardGroups.forEach((card) => {
+    const group = card.dataset.group;
+    const idx = Number(card.dataset.index);
+    if (!group) return;
+    if (!cardState[group] || idx < cardState[group]) cardState[group] = idx;
+  });
+
+  const renderCardGroup = (group, currentIndex) => {
+    document.querySelectorAll(`[data-group="${group}"][data-index]`).forEach((card) => {
+      const idx = Number(card.dataset.index);
+      card.classList.toggle("active", idx === currentIndex);
+    });
+  };
+
+  document.querySelectorAll("[data-card-nav]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const group = button.dataset.group;
+      const direction = button.dataset.cardNav;
+      if (!group || !direction) return;
+
+      const cards = Array.from(document.querySelectorAll(`[data-group="${group}"][data-index]`));
+      const max = cards.length;
+      const current = cardState[group] || 1;
+      let next = current;
+      if (direction === "next") next = Math.min(current + 1, max);
+      if (direction === "prev") next = Math.max(current - 1, 1);
+      cardState[group] = next;
+      renderCardGroup(group, next);
+    });
+  });
+
+  const faders = document.querySelectorAll(".fade-in");
+  if (!reduceMotion && "IntersectionObserver" in window) {
+    const appearOnScroll = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
+      },
+      { threshold: 0.2 }
+    );
+    faders.forEach((fader) => appearOnScroll.observe(fader));
   } else {
-    var overlay = document.getElementById("intro-overlay");
-    if (overlay) overlay.style.display = "none";
+    faders.forEach((fader) => fader.classList.add("visible"));
   }
-  window.showMainContent = showMainContent; // Ensure it's global for video
 });
