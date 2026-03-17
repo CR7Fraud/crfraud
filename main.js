@@ -1,14 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
   const mainContent = document.getElementById("main-content");
   const overlay = document.getElementById("intro-overlay");
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
 
   function showMainContent() {
     if (overlay) {
       overlay.classList.add("hide");
-      setTimeout(() => {
-        overlay.style.display = "none";
-      }, reduceMotion ? 0 : 700);
+      setTimeout(
+        () => {
+          overlay.style.display = "none";
+        },
+        reduceMotion ? 0 : 700,
+      );
     }
     if (mainContent) {
       mainContent.classList.add("visible");
@@ -29,14 +34,54 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const languageSelect = document.getElementById("language-select");
+  const translationStatus = document.getElementById("translation-status");
+
+  const setTranslationStatus = (message) => {
+    if (translationStatus) translationStatus.textContent = message;
+  };
+
+  const tryApplyGoogleLanguage = (lang) => {
+    const googleCombo = document.querySelector(".goog-te-combo");
+    if (!googleCombo) return false;
+    googleCombo.value = lang;
+    googleCombo.dispatchEvent(new Event("change"));
+    return true;
+  };
+
   if (languageSelect) {
     languageSelect.addEventListener("change", function () {
-      const googleCombo = document.querySelector(".goog-te-combo");
-      if (googleCombo) {
-        googleCombo.value = this.value;
-        googleCombo.dispatchEvent(new Event("change"));
+      const lang = this.value;
+      if (tryApplyGoogleLanguage(lang)) {
+        setTranslationStatus("Language updated.");
+        return;
       }
+
+      setTranslationStatus("Starting translation engine...");
+      let tries = 0;
+      const retry = window.setInterval(() => {
+        tries += 1;
+        if (tryApplyGoogleLanguage(lang)) {
+          window.clearInterval(retry);
+          setTranslationStatus("Language updated.");
+          return;
+        }
+
+        if (tries >= 12) {
+          window.clearInterval(retry);
+          setTranslationStatus(
+            "Automatic translation is unavailable right now. Try browser translate or reload.",
+          );
+        }
+      }, 350);
     });
+
+    setTimeout(() => {
+      if (!document.querySelector(".goog-te-combo")) {
+        setTranslationStatus(
+          "Translation loads when Google service is available.",
+        );
+      }
+    }, 1800);
   }
 
   const track = document.querySelector(".carousel-track");
@@ -131,6 +176,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  document.querySelectorAll(".js-section-link").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const targetHref = link.getAttribute("href");
+      if (!targetHref) return;
+      showSection(targetHref.replace("#", ""));
+      applyActiveNav(targetHref);
+      history.replaceState(null, "", targetHref);
+    });
+  });
+
   const yearButtons = document.querySelectorAll(".year-btn");
   const yearContents = document.querySelectorAll(".year-content");
 
@@ -150,7 +206,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (target) {
         target.style.display = "block";
         button.classList.add("active");
-        target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+        target.scrollIntoView({
+          behavior: reduceMotion ? "auto" : "smooth",
+          block: "start",
+        });
       }
     });
   });
@@ -165,10 +224,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const renderCardGroup = (group, currentIndex) => {
-    document.querySelectorAll(`[data-group="${group}"][data-index]`).forEach((card) => {
-      const idx = Number(card.dataset.index);
-      card.classList.toggle("active", idx === currentIndex);
-    });
+    document
+      .querySelectorAll(`[data-group="${group}"][data-index]`)
+      .forEach((card) => {
+        const idx = Number(card.dataset.index);
+        card.classList.toggle("active", idx === currentIndex);
+      });
   };
 
   document.querySelectorAll("[data-card-nav]").forEach((button) => {
@@ -177,7 +238,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const direction = button.dataset.cardNav;
       if (!group || !direction) return;
 
-      const cards = Array.from(document.querySelectorAll(`[data-group="${group}"][data-index]`));
+      const cards = Array.from(
+        document.querySelectorAll(`[data-group="${group}"][data-index]`),
+      );
       const max = cards.length;
       const current = cardState[group] || 1;
       let next = current;
@@ -196,10 +259,23 @@ document.addEventListener("DOMContentLoaded", () => {
           if (entry.isIntersecting) entry.target.classList.add("visible");
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
     faders.forEach((fader) => appearOnScroll.observe(fader));
   } else {
     faders.forEach((fader) => fader.classList.add("visible"));
+  }
+
+  const newsletterForm = document.getElementById("newsletter-form");
+  const feedback = document.getElementById("newsletter-feedback");
+  if (newsletterForm && feedback) {
+    newsletterForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const input = newsletterForm.querySelector("input[type='email']");
+      if (!input) return;
+      feedback.textContent =
+        "Subscription request received. Thank you for supporting the project.";
+      newsletterForm.reset();
+    });
   }
 });
