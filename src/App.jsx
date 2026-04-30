@@ -1,6 +1,6 @@
 import { Toaster } from "@/components/ui/toaster";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { queryClientInstance } from "@/lib/query-client";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import PageNotFound from "./lib/PageNotFound";
@@ -27,16 +27,7 @@ const AuthenticatedApp = () => {
     useAuth();
   const [introDone, setIntroDone] = useState(false);
 
-  useEffect(() => {
-    const alreadySeenIntro =
-      window.sessionStorage.getItem("crfraud_intro_seen") === "true";
-    if (alreadySeenIntro) {
-      setIntroDone(true);
-    }
-  }, []);
-
   const markIntroDone = () => {
-    window.sessionStorage.setItem("crfraud_intro_seen", "true");
     setIntroDone(true);
   };
 
