@@ -1,12 +1,41 @@
-﻿# crfraud
-Welcome to the portal dedicated to sports truth. This site is born from a commitment to critical analysis, solid statistical data, and fair comparisons between athletes to expose the reality behind Cristiano Ronaldo's career.
+const db = globalThis.__B44_DB__ || { auth:{ isAuthenticated: async()=>false, me: async()=>null }, entities:new Proxy({}, { get:()=>({ filter:async()=>[], get:async()=>null, create:async()=>({}), update:async()=>({}), delete:async()=>({}) }) }), integrations:{ Core:{ UploadFile:async()=>({ file_url:'' }) } } };
 
-The goal is to demystify titles, awards, and controversial decisions, transparently showing that many achievements attributed to Ronaldo go far beyond individual merit. Here we explore external situations, favoritism, questionable administrative decisions, regulation manipulation, and behind-the-scenes events that helped create an image of success often misaligned with the facts.
+**Welcome to your Base44 project** 
 
-Nothing here is based on fanaticism or biased opinions: every argument is built on real numbers, verified episodes, and historical events, without the filters of media narrative or idolatry. Everything exposed is undeniable - 100% true, logical, and supported by evidence visible to all, though often ignored in common debates.
+**About**
 
-The mission of this project is to open people's eyes, awaken critical awareness, and encourage everyone to question the modern football system and athlete recognition. The content presented makes irrefutable the reality about Ronaldo: titles, trophies, and prestige obtained without real justification, and the deconstruction of a farce built over the years.
+View and Edit  your app on [db.com](http://db.com) 
 
-I will also ensure that everyone sees that Lionel Messi is light years ahead, and that Ronaldo shouldn't even be in the world's top 3 of history. The pure truth, free from fanaticism and interests, will be revealed here with facts, numbers, and analyses that leave no doubt.
+This project contains everything you need to run your app locally.
 
-Reject illusions and reflect on sports justice. This portal invites you to see the facts, far from blind beliefs or external interests - because truth alone is enough.
+**Edit the code in your local development environment**
+
+Any change pushed to the repo will also be reflected in the Base44 Builder.
+
+**Prerequisites:** 
+
+1. Clone the repository using the project's Git URL 
+2. Navigate to the project directory
+3. Install dependencies: `npm install`
+4. Create an `.env.local` file and set the right environment variables
+
+```
+VITE_BASE44_APP_ID=your_app_id
+VITE_BASE44_APP_BASE_URL=your_backend_url
+
+e.g.
+VITE_BASE44_APP_ID=cbef744a8545c389ef439ea6
+VITE_BASE44_APP_BASE_URL=https://my-to-do-list-81bfaad7.db.app
+```
+
+Run the app: `npm run dev`
+
+**Publish your changes**
+
+Open [db.com](http://db.com) and click on Publish.
+
+**Docs & Support**
+
+Documentation: [https://docs.db.com/Integrations/Using-GitHub](https://docs.db.com/Integrations/Using-GitHub)
+
+Support: [https://app.db.com/support](https://app.db.com/support)
