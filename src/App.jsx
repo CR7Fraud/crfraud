@@ -1,27 +1,28 @@
-import { Toaster } from "@/components/ui/toaster"
-import { QueryClientProvider } from '@tanstack/react-query'
-import { queryClientInstance } from '@/lib/query-client'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import PageNotFound from './lib/PageNotFound';
-import { AuthProvider, useAuth } from '@/lib/AuthContext';
-import UserNotRegisteredError from '@/components/UserNotRegisteredError';
-import { I18nProvider } from './lib/i18n';
+import { Toaster } from "@/components/ui/toaster";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { queryClientInstance } from "@/lib/query-client";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import PageNotFound from "./lib/PageNotFound";
+import { AuthProvider, useAuth } from "@/lib/AuthContext";
+import UserNotRegisteredError from "@/components/UserNotRegisteredError";
+import { I18nProvider } from "./lib/i18n";
 // Add page imports here
-import Home from './pages/Home';
-import About from './pages/About.jsx';
-import Contact from './pages/Contact.jsx';
-import BallonDor from './pages/BallonDor';
-import RiggedUCL from './pages/RiggedUCL';
-import Managers from './pages/Managers';
-import Selfishness from './pages/Selfishness';
-import NationalTeam from './pages/NationalTeam';
-import Crying from './pages/Crying';
-import Hypocrisy from './pages/Hypocrisy';
-import LigaComprada from './pages/LigaComprada';
-import WhyMessi from './pages/WhyMessi';
+import Home from "./pages/Home";
+import About from "./pages/About.jsx";
+import Contact from "./pages/Contact.jsx";
+import BallonDor from "./pages/BallonDor";
+import RiggedUCL from "./pages/RiggedUCL";
+import Managers from "./pages/Managers";
+import Selfishness from "./pages/Selfishness";
+import NationalTeam from "./pages/NationalTeam";
+import Crying from "./pages/Crying";
+import Hypocrisy from "./pages/Hypocrisy";
+import LigaComprada from "./pages/LigaComprada";
+import WhyMessi from "./pages/WhyMessi";
 
 const AuthenticatedApp = () => {
-  const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
+  const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } =
+    useAuth();
 
   if (isLoadingPublicSettings || isLoadingAuth) {
     return (
@@ -32,9 +33,9 @@ const AuthenticatedApp = () => {
   }
 
   if (authError) {
-    if (authError.type === 'user_not_registered') {
+    if (authError.type === "user_not_registered") {
       return <UserNotRegisteredError />;
-    } else if (authError.type === 'auth_required') {
+    } else if (authError.type === "auth_required") {
       navigateToLogin();
       return null;
     }
@@ -71,7 +72,7 @@ function App() {
         </QueryClientProvider>
       </AuthProvider>
     </I18nProvider>
-  )
+  );
 }
 
-export default App
+export default App;

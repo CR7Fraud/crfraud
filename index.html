@@ -9,6 +9,16 @@
         content="CRFraud presents critical football analysis with data-backed comparisons, controversial moments, and evidence-focused debate." />
     <meta name="theme-color" content="#0b1016" />
     <title>CRFraud</title>
+    <script>
+        (function () {
+            var isGithubPages = location.hostname === "cr7fraud.github.io";
+            var isDistPath = location.pathname.indexOf("/dist/") !== -1;
+            if (isGithubPages && !isDistPath) {
+                var target = "./dist/" + location.search + location.hash;
+                location.replace(target);
+            }
+        })();
+    </script>
 </head>
 
 <body>
