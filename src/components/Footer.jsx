@@ -8,15 +8,6 @@ export default function Footer() {
   return (
     <footer className="bg-zinc-950 py-16">
       <div className="max-w-3xl mx-auto px-6 text-center">
-        {/* Logo */}
-        <div className="flex justify-center mb-6">
-          <img
-            src="/assets/logo.png"
-            alt="CRFraud"
-            className="h-12 w-12 rounded-xl border border-zinc-700 object-cover"
-          />
-        </div>
-
         <h2 className="font-playfair text-3xl font-black mb-4 text-white">
           CR<span className="text-amber-400">FRAUD</span>
         </h2>

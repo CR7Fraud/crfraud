@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 export default function LoadingScreen({ onComplete }) {
   const hasCompletedRef = useRef(false);
   const [fadingOut, setFadingOut] = useState(false);
+  const loadingVideoSrc = `${import.meta.env.BASE_URL}assets/loading.mp4`;
 
   useEffect(() => {
     const fallbackTimer = window.setTimeout(() => {
@@ -39,17 +40,20 @@ export default function LoadingScreen({ onComplete }) {
           onEnded={finish}
           onError={finish}
         >
-          <source src="/assets/loading.mp4" type="video/mp4" />
+          <source src={loadingVideoSrc} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/30" />
       </div>
 
       <div className="relative z-10 flex flex-col items-center gap-4 px-6 text-center">
-        <img
-          src="/assets/logo.png"
-          alt="CRFraud"
-          className="h-20 w-20 rounded-2xl border border-white/10 bg-[#0b1016] object-cover shadow-2xl"
-        />
+        <div className="flex items-center justify-center rounded-2xl border border-white/10 bg-[#0b1016]/85 px-5 py-3 shadow-2xl backdrop-blur-sm">
+          <span className="font-playfair text-3xl font-black tracking-tight text-white">
+            CR
+          </span>
+          <span className="font-playfair text-3xl font-black tracking-tight text-amber-400">
+            FRAUD
+          </span>
+        </div>
         <div className="space-y-1">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
             Loading

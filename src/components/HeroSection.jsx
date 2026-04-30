@@ -21,15 +21,6 @@ export default function HeroSection() {
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        {/* Logo mark */}
-        <div className="flex justify-center mb-8">
-          <img
-            src="/assets/logo.png"
-            alt="CRFraud"
-            className="h-16 w-16 rounded-2xl border border-zinc-700 object-cover shadow-2xl"
-          />
-        </div>
-
         <div className="mb-5 inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/25 rounded-full px-4 py-1.5">
           <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
           <span className="text-amber-400 text-xs font-semibold tracking-widest uppercase">
