@@ -1,11 +1,13 @@
 import { Toaster } from "@/components/ui/toaster";
 import { QueryClientProvider } from "@tanstack/react-query";
+import { useEffect, useState } from "react";
 import { queryClientInstance } from "@/lib/query-client";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import PageNotFound from "./lib/PageNotFound";
 import { AuthProvider, useAuth } from "@/lib/AuthContext";
 import UserNotRegisteredError from "@/components/UserNotRegisteredError";
 import { I18nProvider } from "./lib/i18n";
+import LoadingScreen from "@/components/LoadingScreen";
 // Add page imports here
 import Home from "./pages/Home";
 import About from "./pages/About.jsx";
@@ -23,13 +25,23 @@ import WhyMessi from "./pages/WhyMessi";
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } =
     useAuth();
+  const [introDone, setIntroDone] = useState(false);
 
-  if (isLoadingPublicSettings || isLoadingAuth) {
-    return (
-      <div className="fixed inset-0 flex items-center justify-center">
-        <div className="w-8 h-8 border-4 border-slate-200 border-t-slate-800 rounded-full animate-spin"></div>
-      </div>
-    );
+  useEffect(() => {
+    const alreadySeenIntro =
+      window.sessionStorage.getItem("crfraud_intro_seen") === "true";
+    if (alreadySeenIntro) {
+      setIntroDone(true);
+    }
+  }, []);
+
+  const markIntroDone = () => {
+    window.sessionStorage.setItem("crfraud_intro_seen", "true");
+    setIntroDone(true);
+  };
+
+  if (isLoadingPublicSettings || isLoadingAuth || !introDone) {
+    return <LoadingScreen onComplete={markIntroDone} />;
   }
 
   if (authError) {
