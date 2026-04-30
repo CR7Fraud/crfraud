@@ -13,9 +13,10 @@
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b1016'/%3E%3Cpath d='M16 38c5-10 11-16 18-16s13 6 18 16' fill='none' stroke='%234fb4ff' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='22' cy='26' r='4' fill='%23f4c36b'/%3E%3C/svg%3E" />
     <script>
         (function () {
+            var isGithubPages = location.hostname === "cr7fraud.github.io";
             var isStaticLocalHost = (location.hostname === "localhost" || location.hostname === "127.0.0.1") && location.port !== "5173";
             var isDistPath = location.pathname.indexOf("/dist/") !== -1;
-            if (isStaticLocalHost && !isDistPath) {
+            if ((isGithubPages || isStaticLocalHost) && !isDistPath) {
                 var target = "./dist/index.html" + location.search + location.hash;
                 location.replace(target);
             }
