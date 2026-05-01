@@ -25,13 +25,17 @@ export default function Contact() {
               <Mail className="w-5 h-5 text-amber-500" />
             </div>
             <div>
-              <p className="font-semibold text-foreground text-sm">Email</p>
-              <p className="text-muted-foreground text-sm">p</p>
+              <p className="font-semibold text-foreground text-sm">
+                Personal Dev Email
+              </p>
+              <p className="text-muted-foreground text-sm">
+                pedroseixasa@gmail.com
+              </p>
             </div>
           </a>
 
           <a
-            href="https://twitter.com/crfraud"
+            href="https://twitter.com/cr7fraud_"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-5 rounded-2xl border border-border bg-card hover:border-amber-400/50 hover:shadow-md transition-all"
@@ -43,7 +47,7 @@ export default function Contact() {
               <p className="font-semibold text-foreground text-sm">
                 Twitter / X
               </p>
-              <p className="text-muted-foreground text-sm">@crfraud_</p>
+              <p className="text-muted-foreground text-sm">@cr7fraud_</p>
             </div>
           </a>
         </div>
