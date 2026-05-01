@@ -25,14 +25,9 @@ import WhyMessi from "./pages/WhyMessi";
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } =
     useAuth();
-  const [introDone, setIntroDone] = useState(false);
 
-  const markIntroDone = () => {
-    setIntroDone(true);
-  };
-
-  if (isLoadingPublicSettings || isLoadingAuth || !introDone) {
-    return <LoadingScreen onComplete={markIntroDone} />;
+  if (isLoadingPublicSettings || isLoadingAuth) {
+    return <div className="fixed inset-0 bg-black" aria-hidden="true" />;
   }
 
   if (authError) {
@@ -64,12 +59,18 @@ const AuthenticatedApp = () => {
 };
 
 function App() {
+  const [introDone, setIntroDone] = useState(false);
+
   return (
     <I18nProvider>
       <AuthProvider>
         <QueryClientProvider client={queryClientInstance}>
           <Router>
-            <AuthenticatedApp />
+            {!introDone ? (
+              <LoadingScreen onComplete={() => setIntroDone(true)} />
+            ) : (
+              <AuthenticatedApp />
+            )}
           </Router>
           <Toaster />
         </QueryClientProvider>
