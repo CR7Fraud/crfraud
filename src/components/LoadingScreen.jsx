@@ -1,15 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 
-const WORD_ENTRY_MS = 820;
-const MORPH_MS = 650;
-const FINAL_CHAR_STAGGER = 85;
+const WORD_ENTRY_MS = 1040;
+const MORPH_MS = 820;
+const FINAL_CHAR_STAGGER = 55;
 const EXIT_FADE_DURATION = 300;
+const EASE = "cubic-bezier(.16, 1, .3, 1)";
 
 const TIMING = {
-  morph: 1100,
-  stable: 1800,
-  final: 2820,
-  complete: 4350,
+  morph: 1460,
+  stable: 1900,
+  final: 2520,
+  complete: 4100,
 };
 
 function MorphSlot({ stage }) {
@@ -19,16 +20,20 @@ function MorphSlot({ stage }) {
   const isFinal = stage === "final";
 
   return (
-    <span className="relative inline-flex h-[1em] w-[0.8em] items-center justify-center">
+    <span
+      className="relative inline-flex h-[1em] w-[0.62em] items-center justify-center"
+      style={{ marginInline: "-0.04em" }}
+    >
       <span
         className="absolute inset-0 flex items-center justify-center text-white"
         style={{
-          transition: `opacity ${MORPH_MS}ms linear, transform ${MORPH_MS}ms linear, filter ${MORPH_MS}ms linear`,
+          transition: `opacity ${MORPH_MS}ms ${EASE}, transform ${MORPH_MS}ms ${EASE}, filter ${MORPH_MS}ms linear`,
           willChange: "opacity, transform, filter",
+          transformOrigin: "center center",
           opacity: isIntro ? 1 : 0,
           transform: isIntro
             ? "rotate(0deg) scale(1) translateY(0)"
-            : "rotate(180deg) scale(0.55) translateY(-0.06em)",
+            : "rotate(180deg) scale(0.5) translateY(-0.04em)",
           filter: isIntro ? "blur(0px)" : "blur(4px)",
         }}
       >
@@ -37,13 +42,14 @@ function MorphSlot({ stage }) {
       <span
         className="absolute inset-0 flex items-center justify-center"
         style={{
-          transition: `opacity ${MORPH_MS}ms linear, transform ${MORPH_MS}ms linear, filter ${MORPH_MS}ms linear, color ${MORPH_MS}ms linear`,
+          transition: `opacity ${MORPH_MS}ms ${EASE}, transform ${MORPH_MS}ms ${EASE}, filter ${MORPH_MS}ms linear, color ${MORPH_MS}ms linear`,
           willChange: "opacity, transform, filter, color",
+          transformOrigin: "center center",
           opacity: isIntro ? 0 : 1,
           transform:
             isMorph || isStable || isFinal
               ? "rotate(0deg) scale(1) translateY(0)"
-              : "rotate(-90deg) scale(0.65) translateY(0.05em)",
+              : "rotate(-90deg) scale(0.58) translateY(0.02em)",
           filter: isIntro ? "blur(4px)" : "blur(0px)",
           color: isFinal ? "#f59e0b" : "#ffffff",
         }}
@@ -79,11 +85,13 @@ function FinalLetters({ active }) {
           className="inline-block text-amber-500"
           style={{
             transition:
-              "opacity 320ms linear, transform 320ms linear, filter 320ms linear",
+              "opacity 320ms cubic-bezier(.16, 1, .3, 1), transform 320ms cubic-bezier(.16, 1, .3, 1), filter 320ms linear",
             transitionDelay: `${index * FINAL_CHAR_STAGGER}ms`,
             willChange: "opacity, transform, filter",
             opacity: revealed ? 1 : 0,
-            transform: revealed ? "translateY(0)" : "translateY(0.16em)",
+            transform: revealed
+              ? "translateY(0) scale(1)"
+              : "translateY(0.14em) scale(0.96)",
             filter: revealed ? "blur(0px)" : "blur(4px)",
           }}
         >
@@ -95,20 +103,23 @@ function FinalLetters({ active }) {
 }
 
 function LoadingWord({ stage, entered }) {
+  const finalShift = stage === "final" ? "-0.07em" : "0em";
+
   return (
     <div className="absolute inset-0 flex items-center justify-center">
       <h1
-        className="flex items-center whitespace-nowrap select-none font-black leading-none tracking-[-0.095em]"
+        className="flex items-center whitespace-nowrap select-none font-black leading-none tracking-[-0.075em]"
         style={{
-          fontSize: "clamp(3.6rem, 7.8vw, 8.5rem)",
-          transition: `transform ${WORD_ENTRY_MS}ms cubic-bezier(.18, 1, .32, 1), opacity ${Math.round(
+          fontSize: "clamp(4rem, 8.4vw, 9.15rem)",
+          transition: `transform ${WORD_ENTRY_MS}ms ${EASE}, opacity ${Math.round(
             WORD_ENTRY_MS * 0.65,
           )}ms linear`,
           willChange: "transform, opacity",
           transform: entered
-            ? "translate3d(0, 0, 0) scale(1)"
-            : "translate3d(-34vw, 0, 0) scale(0.96)",
+            ? `translate3d(${finalShift}, 0, 0) scale(1)`
+            : "translate3d(-46vw, 0, 0) scale(0.975)",
           opacity: entered ? 1 : 0,
+          textShadow: "0 0 26px rgba(255, 255, 255, 0.04)",
         }}
       >
         <span className="text-white">CR</span>
