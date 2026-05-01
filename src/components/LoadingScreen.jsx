@@ -26,13 +26,13 @@ export default function LoadingScreen({ onComplete }) {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex items-start justify-center bg-[#05080d] px-6 pt-24 sm:pt-32 transition-opacity duration-300 ${
+      className={`fixed inset-0 z-[9999] bg-[#05080d] transition-opacity duration-300 ${
         fadingOut ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
       <div className="absolute inset-0 overflow-hidden">
         <video
-          className="h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover"
           autoPlay
           muted
           playsInline
