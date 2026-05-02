@@ -6,6 +6,9 @@ import { defineConfig } from "vite";
 export default defineConfig({
   logLevel: "error", // Suppress warnings, only show errors
   base: "./",
+  build: {
+    manifest: "manifest.json",
+  },
   plugins: [
     base44({
       // Support for legacy code that imports the base44 SDK with @/integrations, @/entities, etc.
