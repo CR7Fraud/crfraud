@@ -33,7 +33,7 @@ function MorphSlot({ stage }) {
           opacity: isIntro ? 1 : 0,
           transform: isIntro
             ? "rotate(0deg) scale(1) translateY(0)"
-            : "rotate(180deg) scale(0.5) translateY(-0.04em)",
+            : "scaleX(-1) scale(0.5) translateY(-0.04em)",
           filter: isIntro ? "blur(0px)" : "blur(4px)",
         }}
       >
