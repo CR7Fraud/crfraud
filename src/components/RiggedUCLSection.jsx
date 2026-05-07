@@ -1,4 +1,5 @@
 import React from "react";
+import { ExternalLink } from "lucide-react";
 import SectionWrapper from "./SectionWrapper";
 import { useI18n } from "../lib/i18n";
 
@@ -10,15 +11,15 @@ const content = {
       'Between 2016 and 2018, Real Madrid won three consecutive Champions Leagues — a historic feat. Ronaldo was the media protagonist of that sequence, accumulating goals, records and "Mr. Champions" narratives. The problem is what lay underneath: a series of serious refereeing decisions in decisive games that systematically benefited Real Madrid in moments when they could have been eliminated.',
     context_p2:
       'Those "survivals" became trophies. Those trophies became Ballon d\'Ors.',
-    case1_year: "Final 2014",
+    case1_year: "Final 2016",
     case1_title: "The Opening Goal That Was Illegal",
     case1_p1:
-      "In the 2014 Champions League final, Sergio Ramos opens the scoring early. Atlético de Madrid equalise. Real win in extra time 4-1.",
+      "In the 2016 Champions League final, Sergio Ramos opens the scoring early. Atlético de Madrid equalise. Real win in extra time 4-1.",
     case1_p2:
       "What few know: in 2020, the final referee, Mark Clattenburg, publicly admitted that Ramos's goal was offside. His words:",
     case1_q: '"The goal was slightly offside, and we realised at half-time."',
     case1_p3:
-      "The first major European title of the Real/Ronaldo era is literally built on an incident the referee himself acknowledges as irregular. Ronaldo scores from a penalty already in extra time, with the game decided — and enters the record books as European champion.",
+      "The first major European title of the Real/Ronaldo era is literally built on an incident the referee himself acknowledges as irregular. Ronaldo scores from a penalty already in extra time, with the game decided — and enters the record books as European champion. Source:",
     case2_year: "2017 vs Bayern",
     case2_title: "Unjust Red Card, Two Offside Goals",
     case2_p1:
@@ -60,7 +61,7 @@ const content = {
     conclusion_h: "What This Means for Ronaldo's Trophy Haul",
     conclusion_p1: "Putting the four cases together:",
     conclusion_li1:
-      "2014: opening goal of the final in offside, admitted by the referee.",
+      "2016: opening goal of the final in offside, admitted by the referee.",
     conclusion_li2:
       "2017: Bayern eliminated with an unjust red card and Ronaldo goals in offside.",
     conclusion_li3:
@@ -81,16 +82,16 @@ const content = {
       'Entre 2016 e 2018, o Real Madrid ganhou três Champions consecutivas - um feito histórico. Ronaldo foi o protagonista mediático dessa sequência, acumulando golos, recordes e narrativas de "Mr. Champions". O problema é o que ficou por baixo: uma série de decisões arbitrais graves, em jogos decisivos, que beneficiaram sistematicamente o Real Madrid em momentos em que podia ter sido eliminado.',
     context_p2:
       'Esses "sobrevivos" converteram-se em troféus. Os troféus converteram-se em Bolas de Ouro.',
-    case1_year: "Final de 2014",
+    case1_year: "Final de 2016",
     case1_title: "O Golo Inaugural que Era Ilegal",
     case1_p1:
-      "Na final da Champions de 2014, Sergio Ramos abre o marcador cedo. O Atlético de Madrid equilibra. O Real vence no prolongamento por 4-1.",
+      "Na final da Champions de 2016, Sergio Ramos abre o marcador cedo. O Atlético de Madrid equilibra. O Real vence no prolongamento por 4-1.",
     case1_p2:
       "O que poucos sabem: em 2020, o árbitro da final, Mark Clattenburg, admitiu publicamente que o golo de Ramos era em fora de jogo. As suas palavras:",
     case1_q:
       '"O golo foi ligeiramente em offside, e apercebemo-nos disso ao intervalo."',
     case1_p3:
-      "O primeiro grande título europeu desta era Real/Ronaldo está literalmente construído sobre um lance que o próprio árbitro reconhece como irregular.",
+      "O primeiro grande título europeu desta era Real/Ronaldo está literalmente construído sobre um lance que o próprio árbitro reconhece como irregular. Fonte:",
     case2_year: "2017 vs Bayern",
     case2_title: "Vermelho Injusto, Dois Golos em Fora de Jogo",
     case2_p1:
@@ -131,7 +132,7 @@ const content = {
     conclusion_h: "O Que Isto Significa Para o Palmarés de Ronaldo",
     conclusion_p1: "Juntando os quatro casos:",
     conclusion_li1:
-      "2014: golo inaugural da final em fora de jogo, admitido pelo árbitro.",
+      "2016: golo inaugural da final em fora de jogo, admitido pelo árbitro.",
     conclusion_li2:
       "2017: Bayern eliminado com vermelho injusto e golos em offside de Ronaldo.",
     conclusion_li3:
@@ -152,16 +153,16 @@ const content = {
       'Entre 2016 y 2018, el Real Madrid ganó tres Champions seguidas — una hazaña histórica. Ronaldo fue el protagonista mediático de esa secuencia, acumulando goles, récords y narrativas de "Mr. Champions". El problema es lo que había debajo: una serie de decisiones arbitrales graves en partidos decisivos que favorecieron sistemáticamente al Real Madrid en momentos en que podía haber sido eliminado.',
     context_p2:
       'Esas "supervivencias" se convirtieron en trofeos. Esos trofeos se convirtieron en Balones de Oro.',
-    case1_year: "Final 2014",
+    case1_year: "Final 2016",
     case1_title: "El gol inicial que era ilegal",
     case1_p1:
-      "En la final de la Champions de 2014, Sergio Ramos abre el marcador temprano. Atlético de Madrid empata. El Real gana en la prórroga por 4-1.",
+      "En la final de la Champions de 2016, Sergio Ramos abre el marcador temprano. Atlético de Madrid empata. El Real gana en la prórroga por 4-1.",
     case1_p2:
       "Lo que pocos saben: en 2020, el árbitro de la final, Mark Clattenburg, admitió públicamente que el gol de Ramos estaba en fuera de juego. Sus palabras:",
     case1_q:
       '"El gol estaba ligeramente en fuera de juego, y nos dimos cuenta al descanso."',
     case1_p3:
-      "El primer gran título europeo de la era Real/Ronaldo está construido literalmente sobre una jugada que el propio árbitro reconoce como irregular. Ronaldo marca de penalti ya en la prórroga, con el partido decidido — y entra en los libros como campeón de Europa.",
+      "El primer gran título europeo de la era Real/Ronaldo está construido literalmente sobre una jugada que el propio árbitro reconoce como irregular. Ronaldo marca de penalti ya en la prórroga, con el partido decidido — y entra en los libros como campeón de Europa. Fuente:",
     case2_year: "2017 vs Bayern",
     case2_title: "Roja injusta, dos goles en fuera de juego",
     case2_p1:
@@ -201,7 +202,7 @@ const content = {
     conclusion_h: "Lo que esto significa para el palmarés de Ronaldo",
     conclusion_p1: "Juntando los cuatro casos:",
     conclusion_li1:
-      "2014: gol inicial de la final en fuera de juego, admitido por el árbitro.",
+      "2016: gol inicial de la final en fuera de juego, admitido por el árbitro.",
     conclusion_li2:
       "2017: Bayern eliminado con una roja injusta y goles en offside de Ronaldo.",
     conclusion_li3:
@@ -222,16 +223,16 @@ const content = {
       'Entre 2016 et 2018, le Real Madrid a remporté trois Ligues des Champions consécutives — un exploit historique. Ronaldo a été le protagoniste médiatique de cette séquence, accumulant buts, records et récits de "Mr. Champions". Le problème, c’est ce qu’il y avait en dessous : une série de décisions arbitrales graves dans des matches décisifs qui ont systématiquement favorisé le Real Madrid à des moments où il aurait pu être éliminé.',
     context_p2:
       'Ces "survivals" sont devenus des trophées. Ces trophées sont devenus des Ballons d’Or.',
-    case1_year: "Finale 2014",
+    case1_year: "Finale 2016",
     case1_title: "Le but d’ouverture qui était illégal",
     case1_p1:
-      "Lors de la finale de la Ligue des Champions 2014, Sergio Ramos ouvre rapidement le score. L’Atlético de Madrid égalise. Le Real gagne en prolongation 4-1.",
+      "Lors de la finale de la Ligue des Champions 2016, Sergio Ramos ouvre rapidement le score. L’Atlético de Madrid égalise. Le Real gagne en prolongation 4-1.",
     case1_p2:
       "Ce que peu de gens savent : en 2020, l’arbitre de la finale, Mark Clattenburg, a admis publiquement que le but de Ramos était hors-jeu. Ses mots :",
     case1_q:
       '"Le but était légèrement hors-jeu, et nous l’avons réalisé à la mi-temps."',
     case1_p3:
-      "Le premier grand titre européen de l’ère Real/Ronaldo est littéralement bâti sur une action que l’arbitre lui-même reconnaît comme irrégulière. Ronaldo marque sur penalty en prolongation, alors que le match est déjà décidé — et entre dans les livres comme champion d’Europe.",
+      "Le premier grand titre européen de l’ère Real/Ronaldo est littéralement bâti sur une action que l’arbitre lui-même reconnaît comme irrégulière. Ronaldo marque sur penalty en prolongation, alors que le match est déjà décidé — et entre dans les livres comme champion d’Europe. Source :",
     case2_year: "2017 contre le Bayern",
     case2_title: "Carton rouge injuste, deux buts hors-jeu",
     case2_p1:
@@ -272,7 +273,7 @@ const content = {
     conclusion_h: "Ce que cela signifie pour le palmarès de Ronaldo",
     conclusion_p1: "En réunissant les quatre cas :",
     conclusion_li1:
-      "2014 : but d’ouverture de la finale hors-jeu, admis par l’arbitre.",
+      "2016 : but d’ouverture de la finale hors-jeu, admis par l’arbitre.",
     conclusion_li2:
       "2017 : Bayern éliminé avec un carton rouge injuste et des buts hors-jeu de Ronaldo.",
     conclusion_li3:
@@ -290,9 +291,73 @@ const content = {
 
 const fallback = (c, lang, key) => c[lang]?.[key] || c["en"][key];
 
+const sourceCardCopy = {
+  en: {
+    badge: "Source",
+    cta: "Open article",
+    title: "Clattenburg on 2016 Real Madrid-Atletico final",
+    description:
+      "AS USA video article with the referee's admission and the offside context.",
+  },
+  pt: {
+    badge: "Fonte",
+    cta: "Abrir artigo",
+    title: "Clattenburg sobre a final Real Madrid-Atlético de 2016",
+    description:
+      "Vídeo do AS USA com a admissão do árbitro e o contexto do fora de jogo.",
+  },
+  es: {
+    badge: "Fuente",
+    cta: "Abrir artículo",
+    title: "Clattenburg sobre la final Real Madrid-Atlético de 2016",
+    description:
+      "Vídeo de AS USA con la admisión del árbitro y el contexto del fuera de juego.",
+  },
+  fr: {
+    badge: "Source",
+    cta: "Ouvrir l'article",
+    title: "Clattenburg sur la finale Real Madrid-Atlético de 2016",
+    description:
+      "Vidéo AS USA avec l’aveu de l’arbitre et le contexte du hors-jeu.",
+  },
+};
+
+const case2SourceCardCopy = {
+  en: {
+    badge: "Source",
+    cta: "Open article",
+    title: "Real-Bayern referee made two errors with Arturo Vidal",
+    description:
+      "Marca English report on the sending-off and the two officiating mistakes in the quarter-final.",
+  },
+  pt: {
+    badge: "Fonte",
+    cta: "Abrir artigo",
+    title: "O árbitro do Real-Bayern cometeu dois erros com Arturo Vidal",
+    description:
+      "Artigo da Marca sobre a expulsão e os dois erros de arbitragem nos quartos de final.",
+  },
+  es: {
+    badge: "Fuente",
+    cta: "Abrir artículo",
+    title: "El árbitro del Real-Bayern cometió dos errores con Arturo Vidal",
+    description:
+      "Artículo de Marca sobre la expulsión y los dos errores arbitrales en la eliminatoria.",
+  },
+  fr: {
+    badge: "Source",
+    cta: "Ouvrir l'article",
+    title: "L’arbitre de Real-Bayern a commis deux erreurs avec Arturo Vidal",
+    description:
+      "Article de Marca sur l’expulsion et les deux erreurs d’arbitrage du quart de finale.",
+  },
+};
+
 export default function RiggedUCLSection() {
   const { lang, t } = useI18n();
   const c = (key) => fallback(content, lang, key);
+  const sourceCard = sourceCardCopy[lang] || sourceCardCopy.en;
+  const case2SourceCard = case2SourceCardCopy[lang] || case2SourceCardCopy.en;
 
   return (
     <SectionWrapper
@@ -317,6 +382,52 @@ export default function RiggedUCLSection() {
         <p>{c("case1_p2")}</p>
         <blockquote>{c("case1_q")}</blockquote>
         <p>{c("case1_p3")}</p>
+        <figure className="my-8 overflow-hidden rounded-2xl border border-white/10 bg-card/20 shadow-[0_24px_70px_rgba(0,0,0,0.32)]">
+          <img
+            src={`${import.meta.env.BASE_URL}assets/ramos-offside-analysis.png`}
+            alt="Visual analysis of Sergio Ramos' offside goal in the 2016 Champions League final"
+            className="block w-full"
+          />
+          <figcaption className="border-t border-white/10 bg-black/85 px-5 py-4 text-sm font-medium leading-snug text-zinc-200">
+            Clattenburg admits error: Madrid's first goal in 2016 UCL final was
+            offside
+          </figcaption>
+        </figure>
+        <a
+          href="https://en.as.com/en/2021/11/04/videos/1636052317_471606.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group block rounded-3xl border border-amber-400/25 bg-gradient-to-r from-amber-500/20 via-[#151920] to-[#0f1319] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.42)] ring-1 ring-white/5 transition-all duration-200 hover:-translate-y-0.5 hover:border-amber-400/55 hover:shadow-[0_24px_70px_rgba(245,158,11,0.18)]"
+        >
+          <div className="flex items-start gap-4 md:gap-5">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-amber-500/20 text-amber-400 shadow-inner shadow-black/20">
+              <ExternalLink className="h-5 w-5" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="rounded-full bg-amber-500/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.24em] text-amber-300 shadow-sm shadow-black/20">
+                  {sourceCard.badge}
+                </span>
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-300">
+                  AS USA
+                </span>
+                <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-zinc-300">
+                  Video
+                </span>
+              </div>
+              <h3 className="mt-3 text-lg font-semibold text-white">
+                {sourceCard.title}
+              </h3>
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-zinc-300">
+                {sourceCard.description}
+              </p>
+            </div>
+            <span className="mt-1 hidden shrink-0 items-center gap-2 text-sm font-semibold text-amber-300 sm:inline-flex">
+              {sourceCard.cta}
+              <ExternalLink className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </span>
+          </div>
+        </a>
       </div>
 
       {/* Case 2 */}
@@ -330,8 +441,55 @@ export default function RiggedUCLSection() {
           <li>{c("case2_li1")}</li>
           <li>{c("case2_li2")}</li>
         </ul>
+        <a
+          href="https://www.marca.com/en/football/real-madrid/2017/04/18/58f67cc922601da11e8b45c1.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group mb-6 block rounded-3xl border border-rose-400/25 bg-gradient-to-r from-rose-500/20 via-[#151920] to-[#0f1319] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.42)] ring-1 ring-white/5 transition-all duration-200 hover:-translate-y-0.5 hover:border-rose-400/55 hover:shadow-[0_24px_70px_rgba(244,63,94,0.18)]"
+        >
+          <div className="flex items-start gap-4 md:gap-5">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-rose-500/20 text-rose-300 shadow-inner shadow-black/20">
+              <ExternalLink className="h-5 w-5" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="rounded-full bg-rose-500/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.24em] text-rose-200 shadow-sm shadow-black/20">
+                  {case2SourceCard.badge}
+                </span>
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-300">
+                  MARCA
+                </span>
+                <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-zinc-300">
+                  Article
+                </span>
+              </div>
+              <h3 className="mt-3 text-lg font-semibold text-white">
+                {case2SourceCard.title}
+              </h3>
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-zinc-300">
+                {case2SourceCard.description}
+              </p>
+            </div>
+            <span className="mt-1 hidden shrink-0 items-center gap-2 text-sm font-semibold text-rose-300 sm:inline-flex">
+              {case2SourceCard.cta}
+              <ExternalLink className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </span>
+          </div>
+        </a>
         <blockquote>{c("case2_q")}</blockquote>
         <p>{c("case2_p2")}</p>
+        <figure className="my-8 overflow-hidden rounded-2xl border border-white/10 bg-card/20 shadow-[0_24px_70px_rgba(0,0,0,0.32)]">
+          <img
+            src={`${import.meta.env.BASE_URL}assets/2017-bayern-offside.png`}
+            alt="Visual analysis of Ronaldo's offside positions in the 2017 Bayern tie"
+            className="block w-full"
+          />
+          <figcaption className="border-t border-white/10 bg-black/85 px-5 py-4 text-sm font-medium leading-snug text-zinc-200">
+            Two frames, one story: Ronaldo's position at the moment of the pass
+            (top) and at the moment of the finish (bottom). Both goals were
+            allowed. Neither should have been.
+          </figcaption>
+        </figure>
       </div>
 
       {/* Case 3 */}
