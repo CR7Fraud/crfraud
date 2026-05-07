@@ -343,7 +343,7 @@ export default function WhyMessiIsBetterSection() {
 
       <div className="section-divider" />
 
-      <div className="bg-yellow-600 text-[hsl(var(--card))] mt-8 p-8 rounded-2xl border border-zinc-800">
+      <div className="bg-black text-[hsl(var(--card))] mt-8 p-8 rounded-2xl border border-zinc-800">
         <h3 className="text-[hsl(var(--secondary))] mb-6 font-playfair text-2xl font-bold">
           {c("conclusion_title")}
         </h3>

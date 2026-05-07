@@ -71,7 +71,7 @@ export default function BallonDorSection() {
 
         <div className="my-8 overflow-x-auto rounded-xl border border-border">
           <img
-            src={assetPath("2013-Bdor.png")}
+            src={assetPath("2013-Bdor.svg")}
             alt="Ballon d'Or 2013 Statistics"
             className="w-full"
           />
@@ -89,7 +89,7 @@ export default function BallonDorSection() {
 
         <div className="my-8 rounded-xl overflow-hidden border border-border">
           <img
-            src={assetPath("2014-Bdor.png")}
+            src={assetPath("2014-Bdor.svg")}
             alt="Ballon d'Or 2014 Stats"
             className="w-full"
           />
@@ -109,7 +109,7 @@ export default function BallonDorSection() {
 
         <div className="my-8 rounded-xl overflow-hidden border border-border">
           <img
-            src={assetPath("2016-Bdor.png")}
+            src={assetPath("2016-Bdor.svg")}
             alt="Ballon d'Or 2016 Statistics Messi vs Ronaldo"
             className="w-full"
           />
