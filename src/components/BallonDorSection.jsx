@@ -16,6 +16,7 @@ const db = globalThis.__B44_DB__ || {
 };
 
 import React from "react";
+import SectionAccordionList from "./SectionAccordionList";
 import SectionWrapper from "./SectionWrapper";
 import { useI18n } from "../lib/i18n";
 
@@ -38,22 +39,102 @@ const tableSummary = [
   },
 ];
 
-function YearBlock({ year, children }) {
-  return (
-    <div className="mb-16">
-      <div className="flex items-center gap-4 mb-6">
-        <span className="font-playfair text-5xl font-black text-amber-500">
-          {year}
-        </span>
-        <div className="flex-1 h-px bg-border" />
-      </div>
-      {children}
-    </div>
-  );
-}
-
 export default function BallonDorSection() {
   const { t } = useI18n();
+
+  const items = [
+    {
+      key: "2008",
+      eyebrow: t("label_ballon"),
+      title: "2008",
+      content: <p>{t("bdor_2008")}</p>,
+    },
+    {
+      key: "2013",
+      eyebrow: t("label_ballon"),
+      title: "2013",
+      content: (
+        <>
+          <p>{t("bdor_2013_p1")}</p>
+          <p>{t("bdor_2013_p2")}</p>
+
+          <div className="my-8 overflow-x-auto rounded-xl border border-border">
+            <img
+              src={assetPath("2013-Bdor.png")}
+              alt="Ballon d'Or 2013 Statistics"
+              className="w-full"
+            />
+          </div>
+
+          <p>{t("bdor_2013_p3")}</p>
+          <p>{t("bdor_2013_p4")}</p>
+
+          <blockquote>{t("bdor_2013_quote")}</blockquote>
+        </>
+      ),
+    },
+    {
+      key: "2014",
+      eyebrow: t("label_ballon"),
+      title: "2014",
+      content: (
+        <>
+          <p>{t("bdor_2014_p1")}</p>
+          <p>{t("bdor_2014_p2")}</p>
+
+          <div className="my-8 rounded-xl overflow-hidden border border-border">
+            <img
+              src={assetPath("2014-Bdor.png")}
+              alt="Ballon d'Or 2014 Stats"
+              className="w-full"
+            />
+          </div>
+
+          <p>{t("bdor_2014_p3")}</p>
+          <p>{t("bdor_2014_p4")}</p>
+          <p>{t("bdor_2014_p5")}</p>
+          <p>{t("bdor_2014_p6")}</p>
+          <p>{t("bdor_2014_p7")}</p>
+        </>
+      ),
+    },
+    {
+      key: "2016",
+      eyebrow: t("label_ballon"),
+      title: "2016",
+      content: (
+        <>
+          <p>{t("bdor_2016_p1")}</p>
+          <p>{t("bdor_2016_p2")}</p>
+          <p>{t("bdor_2016_p3")}</p>
+
+          <div className="my-8 rounded-xl overflow-hidden border border-border">
+            <img
+              src={assetPath("2016-Bdor.png")}
+              alt="Ballon d'Or 2016 Statistics Messi vs Ronaldo"
+              className="w-full"
+            />
+          </div>
+
+          <p>{t("bdor_2016_p4")}</p>
+          <p>{t("bdor_2016_p5")}</p>
+        </>
+      ),
+    },
+    {
+      key: "2017",
+      eyebrow: t("label_ballon"),
+      title: "2017",
+      content: (
+        <>
+          <p>{t("bdor_2017_p1")}</p>
+          <p>{t("bdor_2017_p2")}</p>
+          <p>{t("bdor_2017_p3")}</p>
+          <p>{t("bdor_2017_p4")}</p>
+        </>
+      ),
+    },
+  ];
 
   return (
     <SectionWrapper
@@ -61,70 +142,7 @@ export default function BallonDorSection() {
       label={t("label_ballon")}
       title={t("title_ballon")}
     >
-      <YearBlock year="2008">
-        <p>{t("bdor_2008")}</p>
-      </YearBlock>
-
-      <YearBlock year="2013">
-        <p>{t("bdor_2013_p1")}</p>
-        <p>{t("bdor_2013_p2")}</p>
-
-        <div className="my-8 overflow-x-auto rounded-xl border border-border">
-          <img
-            src={assetPath("2013-Bdor.png")}
-            alt="Ballon d'Or 2013 Statistics"
-            className="w-full"
-          />
-        </div>
-
-        <p>{t("bdor_2013_p3")}</p>
-        <p>{t("bdor_2013_p4")}</p>
-
-        <blockquote>{t("bdor_2013_quote")}</blockquote>
-      </YearBlock>
-
-      <YearBlock year="2014">
-        <p>{t("bdor_2014_p1")}</p>
-        <p>{t("bdor_2014_p2")}</p>
-
-        <div className="my-8 rounded-xl overflow-hidden border border-border">
-          <img
-            src={assetPath("2014-Bdor.png")}
-            alt="Ballon d'Or 2014 Stats"
-            className="w-full"
-          />
-        </div>
-
-        <p>{t("bdor_2014_p3")}</p>
-        <p>{t("bdor_2014_p4")}</p>
-        <p>{t("bdor_2014_p5")}</p>
-        <p>{t("bdor_2014_p6")}</p>
-        <p>{t("bdor_2014_p7")}</p>
-      </YearBlock>
-
-      <YearBlock year="2016">
-        <p>{t("bdor_2016_p1")}</p>
-        <p>{t("bdor_2016_p2")}</p>
-        <p>{t("bdor_2016_p3")}</p>
-
-        <div className="my-8 rounded-xl overflow-hidden border border-border">
-          <img
-            src={assetPath("2016-Bdor.png")}
-            alt="Ballon d'Or 2016 Statistics Messi vs Ronaldo"
-            className="w-full"
-          />
-        </div>
-
-        <p>{t("bdor_2016_p4")}</p>
-        <p>{t("bdor_2016_p5")}</p>
-      </YearBlock>
-
-      <YearBlock year="2017">
-        <p>{t("bdor_2017_p1")}</p>
-        <p>{t("bdor_2017_p2")}</p>
-        <p>{t("bdor_2017_p3")}</p>
-        <p>{t("bdor_2017_p4")}</p>
-      </YearBlock>
+      <SectionAccordionList items={items} />
 
       <div className="section-divider" />
 

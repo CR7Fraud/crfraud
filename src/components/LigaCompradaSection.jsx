@@ -1,4 +1,5 @@
 import React from "react";
+import SectionAccordionList from "./SectionAccordionList";
 import SectionWrapper from "./SectionWrapper";
 import { useI18n } from "../lib/i18n";
 
@@ -211,6 +212,106 @@ export default function LigaCompradaSection() {
   const { lang, t } = useI18n();
   const c = (key) => fallback(content, lang, key);
 
+  const items = [
+    {
+      key: "h1",
+      title: c("h1"),
+      content: (
+        <>
+          <p>{c("p1")}</p>
+          <p>{c("p2")}</p>
+        </>
+      ),
+    },
+    {
+      key: "h2",
+      title: c("h2"),
+      content: (
+        <>
+          <p>{c("p3")}</p>
+          <h3>{c("h2a")}</h3>
+          <p>{c("p4")}</p>
+          <ul>
+            <li>{c("li1")}</li>
+            <li>{c("li2")}</li>
+            <li>{c("li3")}</li>
+          </ul>
+          <p>{c("p5")}</p>
+          <h3>{c("h2b")}</h3>
+          <p>{c("p6")}</p>
+          <ul>
+            <li>{c("li4")}</li>
+            <li>{c("li5")}</li>
+            <li>{c("li6")}</li>
+          </ul>
+          <p>{c("p7")}</p>
+        </>
+      ),
+    },
+    {
+      key: "h3",
+      title: c("h3"),
+      content: (
+        <>
+          <h3>{c("h3a")}</h3>
+          <p>{c("p8")}</p>
+          <ul>
+            <li>{c("li7")}</li>
+            <li>{c("li8")}</li>
+            <li>{c("li9")}</li>
+          </ul>
+          <p>{c("p9")}</p>
+          <h3>{c("h3b")}</h3>
+          <p>{c("p10")}</p>
+          <ul>
+            <li>{c("li10")}</li>
+            <li>{c("li11")}</li>
+            <li>{c("li12")}</li>
+          </ul>
+          <p>{c("p11")}</p>
+        </>
+      ),
+    },
+    {
+      key: "h4",
+      title: c("h4"),
+      content: (
+        <>
+          <p>{c("p12")}</p>
+          <ul>
+            <li>{c("li13")}</li>
+            <li>{c("li14")}</li>
+          </ul>
+          <p>{c("p13")}</p>
+          <ul>
+            <li>{c("li15")}</li>
+            <li>{c("li16")}</li>
+          </ul>
+          <p>{c("p14")}</p>
+          <ul>
+            <li>{c("li17")}</li>
+            <li>{c("li18")}</li>
+          </ul>
+          <p>{c("p15")}</p>
+          <p>{c("p16")}</p>
+        </>
+      ),
+    },
+    {
+      key: "h5",
+      title: c("h5"),
+      content: (
+        <>
+          <ul>
+            <li>{c("li19")}</li>
+            <li>{c("li20")}</li>
+          </ul>
+          <p>{c("p17")}</p>
+        </>
+      ),
+    },
+  ];
+
   return (
     <SectionWrapper
       id="liga-comprada"
@@ -219,76 +320,7 @@ export default function LigaCompradaSection() {
       dark
     >
       <p>{c("intro")}</p>
-
-      <h2>{c("h1")}</h2>
-      <p>{c("p1")}</p>
-      <p>{c("p2")}</p>
-
-      <div className="section-divider" />
-      <h2>{c("h2")}</h2>
-      <p>{c("p3")}</p>
-      <h3>{c("h2a")}</h3>
-      <p>{c("p4")}</p>
-      <ul>
-        <li>{c("li1")}</li>
-        <li>{c("li2")}</li>
-        <li>{c("li3")}</li>
-      </ul>
-      <p>{c("p5")}</p>
-      <h3>{c("h2b")}</h3>
-      <p>{c("p6")}</p>
-      <ul>
-        <li>{c("li4")}</li>
-        <li>{c("li5")}</li>
-        <li>{c("li6")}</li>
-      </ul>
-      <p>{c("p7")}</p>
-
-      <div className="section-divider" />
-      <h2>{c("h3")}</h2>
-      <h3>{c("h3a")}</h3>
-      <p>{c("p8")}</p>
-      <ul>
-        <li>{c("li7")}</li>
-        <li>{c("li8")}</li>
-        <li>{c("li9")}</li>
-      </ul>
-      <p>{c("p9")}</p>
-      <h3>{c("h3b")}</h3>
-      <p>{c("p10")}</p>
-      <ul>
-        <li>{c("li10")}</li>
-        <li>{c("li11")}</li>
-        <li>{c("li12")}</li>
-      </ul>
-      <p>{c("p11")}</p>
-
-      <div className="section-divider" />
-      <h2>{c("h4")}</h2>
-      <ul>
-        <li>{c("li13")}</li>
-        <li>{c("li14")}</li>
-      </ul>
-      <p>{c("p13")}</p>
-      <ul>
-        <li>{c("li15")}</li>
-        <li>{c("li16")}</li>
-      </ul>
-      <p>{c("p14")}</p>
-      <ul>
-        <li>{c("li17")}</li>
-        <li>{c("li18")}</li>
-      </ul>
-      <p>{c("p15")}</p>
-      <p>{c("p16")}</p>
-
-      <div className="section-divider" />
-      <h2>{c("h5")}</h2>
-      <ul>
-        <li>{c("li19")}</li>
-        <li>{c("li20")}</li>
-      </ul>
-      <p>{c("p17")}</p>
+      <SectionAccordionList items={items} dark />
     </SectionWrapper>
   );
 }

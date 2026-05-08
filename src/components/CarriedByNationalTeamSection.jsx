@@ -1,4 +1,5 @@
 import React from "react";
+import SectionAccordionList from "./SectionAccordionList";
 import SectionWrapper from "./SectionWrapper";
 import { useI18n } from "../lib/i18n";
 
@@ -352,6 +353,31 @@ export default function CarriedByNationalTeamSection() {
   const c = (key) => fallback(content, lang, key);
   const tournaments = tournamentsByLang[lang] || tournamentsEn;
 
+  const items = tournaments.map((item) => ({
+    key: item.year,
+    eyebrow: t("label_national"),
+    title: item.year,
+    subtitle: item.title,
+    content: (
+      <>
+        <p>{item.content}</p>
+        {item.points.length > 0 && (
+          <ul>
+            {item.points.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
+        )}
+        {item.quote && <blockquote>{item.quote}</blockquote>}
+        {item.conclusion && (
+          <p className="text-muted-foreground italic text-sm border-l-2 border-amber-500 pl-4 mt-4">
+            {item.conclusion}
+          </p>
+        )}
+      </>
+    ),
+  }));
+
   return (
     <SectionWrapper
       id="national-team"
@@ -359,39 +385,8 @@ export default function CarriedByNationalTeamSection() {
       title={c("title")}
     >
       <p>{c("intro")}</p>
-
-      <div className="space-y-10 mt-8">
-        {tournaments.map((item, i) => (
-          <div
-            key={i}
-            className="border border-border rounded-xl overflow-hidden"
-          >
-            <div className="bg-muted/40 px-6 py-4">
-              <span className="text-amber-500 font-bold text-xl font-playfair">
-                {item.year}
-              </span>
-              <p className="text-foreground font-semibold mt-0.5">
-                {item.title}
-              </p>
-            </div>
-            <div className="px-6 py-5 prose-content">
-              <p>{item.content}</p>
-              {item.points.length > 0 && (
-                <ul>
-                  {item.points.map((p, pi) => (
-                    <li key={pi}>{p}</li>
-                  ))}
-                </ul>
-              )}
-              {item.quote && <blockquote>{item.quote}</blockquote>}
-              {item.conclusion && (
-                <p className="text-muted-foreground italic text-sm border-l-2 border-amber-500 pl-4 mt-4">
-                  {item.conclusion}
-                </p>
-              )}
-            </div>
-          </div>
-        ))}
+      <div className="mt-8">
+        <SectionAccordionList items={items} />
       </div>
 
       <div className="section-divider" />

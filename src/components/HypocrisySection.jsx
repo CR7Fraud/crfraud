@@ -1,4 +1,5 @@
 import React from "react";
+import SectionAccordionList from "./SectionAccordionList";
 import SectionWrapper from "./SectionWrapper";
 import { useI18n } from "../lib/i18n";
 
@@ -103,42 +104,71 @@ export default function HypocrisySection() {
   const { lang, t } = useI18n();
   const c = (key) => fallback(content, lang, key);
 
+  const items = [
+    {
+      key: "h1",
+      title: c("h1"),
+      content: (
+        <>
+          <p>{c("p1")}</p>
+          <p>{c("p2")}</p>
+          <p>{c("p3")}</p>
+        </>
+      ),
+    },
+    {
+      key: "h2",
+      title: c("h2"),
+      content: (
+        <>
+          <p>{c("p4")}</p>
+          <p>{c("p5")}</p>
+          <p>{c("p6")}</p>
+        </>
+      ),
+    },
+    {
+      key: "h3",
+      title: c("h3"),
+      content: (
+        <>
+          <p>{c("p7")}</p>
+          <p>{c("p8")}</p>
+          <p>{c("p9")}</p>
+        </>
+      ),
+    },
+    {
+      key: "h4",
+      title: c("h4"),
+      content: (
+        <>
+          <p>{c("p10")}</p>
+          <p>{c("p11")}</p>
+        </>
+      ),
+    },
+    {
+      key: "h5",
+      title: c("h5"),
+      content: (
+        <ul>
+          <li>{c("li1")}</li>
+          <li>{c("li2")}</li>
+          <li>{c("li3")}</li>
+          <li>{c("li4")}</li>
+        </ul>
+      ),
+    },
+  ];
+
   return (
     <SectionWrapper
       id="hypocrisy"
       label={t("label_hypocrisy")}
       title={c("title")}
     >
-      <h2>{c("h1")}</h2>
-      <p>{c("p1")}</p>
-      <p>{c("p2")}</p>
-      <p>{c("p3")}</p>
-
-      <div className="section-divider" />
-      <h2>{c("h2")}</h2>
-      <p>{c("p4")}</p>
-      <p>{c("p5")}</p>
-      <p>{c("p6")}</p>
-
-      <div className="section-divider" />
-      <h2>{c("h3")}</h2>
-      <p>{c("p7")}</p>
-      <p>{c("p8")}</p>
-      <p>{c("p9")}</p>
-
-      <div className="section-divider" />
-      <h2>{c("h4")}</h2>
-      <p>{c("p10")}</p>
-      <p>{c("p11")}</p>
-
-      <div className="section-divider" />
-      <h2>{c("h5")}</h2>
-      <ul>
-        <li>{c("li1")}</li>
-        <li>{c("li2")}</li>
-        <li>{c("li3")}</li>
-        <li>{c("li4")}</li>
-      </ul>
+      <SectionAccordionList items={items} />
     </SectionWrapper>
   );
 }
