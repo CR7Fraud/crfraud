@@ -227,17 +227,11 @@ const content = {
 
 const fallback = (c, lang, key) => c[lang]?.[key] || c["en"][key];
 
-export default function CryingOnInternetSection() {
-  const { lang, t } = useI18n();
+export function CryingOnInternetBody({ lang }) {
   const c = (key) => fallback(content, lang, key);
 
   return (
-    <SectionWrapper
-      id="crying"
-      label={t("label_crying")}
-      title={c("title")}
-      dark
-    >
+    <>
       <h2>{c("h1")}</h2>
       <h3>{c("h1a")}</h3>
       <p>{c("p1")}</p>
@@ -304,6 +298,21 @@ export default function CryingOnInternetSection() {
         <li>{c("li11")}</li>
       </ul>
       <p>{c("p23")}</p>
+    </>
+  );
+}
+
+export default function CryingOnInternetSection() {
+  const { lang, t } = useI18n();
+
+  return (
+    <SectionWrapper
+      id="crying"
+      label={t("label_crying")}
+      title={t("title_crying")}
+      dark
+    >
+      <CryingOnInternetBody lang={lang} />
     </SectionWrapper>
   );
 }

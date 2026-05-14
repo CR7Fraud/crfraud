@@ -14,12 +14,18 @@ export default function Footer() {
         <p className="text-white/35 text-sm max-w-md mx-auto leading-relaxed">
           {t("footer_desc")}
         </p>
-        <div className="mt-8 flex justify-center gap-6">
+        <div className="mt-8 flex flex-wrap justify-center gap-6">
           <Link
             to="/about"
             className="text-white/40 hover:text-white/70 text-sm transition-colors"
           >
             {t("footer_about") || "About"}
+          </Link>
+          <Link
+            to="/donate"
+            className="text-white/40 hover:text-white/70 text-sm transition-colors"
+          >
+            {t("footer_donate") || "Donate"}
           </Link>
           <Link
             to="/contact"

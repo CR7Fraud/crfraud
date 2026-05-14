@@ -159,17 +159,11 @@ const content = {
 
 const fallback = (c, lang, key) => c[lang]?.[key] || c["en"][key];
 
-export default function SelfishnessSection() {
-  const { lang, t } = useI18n();
+export function SelfishnessBody({ lang }) {
   const c = (key) => fallback(content, lang, key);
 
   return (
-    <SectionWrapper
-      id="selfishness"
-      label={t("label_selfish")}
-      title={c("title")}
-      dark
-    >
+    <>
       <h2>{c("h1")}</h2>
       <p>{c("p1")}</p>
 
@@ -226,6 +220,21 @@ export default function SelfishnessSection() {
         <li>{c("li6")}</li>
       </ul>
       <p>{c("p21")}</p>
+    </>
+  );
+}
+
+export default function SelfishnessSection() {
+  const { lang, t } = useI18n();
+
+  return (
+    <SectionWrapper
+      id="selfishness"
+      label={t("label_selfish")}
+      title={t("title_selfish")}
+      dark
+    >
+      <SelfishnessBody lang={lang} />
     </SectionWrapper>
   );
 }

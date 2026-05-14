@@ -100,8 +100,7 @@ const content = {
 
 const fallback = (c, lang, key) => c[lang]?.[key] || c["en"][key];
 
-export default function HypocrisySection() {
-  const { lang, t } = useI18n();
+export function HypocrisyBody({ lang, dark = false }) {
   const c = (key) => fallback(content, lang, key);
 
   const items = [
@@ -162,13 +161,19 @@ export default function HypocrisySection() {
     },
   ];
 
+  return <SectionAccordionList items={items} dark={dark} />;
+}
+
+export default function HypocrisySection() {
+  const { lang, t } = useI18n();
+
   return (
     <SectionWrapper
       id="hypocrisy"
       label={t("label_hypocrisy")}
-      title={c("title")}
+      title={t("title_hypocrisy")}
     >
-      <SectionAccordionList items={items} />
+      <HypocrisyBody lang={lang} />
     </SectionWrapper>
   );
 }

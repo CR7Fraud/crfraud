@@ -6,6 +6,7 @@ export default defineConfig({
   base: "/crfraud/",
   build: {
     outDir: "dist",
+    manifest: true,
   },
   plugins: [react()],
   resolve: {

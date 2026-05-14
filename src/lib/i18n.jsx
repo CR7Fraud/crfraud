@@ -14,6 +14,7 @@ export const translations = {
     nav_ucl: "UCL Manipulada",
     nav_managers: "Treinadores",
     nav_selfish: "Egoísmo",
+    nav_character: "Caráter & Comportamento",
     nav_national: "Seleção",
     nav_crying: "Choros",
     nav_hypocrisy: "Hipocrisia",
@@ -24,12 +25,13 @@ export const translations = {
     hero_subtitle:
       "Uma análise baseada em dados, factos e declarações públicas sobre a carreira de Cristiano Ronaldo — Bolas de Ouro, Champions League, treinadores despedidos, egoísmo, hipocrisia e muito mais.",
     hero_cta: "Começar a ler",
-    hero_meta: "9 secções · 44 páginas de análise",
+    hero_meta: "7 secções · 44 páginas de análise",
     // Section labels
     label_ballon: "Ballon D'Or",
     label_ucl: "Champions League",
     label_managers: "Sacked Managers",
     label_selfish: "Selfishness",
+    label_character: "Comportamento",
     label_national: "Carried by National Team",
     label_crying: "Crying on Internet",
     label_hypocrisy: "Hypocrisy",
@@ -40,15 +42,26 @@ export const translations = {
     title_ucl: "A Champions League que Não Foi Limpa",
     title_managers: "Treinadores Despedidos",
     title_selfish: "Egoísmo em Campo e Fora Dele",
+    title_character: "Caráter & Comportamento",
     title_national: "Portugal carregou Ronaldo",
     title_crying: "Crying on Internet",
     title_hypocrisy: "Hipocrisia",
     title_liga: "Liga Comprada & Dubai d'Or",
     title_messi: "Porque é que Messi é Melhor",
+    character_selfish_title: "O Espetáculo de Um Só Homem",
+    character_selfish_subtitle:
+      "Como livres, penáltis e linguagem corporal voltam sempre ao centro dele.",
+    character_crying_title: "Chora, Publica, Repete",
+    character_crying_subtitle:
+      "As lágrimas, os pedidos de desculpa e o drama digital que nunca acaba.",
+    character_hypocrisy_title: "Hipocrisia",
+    character_hypocrisy_subtitle:
+      "Recordes, dignidade e dinheiro saudita: o que diz e o que faz.",
     // Footer
     footer_desc:
       "Uma análise crítica baseada em dados públicos, declarações documentadas e registos desportivos. Todos os textos são transcritos diretamente da fonte original.",
     footer_about: "Sobre",
+    footer_donate: "Doar",
     footer_contact: "Contacto",
     footer_copy:
       "Análise crítica sobre a carreira de Cristiano Ronaldo · Baseada em factos documentados",
@@ -113,6 +126,7 @@ export const translations = {
     nav_ucl: "Rigged UCL",
     nav_managers: "Managers",
     nav_selfish: "Selfishness",
+    nav_character: "Character & Behaviour",
     nav_national: "National Team",
     nav_crying: "Crying",
     nav_hypocrisy: "Hypocrisy",
@@ -122,11 +136,12 @@ export const translations = {
     hero_subtitle:
       "A data-driven analysis based on facts and public statements about Cristiano Ronaldo's career — Ballon d'Or controversies, Champions League, sacked managers, selfishness, hypocrisy and much more.",
     hero_cta: "Start reading",
-    hero_meta: "9 sections · 44 pages of analysis",
+    hero_meta: "7 sections · 44 pages of analysis",
     label_ballon: "Ballon D'Or",
     label_ucl: "Champions League",
     label_managers: "Sacked Managers",
     label_selfish: "Selfishness",
+    label_character: "Behaviour",
     label_national: "Carried by National Team",
     label_crying: "Crying on Internet",
     label_hypocrisy: "Hypocrisy",
@@ -136,14 +151,25 @@ export const translations = {
     title_ucl: "The Champions League That Wasn't Clean",
     title_managers: "Sacked Managers",
     title_selfish: "Selfishness On and Off the Pitch",
+    title_character: "Character & Behaviour",
     title_national: "Portugal Carried Ronaldo",
     title_crying: "Crying on the Internet",
     title_hypocrisy: "Hypocrisy",
     title_liga: "Bought League & Dubai d'Or",
     title_messi: "Why Messi is Better",
+    character_selfish_title: "The One-Man Show",
+    character_selfish_subtitle:
+      "How set pieces, body language and teammates' choices keep circling back to him.",
+    character_crying_title: "Cry, Post, Repeat",
+    character_crying_subtitle:
+      "The tears, the apologies and the digital drama that keep becoming content.",
+    character_hypocrisy_title: "Hypocrisy",
+    character_hypocrisy_subtitle:
+      "Records, dignity and Saudi money: what he says versus what he does.",
     footer_desc:
       "A critical analysis based on public data, documented statements and sporting records. All texts are transcribed directly from the original source.",
     footer_about: "About",
+    footer_donate: "Donate",
     footer_contact: "Contact",
     footer_copy:
       "Critical analysis of Cristiano Ronaldo's career · Based on documented facts",
@@ -209,6 +235,7 @@ export const translations = {
     nav_ucl: "UCL Amañada",
     nav_managers: "Entrenadores",
     nav_selfish: "Egoísmo",
+    nav_character: "Carácter & Comportamiento",
     nav_national: "Selección",
     nav_crying: "Llorando",
     nav_hypocrisy: "Hipocresía",
@@ -218,11 +245,12 @@ export const translations = {
     hero_subtitle:
       "Un análisis basado en datos, hechos y declaraciones públicas sobre la carrera de Cristiano Ronaldo — Balones de Oro, Champions League, entrenadores despedidos, egoísmo, hipocresía y mucho más.",
     hero_cta: "Empezar a leer",
-    hero_meta: "9 secciones · 44 páginas de análisis",
+    hero_meta: "7 secciones · 44 páginas de análisis",
     label_ballon: "Ballon D'Or",
     label_ucl: "Champions League",
     label_managers: "Entrenadores Despedidos",
     label_selfish: "Egoísmo",
+    label_character: "Comportamiento",
     label_national: "Llevado por la Selección",
     label_crying: "Llorando en Internet",
     label_hypocrisy: "Hipocresía",
@@ -232,14 +260,25 @@ export const translations = {
     title_ucl: "La Champions League que No Fue Limpia",
     title_managers: "Entrenadores Despedidos",
     title_selfish: "Egoísmo Dentro y Fuera del Campo",
+    title_character: "Carácter & Comportamiento",
     title_national: "Portugal Cargó a Ronaldo",
     title_crying: "Llorando en Internet",
     title_hypocrisy: "Hipocresía",
     title_liga: "Liga Comprada & Dubai d'Or",
     title_messi: "Por qué Messi es Mejor",
+    character_selfish_title: "El Show de Uno Solo",
+    character_selfish_subtitle:
+      "Cómo los libres, los penaltis y el lenguaje corporal vuelven siempre a él.",
+    character_crying_title: "Llora, Publica, Repite",
+    character_crying_subtitle:
+      "Las lágrimas, las disculpas y el drama digital que no dejan de convertirse en contenido.",
+    character_hypocrisy_title: "Hipocresía",
+    character_hypocrisy_subtitle:
+      "Récords, dignidad y dinero saudí: lo que dice frente a lo que hace.",
     footer_desc:
       "Un análisis crítico basado en datos públicos, declaraciones documentadas y registros deportivos. Todos los textos están transcritos directamente de la fuente original.",
     footer_about: "Sobre",
+    footer_donate: "Donar",
     footer_contact: "Contacto",
     footer_copy:
       "Análisis crítico de la carrera de Cristiano Ronaldo · Basado en hechos documentados",
@@ -304,6 +343,7 @@ export const translations = {
     nav_ucl: "UCL Truquée",
     nav_managers: "Entraîneurs",
     nav_selfish: "Égoïsme",
+    nav_character: "Caractère & Comportement",
     nav_national: "Équipe Nationale",
     nav_crying: "Pleurs",
     nav_hypocrisy: "Hypocrisie",
@@ -313,11 +353,12 @@ export const translations = {
     hero_subtitle:
       "Une analyse basée sur des données, des faits et des déclarations publiques sur la carrière de Cristiano Ronaldo — Ballons d'Or, Ligue des Champions, entraîneurs licenciés, égoïsme, hypocrisie et bien plus encore.",
     hero_cta: "Commencer à lire",
-    hero_meta: "9 sections · 44 pages d'analyse",
+    hero_meta: "7 sections · 44 pages d'analyse",
     label_ballon: "Ballon D'Or",
     label_ucl: "Ligue des Champions",
     label_managers: "Entraîneurs Licenciés",
     label_selfish: "Égoïsme",
+    label_character: "Comportement",
     label_national: "Porté par l'Équipe Nationale",
     label_crying: "Pleurs sur Internet",
     label_hypocrisy: "Hypocrisie",
@@ -327,14 +368,25 @@ export const translations = {
     title_ucl: "La Ligue des Champions qui N'était Pas Propre",
     title_managers: "Entraîneurs Licenciés",
     title_selfish: "Égoïsme Sur et Hors du Terrain",
+    title_character: "Caractère & Comportement",
     title_national: "Le Portugal a Porté Ronaldo",
     title_crying: "Pleurs sur Internet",
     title_hypocrisy: "Hypocrisie",
     title_liga: "Ligue Achetée & Dubai d'Or",
     title_messi: "Pourquoi Messi est Meilleur",
+    character_selfish_title: "Le Spectacle d'un Seul Homme",
+    character_selfish_subtitle:
+      "Comment les coups de pied arrêtés, le langage corporel et les choix des coéquipiers reviennent toujours à lui.",
+    character_crying_title: "Pleure, Publie, Recommence",
+    character_crying_subtitle:
+      "Les larmes, les excuses et le drame numérique qui deviennent sans cesse du contenu.",
+    character_hypocrisy_title: "Hypocrisie",
+    character_hypocrisy_subtitle:
+      "Records, dignité et argent saoudien : ce qu'il dit face à ce qu'il fait.",
     footer_desc:
       "Une analyse critique basée sur des données publiques, des déclarations documentées et des records sportifs. Tous les textes sont transcrits directement de la source originale.",
     footer_about: "À propos",
+    footer_donate: "Faire un don",
     footer_contact: "Contact",
     footer_copy:
       "Analyse critique de la carrière de Cristiano Ronaldo · Basée sur des faits documentés",

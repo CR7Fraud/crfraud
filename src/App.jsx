@@ -12,15 +12,15 @@ import LoadingScreen from "@/components/LoadingScreen";
 import Home from "./pages/Home";
 import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
+import Donate from "./pages/Donate.jsx";
 import BallonDor from "./pages/BallonDor";
 import RiggedUCL from "./pages/RiggedUCL";
 import Managers from "./pages/Managers";
-import Selfishness from "./pages/Selfishness";
+import CharacterBehaviour from "./pages/CharacterBehaviour";
 import NationalTeam from "./pages/NationalTeam";
-import Crying from "./pages/Crying";
-import Hypocrisy from "./pages/Hypocrisy";
 import LigaComprada from "./pages/LigaComprada";
 import WhyMessi from "./pages/WhyMessi";
+import { Navigate } from "react-router-dom";
 
 const normalizeEmDashText = (node) => {
   if (!node) {
@@ -117,14 +117,25 @@ const AuthenticatedApp = () => {
       <Route path="/ballon-dor" element={<BallonDor />} />
       <Route path="/rigged-ucl" element={<RiggedUCL />} />
       <Route path="/managers" element={<Managers />} />
-      <Route path="/selfishness" element={<Selfishness />} />
+      <Route path="/character-behaviour" element={<CharacterBehaviour />} />
       <Route path="/national-team" element={<NationalTeam />} />
-      <Route path="/crying" element={<Crying />} />
-      <Route path="/hypocrisy" element={<Hypocrisy />} />
+      <Route
+        path="/selfishness"
+        element={<Navigate replace to="/character-behaviour" />}
+      />
+      <Route
+        path="/crying"
+        element={<Navigate replace to="/character-behaviour" />}
+      />
+      <Route
+        path="/hypocrisy"
+        element={<Navigate replace to="/character-behaviour" />}
+      />
       <Route path="/liga-comprada" element={<LigaComprada />} />
       <Route path="/why-messi" element={<WhyMessi />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/donate" element={<Donate />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

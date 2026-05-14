@@ -4,8 +4,8 @@
     window.location.hostname,
   );
   const manifestCandidates = isLocalHost
-    ? ["./dist/manifest.json", "./manifest.json"]
-    : ["./manifest.json", "./dist/manifest.json"];
+    ? ["./dist/.vite/manifest.json", "./dist/manifest.json", "./manifest.json"]
+    : ["./manifest.json", "./dist/manifest.json", "./dist/.vite/manifest.json"];
 
   async function fetchJson(url) {
     try {
@@ -17,9 +17,7 @@
     }
   }
 
-  const isViteDevServer =
-    ["5173", "4173"].includes(window.location.port) &&
-    ["localhost", "127.0.0.1"].includes(window.location.hostname);
+  const isViteDevServer = Boolean(import.meta?.env?.DEV);
 
   if (isViteDevServer) {
     await import("./src/main.jsx");
@@ -34,6 +32,7 @@
     if (!entry?.file) continue;
 
     const manifestBase = new URL(manifestUrl, document.baseURI);
+    const assetBase = new URL("../", manifestBase);
 
     if (manifestUrl === "./dist/manifest.json") {
       let base = document.querySelector("base");
@@ -47,13 +46,13 @@
     for (const cssFile of entry.css || []) {
       const link = document.createElement("link");
       link.rel = "stylesheet";
-      link.href = new URL(cssFile, manifestBase).href;
+      link.href = new URL(cssFile, assetBase).href;
       document.head.appendChild(link);
     }
 
     const script = document.createElement("script");
     script.type = "module";
-    script.src = new URL(entry.file, manifestBase).href;
+    script.src = new URL(entry.file, assetBase).href;
     document.body.appendChild(script);
     return;
   }

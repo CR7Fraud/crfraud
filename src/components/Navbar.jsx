@@ -13,10 +13,8 @@ export default function Navbar() {
     { path: "/ballon-dor", key: "nav_ballon" },
     { path: "/rigged-ucl", key: "nav_ucl" },
     { path: "/managers", key: "nav_managers" },
-    { path: "/selfishness", key: "nav_selfish" },
+    { path: "/character-behaviour", key: "nav_character" },
     { path: "/national-team", key: "nav_national" },
-    { path: "/crying", key: "nav_crying" },
-    { path: "/hypocrisy", key: "nav_hypocrisy" },
     { path: "/liga-comprada", key: "nav_liga" },
     { path: "/why-messi", key: "nav_messi" },
   ];
@@ -28,15 +26,18 @@ export default function Navbar() {
   }, []);
 
   const isHome = location.pathname === "/";
+  const isLightHeader = scrolled || !isHome;
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || !isHome ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm" : "bg-transparent"}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isLightHeader ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm" : "bg-transparent"}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14 gap-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 shrink-0">
-          <span className="inline-flex items-center rounded-lg border border-white/10 bg-black/25 px-2.5 py-1 text-[11px] font-black tracking-[0.24em] text-white shadow-md">
+          <span
+            className={`inline-flex items-center rounded-lg px-2.5 py-1 text-[11px] font-black tracking-[0.24em] shadow-md transition-colors ${isLightHeader ? "border border-zinc-800/70 bg-zinc-950 text-white" : "border border-white/10 bg-black/25 text-white"}`}
+          >
             CR<span className="text-amber-400">FRAUD</span>
           </span>
         </Link>
@@ -50,7 +51,7 @@ export default function Navbar() {
               className={`px-2.5 py-1.5 text-xs font-medium transition-colors rounded hover:bg-black/5 ${
                 location.pathname === s.path
                   ? "text-amber-500 font-semibold"
-                  : scrolled || !isHome
+                  : isLightHeader
                     ? "text-muted-foreground hover:text-foreground"
                     : "text-white/70 hover:text-white"
               }`}
@@ -65,7 +66,7 @@ export default function Navbar() {
           <div className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className={`flex items-center gap-1 px-3 py-1.5 text-xs font-semibold rounded-full border transition-colors ${scrolled || !isHome ? "border-border text-foreground hover:bg-muted" : "border-white/30 text-white hover:bg-white/10"}`}
+              className={`flex items-center gap-1 px-3 py-1.5 text-xs font-semibold rounded-full border transition-colors ${isLightHeader ? "border-border text-foreground hover:bg-muted" : "border-white/30 text-white hover:bg-white/10"}`}
             >
               {lang.toUpperCase()}
               <svg
@@ -108,13 +109,13 @@ export default function Navbar() {
           >
             <div className="w-5 h-4 flex flex-col justify-between">
               <span
-                className={`block h-0.5 transition-all ${menuOpen ? "rotate-45 translate-y-1.5" : ""} ${scrolled || !isHome ? "bg-foreground" : "bg-white"}`}
+                className={`block h-0.5 transition-all ${menuOpen ? "rotate-45 translate-y-1.5" : ""} ${isLightHeader ? "bg-foreground" : "bg-white"}`}
               />
               <span
-                className={`block h-0.5 transition-all ${menuOpen ? "opacity-0" : ""} ${scrolled || !isHome ? "bg-foreground" : "bg-white"}`}
+                className={`block h-0.5 transition-all ${menuOpen ? "opacity-0" : ""} ${isLightHeader ? "bg-foreground" : "bg-white"}`}
               />
               <span
-                className={`block h-0.5 transition-all ${menuOpen ? "-rotate-45 -translate-y-1.5" : ""} ${scrolled || !isHome ? "bg-foreground" : "bg-white"}`}
+                className={`block h-0.5 transition-all ${menuOpen ? "-rotate-45 -translate-y-1.5" : ""} ${isLightHeader ? "bg-foreground" : "bg-white"}`}
               />
             </div>
           </button>

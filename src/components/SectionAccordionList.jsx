@@ -67,14 +67,25 @@ export default function SectionAccordionList({
               </span>
             </button>
 
-            {isOpen && (
+            <div
+              id={contentId}
+              aria-hidden={!isOpen}
+              inert={isOpen ? undefined : ""}
+              className="grid"
+              style={{
+                gridTemplateRows: isOpen ? "1fr" : "0fr",
+                transition: "grid-template-rows 300ms ease-in-out",
+                pointerEvents: isOpen ? "auto" : "none",
+              }}
+            >
               <div
-                id={contentId}
-                className={`border-t ${styles.border} px-6 py-6`}
+                className={`min-h-0 overflow-hidden border-t ${styles.border}`}
               >
-                <div className="space-y-4">{item.content}</div>
+                <div className="px-6 py-6">
+                  <div className="space-y-4">{item.content}</div>
+                </div>
               </div>
-            )}
+            </div>
           </section>
         );
       })}

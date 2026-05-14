@@ -10,23 +10,16 @@ const sectionCards = [
   { path: "/rigged-ucl", key: "nav_ucl", icon: "⚽", desc: "ucl_desc" },
   { path: "/managers", key: "nav_managers", icon: "👔", desc: "managers_desc" },
   {
-    path: "/selfishness",
-    key: "nav_selfish",
-    icon: "🎭",
-    desc: "selfish_desc",
+    path: "/character-behaviour",
+    key: "nav_character",
+    icon: "🧩",
+    desc: "character_desc",
   },
   {
     path: "/national-team",
     key: "nav_national",
     icon: "🇵🇹",
     desc: "national_desc",
-  },
-  { path: "/crying", key: "nav_crying", icon: "😭", desc: "crying_desc" },
-  {
-    path: "/hypocrisy",
-    key: "nav_hypocrisy",
-    icon: "🎪",
-    desc: "hypocrisy_desc",
   },
   { path: "/liga-comprada", key: "nav_liga", icon: "💰", desc: "liga_desc" },
   { path: "/why-messi", key: "nav_messi", icon: "⭐", desc: "messi_desc" },
@@ -41,6 +34,7 @@ const cardDescs = {
     managers_desc:
       "Dezasseis anos. Quatro clubes. Os treinadores que pagaram a conta.",
     selfish_desc: "O padrão de comportamento em campo e fora dele.",
+    character_desc: "Egoísmo, lágrimas e hipocrisia num só bloco.",
     national_desc: "Quem realmente carregou Portugal nos grandes torneios.",
     crying_desc:
       "Drama nas redes sociais e a máquina de manipulação mediática.",
@@ -56,6 +50,7 @@ const cardDescs = {
     managers_desc:
       "Sixteen years. Four clubs. The managers who paid the price.",
     selfish_desc: "The pattern of behaviour on and off the pitch.",
+    character_desc: "Selfishness, tears and hypocrisy in one grouped page.",
     national_desc: "Who really carried Portugal in the major tournaments.",
     crying_desc: "Social media drama and the media manipulation machine.",
     hypocrisy_desc: "What he said, what he did, and the gap between the two.",
@@ -70,6 +65,7 @@ const cardDescs = {
     managers_desc:
       "Dieciséis años. Cuatro clubes. Los entrenadores que pagaron la cuenta.",
     selfish_desc: "El patrón de comportamiento dentro y fuera del campo.",
+    character_desc: "Egoísmo, lágrimas e hipocresía en una sola página.",
     national_desc: "Quién realmente cargó a Portugal en los grandes torneos.",
     crying_desc:
       "Drama en redes sociales y la máquina de manipulación mediática.",
@@ -85,6 +81,7 @@ const cardDescs = {
     managers_desc:
       "Seize ans. Quatre clubs. Les entraîneurs qui ont payé le prix.",
     selfish_desc: "Le schéma de comportement sur et hors du terrain.",
+    character_desc: "Égoïsme, larmes et hypocrisie réunis dans une seule page.",
     national_desc: "Qui a vraiment porté le Portugal dans les grands tournois.",
     crying_desc:
       "Drama sur les réseaux sociaux et la machine de manipulation médiatique.",

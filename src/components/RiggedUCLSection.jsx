@@ -107,17 +107,17 @@ export default function RiggedUCLSection() {
   const sourceCard = sourceCardCopy[lang] || sourceCardCopy.en;
   const case2SourceCard = case2SourceCardCopy[lang] || case2SourceCardCopy.en;
 
+  const contextIntro = (
+    <div className="mb-8 space-y-4">
+      <h2 className="font-playfair text-2xl font-bold text-white/90">
+        {c("context_h")}
+      </h2>
+      <p>{c("context_p1")}</p>
+      <p>{c("context_p2")}</p>
+    </div>
+  );
+
   const items = [
-    {
-      key: "context",
-      title: c("context_h"),
-      content: (
-        <>
-          <p>{c("context_p1")}</p>
-          <p>{c("context_p2")}</p>
-        </>
-      ),
-    },
     {
       key: "case1",
       title: `${c("case1_year")}: ${c("case1_title")}`,
@@ -296,7 +296,10 @@ export default function RiggedUCLSection() {
       title={c("title")}
       dark
     >
-      <SectionAccordionList items={items} dark />
+      <div className="space-y-8">
+        {contextIntro}
+        <SectionAccordionList items={items} dark />
+      </div>
     </SectionWrapper>
   );
 }
