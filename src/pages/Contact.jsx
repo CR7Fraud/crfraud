@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Mail, Twitter } from "lucide-react";
+import { Mail, MessageSquare, Twitter } from "lucide-react";
 import { useI18n } from "../lib/i18n";
 
 const content = {
@@ -11,6 +11,7 @@ const content = {
       "Got better data, a correction to make, or just want to talk football? Get in touch.",
     emailLabel: "Personal Dev Email",
     twitterLabel: "Twitter / X",
+    discordLabel: "Discord",
   },
   pt: {
     title: "Contacto",
@@ -18,6 +19,7 @@ const content = {
       "Tens dados melhores, uma correção a fazer ou simplesmente queres falar sobre futebol? Entra em contacto.",
     emailLabel: "Email pessoal de desenvolvimento",
     twitterLabel: "Twitter / X",
+    discordLabel: "Discord",
   },
   es: {
     title: "Contacto",
@@ -25,6 +27,7 @@ const content = {
       "¿Tienes mejores datos, una corrección que hacer o simplemente quieres hablar de fútbol? Ponte en contacto.",
     emailLabel: "Correo personal de desarrollo",
     twitterLabel: "Twitter / X",
+    discordLabel: "Discord",
   },
   fr: {
     title: "Contact",
@@ -32,6 +35,7 @@ const content = {
       "Tu as de meilleures données, une correction à proposer ou tu veux simplement parler de football ? Contacte-moi.",
     emailLabel: "E-mail personnel de développement",
     twitterLabel: "Twitter / X",
+    discordLabel: "Discord",
   },
 };
 
@@ -86,6 +90,20 @@ export default function Contact() {
               <p className="text-muted-foreground text-sm">@cr7fraud_</p>
             </div>
           </a>
+
+          <div className="flex items-center gap-4 p-5 rounded-2xl border border-border bg-card">
+            <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center shrink-0">
+              <MessageSquare className="w-5 h-5 text-amber-500" />
+            </div>
+            <div>
+              <p className="font-semibold text-foreground text-sm">
+                {c("discordLabel")}
+              </p>
+              <p className="text-muted-foreground text-sm">
+                pedrini_ogfounder
+              </p>
+            </div>
+          </div>
         </div>
       </main>
       <Footer />
