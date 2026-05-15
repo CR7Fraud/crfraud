@@ -32,7 +32,7 @@ const content = {
     cryptoSubtitle: "Send to one of these addresses.",
     copyLabel: "Copy",
     copiedLabel: "Copied",
-    qrLabel: "QR code",
+    qrButtonLabel: "QR code",
     qrDialogBody:
       "Scan this QR code in your wallet app, or use the address shown below.",
     cryptoCards: [
@@ -81,7 +81,7 @@ const content = {
     cryptoSubtitle: "Envia para uma destas moradas.",
     copyLabel: "Copiar",
     copiedLabel: "Copiado",
-    qrLabel: "Código QR",
+    qrButtonLabel: "QR code",
     qrDialogBody:
       "Lê este QR code na tua wallet ou usa a morada mostrada abaixo.",
     cryptoCards: [
@@ -130,7 +130,7 @@ const content = {
     cryptoSubtitle: "Envía a una de estas direcciones.",
     copyLabel: "Copiar",
     copiedLabel: "Copiado",
-    qrLabel: "Código QR",
+    qrButtonLabel: "QR code",
     qrDialogBody:
       "Escanea este código QR en tu wallet o usa la dirección que aparece abajo.",
     cryptoCards: [
@@ -179,7 +179,7 @@ const content = {
     cryptoSubtitle: "Envoie vers l'une de ces adresses.",
     copyLabel: "Copier",
     copiedLabel: "Copié",
-    qrLabel: "Code QR",
+    qrButtonLabel: "QR code",
     qrDialogBody:
       "Scanne ce code QR dans ton wallet ou utilise l'adresse affichée ci-dessous.",
     cryptoCards: [
@@ -227,7 +227,7 @@ function WalletCard({
   description,
   copyLabel,
   copiedLabel,
-  qrLabel,
+  qrButtonLabel,
   onOpenQr,
   copied,
   onCopy,
@@ -241,13 +241,14 @@ function WalletCard({
           <Icon className="w-5 h-5 text-amber-500" />
         </div>
         <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-start justify-between gap-3">
-            <div>
-              <p className="font-semibold text-foreground text-sm">{label}</p>
-              <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                {description}
-              </p>
-            </div>
+          <div>
+            <p className="font-semibold text-foreground text-sm">{label}</p>
+            <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+              {description}
+            </p>
+          </div>
+
+          <div className="mt-4 flex flex-wrap gap-3">
             <button
               type="button"
               onClick={() => onCopy(address)}
@@ -260,24 +261,14 @@ function WalletCard({
               )}
               {isCopied ? copiedLabel : copyLabel}
             </button>
-          </div>
-
-          <div className="mt-4 flex flex-wrap items-center gap-4">
-            <div className="min-w-0 flex-1 rounded-xl border border-dashed border-border/70 bg-background/60 px-4 py-3 font-mono text-sm break-all text-foreground">
-              {address}
-            </div>
-
             <button
               type="button"
               onClick={() => onOpenQr({ label, address })}
-              title={qrLabel}
-              aria-label={`${qrLabel} ${label}`}
-              className="group flex w-28 flex-col items-center rounded-2xl border border-border bg-white p-2 shadow-inner transition-colors hover:border-amber-400/50"
+              title={`${qrButtonLabel} ${label}`}
+              aria-label={`${qrButtonLabel} ${label}`}
+              className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1.5 text-xs font-semibold text-foreground transition-colors hover:bg-muted"
             >
-              <QRCodeSVG value={address} size={72} includeMargin />
-              <span className="mt-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-zinc-500">
-                {qrLabel}
-              </span>
+              {qrButtonLabel}
             </button>
           </div>
         </div>
@@ -387,7 +378,7 @@ export default function Donate() {
                   description={item.description}
                   copyLabel={c("copyLabel")}
                   copiedLabel={c("copiedLabel")}
-                  qrLabel={c("qrLabel")}
+                  qrButtonLabel={c("qrButtonLabel")}
                   onOpenQr={setSelectedWallet}
                   copied={copiedAddress}
                   onCopy={handleCopy}
