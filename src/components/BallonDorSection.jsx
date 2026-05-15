@@ -118,6 +118,9 @@ export default function BallonDorSection() {
 
           <p>{t("bdor_2016_p4")}</p>
           <p>{t("bdor_2016_p5")}</p>
+          <p className="font-semibold text-foreground/90">
+            {t("bdor_2016_p5_criteria")}
+          </p>
         </>
       ),
     },
