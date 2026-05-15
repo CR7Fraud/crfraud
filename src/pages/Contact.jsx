@@ -99,9 +99,7 @@ export default function Contact() {
               <p className="font-semibold text-foreground text-sm">
                 {c("discordLabel")}
               </p>
-              <p className="text-muted-foreground text-sm">
-                pedrini_ogfounder
-              </p>
+              <p className="text-muted-foreground text-sm">pedrini_ogfounder</p>
             </div>
           </div>
         </div>
