@@ -70,7 +70,7 @@ export const translations = {
     bdor_2008:
       "Nada a debater. Campeão inglês por dois anos consecutivos, vencedor da Champions League e Bota de Ouro europeia. Desempenho e troféus alinham sem ambiguidade — é o melhor jogador do ano.",
     bdor_2013_p1:
-      "O primeiro Ballon d'Or de Ronaldo merecia mais debate do que recebeu. O jogador que o ganhou terminou a época sem um único troféu colectivo — zero ligas, zero taças, zero Champions. Os outros dois finalistas, Messi e Ribéry, somavam títulos e desempenhos individuais superiores ao longo de toda a temporada.",
+      "O segundo Ballon d'Or de Ronaldo merecia mais debate do que recebeu. O jogador que o ganhou terminou a época sem um único troféu colectivo — zero ligas, zero taças, zero Champions. Os outros dois finalistas, Messi e Ribéry, somavam títulos e desempenhos individuais superiores ao longo de toda a temporada.",
     bdor_2013_p2:
       "Na Champions, o Real Madrid foi eliminado nas meias-finais pelo Borussia Dortmund, depois de uma derrota por 4-1 na primeira mão em que Ronaldo marcou apenas uma vez — e não voltou a marcar na segunda mão. Vale notar que sete dos seus golos europeus nessa época saíram em quatro jogos contra Galatasaray e Ajax; quando os adversários eram de nível superior, a produção desaparecia.",
     bdor_2013_p3:
@@ -178,7 +178,7 @@ export const translations = {
     bdor_2008:
       "Nothing to debate. Back-to-back English champion, Champions League winner and European Golden Boot. Performance and trophies align without ambiguity — he is the best player of the year.",
     bdor_2013_p1:
-      "Ronaldo's first Ballon d'Or deserved more debate than it received. The player who won it finished the season without a single collective trophy — zero leagues, zero cups, zero Champions League. The other two finalists, Messi and Ribéry, combined titles with superior individual performances throughout the entire season.",
+      "Ronaldo's second Ballon d'Or deserved more debate than it received. The player who won it finished the season without a single collective trophy — zero leagues, zero cups, zero Champions League. The other two finalists, Messi and Ribéry, combined titles with superior individual performances throughout the entire season.",
     bdor_2013_p2:
       "In the Champions League, Real Madrid were eliminated in the semi-finals by Borussia Dortmund after a 4-1 first-leg defeat in which Ronaldo scored just once — and didn't score in the second leg either. It is worth noting that seven of his European goals that season came in four games against Galatasaray and Ajax; when the opponents were of a higher standard, his output disappeared.",
     bdor_2013_p3:
@@ -286,7 +286,7 @@ export const translations = {
     bdor_2008:
       "Nada que debatir. Campeón inglés dos años consecutivos, ganador de la Champions League y Bota de Oro europea. Rendimiento y trofeos se alinean sin ambigüedad — es el mejor jugador del año.",
     bdor_2013_p1:
-      "El primer Balón de Oro de Ronaldo merecía más debate del que recibió. El jugador que lo ganó terminó la temporada sin un solo trofeo colectivo — cero ligas, cero copas, cero Champions. Los otros dos finalistas, Messi y Ribéry, acumulaban títulos y rendimientos individuales superiores durante toda la temporada.",
+      "El segundo Balón de Oro de Ronaldo merecía más debate del que recibió. El jugador que lo ganó terminó la temporada sin un solo trofeo colectivo — cero ligas, cero copas, cero Champions. Los otros dos finalistas, Messi y Ribéry, acumulaban títulos y rendimientos individuales superiores durante toda la temporada.",
     bdor_2013_p2:
       "En la Champions, el Real Madrid fue eliminado en semifinales por el Borussia Dortmund tras una derrota por 4-1 en la ida en la que Ronaldo marcó solo una vez — y no volvió a marcar en la vuelta. Vale señalar que siete de sus goles europeos esa temporada llegaron en cuatro partidos contra Galatasaray y Ajax; cuando los rivales eran de mayor nivel, la producción desaparecía.",
     bdor_2013_p3:
@@ -394,7 +394,7 @@ export const translations = {
     bdor_2008:
       "Rien à débattre. Champion d'Angleterre deux années consécutives, vainqueur de la Ligue des Champions et du Soulier d'Or européen. Performance et trophées s'alignent sans ambiguïté — c'est le meilleur joueur de l'année.",
     bdor_2013_p1:
-      "Le premier Ballon d'Or de Ronaldo méritait plus de débat qu'il n'en a reçu. Le joueur qui l'a remporté a terminé la saison sans un seul trophée collectif — zéro ligue, zéro coupe, zéro Ligue des Champions. Les deux autres finalistes, Messi et Ribéry, cumulaient titres et performances individuelles supérieures tout au long de la saison.",
+      "Le deuxième Ballon d'Or de Ronaldo méritait plus de débat qu'il n'en a reçu. Le joueur qui l'a remporté a terminé la saison sans un seul trophée collectif — zéro ligue, zéro coupe, zéro Ligue des Champions. Les deux autres finalistes, Messi et Ribéry, cumulaient titres et performances individuelles supérieures tout au long de la saison.",
     bdor_2013_p2:
       "En Ligue des Champions, le Real Madrid a été éliminé en demi-finale par le Borussia Dortmund après une défaite 4-1 à l'aller lors de laquelle Ronaldo n'avait marqué qu'une fois — et n'a plus marqué au retour. Il convient de noter que sept de ses buts européens cette saison sont venus en quatre matches contre Galatasaray et l'Ajax ; face à des adversaires de niveau supérieur, sa production disparaissait.",
     bdor_2013_p3:
