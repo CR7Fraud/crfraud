@@ -160,7 +160,7 @@ const MarkdownBlock = ({ markdown }) => (
 );
 
 function CommentImage({ fileName, alt, className = "" }) {
-  const src = `/assets/cr7comments/${encodeURIComponent(fileName)}`;
+  const src = `${import.meta.env.BASE_URL}assets/cr7comments/${encodeURIComponent(fileName)}`;
 
   return <img src={src} alt={alt} decoding="async" className={className} />;
 }
