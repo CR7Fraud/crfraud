@@ -4,7 +4,7 @@ import fs from "fs";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/crfraud/",
+  base: "./",
   build: {
     outDir: "dist",
     manifest: true,
@@ -18,10 +18,7 @@ export default defineConfig({
         let html = fs.readFileSync(indexPath, "utf-8");
 
         // Change absolute script path to relative
-        html = html.replace(
-          /src="\/crfraud\/assets\//g,
-          'src="./assets/',
-        );
+        html = html.replace(/src="\/crfraud\/assets\//g, 'src="./assets/');
 
         // Inject base href detection script if not already present
         if (!html.includes("Detect if running on GitHub Pages or locally")) {
@@ -34,7 +31,10 @@ export default defineConfig({
       document.head.prepend(base);
     </script>`;
 
-          html = html.replace(/<title>.*?<\/title>/s, (match) => match + "\n" + baseScript);
+          html = html.replace(
+            /<title>.*?<\/title>/s,
+            (match) => match + "\n" + baseScript,
+          );
         }
 
         fs.writeFileSync(indexPath, html, "utf-8");
