@@ -58,5 +58,5 @@
   }
 
   root.innerHTML =
-    '<div style="min-height:100vh;display:grid;place-items:center;color:#f4f7fb;font-family:sans-serif;text-align:center;padding:2rem">Unable to load the app bundle.</div>';
+    '<div style="min-height:100vh;display:grid;place-items:center;background:#0b1016;color:#f4f7fb;font-family:sans-serif;text-align:center;padding:2rem"><div style="max-width:36rem"><h1 style="margin:0 0 .75rem;font-size:1.25rem">Unable to load the app bundle.</h1><p style="margin:0;opacity:.8">Run the Vite dev server with <code>npm run dev</code> or build the app first with <code>npm run build</code> before opening it through a static server.</p></div></div>';
 })();
