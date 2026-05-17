@@ -1,29 +1,6 @@
 // @ts-nocheck
 import React from "react";
-import ReactMarkdown from "react-markdown";
-
-function InlineMarkdown({ children, className, strongClassName }) {
-  return (
-    <ReactMarkdown
-      className={className}
-      allowedElements={["strong", "em", "code", "span", "br", "a"]}
-      unwrapDisallowed
-      components={{
-        p: ({ children: paragraphChildren }) => <>{paragraphChildren}</>,
-        strong: ({ children: strongChildren }) => (
-          <strong className={strongClassName}>{strongChildren}</strong>
-        ),
-        a: ({ children: linkChildren, href }) => (
-          <a href={href} target="_blank" rel="noreferrer">
-            {linkChildren}
-          </a>
-        ),
-      }}
-    >
-      {children}
-    </ReactMarkdown>
-  );
-}
+import RichText from "./RichText";
 
 export default function SectionAccordionList({
   items,
@@ -74,23 +51,17 @@ export default function SectionAccordionList({
                 <p
                   className={`text-lg font-semibold leading-tight ${styles.title}`}
                 >
-                  <InlineMarkdown
-                    strongClassName="text-amber-400"
-                    className="inline"
-                  >
+                  <RichText as="span" className="inline">
                     {item.title}
-                  </InlineMarkdown>
+                  </RichText>
                 </p>
                 {item.subtitle && (
                   <p
                     className={`mt-0.5 text-sm leading-relaxed ${styles.subtitle}`}
                   >
-                    <InlineMarkdown
-                      strongClassName={dark ? "text-white" : "text-amber-500"}
-                      className="inline"
-                    >
+                    <RichText as="span" className="inline">
                       {item.subtitle}
-                    </InlineMarkdown>
+                    </RichText>
                   </p>
                 )}
               </div>

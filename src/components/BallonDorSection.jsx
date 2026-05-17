@@ -16,6 +16,7 @@ const db = globalThis.__B44_DB__ || {
 };
 
 import React from "react";
+import RichText from "./RichText";
 import SectionAccordionList from "./SectionAccordionList";
 import SectionWrapper from "./SectionWrapper";
 import { useI18n } from "../lib/i18n";
@@ -42,12 +43,15 @@ const tableSummary = [
 export default function BallonDorSection() {
   const { t } = useI18n();
 
+  const text = (value) => <RichText as="p">{value}</RichText>;
+  const quote = (value) => <RichText as="blockquote">{value}</RichText>;
+
   const items = [
     {
       key: "2008",
       eyebrow: t("label_ballon"),
       title: "2008",
-      content: <p>{t("bdor_2008")}</p>,
+      content: text(t("bdor_2008")),
     },
     {
       key: "2013",
@@ -55,8 +59,8 @@ export default function BallonDorSection() {
       title: "2013",
       content: (
         <>
-          <p>{t("bdor_2013_p1")}</p>
-          <p>{t("bdor_2013_p2")}</p>
+          {text(t("bdor_2013_p1"))}
+          {text(t("bdor_2013_p2"))}
 
           <div className="my-8 overflow-x-auto rounded-xl border border-border">
             <img
@@ -66,10 +70,10 @@ export default function BallonDorSection() {
             />
           </div>
 
-          <p>{t("bdor_2013_p3")}</p>
-          <p>{t("bdor_2013_p4")}</p>
+          {text(t("bdor_2013_p3"))}
+          {text(t("bdor_2013_p4"))}
 
-          <blockquote>{t("bdor_2013_quote")}</blockquote>
+          {quote(t("bdor_2013_quote"))}
         </>
       ),
     },
@@ -79,8 +83,8 @@ export default function BallonDorSection() {
       title: "2014",
       content: (
         <>
-          <p>{t("bdor_2014_p1")}</p>
-          <p>{t("bdor_2014_p2")}</p>
+          {text(t("bdor_2014_p1"))}
+          {text(t("bdor_2014_p2"))}
 
           <div className="my-8 rounded-xl overflow-hidden border border-border">
             <img
@@ -90,11 +94,11 @@ export default function BallonDorSection() {
             />
           </div>
 
-          <p>{t("bdor_2014_p3")}</p>
-          <p>{t("bdor_2014_p4")}</p>
-          <p>{t("bdor_2014_p5")}</p>
-          <p>{t("bdor_2014_p6")}</p>
-          <p>{t("bdor_2014_p7")}</p>
+          {text(t("bdor_2014_p3"))}
+          {text(t("bdor_2014_p4"))}
+          {text(t("bdor_2014_p5"))}
+          {text(t("bdor_2014_p6"))}
+          {text(t("bdor_2014_p7"))}
         </>
       ),
     },
@@ -104,9 +108,9 @@ export default function BallonDorSection() {
       title: "2016",
       content: (
         <>
-          <p>{t("bdor_2016_p1")}</p>
-          <p>{t("bdor_2016_p2")}</p>
-          <p>{t("bdor_2016_p3")}</p>
+          {text(t("bdor_2016_p1"))}
+          {text(t("bdor_2016_p2"))}
+          {text(t("bdor_2016_p3"))}
 
           <div className="my-8 rounded-xl overflow-hidden border border-border">
             <img
@@ -116,9 +120,9 @@ export default function BallonDorSection() {
             />
           </div>
 
-          <p>{t("bdor_2016_p4")}</p>
-          <p>{t("bdor_2016_p5")}</p>
-          <p>{t("bdor_2016_p5_criteria")}</p>
+          {text(t("bdor_2016_p4"))}
+          {text(t("bdor_2016_p5"))}
+          {text(t("bdor_2016_p5_criteria"))}
         </>
       ),
     },
@@ -128,10 +132,10 @@ export default function BallonDorSection() {
       title: "2017",
       content: (
         <>
-          <p>{t("bdor_2017_p1")}</p>
-          <p>{t("bdor_2017_p2")}</p>
-          <p>{t("bdor_2017_p3")}</p>
-          <p>{t("bdor_2017_p4")}</p>
+          {text(t("bdor_2017_p1"))}
+          {text(t("bdor_2017_p2"))}
+          {text(t("bdor_2017_p3"))}
+          {text(t("bdor_2017_p4"))}
         </>
       ),
     },
@@ -150,7 +154,7 @@ export default function BallonDorSection() {
       <h2 className="font-playfair text-2xl md:text-3xl font-bold text-foreground mt-12 mb-4">
         {t("bdor_summary_title")}
       </h2>
-      <p>{t("bdor_summary_p")}</p>
+      {text(t("bdor_summary_p"))}
 
       <div className="overflow-x-auto rounded-xl border border-border my-8">
         <table className="data-table">
@@ -177,7 +181,7 @@ export default function BallonDorSection() {
         </table>
       </div>
 
-      <p>{t("bdor_summary_conclusion")}</p>
+      {text(t("bdor_summary_conclusion"))}
     </SectionWrapper>
   );
 }
