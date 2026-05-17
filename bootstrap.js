@@ -4,8 +4,8 @@
     window.location.hostname,
   );
   const manifestCandidates = isLocalHost
-    ? ["./dist/.vite/manifest.json", "./dist/manifest.json", "./manifest.json"]
-    : ["./manifest.json", "./dist/manifest.json", "./dist/.vite/manifest.json"];
+    ? ["./.vite/manifest.json", "./dist/.vite/manifest.json", "./dist/manifest.json", "./manifest.json"]
+    : ["./.vite/manifest.json", "./manifest.json", "./dist/manifest.json", "./dist/.vite/manifest.json"];
 
   async function fetchJson(url) {
     try {
