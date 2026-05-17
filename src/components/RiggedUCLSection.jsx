@@ -13,7 +13,7 @@ const en = {
   context_p2:
     'Those "survivals" became trophies. Those trophies became Ballon d\'Ors.',
   case1_year: "Final 2016",
-  case1_title: "The Opening Goal That Was Illegal",
+  case1_title: "The Opening Goal That Was **Illegal**",
   case1_p1:
     "In the 2016 Champions League final, Sergio Ramos opens the scoring early. Atletico de Madrid equalise. Real win in extra time 4-1.",
   case1_p2:
@@ -22,7 +22,7 @@ const en = {
   case1_p3:
     "The first major European title of the Real/Ronaldo era is literally built on an incident the referee himself acknowledges as irregular. Ronaldo scores from a penalty already in extra time, with the game decided - and enters the record books as European champion. Source:",
   case2_year: "2017 vs Bayern",
-  case2_title: "Unjust Red Card, Two Offside Goals",
+  case2_title: "**Unjust Red Card**, Two Offside Goals",
   case2_p1:
     "In the 2017 quarter-finals, Bayern arrive in Spain with the tie level and a squad that, in theory, was superior to Real that season.",
   case2_li1:
@@ -35,7 +35,7 @@ const en = {
     "Result: Real advance to the semi-finals with a Ronaldo hat-trick that includes at least one illegal goal, in a 11 v 10 game that should not have existed. That passage is a central piece of the back-to-back Champions League narrative - and of the arguments used to justify the 2017 Ballon d'Or.",
   case3_year: "2018 vs PSG",
   case3_title:
-    "The Non-Existent Penalty and the Goal That Should Have Been Retaken",
+    "The **Non-Existent Penalty** and the Goal That Should Have Been Retaken",
   case3_p1:
     "In the 2018 round of 16, PSG arrive in Madrid winning the first leg.",
   case3_li1:
@@ -45,7 +45,7 @@ const en = {
   case3_p2:
     "Real overturn 0-1 to 2-1. Two Ronaldo goals. At least one should not have counted. The other was born from a penalty that divided even the referees themselves.",
   case4_year: "2018 vs Juventus",
-  case4_title: 'The 93rd-Minute Penalty and "The Robbery of the Century"',
+  case4_title: 'The 93rd-Minute Penalty and "**The Robbery of the Century**"',
   case4_p1:
     "This is the most emblematic case. Juventus do the impossible: lose 0-3 in Turin, go to Madrid and win 3-0 - tie level at 3-3.",
   case4_p2:

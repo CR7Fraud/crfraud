@@ -36,9 +36,9 @@ const clubsEn = [
   },
   {
     name: "Juventus (2018–2021)",
-    subtitle: "€340 Million, Zero Champions, Three Managers",
+    subtitle: "**€340 Million**, Zero Champions, Three Managers",
     intro:
-      "In July 2018, Juventus paid €100 million for a 33-year-old striker. They committed to paying €31 million net per season — four times more than any other player in the squad. The total investment over three years was estimated at €340 million between the transfer fee and wages. The goal was explicit and singular: win the Champions League, the trophy that had eluded the club for decades. They didn't win it. And three managers left in the process.",
+      "In July 2018, Juventus paid €100 million for a 33-year-old striker. They committed to paying €31 million net per season — four times more than any other player in the squad. The total investment over three years was estimated at **€340 million** between the transfer fee and wages. The goal was explicit and singular: win the Champions League, the trophy that had eluded the club for decades. They didn't win it. And three managers left in the process.",
     managers: [
       {
         name: "Massimiliano Allegri",
@@ -53,7 +53,7 @@ const clubsEn = [
       {
         name: "Andrea Pirlo",
         detail:
-          "The most inexplicable choice of this cycle. He had zero senior management experience. The 2020–21 season was Juventus's worst in over a decade: they finished fourth in Serie A, lost the title, and were eliminated in the round of 16 by Porto. Ronaldo abandoned the club in August 2021, days before the start of the following season, with no prior notice to the board — he packed his bags, loaded his cars onto a truck and left. Pirlo was sacked. Allegri returned to rebuild the wreckage.",
+          "The most inexplicable choice of this cycle. He had zero senior management experience. The 2020–21 season was Juventus's worst in over a decade: they finished fourth in Serie A, lost the title, and were eliminated in the round of 16 by Porto. Ronaldo abandoned the club in August 2021, days before the start of the following season, with no prior notice to the board — he **packed his bags**, loaded his cars onto a truck and left. Pirlo was sacked. Allegri returned to rebuild the wreckage.",
       },
     ],
     quotes: [
@@ -88,7 +88,7 @@ const clubsEn = [
       {
         name: "Erik ten Hag",
         detail:
-          'He was the manager who finally refused to bend. In October 2022, during a match against Tottenham, Ronaldo refused to come on as a substitute and left the tunnel before the end of the game — one of the most insubordinate gestures in the history of modern English football. Weeks later, Ronaldo gave a two-hour interview to Piers Morgan declaring he "had no respect" for the manager. The contract was terminated in November 2022 — not because the club dismissed him, but because Ronaldo made his continued presence impossible. He left without a settlement.',
+          'He was the manager who finally refused to bend. In October 2022, during a match against Tottenham, Ronaldo refused to come on as a substitute and **left the tunnel** before the end of the game — one of the most insubordinate gestures in the history of modern English football. Weeks later, Ronaldo gave a two-hour interview to Piers Morgan declaring he "had no respect" for the manager. The contract was terminated in November 2022 — not because the club dismissed him, but because Ronaldo made his continued presence impossible. He **left without a settlement**.',
       },
     ],
   },

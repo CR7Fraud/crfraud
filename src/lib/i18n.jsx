@@ -213,7 +213,7 @@ export const translations = {
     bdor_2016_p5:
       "What happened in 2016 is a clear case of an award based on collective trophies — which is a legitimate criterion, but without the awarded player being the real protagonist in any of them. Teammates at Real Madrid and in Portugal have as much merit in those titles as Ronaldo does, and in several decisive moments, more. The 2016 Ballon d'Or was not awarded to the best player of the year — it was awarded to the player who belonged to the two winning teams. Those are different criteria, and it is worth being honest about that distinction.",
     bdor_2016_p5_criteria:
-      "The criteria, in other words, shifted depending on who they favoured. When Messi had 59 goals + 31 assists (91 g/a) without a Champions League title, that was not enough. But when Ronaldo scored 69 goals + 18 assists (87 g/a) without any title in 2013, it was. There is no consistent principle that explains both outcomes simultaneously — only a result.",
+      "The criteria, in other words, **shifted depending on who they favoured**. When Messi had 59 goals + 31 assists (91 g/a) without a Champions League title, that was not enough. But when Ronaldo scored 69 goals + 18 assists (87 g/a) without any title in 2013, it was. There is no consistent principle that explains both outcomes simultaneously — only a result.",
     bdor_2017_p1:
       "2017 is, of the five years analysed, the most defensible for Ronaldo.",
     bdor_2017_p2:

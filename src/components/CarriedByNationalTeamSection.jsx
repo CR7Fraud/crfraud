@@ -15,7 +15,7 @@ const tournamentsEn = [
       "Final vs France: Ronaldo goes off injured at 25 minutes. From then on, Rui Patrício makes several decisive saves, Pepe leads the defence and Éder scores the title-winning goal at 109 minutes.",
     ],
     conclusion:
-      'International reports were direct: Portugal "surprised France and won the Euro despite Ronaldo\'s injury, thanks to Éder\'s goal and Patrício\'s heroic display". The idea that he "carried Portugal to the title" does not survive the match timeline.',
+      'International reports were direct: Portugal "surprised France and won the Euro **despite Ronaldo\'s injury**, thanks to Éder\'s goal and Patrício\'s heroic display". The idea that he "carried Portugal to the title" does not survive the match timeline.',
   },
   {
     year: "Nations League 2019",
@@ -27,7 +27,7 @@ const tournamentsEn = [
       'The move originates from a run and pass by Bernardo Silva; the BBC highlights that the trophy is won by "Guedes\'s strike after brilliant work from Bernardo".',
     ],
     conclusion:
-      "Ronaldo is on the pitch, but Portugal's second official title in history is again decided by others: Éder in 2016, Guedes in 2019.",
+      "Ronaldo is on the pitch, but Portugal's second official title in history is again **decided by others**: Éder in 2016, Guedes in 2019.",
   },
   {
     year: "Euro 2020",
@@ -61,7 +61,7 @@ const tournamentsEn = [
       'According to data compiled by the English press, he was the striker with the worst efficiency in the competition: xG accumulated around 3.5 goals, zero converted — officially "the worst centre-forward at Euro 2024" relative to the chances he had.',
     ],
     conclusion:
-      "In the round of 16 against Slovenia, he had 120 minutes to decide, missed a penalty in extra time and ended in tears; the one who rescues Portugal is Diogo Costa, with three penalties saved, while Bruno and Bernardo convert without missing. In the quarter-final against France, PortuGOAL gives him 4.5/10, noting he had the worst passing percentage and fewest touches of any outfield player — yet he only comes off well into the second half.",
+      "In the round of 16 against Slovenia, he had 120 minutes to decide, missed a penalty in extra time and ended in tears; the one who rescues Portugal is Diogo Costa, with three penalties saved, while Bruno and Bernardo convert without missing. In the quarter-final against France, PortuGOAL gives him 4.5/10, noting he had the **worst passing percentage** and fewest touches of any outfield player — yet he only comes off well into the second half.",
   },
 ];
 
