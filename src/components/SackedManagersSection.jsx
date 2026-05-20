@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import RichText from "./RichText";
 import SectionWrapper from "./SectionWrapper";
 import { useI18n } from "../lib/i18n";
 
@@ -36,9 +37,9 @@ const clubsEn = [
   },
   {
     name: "Juventus (2018–2021)",
-    subtitle: "**€340 Million**, Zero Champions, Three Managers",
+    subtitle: "€340 Million, Zero Champions, Three Managers",
     intro:
-      "In July 2018, Juventus paid €100 million for a 33-year-old striker. They committed to paying €31 million net per season — four times more than any other player in the squad. The total investment over three years was estimated at **€340 million** between the transfer fee and wages. The goal was explicit and singular: win the Champions League, the trophy that had eluded the club for decades. They didn't win it. And three managers left in the process.",
+      'In July 2018, Juventus paid €100 million for a 33-year-old striker. They committed to paying €31 million net per season — four times more than any other player in the squad. The total investment over three years was estimated at <span style="color: hsl(var(--accent))">€340 million</span> between the transfer fee and wages. The goal was explicit and singular: win the Champions League, the trophy that had eluded the club for decades. They did not win it. <strong>And three managers left in the process.</strong>',
     managers: [
       {
         name: "Massimiliano Allegri",
@@ -53,7 +54,7 @@ const clubsEn = [
       {
         name: "Andrea Pirlo",
         detail:
-          "The most inexplicable choice of this cycle. He had zero senior management experience. The 2020–21 season was Juventus's worst in over a decade: they finished fourth in Serie A, lost the title, and were eliminated in the round of 16 by Porto. Ronaldo abandoned the club in August 2021, days before the start of the following season, with no prior notice to the board — he **packed his bags**, loaded his cars onto a truck and left. Pirlo was sacked. Allegri returned to rebuild the wreckage.",
+          'The most inexplicable choice of this cycle. He had zero senior management experience. The 2020–21 season was Juventus\'s worst in over a decade: they finished fourth in Serie A, lost the title, and were eliminated in the round of 16 by Porto. Ronaldo abandoned the club in August 2021, days before the start of the following season, with no prior notice to the board — he <span style="color: hsl(var(--accent))">packed his bags</span>, loaded his cars onto a truck and left. Pirlo was sacked. Allegri returned to rebuild the wreckage.',
       },
     ],
     quotes: [
@@ -88,7 +89,7 @@ const clubsEn = [
       {
         name: "Erik ten Hag",
         detail:
-          'He was the manager who finally refused to bend. In October 2022, during a match against Tottenham, Ronaldo refused to come on as a substitute and **left the tunnel** before the end of the game — one of the most insubordinate gestures in the history of modern English football. Weeks later, Ronaldo gave a two-hour interview to Piers Morgan declaring he "had no respect" for the manager. The contract was terminated in November 2022 — not because the club dismissed him, but because Ronaldo made his continued presence impossible. He **left without a settlement**.',
+          'He was the manager who finally refused to bend. In October 2022, during a match against Tottenham, Ronaldo refused to come on as a substitute and <span style="color: hsl(var(--accent))">left the tunnel</span> before the end of the game — one of the most insubordinate gestures in the history of modern English football. Weeks later, Ronaldo gave a two-hour interview to Piers Morgan declaring he "had no respect" for the manager. The contract was terminated in November 2022 — not because the club dismissed him, but because Ronaldo made his continued presence impossible. He <span style="color: hsl(var(--accent))">left without a settlement</span>.',
       },
     ],
   },
@@ -513,6 +514,13 @@ export default function SackedManagersSection() {
   const c = (key) => fallback(sectionContent, lang, key);
   const clubs = clubsByLang[lang] || clubsEn;
 
+  const text = (value) => <RichText as="p">{value}</RichText>;
+  const span = (value) => (
+    <RichText as="span" className="inline">
+      {value}
+    </RichText>
+  );
+
   return (
     <SectionWrapper
       id="sacked-managers"
@@ -520,8 +528,8 @@ export default function SackedManagersSection() {
       title={c("title")}
     >
       <h2>{c("h1")}</h2>
-      <p>{c("p1")}</p>
-      <p>{c("p2")}</p>
+      {text(c("p1"))}
+      {text(c("p2"))}
 
       <div className="section-divider" />
 
@@ -537,10 +545,10 @@ export default function SackedManagersSection() {
             >
               <div>
                 <p className="font-semibold text-foreground text-lg">
-                  {club.name}
+                  {span(club.name)}
                 </p>
                 <p className="text-muted-foreground text-sm mt-0.5">
-                  {club.subtitle}
+                  {span(club.subtitle)}
                 </p>
               </div>
               <span className="text-2xl text-muted-foreground">
@@ -550,30 +558,41 @@ export default function SackedManagersSection() {
             {openClub === ci && (
               <div className="px-6 py-6 space-y-4">
                 {club.intro && (
-                  <p className="text-foreground/75 leading-relaxed text-sm">
+                  <RichText
+                    as="p"
+                    className="text-foreground/75 leading-relaxed text-sm"
+                  >
                     {club.intro}
-                  </p>
+                  </RichText>
                 )}
                 {club.managers.map((m, mi) => (
                   <div
                     key={mi}
                     className="border-l-4 border-amber-500 pl-4 py-1"
                   >
-                    <p className="font-semibold text-foreground">{m.name}</p>
-                    <p className="text-foreground/65 text-sm mt-1 leading-relaxed">
-                      {m.detail}
+                    <p className="font-semibold text-foreground">
+                      {span(m.name)}
                     </p>
+                    <RichText
+                      as="p"
+                      className="text-foreground/65 text-sm mt-1 leading-relaxed"
+                    >
+                      {m.detail}
+                    </RichText>
                   </div>
                 ))}
                 {club.quotes && (
                   <div className="bg-muted/40 rounded-xl p-5 space-y-3 mt-4">
                     {club.quotes.map((q, qi) => (
                       <div key={qi}>
-                        <p className="italic text-foreground/70 text-sm">
+                        <RichText
+                          as="p"
+                          className="italic text-foreground/70 text-sm"
+                        >
                           {q.text}
-                        </p>
+                        </RichText>
                         <p className="text-xs text-muted-foreground mt-1">
-                          - {q.person}
+                          - {span(q.person)}
                         </p>
                       </div>
                     ))}
@@ -582,12 +601,13 @@ export default function SackedManagersSection() {
                 {club.balance && (
                   <div className="mt-4 p-5 bg-red-50 border border-red-100 rounded-xl">
                     {club.balance.split("\n\n").map((p, pi) => (
-                      <p
+                      <RichText
+                        as="p"
                         key={pi}
                         className="text-foreground/75 text-sm mb-2 last:mb-0"
                       >
                         {p}
-                      </p>
+                      </RichText>
                     ))}
                   </div>
                 )}

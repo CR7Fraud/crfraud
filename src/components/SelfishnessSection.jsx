@@ -1,4 +1,5 @@
 import React from "react";
+import RichText from "./RichText";
 import SectionWrapper from "./SectionWrapper";
 import { useI18n } from "../lib/i18n";
 
@@ -11,11 +12,11 @@ const content = {
     h2a: "Free Kicks: Over 50 Attempts, 1 Goal",
     p2: "In major international tournaments with Portugal — Euros and World Cups — Ronaldo took at least 53 direct free kicks. He scored one, against Spain at the 2018 World Cup.",
     p3: "Not for lack of alternatives. Throughout his career, he coexisted with clearly superior specialists in this set piece: Pjanić and Dybala at Juventus, identified by The Athletic as better options at the time; Bruno Fernandes at Manchester United; João Moutinho in Portugal for an entire decade. The Athletic explicitly questioned whether Ronaldo should continue to be Juventus's primary free-kick taker.",
-    p4: 'Ruud Gullit, European champion in 1988, was blunt when commenting on Euro 2024: he found Ronaldo\'s behaviour "unacceptable" and spoke of "**crocodile tears**" — he cried for himself, not for the team. Dieter Hamann reinforced that the tears after the missed penalty against Slovenia were "proof of how selfish Ronaldo is — he had to mentally leave the game because he was devastated with himself".',
+    p4: 'Ruud Gullit, European champion in 1988, was blunt when commenting on Euro 2024: he found Ronaldo\'s behaviour "unacceptable" and spoke of "<span style="color: hsl(var(--accent))">crocodile tears</span>" — he cried for himself, not for the team. Dieter Hamann reinforced that the tears after the missed penalty against Slovenia were "proof of how selfish Ronaldo is — he had to mentally leave the game because he was devastated with himself".',
     h2b: "Penalties: The Ball Monopoly",
     p5: "The free-kick pattern repeats itself with penalties. At clubs where there were other designated takers — Juventus, Manchester United, Portugal — Ronaldo systematically tended to take the responsibility, regardless of form or tactical context. When a teammate scores a penalty, the camera rarely shows him in full celebration — the narrative centres on his reaction to not being the protagonist.",
     h2c: "The Teammate Whose Goal Gets Stolen",
-    p6: "In 2015, in a Real Madrid move with a goal practically made for a teammate at the back post, Ronaldo physically **interposes himself** and shoots himself. The video circulated precisely because it captures a pattern: it is not just goal instinct, it is goal instinct at the expense of the teammate who was in a better position.",
+    p6: 'In 2015, in a Real Madrid move with a goal practically made for a teammate at the back post, Ronaldo physically <span style="color: hsl(var(--accent))">interposes himself</span> and shoots himself. The video circulated precisely because it captures a pattern: it is not just goal instinct, it is goal instinct at the expense of the teammate who was in a better position.',
     h2d: "The Teammates Who Stop Passing",
     p7: "At Euro 2024, former England international Stuart Pearce, commenting on talkSPORT, repeatedly noted that Portugal's teammates were avoiding finding Ronaldo in situations where, ten years ago, the ball would have reached him automatically. He was not alone: Goal.com echoed the same idea, describing a pattern where Portuguese players were avoiding certain passing lines to Ronaldo because it took control away from them.",
     p8: "It is a rare and revealing statistic: a team that, almost instinctively, diverts play away from its most famous striker — because it knows what happens when the ball enters that funnel.",
@@ -26,8 +27,8 @@ const content = {
       'Gullit returned to the theme: "The behaviour is unacceptable. Those are crocodile tears — he cried because he missed, not because the team could be eliminated."',
     h3: "Off the Pitch",
     h3a: "The Manchester United Dressing Room",
-    p11: "On 19 October 2022, in a 2-0 win over Tottenham, Ronaldo **refused to come on** as a substitute when Erik ten Hag called for him. He left the bench, went down the tunnel before the final whistle and **left the stadium** before his teammates returned to the dressing room. Ten Hag publicly confirmed he had refused to come on and decided to remove him from the squad for the next game.",
-    p12: 'A few days later, the Mirror published an article where Emmanuel Petit, former French international and World Cup winner, spoke of an "**oversized ego**" that was "polluting the Manchester United dressing room". Gary Neville, one of Ronaldo\'s biggest public defenders, said live on air that the behaviour was "unacceptable" and that all he had to do was "sit on the bench for two or three games".'
+    p11: 'On 19 October 2022, in a 2-0 win over Tottenham, Ronaldo <span style="color: hsl(var(--accent))">refused to come on</span> as a substitute when Erik ten Hag called for him. He left the bench, went down the tunnel before the final whistle and <span style="color: hsl(var(--accent))">left the stadium</span> before his teammates returned to the dressing room. Ten Hag publicly confirmed he had refused to come on and decided to remove him from the squad for the next game.',
+    p12: 'A few days later, the Mirror published an article where Emmanuel Petit, former French international and World Cup winner, spoke of an "<span style="color: hsl(var(--accent))">oversized ego</span>" that was "polluting the Manchester United dressing room". Gary Neville, one of Ronaldo\'s biggest public defenders, said live on air that the behaviour was "unacceptable" and that all he had to do was "sit on the bench for two or three games".',
     h3b: "The Juventus Exit",
     p13: "In August 2021, a few days before the transfer window closed, Ronaldo decided to leave Juventus. Several Italian and English reports described the same sequence: more than a normal end-of-cycle process, there was a rushed exit, with the player arranging logistics (including transporting his fleet of cars) before the club had a sporting plan in place. Juventus were forced to accept a relatively low offer from Manchester United because the alternative was being left with a massive asset who no longer wanted to be there.",
     p14: "From an institutional standpoint, it was another example of the pattern: when the context stopped being ideal for Ronaldo, it was the club that had to adapt — not the other way around.",
@@ -162,64 +163,72 @@ const fallback = (c, lang, key) => c[lang]?.[key] || c["en"][key];
 export function SelfishnessBody({ lang }) {
   const c = (key) => fallback(content, lang, key);
 
+  const text = (value) => <RichText as="p">{value}</RichText>;
+  const quote = (value) => <RichText as="blockquote">{value}</RichText>;
+  const inline = (value) => (
+    <RichText as="span" className="inline">
+      {value}
+    </RichText>
+  );
+
   return (
     <>
       <h2>{c("h1")}</h2>
-      <p>{c("p1")}</p>
+      {text(c("p1"))}
 
       <div className="section-divider" />
       <h2>{c("h2")}</h2>
       <h3>{c("h2a")}</h3>
-      <p>{c("p2")}</p>
-      <p>{c("p3")}</p>
-      <p>{c("p4")}</p>
+      {text(c("p2"))}
+      {text(c("p3"))}
+      {quote(c("p4"))}
       <h3>{c("h2b")}</h3>
-      <p>{c("p5")}</p>
+      {text(c("p5"))}
       <h3>{c("h2c")}</h3>
-      <p>{c("p6")}</p>
+      {text(c("p6"))}
       <h3>{c("h2d")}</h3>
-      <p>{c("p7")}</p>
-      <p>{c("p8")}</p>
+      {text(c("p7"))}
+      {text(c("p8"))}
       <h3>{c("h2e")}</h3>
-      <p>{c("p9")}</p>
-      <p>{c("p10")}</p>
-      <blockquote>{c("quote1")}</blockquote>
+      {text(c("p9"))}
+      {text(c("p10"))}
+      {quote(c("quote1"))}
 
       <div className="section-divider" />
       <h2>{c("h3")}</h2>
       <h3>{c("h3a")}</h3>
-      <p>{c("p11")}</p>
-      <p>{c("p12")}</p>
+      {text(c("p11"))}
+      {text(c("p12"))}
       <h3>{c("h3b")}</h3>
-      <p>{c("p13")}</p>
-      <p>{c("p14")}</p>
+      {text(c("p13"))}
+      {text(c("p14"))}
       <h3>{c("h3c")}</h3>
-      <p>{c("p15")}</p>
-      <blockquote>{c("quote2")}</blockquote>
+      {text(c("p15"))}
+      {quote(c("quote2"))}
 
       <div className="section-divider" />
       <h2>{c("h4")}</h2>
       <h3>{c("h4a")}</h3>
-      <p>{c("p16")}</p>
-      <blockquote>{c("quote3")}</blockquote>
-      <blockquote>{c("quote4")}</blockquote>
-      <p>{c("p17")}</p>
+      {text(c("p16"))}
+      {quote(c("quote3"))}
+      {quote(c("quote4"))}
+      {text(c("p17"))}
       <h3>{c("h4b")}</h3>
-      <p>{c("p18")}</p>
+      {text(c("p18"))}
       <ul>
-        <li>{c("li1")}</li>
-        <li>{c("li2")}</li>
-        <li>{c("li3")}</li>
+        <li>{inline(c("li1"))}</li>
+        <li>{inline(c("li2"))}</li>
+        <li>{inline(c("li3"))}</li>
       </ul>
-      <p>{c("p19")}</p>
+      {text(c("p19"))}
       <h3>{c("h4c")}</h3>
-      <p>{c("p20")}</p>
+      {text(c("p20"))}
       <ul>
-        <li>{c("li4")}</li>
-        <li>{c("li5")}</li>
-        <li>{c("li6")}</li>
+        <li>{inline(c("li4"))}</li>
+        <li>{inline(c("li5"))}</li>
+        <li>{inline(c("li6"))}</li>
       </ul>
-      <p>{c("p21")}</p>
+      {text(c("p21"))}
     </>
   );
 }

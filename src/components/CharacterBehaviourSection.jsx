@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React, { useMemo } from "react";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 import SectionAccordionList from "./SectionAccordionList";
 import SectionWrapper from "./SectionWrapper";
 import {
@@ -118,22 +119,63 @@ const stripHeadingPrefix = (value) =>
     .replace(/^\d+\.\s*/, "")
     .trim();
 
-const splitHeading = (headingText) => {
-  const colonSplit = headingText.split(/:\s+/);
+const findSeparatorOutsideHtml = (value, separator) => {
+  let inHtmlTag = false;
 
-  if (colonSplit.length > 1) {
+  for (let index = 0; index < value.length; index += 1) {
+    const character = value[index];
+
+    if (character === "<") {
+      inHtmlTag = true;
+      continue;
+    }
+
+    if (character === ">") {
+      inHtmlTag = false;
+      continue;
+    }
+
+    if (inHtmlTag) {
+      continue;
+    }
+
+    if (
+      separator === ":" &&
+      character === ":" &&
+      /\s/.test(value[index + 1] || "")
+    ) {
+      return index;
+    }
+
+    if (
+      separator === "dash" &&
+      /[—–-]/.test(character) &&
+      /\s/.test(value[index - 1] || "") &&
+      /\s/.test(value[index + 1] || "")
+    ) {
+      return index;
+    }
+  }
+
+  return -1;
+};
+
+const splitHeading = (headingText) => {
+  const colonIndex = findSeparatorOutsideHtml(headingText, ":");
+
+  if (colonIndex !== -1) {
     return {
-      title: colonSplit.shift().trim(),
-      subtitle: colonSplit.join(": ").trim(),
+      title: headingText.slice(0, colonIndex).trim(),
+      subtitle: headingText.slice(colonIndex + 1).trim(),
     };
   }
 
-  const dashSplit = headingText.split(/\s[—–-]\s/);
+  const dashIndex = findSeparatorOutsideHtml(headingText, "dash");
 
-  if (dashSplit.length > 1) {
+  if (dashIndex !== -1) {
     return {
-      title: dashSplit.shift().trim(),
-      subtitle: dashSplit.join(" — ").trim(),
+      title: headingText.slice(0, dashIndex).trim(),
+      subtitle: headingText.slice(dashIndex + 1).trim(),
     };
   }
 
@@ -156,7 +198,11 @@ const stripFirstHeadingFromBlock = (block) => {
 };
 
 const MarkdownBlock = ({ markdown }) => (
-  <ReactMarkdown components={markdownComponents}>{markdown}</ReactMarkdown>
+  <div className="character-behaviour-copy">
+    <ReactMarkdown rehypePlugins={[rehypeRaw]} components={markdownComponents}>
+      {markdown}
+    </ReactMarkdown>
+  </div>
 );
 
 function CommentImage({ fileName, alt, className = "" }) {
@@ -265,8 +311,9 @@ export default function CharacterBehaviourSection() {
       const headingText = stripHeadingPrefix(firstLine);
       const { title, subtitle } = splitHeading(headingText);
       const sectionBody = stripFirstHeadingFromBlock(part);
+      const explicitSubtitle = subtitle?.trim();
       const derivedSubtitle =
-        subtitle || firstMeaningfulLine(sectionBody) || "";
+        explicitSubtitle || firstMeaningfulLine(sectionBody) || "";
 
       return {
         key: `section-${index}`,

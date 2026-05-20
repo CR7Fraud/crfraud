@@ -39,14 +39,14 @@ export const translations = {
     label_messi: "Why Messi is Better",
     // Section titles
     title_ballon: "Ballon D'Or",
-    title_ucl: "A Champions League que Não Foi Limpa",
+    title_ucl: "UCL Manipulada",
     title_managers: "Treinadores Despedidos",
-    title_selfish: "Egoísmo em Campo e Fora Dele",
+    title_selfish: "Egoísmo",
     title_character: "Caráter & Comportamento",
-    title_national: "Portugal carregou Ronaldo",
-    title_crying: "Crying on Internet",
+    title_national: "Seleção",
+    title_crying: "Choros",
     title_hypocrisy: "Hipocrisia",
-    title_liga: "Liga Comprada & Dubai d'Or",
+    title_liga: "Liga Comprada",
     title_messi: "Porque é que Messi é Melhor",
     character_selfish_title: "O Espetáculo de Um Só Homem",
     character_selfish_subtitle:
@@ -72,9 +72,9 @@ export const translations = {
     bdor_2013_p1:
       "O segundo Ballon d'Or de Ronaldo merecia mais debate do que recebeu. O jogador que o ganhou terminou a época sem um único troféu colectivo — zero ligas, zero taças, zero Champions. Os outros dois finalistas, Messi e Ribéry, somavam títulos e desempenhos individuais superiores ao longo de toda a temporada.",
     bdor_2013_p2:
-      "Na Champions, o Real Madrid foi eliminado nas meias-finais pelo Borussia Dortmund, depois de uma derrota por 4-1 na primeira mão em que Ronaldo marcou apenas uma vez — e não voltou a marcar na segunda mão. Vale notar que sete dos seus golos europeus nessa época saíram em quatro jogos contra Galatasaray e Ajax; quando os adversários eram de nível superior, a produção desaparecia.",
+      'Na Champions, o Real Madrid foi eliminado nas meias-finais pelo Borussia Dortmund, depois de uma <span style="color: hsl(var(--accent))">derrota por 4-1 na primeira mão</span> em que Ronaldo marcou apenas uma vez — e não voltou a marcar na segunda mão. Vale notar que sete dos seus golos europeus nessa época saíram em quatro jogos contra Galatasaray e Ajax; quando os adversários eram de nível superior, a produção desaparecia.',
     bdor_2013_p3:
-      "Pela selecção portuguesa, na qualificação para o Mundial de 2014, Ronaldo não liderou a fase de grupos em golos — ficou em 27.º lugar com quatro golos em oito jogos. Nos play-offs contribuiu de forma decisiva com um hat-trick contra a Suécia, garantindo a qualificação. É um momento real, mas restrito a dois jogos numa campanha longa.",
+      'Pela selecção portuguesa, na qualificação para o Mundial de 2014, Ronaldo não liderou a fase de grupos em golos — ficou em 27.º lugar com quatro golos em oito jogos. Nos play-offs contribuiu de forma decisiva com <span style="color: hsl(var(--accent))">um hat-trick contra a Suécia</span>, garantindo a qualificação. <strong>É um momento real, mas continua restrito a dois jogos numa campanha longa.</strong>',
     bdor_2013_p4:
       "O detalhe que mais questiona a decisão: pela primeira vez na história, a France Football estendeu o período de elegibilidade da votação — precisamente até à data desse jogo com a Suécia. A extensão permitiu que o único momento marcante de Ronaldo na fase final da temporada entrasse nos critérios.",
     bdor_2013_quote:
@@ -83,7 +83,7 @@ export const translations = {
       "Este é o ano mais difícil de julgar, e a honestidade obriga a reconhecer que Ronaldo tinha argumentos reais. Foi o melhor marcador da Champions, bateu o recorde de golos na competição, ganhou Liga, Taça do Rei e Champions com o Real Madrid. Em termos de números brutos, o dossiê é sólido.",
     bdor_2014_p2: "A polémica, no entanto, é legítima por duas razões.",
     bdor_2014_p3:
-      "A primeira é interna ao Real Madrid: nas finais que definiram a época, Ronaldo raramente foi a figura decisiva. Gareth Bale foi o mais determinante na final da Champions e na final da Taça do Rei. Sergio Ramos marcou o golo que levou a final da Champions para prolongamento. Di María foi eleito o melhor jogador em campo nessa mesma final. Ronaldo marcou um penálti já no tempo extra, com o jogo controlado. Marcou, sim — mas num palco em que outros foram mais importantes.",
+      "A primeira é interna ao Real Madrid: nas finais que definiram a época, Ronaldo raramente foi a figura decisiva. Gareth Bale foi o mais determinante na final da Champions e na final da Taça do Rei. Sergio Ramos marcou o golo que levou a final da Champions para prolongamento. Di María foi eleito o melhor jogador em campo nessa mesma final. Ronaldo marcou um penálti já no tempo extra, com o jogo controlado. <strong>Marcou, sim — mas num palco em que outros foram mais importantes.</strong>",
     bdor_2014_p4:
       'A segunda é pela selecção: Portugal foi eliminado na fase de grupos do Mundial do Brasil num grupo com Gana e os Estados Unidos. É uma das piores campanhas mundialistas da história recente do país e pesa directamente contra o argumento de "melhor jogador do mundo".',
     bdor_2014_p5:
@@ -97,13 +97,13 @@ export const translations = {
     bdor_2016_p2:
       "Na Champions, Ronaldo foi o melhor marcador com 16 golos — mas 11 deles chegaram na fase de grupos, em jogos com Malmö FF e Shakhtar. Nos oitavos marcou à Roma e nos quartos ao Wolfsburg; a partir das meias-finais e na final, não marcou. O MVP da final foi Sergio Ramos.",
     bdor_2016_p3:
-      "No Euro 2016, a campanha de Portugal começou com resultados negativos: zero vitórias na fase de grupos, terceiro classificado, penálti falhado frente à Áustria. Nos jogos a eliminar, Ronaldo marcou contra a Hungria e o País de Gales, mas nos momentos que realmente definiram o torneio foram outros. Contra a Croácia, o golo decisivo foi de Quaresma; na final com a França, Ronaldo saiu lesionado aos 25 minutos e Portugal ganhou 1-0 graças a um golo de Éder e a uma exibição defensiva liderada por Pepe e Rui Patrício. O melhor jogador do Euro foi Antoine Griezmann.",
+      'No Euro 2016, a campanha de Portugal começou com resultados negativos: zero vitórias na fase de grupos, terceiro classificado, <span style="color: hsl(var(--accent))">penálti falhado frente à Áustria</span>. Nos jogos a eliminar, Ronaldo marcou contra a Hungria e o País de Gales, mas nos momentos que realmente definiram o torneio foram outros. Contra a Croácia, o golo decisivo foi de Quaresma; na final com a França, Ronaldo saiu lesionado aos 25 minutos e Portugal ganhou 1-0 graças a um golo de Éder e a uma exibição defensiva liderada por Pepe e Rui Patrício. O melhor jogador do Euro foi Antoine Griezmann.',
     bdor_2016_p4:
       "Messi, nesse mesmo ano, ganhou La Liga, a Taça do Rei, chegou à final da Copa América e somou 91 golos e assistências no total — foi eleito melhor avançado da Liga espanhola e terminou o ano civil com números superiores.",
     bdor_2016_p5:
-      "O que aconteceu em 2016 é um caso claro de prémio baseado em troféus colectivos - que é um critério legítimo, mas sem que o jogador premiado fosse o protagonista real em nenhum deles. Os colegas de equipa no Real Madrid e em Portugal têm tanto mérito nesses títulos quanto Ronaldo, e em vários momentos decisivos, mais. A Bola de Ouro de 2016 não foi atribuída ao melhor jogador do ano - foi atribuída ao jogador que pertenceu às duas equipas vencedoras. São critérios diferentes, e vale a pena ser honesto sobre essa distinção.",
+      "O que aconteceu em 2016 é um caso claro de prémio baseado em troféus colectivos - que é um critério legítimo, mas sem que o jogador premiado fosse o protagonista real em nenhum deles. Os colegas de equipa no Real Madrid e em Portugal têm tanto mérito nesses títulos quanto Ronaldo, e em vários momentos decisivos, mais. <strong>A Bola de Ouro de 2016 não foi atribuída ao melhor jogador do ano - foi atribuída ao jogador que pertenceu às duas equipas vencedoras.</strong> São critérios diferentes, e vale a pena ser honesto sobre essa distinção.",
     bdor_2016_p5_criteria:
-      "Os critérios, por outras palavras, mudaram consoante quem favoreciam. Quando Messi fez 59 golos + 31 assistências (91 g/a) sem um título da Champions League, isso não foi suficiente. Mas quando Ronaldo marcou 69 golos + 18 assistências (87 g/a) sem qualquer título em 2013, foi. Não existe um princípio consistente que explique ambos os resultados ao mesmo tempo - apenas um resultado.",
+      'Os critérios, por outras palavras, mudaram consoante <span style="color: hsl(var(--accent))">quem favoreciam</span>. Quando Messi fez 59 golos + 31 assistências (91 g/a) sem um título da Champions League, isso não foi suficiente. Mas quando Ronaldo marcou 69 golos + 18 assistências (87 g/a) sem qualquer título em 2013, foi. <strong>Não existe um princípio consistente que explique ambos os resultados ao mesmo tempo - apenas um resultado.</strong>',
     bdor_2017_p1:
       "2017 é, dos cinco anos analisados, o mais defensável para Ronaldo.",
     bdor_2017_p2:
@@ -120,7 +120,7 @@ export const translations = {
     bdor_col_without_cl: "Bolas de Ouro sem Champions",
     bdor_col_years_without: "Anos",
     bdor_summary_conclusion:
-      "Ronaldo ganhou quatro dos seus cinco prémios em anos em que o Real Madrid venceu a Champions. Messi ganhou cinco dos seus oito prémios em anos sem Champions. A conclusão não é que um é melhor do que o outro por isso — é que o modelo de avaliação favorece sistematicamente quem ganha a competição mais mediática da Europa, independentemente do protagonismo individual. Ao longo da carreira, Messi manteve médias superiores em golos, assistências e prémios de melhor jogador, e com a vantagem adicional de nunca ter beneficiado dos bónus de marcador da Premier League que Ronaldo acumulou durante anos. Ronaldo destaca-se no capítulo de golos na Champions e no número de prémios de melhor marcador dessa competição — um registo impressionante, mas que corresponde ao papel de avançado de área de um clube que dominou a Europa durante um período. Esses golos e esses títulos têm o seu mérito. Mas o currículo como argumento de superioridade absoluta sobre Messi assenta, em parte significativa, na Champions — e é aí que a análise se torna mais complexa.",
+      "Ronaldo ganhou quatro dos seus cinco prémios em anos em que o Real Madrid venceu a Champions. Messi ganhou cinco dos seus oito prémios em anos sem Champions. A conclusão não é que um é melhor do que o outro por isso — é que o modelo de avaliação favorece sistematicamente quem ganha a competição mais mediática da Europa, independentemente do protagonismo individual. Ao longo da carreira, Messi manteve médias superiores em golos, assistências e prémios de melhor jogador, e com a vantagem adicional de nunca ter beneficiado dos bónus de marcador da Premier League que Ronaldo acumulou durante anos. Ronaldo destaca-se no capítulo de golos na Champions e no número de prémios de melhor marcador dessa competição — um registo impressionante, mas que corresponde ao papel de avançado de área de um clube que dominou a Europa durante um período. <strong>Mas o currículo como argumento de superioridade absoluta sobre Messi assenta, em parte significativa, na Champions — e é aí que a análise se torna mais complexa.</strong>",
   },
 
   en: {
@@ -150,14 +150,14 @@ export const translations = {
     label_liga: "Bought League",
     label_messi: "Why Messi is Better",
     title_ballon: "Ballon D'Or",
-    title_ucl: "The Champions League That Wasn't Clean",
+    title_ucl: "Rigged UCL",
     title_managers: "Sacked Managers",
-    title_selfish: "Selfishness On and Off the Pitch",
+    title_selfish: "Selfishness",
     title_character: "Character & Behaviour",
-    title_national: "Portugal Carried Ronaldo",
-    title_crying: "Crying on the Internet",
+    title_national: "National Team",
+    title_crying: "Crying",
     title_hypocrisy: "Hypocrisy",
-    title_liga: "Bought League & Dubai d'Or",
+    title_liga: "Bought League",
     title_messi: "Why Messi is Better",
     character_selfish_title: "The One-Man Show",
     character_selfish_subtitle:
@@ -182,9 +182,9 @@ export const translations = {
     bdor_2013_p1:
       "Ronaldo's second Ballon d'Or deserved more debate than it received. The player who won it finished the season without a single collective trophy — zero leagues, zero cups, zero Champions League. The other two finalists, Messi and Ribéry, combined titles with superior individual performances throughout the entire season.",
     bdor_2013_p2:
-      "In the Champions League, Real Madrid were eliminated in the semi-finals by Borussia Dortmund after a <span style=\"color: hsl(var(--accent))\">4-1 first-leg defeat</span> in which Ronaldo scored just once — and didn't score in the second leg either. It is worth noting that seven of his European goals that season came in four games against Galatasaray and Ajax; when the opponents were of a higher standard, his output disappeared.",
+      'In the Champions League, Real Madrid were eliminated in the semi-finals by Borussia Dortmund after a <span style="color: hsl(var(--accent))">4-1 first-leg defeat</span> in which Ronaldo scored just once — and didn\'t score in the second leg either. It is worth noting that seven of his European goals that season came in four games against Galatasaray and Ajax; when the opponents were of a higher standard, his output disappeared.',
     bdor_2013_p3:
-      "For the Portuguese national team, in qualification for the 2014 World Cup, Ronaldo did not lead the group stage in goals — he ranked 27th with four goals in eight games. In the play-offs he contributed decisively with <span style=\"color: hsl(var(--accent))\">a hat-trick against Sweden</span>, securing qualification. <strong>It is a real moment, but it is still limited to two games in a long campaign.</strong>",
+      'For the Portuguese national team, in qualification for the 2014 World Cup, Ronaldo did not lead the group stage in goals — he ranked 27th with four goals in eight games. In the play-offs he contributed decisively with <span style="color: hsl(var(--accent))">a hat-trick against Sweden</span>, securing qualification. <strong>It is a real moment, but it is still limited to two games in a long campaign.</strong>',
     bdor_2013_p4:
       "The detail that most questions the decision: for the first time in history, France Football extended the eligibility period of the vote — precisely to the date of that game against Sweden. The extension allowed the only notable moment of Ronaldo's end-of-season run to enter the criteria.",
     bdor_2013_quote:
@@ -213,7 +213,7 @@ export const translations = {
     bdor_2016_p5:
       "What happened in 2016 is a clear case of an award based on collective trophies — which is a legitimate criterion, but without the awarded player being the real protagonist in any of them. Teammates at Real Madrid and in Portugal have as much merit in those titles as Ronaldo does, and in several decisive moments, more. <strong>The 2016 Ballon d'Or was not awarded to the best player of the year — it was awarded to the player who belonged to the two winning teams.</strong> Those are different criteria, and it is worth being honest about that distinction.",
     bdor_2016_p5_criteria:
-      "The criteria, in other words, shifted depending on <span style=\"color: hsl(var(--accent))\">who they favoured</span>. When Messi had 59 goals + 31 assists (91 g/a) without a Champions League title, that was not enough. But when Ronaldo scored 69 goals + 18 assists (87 g/a) without any title in 2013, it was. <strong>There is no consistent principle that explains both outcomes simultaneously — only a result.</strong>",
+      'The criteria, in other words, shifted depending on <span style="color: hsl(var(--accent))">who they favoured</span>. When Messi had 59 goals + 31 assists (91 g/a) without a Champions League title, that was not enough. But when Ronaldo scored 69 goals + 18 assists (87 g/a) without any title in 2013, it was. <strong>There is no consistent principle that explains both outcomes simultaneously — only a result.</strong>',
     bdor_2017_p1:
       "2017 is, of the five years analysed, the most defensible for Ronaldo.",
     bdor_2017_p2:
@@ -261,14 +261,14 @@ export const translations = {
     label_liga: "Liga Comprada",
     label_messi: "Por qué Messi es Mejor",
     title_ballon: "Ballon D'Or",
-    title_ucl: "La Champions League que No Fue Limpia",
+    title_ucl: "UCL Amañada",
     title_managers: "Entrenadores Despedidos",
-    title_selfish: "Egoísmo Dentro y Fuera del Campo",
+    title_selfish: "Egoísmo",
     title_character: "Carácter & Comportamiento",
-    title_national: "Portugal Cargó a Ronaldo",
-    title_crying: "Llorando en Internet",
+    title_national: "Selección",
+    title_crying: "Llorando",
     title_hypocrisy: "Hipocresía",
-    title_liga: "Liga Comprada & Dubai d'Or",
+    title_liga: "Liga Comprada",
     title_messi: "Por qué Messi es Mejor",
     character_selfish_title: "El Show de Uno Solo",
     character_selfish_subtitle:
@@ -292,9 +292,9 @@ export const translations = {
     bdor_2013_p1:
       "El segundo Balón de Oro de Ronaldo merecía más debate del que recibió. El jugador que lo ganó terminó la temporada sin un solo trofeo colectivo — cero ligas, cero copas, cero Champions. Los otros dos finalistas, Messi y Ribéry, acumulaban títulos y rendimientos individuales superiores durante toda la temporada.",
     bdor_2013_p2:
-      "En la Champions, el Real Madrid fue eliminado en semifinales por el Borussia Dortmund tras una derrota por 4-1 en la ida en la que Ronaldo marcó solo una vez — y no volvió a marcar en la vuelta. Vale señalar que siete de sus goles europeos esa temporada llegaron en cuatro partidos contra Galatasaray y Ajax; cuando los rivales eran de mayor nivel, la producción desaparecía.",
+      'En la Champions, el Real Madrid fue eliminado en semifinales por el Borussia Dortmund tras una <span style="color: hsl(var(--accent))">derrota por 4-1 en la ida</span> en la que Ronaldo marcó solo una vez — y no volvió a marcar en la vuelta. Vale señalar que siete de sus goles europeos esa temporada llegaron en cuatro partidos contra Galatasaray y Ajax; cuando los rivales eran de mayor nivel, la producción desaparecía.',
     bdor_2013_p3:
-      "Con la selección portuguesa, en la clasificación para el Mundial de 2014, Ronaldo no lideró la fase de grupos en goles — quedó en el puesto 27 con cuatro goles en ocho partidos. En los play-offs contribuyó de forma decisiva con un hat-trick ante Suecia, asegurando la clasificación. Es un momento real, pero limitado a dos partidos de una larga campaña.",
+      'Con la selección portuguesa, en la clasificación para el Mundial de 2014, Ronaldo no lideró la fase de grupos en goles — quedó en el puesto 27 con cuatro goles en ocho partidos. En los play-offs contribuyó de forma decisiva con <span style="color: hsl(var(--accent))">un hat-trick ante Suecia</span>, asegurando la clasificación. <strong>Es un momento real, pero sigue limitado a dos partidos de una larga campaña.</strong>',
     bdor_2013_p4:
       "El detalle que más cuestiona la decisión: por primera vez en la historia, France Football amplió el período de elegibilidad de la votación — precisamente hasta la fecha de ese partido con Suecia. La ampliación permitió que el único momento destacado de Ronaldo al final de la temporada entrara en los criterios.",
     bdor_2013_quote:
@@ -303,7 +303,7 @@ export const translations = {
       "Este es el año más difícil de juzgar, y la honestidad obliga a reconocer que Ronaldo tenía argumentos reales. Fue el máximo goleador de la Champions, batió el récord de goles en la competición, ganó La Liga, la Copa del Rey y la Champions con el Real Madrid. En términos de números brutos, el expediente es sólido.",
     bdor_2014_p2: "La polémica, sin embargo, es legítima por dos razones.",
     bdor_2014_p3:
-      "La primera es interna al Real Madrid: en las finales que definieron la temporada, Ronaldo raramente fue la figura decisiva. Gareth Bale fue el más determinante en la final de la Champions y en la final de la Copa del Rey. Sergio Ramos marcó el gol que llevó la final de la Champions a la prórroga. Di María fue elegido el mejor jugador en el campo en esa misma final. Ronaldo marcó un penalti ya en la prórroga, con el partido controlado. Marcó, sí — pero en un escenario en el que otros fueron más importantes.",
+      "La primera es interna al Real Madrid: en las finales que definieron la temporada, Ronaldo raramente fue la figura decisiva. Gareth Bale fue el más determinante en la final de la Champions y en la final de la Copa del Rey. Sergio Ramos marcó el gol que llevó la final de la Champions a la prórroga. Di María fue elegido el mejor jugador en el campo en esa misma final. Ronaldo marcó un penalti ya en la prórroga, con el partido controlado. <strong>Marcó, sí — pero en un escenario en el que otros fueron más importantes.</strong>",
     bdor_2014_p4:
       'La segunda es con la selección: Portugal fue eliminado en la fase de grupos del Mundial de Brasil en un grupo con Ghana y Estados Unidos. Es una de las peores campañas mundialistas de la historia reciente del país y pesa directamente contra el argumento de "mejor jugador del mundo".',
     bdor_2014_p5:
@@ -317,13 +317,13 @@ export const translations = {
     bdor_2016_p2:
       "En la Champions, Ronaldo fue el máximo goleador con 16 goles — pero 11 de ellos llegaron en la fase de grupos, en partidos contra Malmö FF y Shakhtar. En los octavos marcó a la Roma y en los cuartos al Wolfsburg; a partir de las semifinales y en la final, no marcó. El MVP de la final fue Sergio Ramos.",
     bdor_2016_p3:
-      "En la Eurocopa 2016, la campaña de Portugal empezó con resultados negativos: cero victorias en la fase de grupos, tercer clasificado, penalti fallado ante Austria. En los partidos eliminatorios, Ronaldo marcó ante Hungría y Gales, pero los momentos que realmente definieron el torneo los protagonizaron otros. Ante Croacia, el gol decisivo fue de Quaresma; en la final ante Francia, Ronaldo salió lesionado a los 25 minutos y Portugal ganó 1-0 gracias a un gol de Éder y a una exhibición defensiva liderada por Pepe y Rui Patrício. El mejor jugador de la Eurocopa fue Antoine Griezmann.",
+      'En la Eurocopa 2016, la campaña de Portugal empezó con resultados negativos: cero victorias en la fase de grupos, tercer clasificado, <span style="color: hsl(var(--accent))">penalti fallado ante Austria</span>. En los partidos eliminatorios, Ronaldo marcó ante Hungría y Gales, pero los momentos que realmente definieron el torneo los protagonizaron otros. Ante Croacia, el gol decisivo fue de Quaresma; en la final ante Francia, Ronaldo salió lesionado a los 25 minutos y Portugal ganó 1-0 gracias a un gol de Éder y a una exhibición defensiva liderada por Pepe y Rui Patrício. El mejor jugador de la Eurocopa fue Antoine Griezmann.',
     bdor_2016_p4:
       "Messi, ese mismo año, ganó La Liga, la Copa del Rey, llegó a la final de la Copa América y acumuló 91 goles y asistencias en total — fue elegido mejor delantero de la Liga española y terminó el año natural con números superiores.",
     bdor_2016_p5:
-      "Lo que ocurrió en 2016 es un caso claro de premio basado en trofeos colectivos — que es un criterio legítimo, pero sin que el jugador premiado fuera el protagonista real en ninguno de ellos. Los compañeros de equipo en el Real Madrid y en Portugal tienen tanto mérito en esos títulos como Ronaldo, y en varios momentos decisivos, más. El Balón de Oro de 2016 no se concedió al mejor jugador del año — se concedió al jugador que perteneció a los dos equipos ganadores. Son criterios distintos, y vale la pena ser honestos sobre esa distinción.",
+      "Lo que ocurrió en 2016 es un caso claro de premio basado en trofeos colectivos — que es un criterio legítimo, pero sin que el jugador premiado fuera el protagonista real en ninguno de ellos. Los compañeros de equipo en el Real Madrid y en Portugal tienen tanto mérito en esos títulos como Ronaldo, y en varios momentos decisivos, más. <strong>El Balón de Oro de 2016 no se concedió al mejor jugador del año — se concedió al jugador que perteneció a los dos equipos ganadores.</strong> Son criterios distintos, y vale la pena ser honestos sobre esa distinción.",
     bdor_2016_p5_criteria:
-      "Los criterios, en otras palabras, cambiaban según a quién favorecieran. Cuando Messi hizo 59 goles + 31 asistencias (91 g/a) sin un título de la Champions League, eso no fue suficiente. Pero cuando Ronaldo marcó 69 goles + 18 asistencias (87 g/a) sin ningún título en 2013, sí lo fue. No existe un principio coherente que explique ambos resultados al mismo tiempo — solo un resultado.",
+      'Los criterios, en otras palabras, cambiaban según <span style="color: hsl(var(--accent))">a quién favorecieran</span>. Cuando Messi hizo 59 goles + 31 asistencias (91 g/a) sin un título de la Champions League, eso no fue suficiente. Pero cuando Ronaldo marcó 69 goles + 18 asistencias (87 g/a) sin ningún título en 2013, sí lo fue. <strong>No existe un principio coherente que explique ambos resultados al mismo tiempo — solo un resultado.</strong>',
     bdor_2017_p1:
       "2017 es, de los cinco años analizados, el más defendible para Ronaldo.",
     bdor_2017_p2:
@@ -341,7 +341,7 @@ export const translations = {
     bdor_col_without_cl: "Balones de Oro sin Champions",
     bdor_col_years_without: "Años",
     bdor_summary_conclusion:
-      "Ronaldo ganó cuatro de sus cinco premios en años en que el Real Madrid ganó la Champions. Messi ganó cinco de sus ocho premios en años sin Champions. La conclusión no es que uno sea mejor que el otro por eso — es que el modelo de evaluación favorece sistemáticamente a quien gana la competición más mediática de Europa, independientemente del protagonismo individual. A lo largo de sus carreras, Messi mantuvo promedios superiores en goles, asistencias y premios al mejor jugador, con la ventaja adicional de nunca haber beneficiado de los bonus de goleador de la Premier League que Ronaldo acumuló durante años. Ronaldo destaca en el capítulo de goles en la Champions y en el número de premios al máximo goleador de esa competición — un registro impresionante, pero que corresponde al papel de delantero de área en un club que dominó Europa durante un período. Esos goles y esos títulos tienen su mérito. Pero el currículum como argumento de superioridad absoluta sobre Messi se sustenta, en parte significativa, en la Champions — y es ahí donde el análisis se vuelve más complejo.",
+      "Ronaldo ganó cuatro de sus cinco premios en años en que el Real Madrid ganó la Champions. Messi ganó cinco de sus ocho premios en años sin Champions. La conclusión no es que uno sea mejor que el otro por eso — es que el modelo de evaluación favorece sistemáticamente a quien gana la competición más mediática de Europa, independientemente del protagonismo individual. A lo largo de sus carreras, Messi mantuvo promedios superiores en goles, asistencias y premios al mejor jugador, con la ventaja adicional de nunca haber beneficiado de los bonus de goleador de la Premier League que Ronaldo acumuló durante años. Ronaldo destaca en el capítulo de goles en la Champions y en el número de premios al máximo goleador de esa competición — un registro impresionante, pero que corresponde al papel de delantero de área en un club que dominó Europa durante un período. <strong>Pero el currículum como argumento de superioridad absoluta sobre Messi se sustenta, en parte significativa, en la Champions — y es ahí donde el análisis se vuelve más complejo.</strong>",
   },
 
   fr: {
@@ -371,14 +371,14 @@ export const translations = {
     label_liga: "Ligue Achetée",
     label_messi: "Pourquoi Messi est Meilleur",
     title_ballon: "Ballon D'Or",
-    title_ucl: "La Ligue des Champions qui N'était Pas Propre",
+    title_ucl: "UCL Truquée",
     title_managers: "Entraîneurs Licenciés",
-    title_selfish: "Égoïsme Sur et Hors du Terrain",
+    title_selfish: "Égoïsme",
     title_character: "Caractère & Comportement",
-    title_national: "Le Portugal a Porté Ronaldo",
-    title_crying: "Pleurs sur Internet",
+    title_national: "Équipe Nationale",
+    title_crying: "Pleurs",
     title_hypocrisy: "Hypocrisie",
-    title_liga: "Ligue Achetée & Dubai d'Or",
+    title_liga: "Ligue Achetée",
     title_messi: "Pourquoi Messi est Meilleur",
     character_selfish_title: "Le Spectacle d'un Seul Homme",
     character_selfish_subtitle:
@@ -402,9 +402,9 @@ export const translations = {
     bdor_2013_p1:
       "Le deuxième Ballon d'Or de Ronaldo méritait plus de débat qu'il n'en a reçu. Le joueur qui l'a remporté a terminé la saison sans un seul trophée collectif — zéro ligue, zéro coupe, zéro Ligue des Champions. Les deux autres finalistes, Messi et Ribéry, cumulaient titres et performances individuelles supérieures tout au long de la saison.",
     bdor_2013_p2:
-      "En Ligue des Champions, le Real Madrid a été éliminé en demi-finale par le Borussia Dortmund après une défaite 4-1 à l'aller lors de laquelle Ronaldo n'avait marqué qu'une fois — et n'a plus marqué au retour. Il convient de noter que sept de ses buts européens cette saison sont venus en quatre matches contre Galatasaray et l'Ajax ; face à des adversaires de niveau supérieur, sa production disparaissait.",
+      "En Ligue des Champions, le Real Madrid a été éliminé en demi-finale par le Borussia Dortmund après une <span style=\"color: hsl(var(--accent))\">défaite 4-1 à l'aller</span> lors de laquelle Ronaldo n'avait marqué qu'une fois — et n'a plus marqué au retour. Il convient de noter que sept de ses buts européens cette saison sont venus en quatre matches contre Galatasaray et l'Ajax ; face à des adversaires de niveau supérieur, sa production disparaissait.",
     bdor_2013_p3:
-      "Avec la sélection portugaise, lors des qualifications pour la Coupe du Monde 2014, Ronaldo n'a pas mené la phase de groupes en buts — il s'est classé 27e avec quatre buts en huit matches. En barrages, il a contribué de manière décisive avec un hat-trick contre la Suède, assurant la qualification. C'est un moment réel, mais limité à deux matches d'une longue campagne.",
+      "Avec la sélection portugaise, lors des qualifications pour la Coupe du Monde 2014, Ronaldo n'a pas mené la phase de groupes en buts — il s'est classé 27e avec quatre buts en huit matches. En barrages, il a contribué de manière décisive avec <span style=\"color: hsl(var(--accent))\">un hat-trick contre la Suède</span>, assurant la qualification. <strong>C'est un moment réel, mais il reste limité à deux matches d'une longue campagne.</strong>",
     bdor_2013_p4:
       "Le détail qui remet le plus en question la décision : pour la première fois dans l'histoire, France Football a étendu la période d'éligibilité du vote — précisément jusqu'à la date de ce match contre la Suède. Cette extension a permis que le seul moment marquant de Ronaldo en fin de saison entre dans les critères.",
     bdor_2013_quote:
@@ -413,7 +413,7 @@ export const translations = {
       "C'est l'année la plus difficile à juger, et l'honnêteté oblige à reconnaître que Ronaldo avait de vrais arguments. Il a été le meilleur buteur de la Ligue des Champions, a battu le record de buts dans la compétition, a remporté La Liga, la Coupe du Roi et la Ligue des Champions avec le Real Madrid. En termes de chiffres bruts, le dossier est solide.",
     bdor_2014_p2: "La controverse est néanmoins légitime pour deux raisons.",
     bdor_2014_p3:
-      "La première est interne au Real Madrid : lors des finales qui ont défini la saison, Ronaldo a rarement été la figure décisive. Gareth Bale a été le plus déterminant en finale de la Ligue des Champions et en finale de la Coupe du Roi. Sergio Ramos a marqué le but qui a renvoyé la finale de la Ligue des Champions aux prolongations. Di María a été élu meilleur joueur sur le terrain lors de cette même finale. Ronaldo a marqué un penalty déjà en prolongation, avec le match maîtrisé. Il a marqué, oui — mais sur une scène où d'autres ont été plus importants.",
+      "La première est interne au Real Madrid : lors des finales qui ont défini la saison, Ronaldo a rarement été la figure décisive. Gareth Bale a été le plus déterminant en finale de la Ligue des Champions et en finale de la Coupe du Roi. Sergio Ramos a marqué le but qui a renvoyé la finale de la Ligue des Champions aux prolongations. Di María a été élu meilleur joueur sur le terrain lors de cette même finale. Ronaldo a marqué un penalty déjà en prolongation, avec le match maîtrisé. <strong>Il a marqué, oui — mais sur une scène où d'autres ont été plus importants.</strong>",
     bdor_2014_p4:
       "La seconde concerne la sélection : le Portugal a été éliminé en phase de groupes du Mondial au Brésil dans un groupe avec le Ghana et les États-Unis. C'est l'une des pires campagnes mondialistes de l'histoire récente du pays et cela pèse directement contre l'argument du « meilleur joueur du monde ».",
     bdor_2014_p5:
@@ -427,13 +427,13 @@ export const translations = {
     bdor_2016_p2:
       "En Ligue des Champions, Ronaldo a été le meilleur buteur avec 16 buts — mais 11 d'entre eux sont venus en phase de groupes, lors de matches contre Malmö FF et le Shakhtar. En huitièmes, il a marqué contre la Roma et en quarts contre Wolfsburg ; à partir des demi-finales et en finale, il n'a pas marqué. Le MVP de la finale était Sergio Ramos.",
     bdor_2016_p3:
-      "À l'Euro 2016, la campagne du Portugal a débuté par des résultats négatifs : zéro victoire en phase de groupes, troisième au classement, pénalty raté contre l'Autriche. Dans les matches à élimination directe, Ronaldo a marqué contre la Hongrie et le Pays de Galles, mais les moments qui ont vraiment défini le tournoi ont été produits par d'autres. Contre la Croatie, le but décisif était de Quaresma ; en finale contre la France, Ronaldo est sorti blessé à la 25e minute et le Portugal a gagné 1-0 grâce à un but d'Éder et à une prestation défensive menée par Pepe et Rui Patrício. Le meilleur joueur de l'Euro était Antoine Griezmann.",
+      "À l'Euro 2016, la campagne du Portugal a débuté par des résultats négatifs : zéro victoire en phase de groupes, troisième au classement, <span style=\"color: hsl(var(--accent))\">pénalty raté contre l'Autriche</span>. Dans les matches à élimination directe, Ronaldo a marqué contre la Hongrie et le Pays de Galles, mais les moments qui ont vraiment défini le tournoi ont été produits par d'autres. Contre la Croatie, le but décisif était de Quaresma ; en finale contre la France, Ronaldo est sorti blessé à la 25e minute et le Portugal a gagné 1-0 grâce à un but d'Éder et à une prestation défensive menée par Pepe et Rui Patrício. Le meilleur joueur de l'Euro était Antoine Griezmann.",
     bdor_2016_p4:
       "Messi, cette même année, a remporté La Liga, la Coupe du Roi, atteint la finale de la Copa América et totalisé 91 buts et passes décisives — il a été élu meilleur attaquant de la Liga espagnole et a terminé l'année civile avec des chiffres supérieurs.",
     bdor_2016_p5:
-      "Ce qui s'est passé en 2016 est un cas clair de prix basé sur des trophées collectifs — ce qui est un critère légitime, mais sans que le joueur récompensé soit le vrai protagoniste dans aucun d'entre eux. Les coéquipiers du Real Madrid et du Portugal ont autant de mérite dans ces titres que Ronaldo, et à plusieurs moments décisifs, davantage. Le Ballon d'Or de 2016 n'a pas été attribué au meilleur joueur de l'année — il a été attribué au joueur qui appartenait aux deux équipes gagnantes. Ce sont des critères différents, et il vaut la peine d'être honnête à propos de cette distinction.",
+      "Ce qui s'est passé en 2016 est un cas clair de prix basé sur des trophées collectifs — ce qui est un critère légitime, mais sans que le joueur récompensé soit le vrai protagoniste dans aucun d'entre eux. Les coéquipiers du Real Madrid et du Portugal ont autant de mérite dans ces titres que Ronaldo, et à plusieurs moments décisifs, davantage. <strong>Le Ballon d'Or de 2016 n'a pas été attribué au meilleur joueur de l'année — il a été attribué au joueur qui appartenait aux deux équipes gagnantes.</strong> Ce sont des critères différents, et il vaut la peine d'être honnête à propos de cette distinction.",
     bdor_2016_p5_criteria:
-      "Les critères, en d'autres termes, ont changé selon ceux qu'ils favorisaient. Quand Messi a affiché 59 buts + 31 passes décisives (91 g/a) sans titre en Ligue des Champions, cela n'a pas suffi. Mais quand Ronaldo a marqué 69 buts + 18 passes décisives (87 g/a) sans aucun titre en 2013, cela a suffi. Il n'existe pas de principe cohérent qui explique simultanément les deux résultats - seulement un résultat.",
+      "Les critères, en d'autres termes, ont changé selon <span style=\"color: hsl(var(--accent))\">ceux qu'ils favorisaient</span>. Quand Messi a affiché 59 buts + 31 passes décisives (91 g/a) sans titre en Ligue des Champions, cela n'a pas suffi. Mais quand Ronaldo a marqué 69 buts + 18 passes décisives (87 g/a) sans aucun titre en 2013, cela a suffi. <strong>Il n'existe pas de principe cohérent qui explique simultanément les deux résultats - seulement un résultat.</strong>",
     bdor_2017_p1:
       "2017 est, des cinq années analysées, la plus défendable pour Ronaldo.",
     bdor_2017_p2:
@@ -451,7 +451,7 @@ export const translations = {
     bdor_col_without_cl: "Ballons d'Or sans la LDC",
     bdor_col_years_without: "Années",
     bdor_summary_conclusion:
-      "Ronaldo a remporté quatre de ses cinq prix lors d'années où le Real Madrid a gagné la Ligue des Champions. Messi a remporté cinq de ses huit prix lors d'années sans Ligue des Champions. La conclusion n'est pas que l'un est meilleur que l'autre pour autant — c'est que le modèle d'évaluation favorise systématiquement celui qui remporte la compétition la plus médiatisée d'Europe, indépendamment du rôle individuel. Tout au long de leur carrière, Messi a maintenu des moyennes supérieures en buts, passes décisives et prix de meilleur joueur, avec l'avantage supplémentaire de n'avoir jamais bénéficié des bonus de buteur de la Premier League qu'a accumulés Ronaldo pendant des années. Ronaldo se distingue dans le chapitre des buts en Ligue des Champions et du nombre de prix de meilleur buteur de cette compétition — un palmarès impressionnant, mais qui correspond au rôle d'avant-centre d'un club qui a dominé l'Europe pendant une période. Ces buts et ces titres ont leur mérite. Mais le CV comme argument de supériorité absolue sur Messi repose, dans une part significative, sur la Ligue des Champions — et c'est là que l'analyse devient plus complexe.",
+      "Ronaldo a remporté quatre de ses cinq prix lors d'années où le Real Madrid a gagné la Ligue des Champions. Messi a remporté cinq de ses huit prix lors d'années sans Ligue des Champions. La conclusion n'est pas que l'un est meilleur que l'autre pour autant — c'est que le modèle d'évaluation favorise systématiquement celui qui remporte la compétition la plus médiatisée d'Europe, indépendamment du rôle individuel. Tout au long de leur carrière, Messi a maintenu des moyennes supérieures en buts, passes décisives et prix de meilleur joueur, avec l'avantage supplémentaire de n'avoir jamais bénéficié des bonus de buteur de la Premier League qu'a accumulés Ronaldo pendant des années. Ronaldo se distingue dans le chapitre des buts en Ligue des Champions et du nombre de prix de meilleur buteur de cette compétition — un palmarès impressionnant, mais qui correspond au rôle d'avant-centre d'un club qui a dominé l'Europe pendant une période. <strong>Mais le CV comme argument de supériorité absolue sur Messi repose, dans une part significative, sur la Ligue des Champions — et c'est là que l'analyse devient plus complexe.</strong>",
   },
 };
 

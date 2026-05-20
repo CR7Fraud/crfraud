@@ -1,6 +1,5 @@
 // @ts-nocheck
 import React from "react";
-import { ExternalLink } from "lucide-react";
 import SectionAccordionList from "./SectionAccordionList";
 import SectionWrapper from "./SectionWrapper";
 import { useI18n } from "../lib/i18n";
@@ -13,7 +12,7 @@ const en = {
   context_p2:
     'Those "survivals" became trophies. Those trophies became Ballon d\'Ors.',
   case1_year: "Final 2016",
-  case1_title: "The Opening Goal That Was **Illegal**",
+  case1_title: "The Opening Goal That Was Illegal",
   case1_p1:
     "In the 2016 Champions League final, Sergio Ramos opens the scoring early. Atletico de Madrid equalise. Real win in extra time 4-1.",
   case1_p2:
@@ -22,7 +21,7 @@ const en = {
   case1_p3:
     "The first major European title of the Real/Ronaldo era is literally built on an incident the referee himself acknowledges as irregular. Ronaldo scores from a penalty already in extra time, with the game decided - and enters the record books as European champion. Source:",
   case2_year: "2017 vs Bayern",
-  case2_title: "**Unjust Red Card**, Two Offside Goals",
+  case2_title: "Unjust Red Card, Two Offside Goals",
   case2_p1:
     "In the 2017 quarter-finals, Bayern arrive in Spain with the tie level and a squad that, in theory, was superior to Real that season.",
   case2_li1:
@@ -35,7 +34,7 @@ const en = {
     "Result: Real advance to the semi-finals with a Ronaldo hat-trick that includes at least one illegal goal, in a 11 v 10 game that should not have existed. That passage is a central piece of the back-to-back Champions League narrative - and of the arguments used to justify the 2017 Ballon d'Or.",
   case3_year: "2018 vs PSG",
   case3_title:
-    "The **Non-Existent Penalty** and the Goal That Should Have Been Retaken",
+    "The Non-Existent Penalty and the Goal That Should Have Been Retaken",
   case3_p1:
     "In the 2018 round of 16, PSG arrive in Madrid winning the first leg.",
   case3_li1:
@@ -45,7 +44,7 @@ const en = {
   case3_p2:
     "Real overturn 0-1 to 2-1. Two Ronaldo goals. At least one should not have counted. The other was born from a penalty that divided even the referees themselves.",
   case4_year: "2018 vs Juventus",
-  case4_title: 'The 93rd-Minute Penalty and "**The Robbery of the Century**"',
+  case4_title: 'The 93rd-Minute Penalty and "The Robbery of the Century"',
   case4_p1:
     "This is the most emblematic case. Juventus do the impossible: lose 0-3 in Turin, go to Madrid and win 3-0 - tie level at 3-3.",
   case4_p2:
@@ -226,67 +225,106 @@ const fallback = (c, lang, key) => c[lang]?.[key] || c["en"][key];
 
 const sourceCardCopy = {
   en: {
-    badge: "Source",
-    cta: "Open article",
-    title: "Clattenburg on 2016 Real Madrid-Atletico final",
+    source: "Source",
+    site: "AS USA",
     format: "Video",
+    title: "Clattenburg on 2016 Real Madrid-Atletico final",
     description:
       "AS USA video article with the referee's admission and the offside context.",
+    cta: "Open article",
   },
   pt: {
-    badge: `Fonte`,
-    cta: `Abrir artigo`,
-    title: `Clattenburg sobre a final Real Madrid-Atlético de 2016`,
+    source: `Fonte`,
+    site: `AS USA`,
     format: `Vídeo`,
+    title: `Clattenburg sobre a final Real Madrid-Atlético de 2016`,
     description: `Artigo em vídeo da AS USA com a admissão do árbitro e o contexto do fora-de-jogo.`,
+    cta: `Abrir artigo`,
   },
   es: {
-    badge: `Fuente`,
-    cta: `Abrir artículo`,
-    title: `Clattenburg sobre la final Real Madrid-Atlético de 2016`,
+    source: `Fuente`,
+    site: `AS USA`,
     format: `Vídeo`,
+    title: `Clattenburg sobre la final Real Madrid-Atlético de 2016`,
     description: `Artículo en vídeo de AS USA con la admisión del árbitro y el contexto del fuera de juego.`,
+    cta: `Abrir artículo`,
   },
   fr: {
-    badge: `Source`,
-    cta: `Ouvrir l'article`,
-    title: `Clattenburg à propos de la finale Real Madrid-Atlético de 2016`,
+    source: `Source`,
+    site: `AS USA`,
     format: `Vidéo`,
+    title: `Clattenburg à propos de la finale Real Madrid-Atlético de 2016`,
     description: `Article vidéo d'AS USA avec l'aveu de l'arbitre et le contexte du hors-jeu.`,
+    cta: `Ouvrir l'article`,
   },
 };
 
 const case2SourceCardCopy = {
   en: {
-    badge: "Source",
-    cta: "Open article",
-    title: "Real-Bayern referee made two errors with Arturo Vidal",
+    source: "Source",
+    site: "MARCA",
     format: "Article",
+    title: "Real-Bayern referee made two errors with Arturo Vidal",
     description:
       "Marca English report on the sending-off and the two officiating mistakes in the quarter-final.",
+    cta: "Open article",
   },
   pt: {
-    badge: `Fonte`,
-    cta: `Abrir artigo`,
-    title: `O árbitro de Real-Bayern cometeu dois erros com Arturo Vidal`,
+    source: `Fonte`,
+    site: `MARCA`,
     format: `Artigo`,
+    title: `O árbitro de Real-Bayern cometeu dois erros com Arturo Vidal`,
     description: `Reportagem da Marca English sobre a expulsão e os dois erros de arbitragem nos quartos de final.`,
+    cta: `Abrir artigo`,
   },
   es: {
-    badge: `Fuente`,
-    cta: `Abrir artículo`,
-    title: `El árbitro de Real-Bayern cometió dos errores con Arturo Vidal`,
+    source: `Fuente`,
+    site: `MARCA`,
     format: `Artículo`,
+    title: `El árbitro de Real-Bayern cometió dos errores con Arturo Vidal`,
     description: `Reportaje de Marca English sobre la expulsión y los dos errores arbitrales en los cuartos de final.`,
+    cta: `Abrir artículo`,
   },
   fr: {
-    badge: `Source`,
-    cta: `Ouvrir l'article`,
-    title: `L'arbitre de Real-Bayern a commis deux erreurs avec Arturo Vidal`,
+    source: `Source`,
+    site: `MARCA`,
     format: `Article`,
+    title: `L'arbitre de Real-Bayern a commis deux erreurs avec Arturo Vidal`,
     description: `Reportage de Marca English sur l'expulsion et les deux erreurs d'arbitrage en quarts de finale.`,
+    cta: `Ouvrir l'article`,
   },
 };
+
+const SourceLinkCard = ({
+  href,
+  source,
+  site,
+  format,
+  title,
+  description,
+  cta,
+}) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="source-link-card"
+  >
+    <div className="flex items-center justify-between gap-3">
+      <div className="flex flex-wrap items-center gap-2 text-[10px] font-bold uppercase tracking-[0.24em] text-zinc-400">
+        <span>{source}</span>
+        <span>{site}</span>
+        <span>{format}</span>
+      </div>
+      <span className="shrink-0 text-[10px] font-semibold uppercase tracking-[0.18em] text-amber-300">
+        ↗
+      </span>
+    </div>
+    <h3 className="mt-2 text-sm font-semibold text-white">{title}</h3>
+    <p className="mt-1 text-sm leading-relaxed text-zinc-300">{description}</p>
+    <span className="source-link-card-cta">{cta}</span>
+  </a>
+);
 
 export default function RiggedUCLSection() {
   const { lang, t } = useI18n();
@@ -324,41 +362,10 @@ export default function RiggedUCLSection() {
               {c("case1_figcaption")}
             </figcaption>
           </figure>
-          <a
+          <SourceLinkCard
             href="https://en.as.com/en/2021/11/04/videos/1636052317_471606.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block rounded-3xl border border-amber-400/25 bg-gradient-to-r from-amber-500/20 via-[#151920] to-[#0f1319] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.42)] ring-1 ring-white/5 transition-all duration-200 hover:-translate-y-0.5 hover:border-amber-400/55 hover:shadow-[0_24px_70px_rgba(245,158,11,0.18)]"
-          >
-            <div className="flex items-start gap-4 md:gap-5">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-amber-500/20 text-amber-400 shadow-inner shadow-black/20">
-                <ExternalLink className="h-5 w-5" />
-              </div>
-              <div className="min-w-0 flex-1">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="rounded-full bg-amber-500/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.24em] text-amber-300 shadow-sm shadow-black/20">
-                    {sourceCard.badge}
-                  </span>
-                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-300">
-                    AS USA
-                  </span>
-                  <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-zinc-300">
-                    {sourceCard.format}
-                  </span>
-                </div>
-                <h3 className="mt-3 text-lg font-semibold text-white">
-                  {sourceCard.title}
-                </h3>
-                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-zinc-300">
-                  {sourceCard.description}
-                </p>
-              </div>
-              <span className="mt-1 hidden shrink-0 items-center gap-2 text-sm font-semibold text-amber-300 sm:inline-flex">
-                {sourceCard.cta}
-                <ExternalLink className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </span>
-            </div>
-          </a>
+            {...sourceCard}
+          />
         </>
       ),
     },
@@ -372,41 +379,10 @@ export default function RiggedUCLSection() {
             <li>{c("case2_li1")}</li>
             <li>{c("case2_li2")}</li>
           </ul>
-          <a
+          <SourceLinkCard
             href="https://www.marca.com/en/football/real-madrid/2017/04/18/58f67cc922601da11e8b45c1.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group mb-6 block rounded-3xl border border-rose-400/25 bg-gradient-to-r from-rose-500/20 via-[#151920] to-[#0f1319] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.42)] ring-1 ring-white/5 transition-all duration-200 hover:-translate-y-0.5 hover:border-rose-400/55 hover:shadow-[0_24px_70px_rgba(244,63,94,0.18)]"
-          >
-            <div className="flex items-start gap-4 md:gap-5">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-rose-500/20 text-rose-300 shadow-inner shadow-black/20">
-                <ExternalLink className="h-5 w-5" />
-              </div>
-              <div className="min-w-0 flex-1">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="rounded-full bg-rose-500/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.24em] text-rose-200 shadow-sm shadow-black/20">
-                    {case2SourceCard.badge}
-                  </span>
-                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-300">
-                    MARCA
-                  </span>
-                  <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-zinc-300">
-                    {case2SourceCard.format}
-                  </span>
-                </div>
-                <h3 className="mt-3 text-lg font-semibold text-white">
-                  {case2SourceCard.title}
-                </h3>
-                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-zinc-300">
-                  {case2SourceCard.description}
-                </p>
-              </div>
-              <span className="mt-1 hidden shrink-0 items-center gap-2 text-sm font-semibold text-rose-300 sm:inline-flex">
-                {case2SourceCard.cta}
-                <ExternalLink className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </span>
-            </div>
-          </a>
+            {...case2SourceCard}
+          />
           <blockquote>{c("case2_q")}</blockquote>
           <p>{c("case2_p2")}</p>
           <figure className="my-8 overflow-hidden rounded-2xl border border-white/10 bg-card/20 shadow-[0_24px_70px_rgba(0,0,0,0.32)]">
@@ -480,7 +456,7 @@ export default function RiggedUCLSection() {
       title={c("title")}
       dark
     >
-      <div className="space-y-8">
+      <div className="space-y-10">
         {contextIntro}
         <SectionAccordionList items={items} dark />
       </div>

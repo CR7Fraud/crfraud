@@ -320,7 +320,7 @@ export default function LigaCompradaSection() {
       dark
     >
       <p>{c("intro")}</p>
-      <SectionAccordionList items={items} dark />
+      <SectionAccordionList items={items} dark className="mt-10" />
     </SectionWrapper>
   );
 }

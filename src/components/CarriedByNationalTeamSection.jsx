@@ -1,4 +1,5 @@
 import React from "react";
+import RichText from "./RichText";
 import SectionAccordionList from "./SectionAccordionList";
 import SectionWrapper from "./SectionWrapper";
 import { useI18n } from "../lib/i18n";
@@ -15,7 +16,7 @@ const tournamentsEn = [
       "Final vs France: Ronaldo goes off injured at 25 minutes. From then on, Rui Patrício makes several decisive saves, Pepe leads the defence and Éder scores the title-winning goal at 109 minutes.",
     ],
     conclusion:
-      'International reports were direct: Portugal "surprised France and won the Euro **despite Ronaldo\'s injury**, thanks to Éder\'s goal and Patrício\'s heroic display". The idea that he "carried Portugal to the title" does not survive the match timeline.',
+      'International reports were direct: Portugal "surprised France and won the Euro <span style="color: hsl(var(--accent))">despite Ronaldo\'s injury</span>, thanks to Éder\'s goal and Patrício\'s heroic display". <strong>The idea that he "carried Portugal to the title" does not survive the match timeline.</strong>',
   },
   {
     year: "Nations League 2019",
@@ -27,7 +28,7 @@ const tournamentsEn = [
       'The move originates from a run and pass by Bernardo Silva; the BBC highlights that the trophy is won by "Guedes\'s strike after brilliant work from Bernardo".',
     ],
     conclusion:
-      "Ronaldo is on the pitch, but Portugal's second official title in history is again **decided by others**: Éder in 2016, Guedes in 2019.",
+      'Ronaldo is on the pitch, but Portugal\'s second official title in history is again <span style="color: hsl(var(--accent))">decided by others</span>: Éder in 2016, Guedes in 2019.',
   },
   {
     year: "Euro 2020",
@@ -61,7 +62,7 @@ const tournamentsEn = [
       'According to data compiled by the English press, he was the striker with the worst efficiency in the competition: xG accumulated around 3.5 goals, zero converted — officially "the worst centre-forward at Euro 2024" relative to the chances he had.',
     ],
     conclusion:
-      "In the round of 16 against Slovenia, he had 120 minutes to decide, missed a penalty in extra time and ended in tears; the one who rescues Portugal is Diogo Costa, with three penalties saved, while Bruno and Bernardo convert without missing. In the quarter-final against France, PortuGOAL gives him 4.5/10, noting he had the **worst passing percentage** and fewest touches of any outfield player — yet he only comes off well into the second half.",
+      'In the round of 16 against Slovenia, he had 120 minutes to decide, missed a penalty in extra time and ended in tears; the one who rescues Portugal is Diogo Costa, with three penalties saved, while Bruno and Bernardo convert without missing. In the quarter-final against France, PortuGOAL gives him 4.5/10, noting he had the <span style="color: hsl(var(--accent))">worst passing percentage</span> and fewest touches of any outfield player — yet he only comes off well into the second half.',
   },
 ];
 
@@ -353,6 +354,14 @@ export default function CarriedByNationalTeamSection() {
   const c = (key) => fallback(content, lang, key);
   const tournaments = tournamentsByLang[lang] || tournamentsEn;
 
+  const text = (value) => <RichText as="p">{value}</RichText>;
+  const inline = (value) => (
+    <RichText as="span" className="inline">
+      {value}
+    </RichText>
+  );
+  const quote = (value) => <RichText as="blockquote">{value}</RichText>;
+
   const items = tournaments.map((item) => ({
     key: item.year,
     eyebrow: t("label_national"),
@@ -360,19 +369,22 @@ export default function CarriedByNationalTeamSection() {
     subtitle: item.title,
     content: (
       <>
-        <p>{item.content}</p>
+        {text(item.content)}
         {item.points.length > 0 && (
           <ul>
             {item.points.map((point, index) => (
-              <li key={index}>{point}</li>
+              <li key={index}>{inline(point)}</li>
             ))}
           </ul>
         )}
-        {item.quote && <blockquote>{item.quote}</blockquote>}
+        {item.quote && quote(item.quote)}
         {item.conclusion && (
-          <p className="text-muted-foreground italic text-sm border-l-2 border-amber-500 pl-4 mt-4">
+          <RichText
+            as="p"
+            className="text-muted-foreground italic text-sm border-l-2 border-amber-500 pl-4 mt-4"
+          >
             {item.conclusion}
-          </p>
+          </RichText>
         )}
       </>
     ),
@@ -384,22 +396,22 @@ export default function CarriedByNationalTeamSection() {
       label={t("label_national")}
       title={c("title")}
     >
-      <p>{c("intro")}</p>
+      {text(c("intro"))}
       <div className="mt-8">
         <SectionAccordionList items={items} />
       </div>
 
       <div className="section-divider" />
       <h2>{c("summary_h")}</h2>
-      <p>{c("summary_intro")}</p>
+      {text(c("summary_intro"))}
       <ul>
-        <li>{c("summary_li1")}</li>
-        <li>{c("summary_li2")}</li>
-        <li>{c("summary_li3")}</li>
-        <li>{c("summary_li4")}</li>
-        <li>{c("summary_li5")}</li>
+        <li>{inline(c("summary_li1"))}</li>
+        <li>{inline(c("summary_li2"))}</li>
+        <li>{inline(c("summary_li3"))}</li>
+        <li>{inline(c("summary_li4"))}</li>
+        <li>{inline(c("summary_li5"))}</li>
       </ul>
-      <p>{c("summary_p")}</p>
+      {text(c("summary_p"))}
     </SectionWrapper>
   );
 }

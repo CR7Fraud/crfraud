@@ -6,25 +6,147 @@ O padrão, ao longo de vinte anos e de quatro clubes, fala por si.
 
 ---
 
-## 1. Hipocrisia: O que Ronaldo Diz e o que Ronaldo Faz
+## 1. Hipocrisia: Princípio versus conveniência
 
 Ao longo da carreira, Ronaldo construiu uma narrativa pública em torno de dignidade, princípios e desinteresse por estatísticas. As suas decisões reais contam uma história diferente.
 
-- **"I don't chase records"** — manteve-se na seleção nacional muito para lá do seu pico competitivo para acumular golos e internacionalizações; escolheu uma liga periférica onde podia inflacionar números num contexto menos exigente; monopolizou penáltis e livres diretos com eficácia discutível, mesmo quando havia especialistas melhores disponíveis. A frase soa bem em entrevistas. A carreira é a sua própria refutação.
+### Ao longo da carreira — "I don't chase records"
 
-  Rafael van der Vaart, antigo colega do Real Madrid, confirmou: "If we won 6–0 and he hadn't scored, he wasn't happy. He was selfish." Sergio Ramos admitiu o mesmo padrão: Ronaldo ia sempre para casa chateado quando não marcava, independentemente do resultado.
+Ronaldo repete a frase há anos: "I don't chase records, records chase me." Soa bem em entrevistas, mas a forma como geriu o fim de carreira diz o contrário.
 
-- **"Winning the World Cup is the biggest dream of my career"** — disse-o com emoção em 2022, depois da eliminação de Portugal frente ao Marrocos. Meses depois, Messi ganhou exatamente esse torneio e foi aclamado como o maior de sempre. Em 2025, numa entrevista, Ronaldo disse o oposto: "I'd say it's NOT a dream for me to win the World Cup - to win one competition, six or seven games, does that define who's the best?" O argumento mudou assim que o troféu passou para o outro lado.
+Manteve-se na seleção nacional muito para lá do seu pico competitivo, insistindo em ser titular em Euros e Mundiais onde era um dos jogadores menos produtivos em campo — sobretudo para acumular internacionalizações e golos. Escolheu a liga da Arábia Saudita, muito abaixo do nível competitivo da elite europeia, precisamente quando deixou de ter mercado nesse topo - mas onde pode continuar a somar golos e jogos em contexto muito menos exigente.
 
-- **"I can't see myself in Qatar or Dubai… and Xavi plays in Qatar"** — em 2015 declarou que queria "finish with dignity" e que não se imaginava a ir para "the United States, Qatar or Dubai", associando essas ligas a pré-reforma. Em 2016 foi mais longe, usando esse argumento para diminuir Xavi no debate Messi–Ronaldo, apontando que o espanhol "plays in Qatar" enquanto ele ainda estava no Real Madrid. Sete anos depois, sem mercado real entre os clubes de elite da Europa, assinou pelo Al Nassr — uma liga equivalente à que tinha usado como insulto, com a única diferença de um cheque muito maior.
+Continua a tentar monopolizar penáltis e livres diretos, mesmo com eficácia pobre e colegas mais fortes nesse momento do jogo.
 
-- **"If everyone were at my level, we'd probably be leaders"** — numa altura em que o Real Madrid tinha vários titulares indisponíveis, disse à Marca que os suplentes ficavam aquém. A frase não foi inventada — foi dita em 2016 e gerou polémica imediata no balneário. Mais tarde tentou recuar, mas as palavras já tinham saído.
+Rafael van der Vaart, antigo colega do Real Madrid, confirmou: "If we won 6–0 and he hadn't scored, he wasn't happy. He was selfish."
+
+Sergio Ramos admitiu o mesmo padrão: Ronaldo ia sempre para casa chateado quando não marcava, independentemente do resultado.
+
+<hr class="my-8 border-white/10" />
+
+### 2022 — "Winning the World Cup is the biggest dream of my career"
+
+Disse-o com emoção em 2022, depois da eliminação de Portugal frente ao Marrocos. Meses depois, Messi ganhou exatamente esse torneio e foi aclamado como o maior de sempre.
+
+Em 2025, numa entrevista, Ronaldo disse o oposto: "I'd say it's NOT a dream for me to win the World Cup - to win one competition, six or seven games, does that define who's the best?" O argumento mudou assim que o troféu passou para o outro lado.
+
+<hr class="my-8 border-white/10" />
+
+### 2015/2016 — "I can't see myself in Qatar or Dubai… and Xavi plays in Qatar"
+
+Em 2015 declarou que queria "finish with dignity" e que não se imaginava a ir para "the United States, Qatar or Dubai", associando essas ligas a pré-reforma.
+
+Em 2016 foi mais longe, usando esse argumento para diminuir Xavi no debate Messi–Ronaldo, apontando que o espanhol "plays in Qatar" enquanto ele ainda estava no Real Madrid.
+
+Sete anos depois, sem mercado real entre os clubes de elite da Europa, assinou pelo Al Nassr — uma liga equivalente à que tinha usado como insulto, com a única diferença de um cheque muito maior.
+
+<hr class="my-8 border-white/10" />
+
+### 2016 — "If everyone were at my level, we'd probably be leaders"
+
+Numa altura em que o Real Madrid tinha vários titulares indisponíveis, disse à Marca que os suplentes ficavam aquém.
+
+A frase não foi inventada — foi dita em 2016 e gerou polémica imediata no balneário. Mais tarde tentou recuar, mas as palavras já tinham saído.
+
+<hr class="my-8 border-white/10" />
+
+### 2015 — "The Golden Boot is the best award out there for me"
+
+Contexto: Messi tinha 4 Bolas de Ouro, Ronaldo tinha 3. Ronaldo liderava a contagem da Bota de Ouro: 4 para 3 do Messi.
+
+Numa entrevista ao jornal neerlandês De Telegraaf em outubro de 2015, citada pelo Goal.com, disse: "I really love this award. It is the best award out there for me. Others can pick you as the best player, but an attacker's job is to make goals and I love that."
+
+O critério em que estava a vencer tornou-se, de repente, o mais importante.
+
+<a href="https://www.goal.com/en/news/ronaldo-golden-shoe-better-than-the-ballon-dor/blte4ab4090acf40f93" target="_blank" rel="noopener noreferrer" class="source-link-card">
+  <div class="flex items-center justify-between gap-3">
+    <div class="flex flex-wrap items-center gap-2 text-[10px] font-bold uppercase tracking-[0.24em] text-zinc-400">
+      <span>Fonte</span>
+      <span>Goal.com</span>
+      <span>Artigo</span>
+    </div>
+    <span class="shrink-0 text-[10px] font-semibold uppercase tracking-[0.18em] text-amber-300">↗</span>
+  </div>
+  <h3 class="mt-2 text-sm font-semibold text-white">A Bota de Ouro é o melhor prémio para mim</h3>
+  <span class="source-link-card-cta">Abrir artigo</span>
+</a>
+
+<hr class="content-divider" />
+
+### 2019 — "I want more Ballon d'Or than Messi — six, seven or eight"
+
+Contexto: Messi tinha 5 Bolas de Ouro, Ronaldo tinha 5. Empate.
+
+Na entrevista à ITV com Piers Morgan, em setembro de 2019, confirmada pela BBC Sport (16 de setembro de 2019): "I want to win more Ballon d'Or than Messi. I think I have to have six or seven or eight to be above him."
+
+A Bota de Ouro tinha sido discretamente posta de lado. A Bola de Ouro era agora a medida definitiva — a única em que ele acreditava ainda poder ultrapassar Messi.
+
+<a href="https://www.espn.com/soccer/story/_/id/37576658/deserve-more-ballons-dor" target="_blank" rel="noopener noreferrer" class="source-link-card">
+  <div class="flex items-center justify-between gap-3">
+    <div class="flex flex-wrap items-center gap-2 text-[10px] font-bold uppercase tracking-[0.24em] text-zinc-400">
+      <span>Fonte</span>
+      <span>ESPN</span>
+      <span>Artigo</span>
+    </div>
+    <span class="shrink-0 text-[10px] font-semibold uppercase tracking-[0.18em] text-amber-300">↗</span>
+  </div>
+  <h3 class="mt-2 text-sm font-semibold text-white">Quero mais Bolas de Ouro do que Messi — seis, sete ou oito</h3>
+  <span class="source-link-card-cta">Abrir artigo</span>
+</a>
+
+<hr class="content-divider" />
+
+### 2024 — "I no longer care about individual records"
+
+Contexto: Ronaldo no Al Nassr. Messi à frente em todas as métricas individuais que interessam.
+
+Numa conferência de imprensa da Liga dos Campeões Asiática da AFC do Al Nassr, em outubro de 2024: "It is not important anymore whether I am the best or not, I no longer care about that. It is good for a player to score goals, but for me it is better for the team to win."
+
+Nesse mesmo verão, no Euro 2024, desfez-se em lágrimas depois de falhar um penálti — e mais tarde admitiu a Rio Ferdinand que não estava a chorar pela eliminação de Portugal, mas por uma série interrompida de 27 penáltis consecutivos convertidos. Isto será explorado mais à frente na secção Chora, Publica, Repete.
+
+<a href="https://www.reuters.com/sports/soccer/i-dont-care-about-individual-records-anymore-ronaldo-says-2024-10-01/" target="_blank" rel="noopener noreferrer" class="source-link-card">
+  <div class="flex items-center justify-between gap-3">
+    <div class="flex flex-wrap items-center gap-2 text-[10px] font-bold uppercase tracking-[0.24em] text-zinc-400">
+      <span>Fonte</span>
+      <span>Reuters</span>
+      <span>Artigo</span>
+    </div>
+    <span class="shrink-0 text-[10px] font-semibold uppercase tracking-[0.18em] text-amber-300">↗</span>
+  </div>
+  <h3 class="mt-2 text-sm font-semibold text-white">Já não me importo com recordes individuais</h3>
+  <span class="source-link-card-cta">Abrir artigo</span>
+</a>
+
+<hr class="content-divider" />
+
+### 2025 — "The Ballon d'Or is fictional to me"
+
+Contexto: Messi chegou aos 7, depois aos 8 Ballons d'Or. Ronaldo não ganhava um desde 2017 e continuava nos 5.
+
+"The Ballon d'Or? That's FICTIONAL to me. It doesn't reflect the reality."
+
+O prémio que passou quatro anos a dizer que precisava de seis ou sete para ultrapassar Messi tinha-se tornado, nas suas próprias palavras, uma ficção.
+
+<a href="https://worldsoccertalk.com/news/cristiano-ronaldo-slams-ballon-dor-with-5-word-statement-after-being-left-off-nominees-list/" target="_blank" rel="noopener noreferrer" class="source-link-card">
+  <div class="flex items-center justify-between gap-3">
+    <div class="flex flex-wrap items-center gap-2 text-[10px] font-bold uppercase tracking-[0.24em] text-zinc-400">
+      <span>Fonte</span>
+      <span>World Soccer Talk</span>
+      <span>Artigo</span>
+    </div>
+    <span class="shrink-0 text-[10px] font-semibold uppercase tracking-[0.18em] text-amber-300">↗</span>
+  </div>
+  <h3 class="mt-2 text-sm font-semibold text-white">A Bola de Ouro é fictícia para mim</h3>
+  <span class="source-link-card-cta">Abrir artigo</span>
+</a>
+
+<hr class="content-divider" />
 
 O padrão é consistente: o discurso é construído para soar a princípio; as decisões são tomadas por conveniência.
 
 ---
 
-## 2. Chora, Publica, Repete
+## 2. Chora, Publica, Repete — Uma década de colapsos públicos e posts reciclados
 
 O padrão tem sido consistente durante mais de uma década: falha ou eliminação, lágrimas em público, publicação nas redes sociais, ciclo a repetir-se.
 
@@ -38,7 +160,7 @@ Falhou um penálti contra a Eslovénia e desabou no meio do relvado com o jogo a
 
 ---
 
-## 3. O Espetáculo de Um Só Homem — Quando os Outros Marcam, Ele Sofre
+## 3. O Espetáculo de Um Só Homem — A celebração depende de quem marca
 
 Há um fio condutor que atravessa o Real Madrid, o Manchester United e a seleção: quando um colega marca ou se destaca, a reação de Ronaldo raramente é celebrar — é frustração, indiferença ou irritação mal disfarçada.
 
@@ -68,9 +190,9 @@ O dado mais revelador não vem de uma câmara nem de uma declaração — vem do
 
 ---
 
-## 4. É Sempre Culpa de Outra Pessoa
+## 4. Jogo da Culpa — Teaser no Instagram para a entrevista do Morgan
 
-No verão de 2022, ainda sob contrato com o Manchester United, Ronaldo começou a preparar o terreno nas redes sociais: stories no Instagram a afirmar que "95% of the news about him is false", que tinha um caderno com provas e que "the truth will come out in a major interview." Não era desabafo — era um trailer deliberado.
+No verão de 2022, ainda sob contrato com o Manchester United, Ronaldo começou a preparar o terreno nas redes sociais: stories no Instagram a afirmar <span style="color: hsl(var(--accent))">"95% of the news about him is false"</span>, que tinha um caderno com provas e que "the truth will come out in a major interview." Não era desabafo — era um trailer deliberado.
 
 Semanas depois, sentou-se com Piers Morgan e passou duas horas a destruir o clube em direto na televisão: disse que não tinha respeito por Ten Hag, que se sentia "betrayed" pela direção, que o clube tinha estagnado desde Ferguson, que os balneários e as instalações eram uma vergonha para um clube daquele nível. Tudo isto enquanto continuava sob contrato, a receber salário, e semanas depois de se ter recusado a entrar como suplente e ter abandonado o estádio antes do apito final.
 
@@ -82,9 +204,9 @@ O que torna o episódio ainda mais revelador é a sequência: teaser no Instagra
 
 Em março de 2025, numa conferência de imprensa da seleção portuguesa, um jornalista perguntou-lhe se ainda tinha nível para jogar ao mais alto nível. Ele respondeu com:
 
-- acusações de "negativity around the team";
-- queixas sobre "lack of respect";
-- e a agora famosa frase: "Look me in the eyes when you ask me that."
+- acusações de <span style="color: hsl(var(--accent))">"negativity around the team"</span>;
+- queixas sobre <span style="color: hsl(var(--accent))">"lack of respect"</span>;
+- e a agora famosa frase: <span style="color: hsl(var(--accent))">"Look me in the eyes when you ask me that."</span>
 
 O Goal resumiu de forma direta: Ronaldo, visivelmente irritado, disse ao jornalista para o "look me in the eye" por uma pergunta rotineira sobre rendimento. É a mesma gramática das redes sociais, mas numa conferência de imprensa: tudo gira em torno do que ele sente, nunca do que ele joga.
 
@@ -92,9 +214,9 @@ Nos últimos anos, Ronaldo tem-se comportado menos como um veterano de elite e m
 
 ---
 
-## 5. Nunca Foi Sobre a Equipa
+## 5. Nunca Foi Sobre a Equipa — O conflito era o trabalho defensivo
 
-Em 2013, Mourinho confrontou-o no balneário depois de uma vitória, por não recuar e cobrir o lateral adversário. Segundo a autobiografia de Modrić, Ronaldo ficou "close to tears" e respondeu: "After everything I've done for you, this is how you treat me?" A lógica é reveladora — os golos funcionam como moeda de troca para comprar isenção do trabalho defensivo.
+Em 2013, Mourinho confrontou-o no balneário depois de uma vitória, por não recuar e cobrir o lateral adversário. Segundo a autobiografia de Modrić, Ronaldo ficou <span style="color: hsl(var(--accent))">"close to tears"</span> e respondeu: "After everything I've done for you, this is how you treat me?" A lógica é reveladora — os golos funcionam como moeda de troca para comprar isenção do trabalho defensivo.
 
 Em outubro de 2022, recusou-se a entrar como suplente contra o Tottenham, abandonou o banco, caminhou pelo túnel e saiu do estádio antes do apito final. Ten Hag confirmou tudo na conferência de imprensa pós-jogo. Emmanuel Petit falou de um "oversized ego polluting the dressing room." Gary Neville disse em direto que o comportamento era "unacceptable."
 
@@ -102,47 +224,47 @@ Em outubro de 2022, recusou-se a entrar como suplente contra o Tottenham, abando
 
 Em agosto de 2024, numa conversa com Rio Ferdinand, Ronaldo explicou porque chorou depois de falhar o penálti contra a Eslovénia no Euro 2024:
 
-> "When I cried, it wasn't because I felt Portugal were going to be eliminated… Imagine you score the last 27 penalties. And in that moment you miss. I didn't even think about Portugal being eliminated. I was sad because of the pressure I put on myself."
+> "When I cried, it wasn't because I felt Portugal were going to be eliminated… Imagine you score the last 27 penalties. And in that moment you miss. <span style="color: hsl(var(--accent))">I didn't even think about Portugal being eliminated.</span> I was sad because of the pressure I put on myself."
 
 Lido com atenção, o subtexto deixa de ser subtexto: o capitão de Portugal, num momento de possível eliminação, estava a pensar na sua sequência pessoal de penáltis — não no destino da equipa. Não é uma interpretação. São palavras dele.
 
 ---
 
-## 6. Gestos, Cartões Vermelhos e Birras de Adulto
+## 6. Gestos, Cartões Vermelhos e Birras de Adulto — Uma longa lista de reações desnecessárias
 
 A lista de cartões vermelhos e incidentes disciplinares de Ronaldo ao longo da carreira tem um traço comum: quase sempre envolvem uma reação desproporcionada a um contratempo futebolístico perfeitamente normal.
 
-- **Microfone para o lago — Euro 2016**  
+- <span style="color: hsl(var(--accent))">Microfone para o lago — Euro 2016</span>  
   Em Lyon, durante uma caminhada da equipa, um jornalista da CMTV fez uma pergunta rotineira sobre o próximo jogo contra a Hungria. Ronaldo agarrou o microfone da mão dele e atirou-o para um lago sem responder. O jornalista disse depois à BBC que a pergunta era totalmente normal e que a reação terá resultado da antipatia de Ronaldo pela cobertura do canal.
 
-- **Empurrão ao árbitro — Supertaça espanhola (2017)**  
+- <span style="color: hsl(var(--accent))">Empurrão ao árbitro — Supertaça espanhola (2017)</span>  
   No Camp Nou, marcou um golo, tirou a camisola (primeiro amarelo), deixou-se cair a pedir penálti (segundo amarelo por simulação) e, ao ver o vermelho, empurrou o árbitro Ricardo de Burgos Bengoetxea pelas costas. Resultado: cinco jogos de suspensão e multa para Ronaldo e para o Real Madrid.
 
-- **Expulso na estreia europeia pela Juventus (2018)**  
+- <span style="color: hsl(var(--accent))">Expulso na estreia europeia pela Juventus (2018)</span>  
   Em Valência, envolveu-se com Jeison Murillo fora da bola, agarrou-o pelo cabelo e o árbitro mostrou vermelho direto após consultar o assistente. Saiu do relvado em lágrimas, visivelmente abalado. Um detalhe raramente mencionado: o início de um dos capítulos mais celebrados da carreira dele na Juventus começou com um cartão vermelho por violência fora da jogada.
 
-- **Gesto obsceno aos adeptos a responder a cânticos de "Messi" — Arábia Saudita (2024)**  
+- <span style="color: hsl(var(--accent))">Gesto obsceno aos adeptos a responder a cânticos de "Messi" — Arábia Saudita (2024)</span>  
   Depois de um jogo do Al-Nassr contra o Al-Shabab, respondeu aos cânticos de "Messi" nas bancadas com um gesto explícito dirigido ao público (mão na virilha, repetida várias vezes), captado em vídeo. A federação saudita suspendeu-o por um jogo.
 
-- **Cotoveladas, punho erguido ao árbitro e aplausos sarcásticos (2024)**  
+- <span style="color: hsl(var(--accent))">Cotoveladas, punho erguido ao árbitro e aplausos sarcásticos (2024)</span>  
   Na meia-final da Supertaça saudita contra o Al-Hilal, com o Al-Nassr a perder por 2-0 e faltando quatro minutos, Ronaldo deu duas cotoveladas em Ali Al-Bulaihi no peito. O árbitro mostrou vermelho direto. Quando o juiz lhe virou as costas, Ronaldo ergueu o punho fechado na direção dele num gesto ameaçador captado em vídeo, antes de recuar. Saiu do relvado a aplaudir sarcasticamente as bancadas.
 
-- **Gestos de desprezo para os próprios colegas do Al-Nassr (2024)**  
+- <span style="color: hsl(var(--accent))">Gestos de desprezo para os próprios colegas do Al-Nassr (2024)</span>  
   Na derrota por 4-1 na final da Supertaça saudita contra o Al-Hilal, passou grande parte do jogo a gesticular para os colegas — incluindo um gesto a imitar alguém a dormir. Saiu do estádio antes da cerimónia das medalhas.
 
-- **Gesto de "choro" e primeiro vermelho internacional — Irlanda (novembro de 2025)**  
+- <span style="color: hsl(var(--accent))">Gesto de "choro" e primeiro vermelho internacional — Irlanda (novembro de 2025)</span>  
   Com Portugal a perder por 2-0 em Dublin, Ronaldo fez um gesto de choro para o defesa Dara O'Shea e para os adeptos irlandeses. Minutos depois, acertou com o cotovelo em O'Shea, o árbitro reviu o lance no VAR e mostrou vermelho direto: o primeiro vermelho de Ronaldo em 226 internacionalizações. Os adeptos irlandeses responderam imediatamente com o mesmo gesto de choro das bancadas. Portugal terminou com dez e perdeu. O gesto que ele tentou usar como provocação tornou-se o símbolo da noite.
 
-- **Gesto de "roubo" diretamente para a câmara de transmissão — Al-Hilal 3–1 Al-Nassr (janeiro de 2026)**  
+- <span style="color: hsl(var(--accent))">Gesto de "roubo" diretamente para a câmara de transmissão — Al-Hilal 3–1 Al-Nassr (janeiro de 2026)</span>  
   Durante a derrota do Al-Nassr com o Al-Hilal, as câmaras da transmissão apanharam Ronaldo no banco a olhar diretamente para a lente e a fazer um gesto de "roubo" com a mão — sugerindo que o resultado tinha sido manipulado pela arbitragem. É o único incidente em que o gesto foi dirigido não às bancadas, não aos árbitros, mas à câmara de transmissão, para a audiência global: uma acusação de corrupção feita em direto, sem palavras, com um sorriso na cara. Sob as regras do futebol saudita, insinuar que um árbitro foi "bought" constitui um ataque à integridade da partida e expõe o jogador a uma suspensão de dois a quatro jogos e a uma multa até 40 mil riais.
 
 O padrão, documentado ao longo de três países, três clubes e a seleção, é invariável: árbitros, adeptos, jornalistas ou colegas — quando desafiado, a resposta de Ronaldo é o gesto ou a provocação. Nunca silêncio. Nunca responsabilização.
 
 ---
 
-## 7. Redes Sociais de uma Criança com Mais de 35 Anos
+## 7. Redes Sociais de uma Criança com Mais de 35 Anos — Um quarentão a postar como adolescente
 
-Para alguém com 900 milhões de seguidores, Ronaldo usa as redes sociais com o recato de um miúdo de 15 anos num fórum de futebol.
+Para alguém com 900 milhões de seguidores, Ronaldo usa as redes sociais com o recato de um <span style="color: hsl(var(--accent))">miúdo de 15 anos</span> num fórum de futebol.
 
 ### "FACTS" — Ballon d'Or 2021
 
@@ -160,9 +282,9 @@ _[carousel — screenshots of social media comments]_
 
 ---
 
-## 8. A Greve - Quando um Jogador de 41 Anos Entra em Greve
+## 8. A Greve — Uma greve por uma transferência rival
 
-Em fevereiro de 2026, Ronaldo recusou-se a jogar durante três jogos para protestar contra a transferência de um clube rival. Não estava lesionado. Não estava em atraso salarial. Simplesmente recusou-se.
+Em fevereiro de 2026, Ronaldo <span style="color: hsl(var(--accent))">recusou-se a jogar</span> durante três jogos para protestar contra a transferência de um clube rival. Não estava lesionado. Não estava em atraso salarial. Simplesmente recusou-se.
 
 No final de janeiro de 2026, o Al Hilal contratou Karim Benzema. Não o clube de Ronaldo — os rivais. A resposta de Ronaldo foi tornar-se indisponível para a convocatória em três jogos consecutivos.
 
@@ -179,13 +301,13 @@ O que torna isto relevante:
 
 ---
 
-## 9. A Melhor Frase de Ronaldo de Todos os Tempos
+## 9. A Melhor Frase de Ronaldo de Todos os Tempos — A sua afirmação enfrenta os números
 
-> "I'm the best player in football history. I haven't seen anyone better than me, ever."
+> "<span style="color: hsl(var(--accent))">I'm the best player in football history.</span> I haven't seen anyone better than me, ever."
 > — Cristiano Ronaldo, La Sexta, fevereiro de 2025
 
 Dito voluntariamente, sem ser provocado, enquanto jogava na liga saudita. Dois anos depois de Lionel Messi ter ganho um Mundial e a oitava Bola de Ouro — a maior distinção individual do futebol.
 
-Os números não mentem. O problema é que, quando se comparam os dois lado a lado, eles apontam consistentemente numa direção diferente daquela que Ronaldo prefere. Assistências por jogo, progressão com bola, golos em jogos decisivos da Champions, eficácia fora dos penáltis e livres diretos, impacto tático coletivo — em quase todas as métricas avançadas que distinguem um grande avançado de um jogador verdadeiramente transformador, um nome domina de forma consistente.
+Os números não mentem. O problema é que, quando se comparam os dois lado a lado, eles apontam consistentemente numa direção diferente daquela que Ronaldo prefere. Assistências por jogo, progressão com bola, golos em jogos decisivos da Champions, eficácia fora dos penáltis e livres diretos, impacto tático coletivo — em quase todas as métricas avançadas que distinguem um grande avançado de um jogador verdadeiramente transformador, <span style="color: hsl(var(--accent))">um nome domina de forma consistente</span>.
 
 → [Ver a análise completa: Porque Messi é Melhor](#why-messi) _(link para a página)_
