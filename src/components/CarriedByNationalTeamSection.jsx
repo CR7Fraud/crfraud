@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import RichText from "./RichText";
 import SectionAccordionList from "./SectionAccordionList";
 import SectionWrapper from "./SectionWrapper";
@@ -7,15 +7,15 @@ import { useI18n } from "../lib/i18n";
 const tournamentsEn = [
   {
     year: "World Cup 2010",
-    title: "one goal in four games — the sixth of seven against North Korea",
+    title: "one goal in four games - the sixth of seven against North Korea",
     content:
-      "In South Africa, Portugal reached only the round of 16. They finished second in Group G behind Brazil, with two goalless draws (Ivory Coast and Brazil) and a 7–0 over North Korea.",
+      "In South Africa, Portugal reached only the round of 16. They finished second in Group G behind Brazil, with two goalless draws (Ivory Coast and Brazil) and a 7-0 over North Korea.",
     points: [
-      "Group stage: Ronaldo scored once in three matches — the sixth goal in the 7-0 against North Korea. In the other two games, including the 0-0 with Brazil, he was goalless and without an assist.",
+      "Group stage: Ronaldo scored once in three matches - the sixth goal in the 7-0 against North Korea. In the other two games, including the 0-0 with Brazil, he was goalless and without an assist.",
       "Round of 16 vs Spain: Portugal lost 0-1 to a David Villa goal. Ronaldo failed to score, failed to assist, and never produced the moment that might have changed the tie. Spain went on to win the World Cup.",
     ],
     conclusion:
-      "One goal in four games, the sixth in a seven-goal rout against the weakest team in the group. In the match that ended Portugal's tournament, he offered no decisive contribution — the first entry in a pattern that would repeat across the next decade.",
+      "One goal in four games, the sixth in a seven-goal rout against the weakest team in the group. In the match that ended Portugal's tournament, he offered no decisive contribution - the first entry in a pattern that would repeat across the next decade.",
   },
   {
     year: "Euro 2012",
@@ -85,7 +85,7 @@ const tournamentsEn = [
     content:
       "In Qatar the contrast was stark. Ronaldo arrived in the worst form of his career — six months after leaving Manchester United in acrimonious circumstances.",
     points: [
-      'Group stage: one controversial penalty against Ghana (the Ghanaian coach called it "a special gift from the referee"); a goal against Uruguay officially credited to Bruno Fernandes after technology showed Ronaldo had not touched the ball; substituted in the final group game against South Korea with Fernando Santos publicly saying he "did\'t like it, not at all" when Ronaldo reacted badly.',
+      'Group stage: one controversial penalty against Ghana (the Ghanaian coach called it "a special gift from the referee"); a goal against Uruguay officially credited to Bruno Fernandes after technology showed Ronaldo had not touched the ball; substituted in the final group game against South Korea with Fernando Santos publicly saying he "didn\'t like it, not at all" when Ronaldo reacted badly.',
       "Round of 16 vs Switzerland: Santos drops him. Gonçalo Ramos, 21, on his first start, scores a hat-trick. Portugal win 6-1.",
       "Quarter-finals vs Morocco: brought on at half-time with Portugal a goal down. 40 minutes, no shots on target, no assists. Portugal are eliminated. Ronaldo leaves the pitch in tears.",
     ],
@@ -96,13 +96,26 @@ const tournamentsEn = [
     year: "Euro 2024",
     title: "the worst striker in the tournament… always on the pitch",
     content:
-      "At Euro 2024, the drop in output is even more visible, but his time on the pitch does not decrease. He played all five of Portugal's games, always as a starter, accumulating nearly every available minute — including 120 against Slovenia. He did not score a single goal from open play. With 23 attempts and an xG of 3.52, WhoScored named him the biggest xG underperformer of the entire tournament.",
+      "At Euro 2024, the drop in output is even more visible, but his time on the pitch does not decrease. He started all five of Portugal's games, always as captain, and played every single minute available — 510 minutes including extra time against Slovenia and France. He did not score a single goal. With 23 attempts and an xG of 3.52, WhoScored named him the biggest xG underperformer of the entire tournament; only Kylian Mbappé took more shots (24), and no player in Euro history since 1980 had taken as many shots without scoring and still stayed on the pitch as an undisputed starter. A separate breakdown listed him with 0 goals, 1 assist, 23 shots, 3.47–3.52 xG, 5 big chances missed and 1 missed penalty.",
     points: [
-      "Round of 16 vs Slovenia: 120 minutes, no goal, a missed penalty in extra time that left him in tears on the pitch. Portugal advance only because Diogo Costa saves all three Slovenian penalties in the shootout.",
-      'Quarter-finals vs France: <a href="https://portugoal.net/selecao/3981-portugal-vs-france-player-ratings" target="_blank"><span style="color:#89CFF0">PortuGOAL</span></a> rates him 4.5/10 — the worst pass completion and fewest touches of any outfield player on the pitch. He is only substituted well into the second half.',
+      "Round of 16 vs Slovenia: 120 minutes, no goal, and a missed penalty in extra time that leaves him in tears on the pitch. Portugal only survive because Diogo Costa stops a one-on-one from Šeško in extra time and then saves all three Slovenian penalties in the shootout, while Ronaldo merely converts his own kick in the series. By the end of the game he has filled the shot column again, but the decisive actions belong to the goalkeeper.",
+      'Quarter-finals vs France: again 120 minutes, again no goal. <a href="https://portugoal.net/selecao/3981-portugal-vs-france-player-ratings" target="_blank"><span style="color:#89CFF0">PortuGOAL</span></a> rates him 4.5/10 — the lowest mark in the team — highlighting that he recorded the worst pass completion and the fewest touches of any outfield player on the pitch. He stays on until the penalties and converts his attempt, but it is João Félix who hits the post and the French who score all five to knock Portugal out.',
     ],
     conclusion:
-      "He had more shots than anyone else in the tournament. He scored none of them.",
+      "Across the tournament, he had more shots than any other player except Mbappé and the highest xG underperformance of anyone at Euro 2024. He scored none of them.",
+  },
+  {
+    year: "Nations League 2025",
+    title: "a title, but who really decided it?",
+    content:
+      "Portugal won its second Nations League in Munich, beating Spain 5-3 on penalties after a 2-2 draw, becoming the first team to lift the trophy twice. On the spreadsheet, it looks like a perfect coronation: Ronaldo scores in the final, adds the equaliser that takes the game to the shootout, and finishes as the competition's top scorer with 8 goals in 9 matches. On the pitch, the story felt very different: a tournament played a couple of notches below World Cup or Euro intensity, lots of rotation on all sides, and a version of Ronaldo that mostly lived inside the box waiting for the final touch.\n\nA Flashscore analysis published in March 2025 - before the Final Four - had already noted that his shooting accuracy across the group phase stood at 38.9%, the second worst in the entire Portugal squad. The eight goals obscure the full picture: a lot of shots, a lot of misses, and a team that kept creating the right situations for him to eventually convert. The one goal in the campaign that wasn't a close-range position play came against Poland in a 5-1 win already decided: an overhead kick scored when the game was dead and Portugal leading 4-1 - the kind of acrobatic finish that exists for highlight reels, not for deciding tournaments.\n\nIn the semi-final against Germany (2-1), he does produce a clean, narrative-friendly moment: after Francisco Conceição drags Portugal level, Ronaldo taps in at the back post to make it 2-1 and finally beat Germany in a competitive match, at 40 years old. Even there, the pattern is revealing: the hard work - recovering from a poor first hour, tilting the game territorially, and creating chances - comes from the team, while his job is to appear in the right square metre at the end of a move that was already done. It is a classic poacher's goal, not a takeover performance.\n\nThe final against Spain repeats the same structure. Spain control the first half and go 2-0 up through Zubimendi and Oyarzabal; Portugal are hanging on and nowhere near the romantic script of Ronaldo vs Spain. The comeback starts not with the legendary number 7 but with Nuno Mendes, who scores the first international goal of his career to make it 2-1 and then spends the rest of the night glued to Lamine Yamal, essentially erasing Spain's most dangerous player. Ronaldo's equaliser at 61 minutes is a close-range volley from a deflected Nuno Mendes cross - technically more than a tap-in, but still arriving in the six-yard box with the heavy lifting already done. If you only read goal in the semi-final, goal in the final, it sounds like domination; if you actually watched the 180 minutes, it looked more like a specialist of micro-distances being fed by a team that did 90-95% of the work.\n\nThe penalty shootout finishes the job and leaves the headline names even clearer. Morata's miss - saved by Diogo Costa - is the real hinge of the trophy; Rúben Neves, not Ronaldo, hits the title-winning penalty that seals 5-3 in the series. Around them, Nuno Mendes (goal, penalty, and elite defensive work on Yamal), Vitinha (control and progression under pressure) and Francisco Conceição (impact goal in the semi-final) are the players who actually bend the tournament in Portugal's favour. Ronaldo scores, yes - including a crucial equaliser in the final - but almost all of his production comes from within a few metres of goal, tap-ins and close-range finishes inside the box that depend entirely on his teammates putting the ball on a plate. On the stat line, it reads like a defining campaign; in real time, it felt much more like a collective trophy in a competition nobody treated like a World Cup, with Ronaldo as the finisher at the end of moves rather than the engine that created them.",
+    points: [
+      "Semi-final vs Germany (2-1): Francisco Conceição equalises with a stunning long-range strike, nominated by UEFA for Goal of the Tournament, and wins Player of the Match. Ronaldo scores the 2-1 from a tap-in after a Nuno Mendes cross assisted by Bruno Fernandes. An important goal, but one built by the team.",
+      "Final vs Spain: Spain dominate the first half and go 2-0 up (Zubimendi, Oyarzabal). Nuno Mendes brings Portugal back — the first goal of his international career — before Ronaldo's equaliser at 61', also from inside the box. Neither side scores again in 120 minutes.",
+      "Penalties: Diogo Costa saves Morata's effort. Rúben Neves scores the title-winning penalty. Nuno Mendes, Vitinha and Rúben Neves are the pillars who decide qualification, both on and off the ball.",
+    ],
+    conclusion:
+      "Ronaldo scores — including a crucial equaliser in the final — but it was the team that carried the title. UEFA recognised it: the final's MVP was Nuno Mendes, with six assists, a shutdown of Lamine Yamal and the goal that reignited the final. Gyökeres was the tournament's real top scorer. The trophy rests on Nuno Mendes (goal, MVP, penalty, Yamal neutralised), Diogo Costa (decisive shootout save), Vitinha (midfield engine throughout), Francisco Conceição (semi-final stunner) and Rúben Neves (title-winning penalty). A collective trophy — with a more present Ronaldo than in previous editions, but far from the man who won it.",
   },
 ];
 
@@ -203,6 +216,19 @@ const tournamentsPt = [
     ],
     conclusion:
       "Nos oitavos com a Eslovénia, teve 120 minutos para decidir, falhou um penálti e acabou em lágrimas; quem segura Portugal é Diogo Costa, com três penáltis defendidos.",
+  },
+  {
+    year: "Nations League 2025",
+    title: "um título, mas quem o decidiu mesmo?",
+    content:
+      "Portugal conquistou a segunda Liga das Nações em Munique, batendo a Espanha por 5-3 nos penáltis depois de um empate 2-2 no prolongamento. Ronaldo terminou com 8 golos em 9 jogos — mas ficou atrás de Viktor Gyökeres, o verdadeiro melhor marcador da competição, com 9 golos. O MVP oficial da UEFA foi Nuno Mendes. O contexto, portanto, atenua bastante a narrativa.",
+    points: [
+      "Meia-final vs Alemanha (2-1): Francisco Conceição empatou com um golaço de fora da área — nomeado para Golo do Torneio pela UEFA — e foi o Player of the Match. Ronaldo fez o 2-1 num tap-in após cruzamento de Nuno Mendes assistido por Bruno Fernandes. Um golo importante, mas construído pela equipa.",
+      "Final vs Espanha: a Espanha dominou a primeira parte e chegou ao 2-0 (Zubimendi, Oyarzabal). Foi Nuno Mendes quem relançou Portugal — o primeiro golo da sua carreira internacional — antes do empate de Ronaldo aos 61', também dentro da área. Nenhuma das equipas marcou o terceiro golo em 120 minutos.",
+      "Penáltis: Diogo Costa defendeu o remate de Morata. Rúben Neves marcou o penálti do título. Nuno Mendes, Vitinha e Rúben Neves foram os pilares que decidiram a qualificação — dentro e fora de campo.",
+    ],
+    conclusion:
+      "Ronaldo marca — incluindo um empate crucial na final — mas foi a equipa a carregar o título. A UEFA reconheceu-o: o MVP da final foi Nuno Mendes, com 6 assistências, anulou Lamine Yamal e marcou o golo que reacendeu a final. Gyökeres foi o goleador real do torneio. O troféu assenta em Nuno Mendes (golo, MVP, penálti, Yamal anulado), Diogo Costa (defesa decisiva nos penáltis), Vitinha (motor do meio-campo ao longo de toda a competição), Francisco Conceição (golaço na meia-final) e Rúben Neves (penálti do título). Um troféu coletivo — com um Ronaldo mais presente do que em edições anteriores, mas longe de ser o homem que o conquistou.",
   },
 ];
 
@@ -306,6 +332,19 @@ const tournamentsEs = [
     conclusion:
       "Tuvo más tiros que cualquier otro jugador en el torneo. No convirtió ninguno.",
   },
+  {
+    year: "Nations League 2025",
+    title: "un título, pero ¿quién lo decidió de verdad?",
+    content:
+      "Portugal conquistó su segunda Liga de Naciones en Múnich, derrotando a España 5-3 en los penaltis después de un empate 2-2 en la prórroga. Ronaldo terminó con 8 goles en 9 partidos — pero quedó por detrás de Viktor Gyökeres, el verdadero máximo goleador de la competición, con 9. El MVP oficial de la UEFA fue Nuno Mendes. El contexto, por tanto, suaviza bastante el relato.",
+    points: [
+      "Semifinal vs Alemania (2-1): Francisco Conceição empató con un golazo desde fuera del área — nominado por la UEFA como Gol del Torneo — y fue el Jugador del Partido. Ronaldo hizo el 2-1 con un toque a bocajarro tras un centro de Nuno Mendes asistido por Bruno Fernandes. Un gol importante, pero construido por el equipo.",
+      "Final vs España: España dominó la primera parte y se puso 2-0 (Zubimendi, Oyarzabal). Fue Nuno Mendes quien reactivó a Portugal — el primer gol de su carrera internacional — antes del empate de Ronaldo en el 61', también desde dentro del área. Ninguno de los dos equipos marcó el tercero en 120 minutos.",
+      "Penaltis: Diogo Costa detuvo el lanzamiento de Morata. Rúben Neves marcó el penalti del título. Nuno Mendes, Vitinha y Rúben Neves fueron los pilares que decidieron la clasificación — dentro y fuera del campo.",
+    ],
+    conclusion:
+      "Ronaldo marca — incluido un empate crucial en la final — pero fue el equipo el que cargó con el título. La UEFA lo reconoció: el MVP de la final fue Nuno Mendes, con 6 asistencias, anuló a Lamine Yamal y marcó el gol que reactivó la final. Gyökeres fue el verdadero máximo goleador del torneo. El trofeo descansa en Nuno Mendes (gol, MVP, penalti, Yamal anulado), Diogo Costa (parada decisiva en los penaltis), Vitinha (motor del centro del campo durante toda la competición), Francisco Conceição (golazo en semifinales) y Rúben Neves (penalti del título). Un trofeo colectivo, con un Ronaldo más presente que en ediciones anteriores, pero lejos de ser el hombre que lo conquistó.",
+  },
 ];
 
 const tournamentsFr = [
@@ -404,6 +443,19 @@ const tournamentsFr = [
     ],
     conclusion: "Beaucoup de tentatives, aucune concrétisation.",
   },
+  {
+    year: "Nations League 2025",
+    title: "un titre, mais qui l'a vraiment décidé ?",
+    content:
+      "Le Portugal remporte sa deuxième Ligue des Nations à Munich, en battant l'Espagne 5-3 aux tirs au but après un 2-2 après prolongation. Ronaldo marque dans la finale et termine meilleur buteur de la compétition avec 8 buts en 9 matches. Le contexte, pourtant, nuance fortement le récit.",
+    points: [
+      "Demi-finale vs Allemagne (2-1) : Ronaldo marque le but décisif après que Francisco Conceição a égalisé. Un des rares moments où il est véritablement l'homme du match dans un grand tournoi.",
+      "Finale vs Espagne : l'Espagne domine la première mi-temps et mène 2-0 (Zubimendi, Oyarzabal). C'est Nuno Mendes qui relance le Portugal — premier but de sa carrière internationale — avant l'égalisation de Ronaldo à la 61e. Ni l'un ni l'autre ne trouve le troisième but en 120 minutes.",
+      "Tirs au but : Morata manque pour l'Espagne, Diogo Costa sauve. Rúben Neves frappe le penalty du titre. Nuno Mendes, Vitinha et Rúben Neves sont les acteurs qui décident la qualification.",
+    ],
+    conclusion:
+      "Ronaldo marque — dont un équaliseur crucial en finale — et est le meilleur buteur du tournoi. Mais le titre repose sur Nuno Mendes (but, marquage de Yamal, penalty), Francisco Conceição (but décisif en demi), Diogo Costa (arrêt décisif) et Rúben Neves (penalty du titre). Un trophée collectif, avec un Ronaldo plus présent que lors des éditions précédentes.",
+  },
 ];
 
 const content = {
@@ -411,85 +463,69 @@ const content = {
     title: "Portugal Carried Ronaldo",
     intro:
       "Ronaldo has played for Portugal in eight major tournaments. He has never scored a goal in a knockout game at a World Cup. The narrative that he carried the national team for a decade doesn't survive contact with the match timeline.",
-    summary_h:
-      "From Euro 2016 to today: who makes the plays and who appears on the cover",
+    summary_h: "Nine tournaments. Three titles.",
     summary_intro:
-      "Across these tournaments, the timeline of important games always shows the same pattern: the moments when Portugal truly needs someone to decide come from others.",
-    summary_li1:
-      "Euro 2016: Nani, Quaresma, Éder, Patrício and Pepe are the names in the key games.",
+      "The winning goals: Éder, Guedes - and in 2025, finally, a Ronaldo equaliser that kept Portugal alive in extra time, with Rúben Neves scoring the penalty that sealed it.",
+    summary_li1: "The pattern held for most of a decade.",
     summary_li2:
-      "Nations League 2019: Bernardo drives it, Guedes scores the title-winning goal.",
+      "In 2025 it shifted - slightly. Ronaldo scored more, contributed in bigger moments, and finished as top scorer in the competition.",
     summary_li3:
-      "Euro 2020: Group stage Golden Boot, but in the round of 16 it is the Belgians who decide; Ronaldo goes blank.",
-    summary_li4:
-      "World Cup 2022: Ramos, Bruno and Pepe carry the 6-1 win over Switzerland; Portugal fall to Morocco without a Ronaldo goal.",
-    summary_li5:
-      "Euro 2024: Diogo Costa, Bruno and Bernardo rescue the team in the shootout; Ronaldo is the protagonist of the drama, not the solution.",
+      "But even then, the title rested on Nuno Mendes, Diogo Costa and Rúben Neves.",
+    summary_li4: "The engine was still the team.",
+    summary_li5: "The finishing touch was his.",
     summary_p:
-      'The honest sentence, looking from Euro 2016 to today, is not "Ronaldo carried the national team". It is another: Portugal spent a decade selling the idea that it needed him for everything, but whenever someone was needed to decide a tournament, it was almost always teammates — Nani, Quaresma, Éder, Guedes, Bernardo, Bruno, Ramos, Diogo Costa — who did the heavy lifting, while the number 7 kept the protagonist role on the covers thanks to penalties and tap-ins during breaks.',
+      "That is not nothing. But it is also not carrying a team. It never was.",
   },
   pt: {
     title: "Portugal carregou Ronaldo",
     intro:
-      "Ronaldo jogou por Portugal em oito torneios maiores. Nunca marcou um golo num jogo a eliminar de um Mundial. A narrativa de que carregou a seleção durante uma década não resiste à cronologia dos jogos.",
-    summary_h:
-      "Entre Euro 2016 e hoje: quem faz as jogadas e quem aparece na capa",
+      "Ronaldo jogou por Portugal em oito grandes torneios. Nunca marcou num jogo a eliminar num Mundial. A narrativa de que carregou a seleção durante uma década não resiste ao cronograma dos jogos.",
+    summary_h: "Nove torneios. Três títulos.",
     summary_intro:
-      "Entre estes torneios, a cronologia dos jogos importantes mostra sempre o mesmo padrão: os momentos em que Portugal realmente precisa de alguém para decidir vêm de outros.",
-    summary_li1:
-      "Euro 2016: Nani, Quaresma, Éder, Patrício e Pepe são os nomes dos jogos-chave.",
+      "Os golos da vitória: Éder, Guedes — e em 2025, finalmente, um empate de Ronaldo que manteve Portugal vivo no prolongamento, com Rúben Neves a marcar o penálti que selou tudo.",
+    summary_li1: "O padrão manteve-se durante quase toda a década.",
     summary_li2:
-      "Nations League 2019: Bernardo conduz, Guedes marca o golo do título.",
+      "Em 2025 isso mudou — ligeiramente. Ronaldo marcou mais, apareceu em momentos maiores e terminou como melhor marcador da competição.",
     summary_li3:
-      "Euro 2020: Bota de Ouro de grupos, mas nos oitavos quem decide são os belgas; Ronaldo fica em branco.",
-    summary_li4:
-      "Mundial 2022: Ramos, Bruno e Pepe carregam nos 6-1 à Suíça; Portugal cai com Marrocos sem golo de Ronaldo.",
-    summary_li5:
-      "Euro 2024: Diogo Costa, Bruno e Bernardo salvam a equipa nos penáltis; Ronaldo é protagonista do drama, não da solução.",
+      "Mesmo assim, o título ficou nas mãos de Nuno Mendes, Diogo Costa e Rúben Neves.",
+    summary_li4: "O motor continuou a ser a equipa.",
+    summary_li5: "O toque final foi dele.",
     summary_p:
-      'A frase honesta, olhando de Euro 2016 até hoje, não é "Ronaldo carregou a Seleção". É outra: Portugal passou uma década a vender a ideia de que precisava dele para tudo, mas sempre que foi preciso alguém para decidir um torneio, foram quase sempre colegas a fazer o trabalho pesado.',
+      "Isso não é pouco. Mas também não é carregar uma equipa. Nunca foi.",
   },
   es: {
     title: "Portugal llevó a Ronaldo",
     intro:
       "Ronaldo ha jugado para Portugal en ocho torneos importantes. Nunca ha marcado un gol en un partido de eliminación directa de un Mundial. La narrativa de que cargó con la selección durante una década no resiste el cronograma de los partidos.",
-    summary_h:
-      "De la Euro 2016 a hoy: quién hace las jugadas y quién sale en la portada",
+    summary_h: "Nueve torneos. Tres títulos.",
     summary_intro:
-      "En estos torneos, la cronología de los partidos importantes muestra siempre el mismo patrón: los momentos en que Portugal realmente necesita a alguien que decida vienen de otros.",
-    summary_li1:
-      "Euro 2016: Nani, Quaresma, Éder, Patrício y Pepe son los nombres de los partidos clave.",
+      "Los goles del título: Éder, Guedes — y en 2025, por fin, un empate de Ronaldo que mantuvo a Portugal con vida en la prórroga, con Rúben Neves marcando el penalti que lo selló.",
+    summary_li1: "El patrón se mantuvo durante casi una década.",
     summary_li2:
-      "Liga de Naciones 2019: Bernardo conduce, Guedes marca el gol del título.",
+      "En 2025 cambió - un poco. Ronaldo marcó más, apareció en momentos más grandes y terminó como máximo goleador de la competición.",
     summary_li3:
-      "Euro 2020: Bota de Oro de la fase de grupos, pero en octavos quienes deciden son los belgas; Ronaldo se queda en blanco.",
-    summary_li4:
-      "Mundial 2022: Ramos, Bruno y Pepe cargan con el 6-1 a Suiza; Portugal cae ante Marruecos sin gol de Ronaldo.",
-    summary_li5:
-      "Euro 2024: Diogo Costa, Bruno y Bernardo salvan al equipo en los penaltis; Ronaldo es protagonista del drama, no de la solución.",
+      "Aun así, el título siguió descansando en Nuno Mendes, Diogo Costa y Rúben Neves.",
+    summary_li4: "El motor seguía siendo el equipo.",
+    summary_li5: "El toque final fue suyo.",
     summary_p:
-      'La frase honesta, mirando desde la Euro 2016 hasta hoy, no es "Ronaldo llevó a la selección". Es otra: Portugal pasó una década vendiendo la idea de que lo necesitaba para todo, pero siempre que hubo que decidir un torneo, casi siempre fueron sus compañeros — Nani, Quaresma, Éder, Guedes, Bernardo, Bruno, Ramos, Diogo Costa — quienes hicieron el trabajo pesado.',
+      "Eso no es poco. Pero tampoco es cargar a un equipo. Nunca lo fue.",
   },
   fr: {
     title: "Le Portugal a porté Ronaldo",
     intro:
       "Ronaldo a joué pour le Portugal dans huit grands tournois. Il n’a jamais marqué dans un match à élimination directe en Coupe du monde. Le récit selon lequel il a porté la sélection pendant une décennie ne résiste pas à la chronologie des matches.",
-    summary_h:
-      "De l’Euro 2016 à aujourd’hui : qui fait les actions et qui apparaît en couverture",
+    summary_h: "Neuf tournois. Trois titres.",
     summary_intro:
-      "Dans ces tournois, la chronologie des matches importants montre toujours le même schéma : les moments où le Portugal a vraiment besoin de quelqu’un pour décider viennent des autres.",
-    summary_li1:
-      "Euro 2016 : Nani, Quaresma, Éder, Patrício et Pepe sont les noms des matches clés.",
+      "Les buts décisifs : Éder, Guedes - et en 2025, enfin, une égalisation de Ronaldo qui a maintenu le Portugal en vie en prolongation, avant le penalty victorieux de Rúben Neves.",
+    summary_li1: "Le schéma a duré presque toute une décennie.",
     summary_li2:
-      "Ligue des Nations 2019 : Bernardo mène, Guedes marque le but du titre.",
+      "En 2025, cela a légèrement changé. Ronaldo a marqué davantage, a pesé dans de plus grands moments et a terminé meilleur buteur de la compétition.",
     summary_li3:
-      "Euro 2020 : Soulier d’or de la phase de groupes, mais en huitième ce sont les Belges qui décident ; Ronaldo reste muet.",
-    summary_li4:
-      "Coupe du monde 2022 : Ramos, Bruno et Pepe portent le 6-1 contre la Suisse ; le Portugal tombe contre le Maroc sans but de Ronaldo.",
-    summary_li5:
-      "Euro 2024 : Diogo Costa, Bruno et Bernardo sauvent l’équipe aux tirs au but ; Ronaldo est le protagoniste du drame, pas la solution.",
+      "Même alors, le titre reposait sur Nuno Mendes, Diogo Costa et Rúben Neves.",
+    summary_li4: "Le moteur restait l’équipe.",
+    summary_li5: "La touche finale était la sienne.",
     summary_p:
-      'La phrase honnête, en regardant de l’Euro 2016 à aujourd’hui, n’est pas "Ronaldo a porté la sélection". C’en est une autre : le Portugal a passé une décennie à vendre l’idée qu’il avait besoin de lui pour tout, mais chaque fois qu’il fallait décider d’un tournoi, ce sont presque toujours des coéquipiers — Nani, Quaresma, Éder, Guedes, Bernardo, Bruno, Ramos, Diogo Costa — qui ont fait le gros du travail.',
+      "Ce n’est pas rien. Mais ce n’est pas non plus porter une équipe. Ça ne l’a jamais été.",
   },
 };
 
