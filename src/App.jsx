@@ -9,8 +9,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import PageNotFound from "./lib/PageNotFound";
-import { AuthProvider, useAuth } from "@/lib/AuthContext";
-import UserNotRegisteredError from "@/components/UserNotRegisteredError";
+import { AuthProvider } from "@/lib/AuthContext";
 import { I18nProvider } from "./lib/i18n";
 import LoadingScreen from "@/components/LoadingScreen";
 // Add page imports here
@@ -116,22 +115,6 @@ const ScrollToTop = () => {
 };
 
 const AuthenticatedApp = () => {
-  const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } =
-    useAuth();
-
-  if (isLoadingPublicSettings || isLoadingAuth) {
-    return <div className="fixed inset-0 bg-black" aria-hidden="true" />;
-  }
-
-  if (authError) {
-    if (authError.type === "user_not_registered") {
-      return <UserNotRegisteredError />;
-    } else if (authError.type === "auth_required") {
-      navigateToLogin();
-      return null;
-    }
-  }
-
   return (
     <Routes>
       <Route path="/" element={<Home />} />
