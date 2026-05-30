@@ -5,49 +5,52 @@ import HeroSection from "../components/HeroSection";
 import Footer from "../components/Footer";
 import { useI18n } from "../lib/i18n";
 
+const assetPath = (fileName) =>
+  `${import.meta.env.BASE_URL}assets/homepageCardImages/${fileName}`;
+
 const sectionCards = [
   {
     path: "/ballon-dor",
     key: "nav_ballon",
     desc: "ballon_desc",
-    image: "/assets/homepageCardImages/balondor.png",
+    image: assetPath("balondor.png"),
     featured: true,
   },
   {
     path: "/rigged-ucl",
     key: "nav_ucl",
     desc: "ucl_desc",
-    image: "/assets/homepageCardImages/riggeducl.png",
+    image: assetPath("riggeducl.png"),
   },
   {
     path: "/managers",
     key: "nav_managers",
     desc: "managers_desc",
-    image: "/assets/homepageCardImages/sackedmanagers.png",
+    image: assetPath("sackedmanagers.png"),
   },
   {
     path: "/character-behaviour",
     key: "nav_character",
     desc: "character_desc",
-    image: "/assets/homepageCardImages/characterBehavior.png",
+    image: assetPath("characterBehavior.png"),
   },
   {
     path: "/national-team",
     key: "nav_national",
     desc: "national_desc",
-    image: "/assets/homepageCardImages/nationalteam.png",
+    image: assetPath("nationalteam.png"),
   },
   {
     path: "/liga-comprada",
     key: "nav_liga",
     desc: "liga_desc",
-    image: "/assets/homepageCardImages/boughtleague.png",
+    image: assetPath("boughtleague.png"),
   },
   {
     path: "/why-messi",
     key: "nav_messi",
     desc: "messi_desc",
-    image: "/assets/homepageCardImages/whymessi.png",
+    image: assetPath("whymessi.png"),
   },
 ];
 
