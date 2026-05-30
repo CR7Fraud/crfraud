@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import { useI18n } from "../lib/i18n";
 
 const assetPath = (fileName) =>
-  `${import.meta.env.BASE_URL}assets/homepageCardImages/${fileName}`;
+  new URL(`assets/homepageCardImages/${fileName}`, document.baseURI).href;
 
 const sectionCards = [
   {
