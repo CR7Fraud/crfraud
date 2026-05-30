@@ -114,7 +114,7 @@ export default function BallonDorSection() {
 
           <div className="my-8 rounded-xl overflow-hidden border border-border">
             <img
-              src={assetPath("2016-Bdor.png")}
+              src={assetPath("2016-BDor.png")}
               alt="Ballon d'Or 2016 Statistics Messi vs Ronaldo"
               className="w-full"
             />
