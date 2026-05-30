@@ -1,16 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 
 const WORD_ENTRY_MS = 1040;
-const MORPH_MS = 820;
-const FINAL_CHAR_STAGGER = 55;
-const EXIT_FADE_DURATION = 300;
+const MORPH_MS = 1400;
+const FINAL_CHAR_STAGGER = 110;
+const EXIT_FADE_DURATION = 700;
 const EASE = "cubic-bezier(.16, 1, .3, 1)";
 
 const TIMING = {
   morph: 1460,
   stable: 1900,
   final: 2520,
-  complete: 4100,
+  complete: 4800,
 };
 
 function MorphSlot({ stage }) {
@@ -85,13 +85,15 @@ function FinalLetters({ active }) {
           className="inline-block text-amber-500"
           style={{
             transition:
-              "opacity 320ms cubic-bezier(.16, 1, .3, 1), transform 320ms cubic-bezier(.16, 1, .3, 1), filter 320ms linear",
+              "width 700ms cubic-bezier(.16, 1, .3, 1), opacity 700ms cubic-bezier(0.34, 1.56, 0.64, 1), transform 700ms cubic-bezier(0.34, 1.56, 0.64, 1), filter 700ms linear",
             transitionDelay: `${index * FINAL_CHAR_STAGGER}ms`,
             willChange: "opacity, transform, filter",
+            width: revealed ? "auto" : "0",
+            overflow: "hidden",
             opacity: revealed ? 1 : 0,
             transform: revealed
               ? "translateY(0) scale(1)"
-              : "translateY(0.14em) scale(0.96)",
+              : "translateY(0.22em) scale(0.85)",
             filter: revealed ? "blur(0px)" : "blur(4px)",
           }}
         >
@@ -103,8 +105,6 @@ function FinalLetters({ active }) {
 }
 
 function LoadingWord({ stage, entered }) {
-  const finalShift = stage === "final" ? "-0.07em" : "0em";
-
   return (
     <div className="absolute inset-0 flex items-center justify-center">
       <h1
@@ -116,7 +116,7 @@ function LoadingWord({ stage, entered }) {
           )}ms linear`,
           willChange: "transform, opacity",
           transform: entered
-            ? `translate3d(${finalShift}, 0, 0) scale(1)`
+            ? "scale(1)"
             : "translate3d(-46vw, 0, 0) scale(0.975)",
           opacity: entered ? 1 : 0,
           textShadow: "0 0 26px rgba(255, 255, 255, 0.04)",
@@ -208,7 +208,7 @@ export default function LoadingScreen({ onComplete }) {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] bg-black transition-opacity duration-300 ${
+      className={`fixed inset-0 z-[9999] bg-black transition-opacity duration-700 ${
         isExiting ? "pointer-events-none opacity-0" : "opacity-100"
       }`}
       onTransitionEnd={handleTransitionEnd}

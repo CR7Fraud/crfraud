@@ -149,14 +149,23 @@ function App() {
       <AuthProvider>
         <QueryClientProvider client={queryClientInstance}>
           <TextNormalizer />
-          <Router>
+          <div className="relative min-h-screen bg-black">
+            <div
+              className="min-h-screen"
+              style={{
+                opacity: introDone ? 1 : 0,
+                transition: "opacity 800ms cubic-bezier(.16, 1, .3, 1)",
+              }}
+            >
+              <Router>
+                <AuthenticatedApp />
+              </Router>
+              <Toaster />
+            </div>
             {!introDone ? (
               <LoadingScreen onComplete={() => setIntroDone(true)} />
-            ) : (
-              <AuthenticatedApp />
-            )}
-          </Router>
-          <Toaster />
+            ) : null}
+          </div>
         </QueryClientProvider>
       </AuthProvider>
     </I18nProvider>
