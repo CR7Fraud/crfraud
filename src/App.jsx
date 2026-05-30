@@ -1,8 +1,13 @@
 import { Toaster } from "@/components/ui/toaster";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { queryClientInstance } from "@/lib/query-client";
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import PageNotFound from "./lib/PageNotFound";
 import { AuthProvider, useAuth } from "@/lib/AuthContext";
 import UserNotRegisteredError from "@/components/UserNotRegisteredError";
@@ -94,6 +99,22 @@ const TextNormalizer = () => {
   return null;
 };
 
+const ScrollToTop = () => {
+  const location = useLocation();
+  const hasMountedRef = useRef(false);
+
+  useEffect(() => {
+    if (hasMountedRef.current) {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      return;
+    }
+
+    hasMountedRef.current = true;
+  }, [location.pathname]);
+
+  return null;
+};
+
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } =
     useAuth();
@@ -158,6 +179,7 @@ function App() {
               }}
             >
               <Router>
+                <ScrollToTop />
                 <AuthenticatedApp />
               </Router>
               <Toaster />

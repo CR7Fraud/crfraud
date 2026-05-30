@@ -6,23 +6,49 @@ import Footer from "../components/Footer";
 import { useI18n } from "../lib/i18n";
 
 const sectionCards = [
-  { path: "/ballon-dor", key: "nav_ballon", icon: "🏆", desc: "ballon_desc" },
-  { path: "/rigged-ucl", key: "nav_ucl", icon: "⚽", desc: "ucl_desc" },
-  { path: "/managers", key: "nav_managers", icon: "👔", desc: "managers_desc" },
+  {
+    path: "/ballon-dor",
+    key: "nav_ballon",
+    desc: "ballon_desc",
+    image: "/assets/homepageCardImages/balondor.png",
+    featured: true,
+  },
+  {
+    path: "/rigged-ucl",
+    key: "nav_ucl",
+    desc: "ucl_desc",
+    image: "/assets/homepageCardImages/riggeducl.png",
+  },
+  {
+    path: "/managers",
+    key: "nav_managers",
+    desc: "managers_desc",
+    image: "/assets/homepageCardImages/sackedmanagers.png",
+  },
   {
     path: "/character-behaviour",
     key: "nav_character",
-    icon: "🧩",
     desc: "character_desc",
+    image: "/assets/homepageCardImages/characterBehavior.png",
   },
   {
     path: "/national-team",
     key: "nav_national",
-    icon: "🇵🇹",
     desc: "national_desc",
+    image: "/assets/homepageCardImages/nationalteam.png",
   },
-  { path: "/liga-comprada", key: "nav_liga", icon: "💰", desc: "liga_desc" },
-  { path: "/why-messi", key: "nav_messi", icon: "⭐", desc: "messi_desc" },
+  {
+    path: "/liga-comprada",
+    key: "nav_liga",
+    desc: "liga_desc",
+    image: "/assets/homepageCardImages/boughtleague.png",
+  },
+  {
+    path: "/why-messi",
+    key: "nav_messi",
+    desc: "messi_desc",
+    image: "/assets/homepageCardImages/whymessi.png",
+  },
 ];
 
 const cardDescs = {
@@ -100,32 +126,50 @@ export default function Home() {
     <div className="min-h-screen bg-background font-inter">
       <Navbar />
       <HeroSection />
-      <main className="max-w-5xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {sectionCards.map((card) => (
-            <Link
-              key={card.path}
-              to={card.path}
-              className="group block p-6 rounded-2xl border border-border bg-card hover:border-amber-400/50 hover:shadow-lg transition-all duration-200"
-            >
-              <span className="text-3xl mb-3 block">{card.icon}</span>
-              <h3 className=" font-bold text-lg text-foreground mb-2 group-hover:text-amber-500 transition-colors">
-                {t(card.key)}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {descs[card.desc]}
-              </p>
-              <span className="mt-4 inline-flex items-center text-xs font-semibold text-amber-500 gap-1">
-                {lang === "pt"
-                  ? "Ler →"
-                  : lang === "es"
-                    ? "Leer →"
-                    : lang === "fr"
-                      ? "Lire →"
-                      : "Read →"}
-              </span>
-            </Link>
-          ))}
+      <main className="bg-[#f0f0f0] py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:auto-rows-[180px] md:grid-flow-row-dense">
+            {sectionCards.map((card) => (
+              <Link
+                key={card.path}
+                to={card.path}
+                className={`group relative overflow-hidden rounded-[12px] border border-[#c8a84b] bg-black shadow-[0_12px_28px_rgba(0,0,0,0.18)] transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_36px_rgba(0,0,0,0.24)] ${
+                  card.featured
+                    ? "md:row-span-2 min-h-[360px] md:min-h-0"
+                    : "min-h-[180px]"
+                }`}
+              >
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                  style={{ backgroundImage: `url(${card.image})` }}
+                  aria-hidden="true"
+                />
+                <div
+                  className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.3)_60%,transparent_100%)]"
+                  aria-hidden="true"
+                />
+                <div className="relative flex h-full items-end p-4">
+                  <div className="max-w-[92%]">
+                    <h3 className="text-[18px] font-bold leading-tight text-white">
+                      {t(card.key)}
+                    </h3>
+                    <p className="mt-2 text-[13px] leading-snug text-white/75">
+                      {descs[card.desc]}
+                    </p>
+                    <span className="mt-3 inline-flex text-[13px] font-semibold text-[#c8a84b]">
+                      {lang === "pt"
+                        ? "Ler →"
+                        : lang === "es"
+                          ? "Leer →"
+                          : lang === "fr"
+                            ? "Lire →"
+                            : "Read →"}
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </main>
       <Footer />

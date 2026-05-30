@@ -11,6 +11,9 @@ export default function SectionAccordionList({
 }) {
   const [openIndex, setOpenIndex] = React.useState(defaultOpenIndex);
   const baseId = React.useId();
+  const sectionRefs = React.useRef([]);
+  const contentRefs = React.useRef([]);
+  const didMountRef = React.useRef(false);
 
   const styles = dark
     ? {
@@ -30,6 +33,41 @@ export default function SectionAccordionList({
         sign: "text-muted-foreground",
       };
 
+  React.useEffect(() => {
+    if (!didMountRef.current) {
+      didMountRef.current = true;
+      return undefined;
+    }
+
+    if (openIndex < 0) {
+      return undefined;
+    }
+
+    const timerId = window.setTimeout(() => {
+      const contentElement = contentRefs.current[openIndex];
+      const sectionElement = sectionRefs.current[openIndex];
+
+      if (!contentElement && !sectionElement) {
+        return;
+      }
+
+      const headerElement = document.querySelector(
+        "[data-sticky-header='true']",
+      );
+      const headerHeight = headerElement?.getBoundingClientRect().height ?? 56;
+      const targetElement = contentElement || sectionElement;
+      const targetRect = targetElement.getBoundingClientRect();
+      const targetY = Math.max(
+        0,
+        window.scrollY + targetRect.top - headerHeight - 12,
+      );
+
+      window.scrollTo({ top: targetY, behavior: "smooth" });
+    }, 50);
+
+    return () => window.clearTimeout(timerId);
+  }, [openIndex]);
+
   return (
     <div className={`${showDividers ? "space-y-2" : "space-y-6"} ${className}`}>
       {items.map((item, index) => {
@@ -45,6 +83,9 @@ export default function SectionAccordionList({
               />
             )}
             <section
+              ref={(element) => {
+                sectionRefs.current[index] = element;
+              }}
               className={`overflow-hidden rounded-xl border ${styles.card}`}
             >
               <button
@@ -91,6 +132,9 @@ export default function SectionAccordionList({
                 }}
               >
                 <div
+                  ref={(element) => {
+                    contentRefs.current[index] = element;
+                  }}
                   className={`min-h-0 overflow-hidden border-t ${styles.border}`}
                 >
                   <div className="px-6 py-6">
