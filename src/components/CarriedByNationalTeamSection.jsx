@@ -1,7 +1,5 @@
 ﻿import React from "react";
 import RichText from "./RichText";
-import SectionAccordionList from "./SectionAccordionList";
-import SectionWrapper from "./SectionWrapper";
 import { useI18n } from "../lib/i18n";
 
 const tournamentsEn = [
@@ -522,8 +520,8 @@ const content = {
   en: {
     title: "Portugal Carried Ronaldo",
     intro:
-      "Ronaldo has played for Portugal in eight major tournaments. He has never scored a goal in a knockout game at a World Cup. The narrative that he carried the national team for a decade doesn't survive contact with the match timeline.",
-    summary_h: "Nine tournaments. Three titles.",
+      "Ronaldo has played for Portugal in ten major tournaments. He has never scored a goal in a knockout game at a World Cup. The narrative that he carried the national team for a decade doesn't survive contact with the match timeline.",
+    summary_h: "Ten tournaments. Three titles.",
     summary_intro:
       "The winning goals: Éder, Guedes - and in 2025, finally, a Ronaldo equaliser that kept Portugal alive in extra time, with Rúben Neves scoring the penalty that sealed it.",
     summary_li1: "The pattern held for most of a decade.",
@@ -539,8 +537,8 @@ const content = {
   pt: {
     title: "Portugal carregou Ronaldo",
     intro:
-      "Ronaldo jogou por Portugal em oito grandes torneios. Nunca marcou num jogo a eliminar num Mundial. A narrativa de que carregou a seleção durante uma década não resiste ao cronograma dos jogos.",
-    summary_h: "Nove torneios. Três títulos.",
+      "Ronaldo jogou por Portugal em dez grandes torneios. Nunca marcou num jogo a eliminar num Mundial. A narrativa de que carregou a seleção durante uma década não resiste ao cronograma dos jogos.",
+    summary_h: "Dez torneios. Três títulos.",
     summary_intro:
       "Os golos da vitória: Éder, Guedes — e em 2025, finalmente, um empate de Ronaldo que manteve Portugal vivo no prolongamento, com Rúben Neves a marcar o penálti que selou tudo.",
     summary_li1: "O padrão manteve-se durante quase toda a década.",
@@ -556,8 +554,8 @@ const content = {
   es: {
     title: "Portugal llevó a Ronaldo",
     intro:
-      "Ronaldo ha jugado para Portugal en ocho torneos importantes. Nunca ha marcado un gol en un partido de eliminación directa de un Mundial. La narrativa de que cargó con la selección durante una década no resiste el cronograma de los partidos.",
-    summary_h: "Nueve torneos. Tres títulos.",
+      "Ronaldo ha jugado para Portugal en diez torneos importantes. Nunca ha marcado un gol en un partido de eliminación directa de un Mundial. La narrativa de que cargó con la selección durante una década no resiste el cronograma de los partidos.",
+    summary_h: "Diez torneos. Tres títulos.",
     summary_intro:
       "Los goles del título: Éder, Guedes — y en 2025, por fin, un empate de Ronaldo que mantuvo a Portugal con vida en la prórroga, con Rúben Neves marcando el penalti que lo selló.",
     summary_li1: "El patrón se mantuvo durante casi una década.",
@@ -573,8 +571,8 @@ const content = {
   fr: {
     title: "Le Portugal a porté Ronaldo",
     intro:
-      "Ronaldo a joué pour le Portugal dans huit grands tournois. Il n’a jamais marqué dans un match à élimination directe en Coupe du monde. Le récit selon lequel il a porté la sélection pendant une décennie ne résiste pas à la chronologie des matches.",
-    summary_h: "Neuf tournois. Trois titres.",
+      "Ronaldo a joué pour le Portugal dans dix grands tournois. Il n’a jamais marqué dans un match à élimination directe en Coupe du monde. Le récit selon lequel il a porté la sélection pendant une décennie ne résiste pas à la chronologie des matches.",
+    summary_h: "Dix tournois. Trois titres.",
     summary_intro:
       "Les buts décisifs : Éder, Guedes - et en 2025, enfin, une égalisation de Ronaldo qui a maintenu le Portugal en vie en prolongation, avant le penalty victorieux de Rúben Neves.",
     summary_li1: "Le schéma a duré presque toute une décennie.",
@@ -602,65 +600,161 @@ export default function CarriedByNationalTeamSection() {
   const { lang, t } = useI18n();
   const c = (key) => fallback(content, lang, key);
   const tournaments = tournamentsByLang[lang] || tournamentsEn;
+  const [selectedTournament, setSelectedTournament] = React.useState(0);
 
-  const text = (value) => <RichText as="p">{value}</RichText>;
+  const paragraphClass =
+    "mb-0 text-left text-base leading-[1.7] text-foreground/80 [hyphens:auto] [text-align-last:left] md:text-justify";
+  const paragraphs = (value, className = paragraphClass) =>
+    String(value)
+      .split(/\n\n+/)
+      .map((paragraph, index) => (
+        <RichText
+          as="p"
+          key={`${paragraph.slice(0, 24)}-${index}`}
+          className={className}
+        >
+          {paragraph}
+        </RichText>
+      ));
   const inline = (value) => (
     <RichText as="span" className="inline">
       {value}
     </RichText>
   );
-  const quote = (value) => <RichText as="blockquote">{value}</RichText>;
-
-  const items = tournaments.map((item) => ({
-    key: item.year,
-    eyebrow: t("label_national"),
-    title: item.year,
-    subtitle: item.title,
-    content: (
-      <>
-        {text(item.content)}
-        {item.points && item.points.length > 0 && (
-          <ul>
-            {item.points.map((point, index) => (
-              <li key={index}>{inline(point)}</li>
-            ))}
-          </ul>
-        )}
-        {item.quote && quote(item.quote)}
-        {item.conclusion && (
-          <RichText
-            as="p"
-            className="text-muted-foreground italic text-sm border-l-2 border-amber-500 pl-4 mt-4"
-          >
-            {item.conclusion}
-          </RichText>
-        )}
-      </>
-    ),
-  }));
+  const selectedItem = tournaments[selectedTournament] || tournaments[0];
+  const selectedPanelId = `national-team-panel-${selectedTournament}`;
+  const tournamentLabel = (yearLabel) => {
+    const match = yearLabel.match(/^(.*)\s(\d{4})$/);
+    return match
+      ? { competition: match[1], year: match[2] }
+      : { competition: yearLabel, year: "" };
+  };
 
   return (
-    <SectionWrapper
+    <section
       id="national-team"
-      label={t("label_national")}
-      title={c("title")}
+      lang={lang}
+      className="bg-background py-20 md:py-28"
     >
-      {text(c("intro"))}
-      <div className="mt-8">
-        <SectionAccordionList items={items} />
-      </div>
+      <div className="mx-auto max-w-[60rem] px-5 sm:px-8 lg:px-10">
+        <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-muted-foreground">
+          <span className="text-xs font-semibold uppercase tracking-widest">
+            {t("label_national")}
+          </span>
+        </div>
+        <h1 className="mb-10 font-playfair text-4xl font-black leading-tight text-foreground md:text-5xl">
+          {c("title")}
+        </h1>
 
-      <div className="section-divider" />
-      <h2>{c("summary_h")}</h2>
-      {text(c("summary_intro"))}
-      <ul>
-        <li>{inline(c("summary_li1"))}</li>
-        <li>{inline(c("summary_li2"))}</li>
-        <li>{inline(c("summary_li3"))}</li>
-        <li>{inline(c("summary_li4"))}</li>
-        <li>{inline(c("summary_li5"))}</li>
-      </ul>
-      {text(c("summary_p"))}
-    </SectionWrapper>
+        <div className="mb-8 space-y-4">{paragraphs(c("intro"))}</div>
+
+        <div className="relative mb-4">
+          <div
+            className="overflow-x-auto pb-2"
+            role="tablist"
+            aria-label={c("title")}
+          >
+            <div className="flex min-w-[48rem] gap-3 sm:min-w-0">
+              {tournaments.map((tournament, index) => {
+                const label = tournamentLabel(tournament.year);
+                const isSelected = index === selectedTournament;
+
+                return (
+                  <button
+                    key={tournament.year}
+                    id={`national-team-tab-${index}`}
+                    type="button"
+                    role="tab"
+                    aria-controls={selectedPanelId}
+                    aria-pressed={isSelected}
+                    aria-selected={isSelected}
+                    onClick={() => setSelectedTournament(index)}
+                    className={`flex min-h-16 min-w-36 flex-1 flex-col items-center justify-center rounded-xl border px-3 py-2 text-center outline-none transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
+                      isSelected
+                        ? "border-foreground bg-foreground text-accent"
+                        : "border-border bg-background text-muted-foreground hover:border-foreground/40 hover:bg-muted/50 hover:text-foreground"
+                    }`}
+                  >
+                    <span className="text-sm font-semibold">{label.year}</span>
+                    <span className="mt-0.5 text-xs opacity-80">
+                      {label.competition}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute bottom-2 right-0 top-0 w-8 bg-gradient-to-l from-background to-transparent sm:hidden"
+          />
+        </div>
+
+        <div
+          id={selectedPanelId}
+          role="tabpanel"
+          aria-labelledby={`national-team-tab-${selectedTournament}`}
+          className="rounded-[14px] border border-border bg-white p-5 shadow-sm md:p-7"
+        >
+          <div className="mb-5 border-b border-border pb-5">
+            <p className="mb-1 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+              {selectedItem.year}
+            </p>
+            <h2 className="font-playfair text-2xl font-bold text-foreground md:text-3xl">
+              {selectedItem.title}
+            </h2>
+          </div>
+
+          <div className="space-y-4 text-base leading-[1.7] text-foreground/80 [&>ul]:list-disc [&>ul]:space-y-2 [&>ul]:pl-5 [&>ul]:text-left">
+            {paragraphs(selectedItem.content)}
+            {selectedItem.points?.length > 0 && (
+              <ul>
+                {selectedItem.points.map((point, index) => (
+                  <li key={index}>{inline(point)}</li>
+                ))}
+              </ul>
+            )}
+            {selectedItem.quote && (
+              <div className="border-l-2 border-accent bg-amber-50/60 px-4 py-3 text-left">
+                {paragraphs(
+                  selectedItem.quote,
+                  "mb-0 text-left text-base leading-[1.7] text-foreground/75 italic",
+                )}
+              </div>
+            )}
+            {selectedItem.conclusion && (
+              <div className="border-l-2 border-accent bg-muted/30 px-4 py-3 text-left">
+                {paragraphs(
+                  selectedItem.conclusion,
+                  "mb-0 text-left text-base leading-[1.7] font-semibold text-foreground",
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+
+        <section className="mt-12 border-t border-border pt-8">
+          <h2 className="mb-5 font-playfair text-2xl font-bold text-foreground md:text-3xl">
+            {c("summary_h")}
+          </h2>
+          <div className="space-y-4">
+            {paragraphs(c("summary_intro"))}
+            <ul className="list-disc space-y-2 pl-5 text-left text-base leading-[1.7] text-foreground/80">
+              <li>{inline(c("summary_li1"))}</li>
+              <li>{inline(c("summary_li2"))}</li>
+              <li>{inline(c("summary_li3"))}</li>
+              <li>{inline(c("summary_li4"))}</li>
+              <li>{inline(c("summary_li5"))}</li>
+            </ul>
+            <div className="border-l-2 border-accent bg-muted/30 px-4 py-3">
+              {paragraphs(
+                c("summary_p"),
+                "mb-0 text-left text-base leading-[1.7] font-semibold text-foreground",
+              )}
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
   );
 }
