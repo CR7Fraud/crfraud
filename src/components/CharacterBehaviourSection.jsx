@@ -33,6 +33,20 @@ const commentImageFiles = [
 
 const carouselMarker = "_[carousel — screenshots of social media comments]_";
 
+const freekickMarker = "_[freekick — free kick conversion rate chart]_";
+
+function FreekickChart() {
+  const src = `${import.meta.env.BASE_URL}assets/freekick.png`;
+  return (
+    <img
+      src={src}
+      alt="Free kick conversion rate — Juventus league and Portugal at major tournaments"
+      decoding="async"
+      style={{ width: "100%", borderRadius: "8px", margin: "1rem 0" }}
+    />
+  );
+}
+
 const screenshotCopyByLang = {
   en: {
     button: "Social media comments screenshot",
@@ -281,16 +295,24 @@ function SocialCommentsCarousel({ lang }) {
 }
 
 function MarkdownWithCarousel({ markdown, lang }) {
-  const segments = markdown.split(carouselMarker);
-
-  return segments.map((segment, index) => (
-    <React.Fragment key={`${index}-${segment.slice(0, 16)}`}>
-      {segment.trim() ? <MarkdownBlock markdown={segment} /> : null}
-      {index < segments.length - 1 ? (
-        <SocialCommentsCarousel lang={lang} />
-      ) : null}
-    </React.Fragment>
-  ));
+  return markdown
+    .split(carouselMarker)
+    .flatMap((carouselSegment, ci, carouselArr) => {
+      const parts = carouselSegment.split(freekickMarker);
+      return [
+        ...parts.flatMap((part, fi, fkArr) => [
+          part.trim() ? (
+            <MarkdownBlock key={`c${ci}-f${fi}-md`} markdown={part} />
+          ) : null,
+          fi < fkArr.length - 1 ? (
+            <FreekickChart key={`c${ci}-f${fi}-fk`} />
+          ) : null,
+        ]),
+        ci < carouselArr.length - 1 ? (
+          <SocialCommentsCarousel key={`c${ci}-carousel`} lang={lang} />
+        ) : null,
+      ];
+    });
 }
 
 export default function CharacterBehaviourSection() {

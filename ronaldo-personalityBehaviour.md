@@ -10,35 +10,11 @@ The pattern, across twenty years and four clubs, speaks for itself.
 
 Throughout his career, Ronaldo has built a public narrative around dignity, principles, and indifference to statistics. His actual decisions tell a different story.
 
-### Career-long — "I don't chase records"
-
-Ronaldo has repeated the phrase for years: "I don't chase records, records chase me." It sounds good in interviews, but the way he managed the end of his career says the opposite.
-
-He stayed in the national team long after his competitive peak, insisting on starting at Euros and World Cups where he was one of the least productive players on the pitch — mainly to inflate numbers with caps and goals. He chose the Saudi league, well below the competitive level of the European elite, precisely when he had no market at the top — but where he can keep adding goals and games in a far less demanding context.
-
-He continues to try to monopolise penalties and free kicks, even with poor efficiency and teammates who are stronger in that moment of the game.
-
-Rafael van der Vaart, former Real Madrid teammate, confirmed: "If we won 6–0 and he hadn't scored, he wasn't happy. He was selfish."
-
-Sergio Ramos admitted the same pattern: Ronaldo always went home upset when he didn't score, regardless of the result.
-
-<hr class="my-8 border-white/10" />
-
-### 2022 — "Winning the World Cup is the biggest dream of my career"
-
-He said it with emotion in 2022, after Portugal's elimination by Morocco. Months later, Messi won exactly that tournament and was acclaimed as the greatest of all time.
-
-By 2025, in an interview, Ronaldo said the opposite: "I'd say it's NOT a dream for me to win the World Cup - to win one competition, six or seven games, does that define who's the best?" The argument shifted once the trophy went to the other side.
-
-<hr class="my-8 border-white/10" />
-
 ### 2015/2016 — "I can't see myself in Qatar or Dubai… and Xavi plays in Qatar"
 
-In 2015 he declared he wanted to "finish with dignity" and couldn't picture himself going to "the United States, Qatar or Dubai," associating those leagues with pre-retirement.
+In 2015 he declared he wanted to "finish with dignity" and couldn't picture himself going to "the United States, Qatar or Dubai," associating those leagues with pre-retirement. In 2016 he went further, using that argument to diminish Xavi in the Messi–Ronaldo debate, pointing out that the Spaniard "plays in Qatar" while he was still at Real Madrid.
 
-In 2016 he went further, using that argument to diminish Xavi in the Messi–Ronaldo debate, pointing out that the Spaniard "plays in Qatar" while he was still at Real Madrid.
-
-Seven years later, with no real market among Europe's elite clubs, he signed for Al Nassr - a league equivalent to the one he used as an insult, with the only difference being a much larger cheque.
+Seven years later, with no real market among Europe's elite clubs, he signed for Al Nassr — a league equivalent to the one he used as an insult, with the only difference being a much larger cheque.
 
 <hr class="my-8 border-white/10" />
 
@@ -46,7 +22,18 @@ Seven years later, with no real market among Europe's elite clubs, he signed for
 
 At a time when Real Madrid had several regular starters unavailable, he told Marca that the substitutes fell short.
 
-The quote is not invented - it was said in 2016 and sparked immediate controversy in the dressing room. He later tried to walk it back, but the words were already out.
+<a href="https://www.theguardian.com/football/2016/mar/01/cristiano-ronaldo-apologies-real-madrid-team-mates-via-whatsapp" target="_blank" rel="noopener noreferrer" class="source-link-card">
+  <div class="flex items-center justify-between gap-3">
+    <div class="flex flex-wrap items-center gap-2 text-[10px] font-bold uppercase tracking-[0.24em] text-zinc-400">
+      <span>Source</span>
+      <span>TheGuardian.com</span>
+      <span>Article</span>
+    </div>
+    <span class="shrink-0 text-[10px] font-semibold uppercase tracking-[0.18em] text-amber-300">↗</span>
+  </div>
+  <h3 class="mt-2 text-sm font-semibold text-white">Cristiano Ronaldo apologises to Real Madrid team-mates</h3>
+  <span class="source-link-card-cta">Open article</span>
+</a>
 
 <hr class="my-8 border-white/10" />
 
@@ -96,13 +83,21 @@ The Golden Boot had been quietly set aside. The Ballon d'Or was now the definiti
 
 <hr class="content-divider" />
 
+### 2022 — "Winning the World Cup is the biggest dream of my career"
+
+He said it with emotion in 2022, after Portugal's elimination by Morocco. Months later, Messi won exactly that tournament and was acclaimed as the greatest of all time.
+
+By 2025, in an interview, Ronaldo said the opposite: "I'd say it's NOT a dream for me to win the World Cup - to win one competition, six or seven games, does that define who's the best?" The argument shifted once the trophy went to the other side.
+
+<hr class="content-divider" />
+
 ### 2024 — "I no longer care about individual records"
 
 Context: Ronaldo at Al Nassr. Messi ahead on every meaningful individual metric.
 
 At an Al Nassr AFC Champions League press conference, October 2024: "It is not important anymore whether I am the best or not, I no longer care about that. It is good for a player to score goals, but for me it is better for the team to win."
 
-That same summer, at Euro 2024, he broke down in tears after missing a penalty — and later admitted to Rio Ferdinand that he wasn't crying over Portugal's elimination, but over a broken streak of 27 consecutive penalties scored. This will be explored further in the Cry, Post, Repeat section.
+That same summer, at Euro 2024, he broke down in tears after missing a penalty — and this will be explored further in the next section.
 
 <a href="https://www.reuters.com/sports/soccer/i-dont-care-about-individual-records-anymore-ronaldo-says-2024-10-01/" target="_blank" rel="noopener noreferrer" class="source-link-card">
   <div class="flex items-center justify-between gap-3">
@@ -146,27 +141,40 @@ The pattern is consistent: the speech is constructed to sound like principle; th
 
 ---
 
-## 2. Cry, Post, Repeat — A decade of public breakdowns and recycled posts
+## 2. Ego — When it was never about the team
 
-The pattern has been consistent for more than a decade: failure or elimination, tears in public, post on social media, cycle repeats.
-
-### The tunnel walk — 2018 and 2022 World Cups
-
-Eliminated by Uruguay in 2018, he walked off crying into the tunnel and posted on Instagram about his "destiny" at World Cups — without a single word about the team. In 2022, eliminated by Morocco, the images repeat. Portugal fails; what stays on loop are his tears.
+Rafael van der Vaart confirmed: "If we won 6–0 and he hadn't scored, he wasn't happy. He was selfish." Sergio Ramos admitted the same: Ronaldo always went home upset when he didn't score, regardless of the result. That pattern did not stay in the dressing room.
 
 ### Euro 2024 — the live collapse
 
-He missed a penalty against Slovenia and collapsed in the middle of the pitch with the game still ongoing, held up by teammates. Diogo Costa saved three consecutive penalties and Portugal qualified. The next day, the dominant story was not Costa — it was Ronaldo in tears. Ruud Gullit in the studio: "Those are crocodile tears — he cried because he missed, not because the team could be eliminated." He later confirmed it himself: he told Rio Ferdinand that in that moment he didn't even think about Portugal being eliminated.
+He missed a penalty against Slovenia and collapsed in the middle of the pitch with the game still ongoing, held up by teammates. Diogo Costa saved three consecutive penalties and Portugal qualified. The next day, the dominant story was not Costa — it was Ronaldo in tears. Ruud Gullit in the studio: "Those are crocodile tears — he cried because he missed, not because the team could be eliminated."
+
+### "I didn't even think about Portugal being eliminated"
+
+In August 2024, in a conversation with Rio Ferdinand, Ronaldo explained why he cried after missing the penalty against Slovenia at Euro 2024:
+
+> "When I cried, it wasn't because I felt Portugal were going to be eliminated… Imagine you score the last 27 penalties. And in that moment you miss. <span style="color: hsl(var(--accent))">I didn't even think about Portugal being eliminated.</span> I was sad because of the pressure I put on myself."
+
+Read carefully, the subtext ceases to be subtext: the captain of Portugal, at a moment of possible elimination, was thinking about his personal penalty run — not about the fate of his team. It is not an interpretation. Those are his own words.
+
+### Mourinho, 2013 — goals as currency
+
+In 2013, Mourinho confronted him in the dressing room after a win, for failing to track back and cover the opposing full-back. According to Modrić's autobiography, Ronaldo was <span style="color: hsl(var(--accent))">"close to tears"</span> and replied: "After everything I've done for you, this is how you treat me?" The logic is revealing — goals are currency that buys exemption from defensive work.
+
+### Tottenham, 2022 — walking out
+
+In October 2022, he refused to come on as a substitute against Tottenham, left the bench, walked down the tunnel and exited the stadium before the final whistle. Ten Hag confirmed everything at the post-match press conference. Emmanuel Petit spoke of an "oversized ego polluting the dressing room."
+Gary Neville said live on air that the behaviour was "unacceptable."
 
 ---
 
-## 3. The One-Man Show — Celebration depends on who scores
+## 3. Behaviour — on and off the pitch
 
-There is a thread running through Real Madrid, Manchester United and the national team: when a teammate scores or shines, Ronaldo's reaction is rarely celebration — it is frustration, indifference, or barely concealed irritation.
+### Free kicks — a decade of attempts, a refusal to step aside
 
-### Free kicks — 53 attempts, 1 goal
+The clearest on-field evidence of Ronaldo's selfishness: at Juventus he converted just 1 free kick in 52 attempts, and for Portugal at major tournaments he managed 1 in 60 — yet at no point did he cede the role to a better specialist.
 
-The strongest argument for on-field selfishness: over 53 direct free kicks at European Championships and World Cups with Portugal, one goal, with better specialists in the squad for years. The Athletic explicitly questioned whether he should still be the designated set-piece taker at Juventus.
+_[freekick — free kick conversion rate chart]_
 
 ### Arbeloa, 2015 — the goal that couldn't be the defender's
 
@@ -176,72 +184,19 @@ In a Real Madrid match against Almería, Arbeloa and Ronaldo contest a ball in t
 
 Against Uruguay, a ball entered the net and Ronaldo celebrated as if he had scored, pointing to the sky. VAR later confirmed the ball never touched him — the goal belonged to Bruno Fernandes. The insistence on appearing as the scorer, even when he had not touched the ball, became one of the most talked-about moments of the tournament.
 
-### Rashford, 2022 — the slow walk to the celebration
-
-After Marcus Rashford scored the decisive goal in a Manchester United match, Ronaldo walked slowly towards the celebration, without seeking out his teammate. The contrast with his own celebrations — sprint to the corner, jump, the roar — was widely noted.
-
 ### Euro 2024 — frustration on the bench when a teammate scores
 
 Already on the bench after being substituted, he was caught on camera visibly frustrated when a teammate converted a penalty with Portugal leading 2–0. Instead of celebrating the comfortable lead, his reaction was minimal — focused on his own earlier miss. Dieter Hamann was direct: "Those tears were proof of how selfish Ronaldo is — he had to mentally leave the game because he was devastated with himself."
 
-### The teammates who stop passing to him
+### Gestures, red cards and adult tantrums
 
-The most revealing data point comes not from a camera or a statement — it comes from the team's collective behaviour. At Euro 2024, Stuart Pearce on talkSPORT and Goal.com documented the same pattern: Portuguese players were systematically avoiding passing lines to Ronaldo — not by accident, but almost instinctively, because they knew what happened when the ball entered that channel. It is a rare statistic: a team adjusting its play to avoid its own most famous forward.
-
----
-
-## 4. The Blame Game — Instagram trailer for the Morgan interview
-
-In the summer of 2022, still under contract with Manchester United, Ronaldo began laying the groundwork on social media: Instagram stories claiming <span style="color: hsl(var(--accent))">"95% of the news about him is false"</span>, that he had a notebook with proof, and that "the truth will come out in a major interview." It was not venting — it was a deliberate trailer.
-
-Weeks later, he sat down with Piers Morgan and spent two hours destroying the club on live television: said he had no respect for Ten Hag, that he felt "betrayed" by the board, that the club had stagnated since Ferguson, that the dressing rooms and facilities were a disgrace for a club of that level. All this while still under contract, still receiving his salary, and weeks after having refused to come on as a substitute and leaving the stadium before the final whistle.
-
-To understand what this means in practice: a professional player, while still active, unilaterally chose to use television to publicly attack his manager, board and club facilities — not after leaving, not in court, not in memoirs published years later. Live, on camera, with a global audience, while his teammates were preparing for the second half of the season. The only thing United could do was terminate his contract, which they did days later.
-
-What makes the episode even more revealing is the sequence: Instagram teaser → two-hour broadcast → termination presented as "mutual agreement." Ronaldo forced his exit through a television interview and still tried to sell the narrative that he was the victim — betrayed by a club that wasn't up to his level.
-
-### "Look me in the eyes": press conferences as an extension of the feed
-
-In March 2025, at a Portugal national team press conference, a journalist asked him whether he still had the level to play at the highest level. He responded with:
-
-- accusations of <span style="color: hsl(var(--accent))">"negativity around the team"</span>;
-- complaints about <span style="color: hsl(var(--accent))">"lack of respect"</span>;
-- and the now-famous line: <span style="color: hsl(var(--accent))">"Look me in the eyes when you ask me that."</span>
-
-Goal summarised it plainly: Ronaldo, visibly irritated, told the journalist to "look me in the eye" over a routine question about performance. It is the same grammar as social media, but at a press conference: everything is about what he feels, never about what he plays.
-
-In recent years, Ronaldo has behaved less like an elite veteran and more like an overexposed child: he cries at every major failure, turns each negative episode into personal drama on social media, and responds to criticism with victimhood or mockery rather than accountability.
-
----
-
-## 5. It Was Never About the Team — Defensive work was the conflict
-
-In 2013, Mourinho confronted him in the dressing room after a win, for failing to track back and cover the opposing full-back. According to Modrić's autobiography, Ronaldo was <span style="color: hsl(var(--accent))">"close to tears"</span> and replied: "After everything I've done for you, this is how you treat me?" The logic is revealing — goals are currency that buys exemption from defensive work.
-
-In October 2022, he refused to come on as a substitute against Tottenham, left the bench, walked down the tunnel and exited the stadium before the final whistle. Ten Hag confirmed everything at the post-match press conference. Emmanuel Petit spoke of an "oversized ego polluting the dressing room." Gary Neville said live on air that the behaviour was "unacceptable."
-
-### I didn't even think about Portugal being eliminated
-
-In August 2024, in a conversation with Rio Ferdinand, Ronaldo explained why he cried after missing the penalty against Slovenia at Euro 2024:
-
-> "When I cried, it wasn't because I felt Portugal were going to be eliminated… Imagine you score the last 27 penalties. And in that moment you miss. <span style="color: hsl(var(--accent))">I didn't even think about Portugal being eliminated.</span> I was sad because of the pressure I put on myself."
-
-Read carefully, the subtext ceases to be subtext: the captain of Portugal, at a moment of possible elimination, was thinking about his personal penalty run — not about the fate of his team. It is not an interpretation. Those are his own words.
-
----
-
-## 6. Gestures, Red Cards and Adult Tantrums — A long list of needless reactions
-
-The list of Ronaldo's red cards and disciplinary incidents throughout his career shares one common trait: they almost always involve a disproportionate reaction to a perfectly normal footballing setback.
+The list of Ronaldo's red cards and disciplinary incidents throughout his career shares one common trait: they almost always involve a disproportionate reaction to a perfectly normal footballing setback. The incidents below are listed chronologically.
 
 - <span style="color: hsl(var(--accent))">Microphone into the lake — Euro 2016</span>  
   In Lyon, during a team walkabout, a CMTV journalist asked a routine question about the upcoming match against Hungary. Ronaldo grabbed the microphone from his hand and threw it into a lake without responding. The journalist later told the BBC that the question was entirely normal, and that the reaction likely stemmed from Ronaldo's dislike of the channel's coverage.
 
 - <span style="color: hsl(var(--accent))">Pushing the referee — Spanish Super Cup (2017)</span>  
   At Camp Nou, he scored a goal, removed his shirt (first yellow card), threw himself to the ground looking for a penalty (second yellow for simulation) and, upon seeing the red card, pushed referee Ricardo de Burgos Bengoetxea in the back. Result: five-game suspension and a fine for both Ronaldo and Real Madrid.
-
-- <span style="color: hsl(var(--accent))">Sent off on Juventus' European debut (2018)</span>  
-  In Valencia, he got involved with Jeison Murillo off the ball, grabbed him by the hair, and the referee showed a straight red after consulting the assistant. He walked off the pitch in tears, visibly shaken. A detail rarely mentioned: the beginning of what would become one of the most celebrated chapters of his career at Juventus started with a red card for off-the-ball violence.
 
 - <span style="color: hsl(var(--accent))">Obscene gesture to fans responding to "Messi" chants — Saudi Arabia (2024)</span>  
   After an Al-Nassr match against Al-Shabab, he responded to chants of "Messi" from the stands with an explicit gesture directed at the crowd (hand to the groin, repeated several times), captured on video. The Saudi federation suspended him for one match.
@@ -260,37 +215,43 @@ The list of Ronaldo's red cards and disciplinary incidents throughout his career
 
 The pattern, documented across three countries, three clubs and the national team, is invariable: referees, fans, journalists or teammates — when challenged, Ronaldo's response is the gesture or the provocation. Never silence. Never accountability.
 
----
+### The Blame Game — Instagram trailer for the Morgan interview
 
-## 7. Social Media of a Child with 35+ Years Old — A 40-year-old posting like a teenager
+In the summer of 2022, still under contract with Manchester United, Ronaldo began laying the groundwork on social media: Instagram stories claiming <span style="color: hsl(var(--accent))">"95% of the news about him is false"</span>, that he had a notebook with proof, and that "the truth will come out in a major interview." It was not venting — it was a deliberate trailer.
+
+Weeks later, he sat down with Piers Morgan and spent two hours destroying the club on live television: said he had no respect for Ten Hag, that he felt "betrayed" by the board, that the club had stagnated since Ferguson, that the dressing rooms and facilities were a disgrace for a club of that level. All this while still under contract, still receiving his salary.
+
+To understand what this means in practice: a professional player, while still active, unilaterally chose to use television to publicly attack his manager, board and club facilities — not after leaving, not in court, not in memoirs published years later. Live, on camera, with a global audience, while his teammates were preparing for the second half of the season. The only thing United could do was terminate his contract, which they did days later.
+
+What makes the episode even more revealing is the sequence: Instagram teaser → two-hour broadcast → termination presented as "mutual agreement." Ronaldo forced his exit through a television interview and still tried to sell the narrative that he was the victim — betrayed by a club that wasn't up to his level.
+
+### "Look me in the eyes": press conferences as an extension of the feed
+
+In March 2025, at a Portugal national team press conference, a journalist asked him whether he still had the level to play at the highest level. He responded with:
+
+- accusations of <span style="color: hsl(var(--accent))">"negativity around the team"</span>;
+- complaints about <span style="color: hsl(var(--accent))">"lack of respect"</span>;
+- and the now-famous line: <span style="color: hsl(var(--accent))">"Look me in the eyes when you ask me that."</span>
+
+Goal summarised it plainly: Ronaldo, visibly irritated, told the journalist to "look me in the eye" over a routine question about performance. It is the same grammar as social media, but at a press conference: everything is about what he feels, never about what he plays.
+
+### Social media — A 40-year-old posting like a teenager
 
 For someone with 900 million followers, Ronaldo uses social media with the restraint of a <span style="color: hsl(var(--accent))">15-year-old</span> on a football forum.
 
-### "FACTS" — 2021 Ballon d'Or
-
 When Messi won the 2021 Ballon d'Or, an anti-Messi fan page posted that the award had been stolen. Ronaldo went to the comment section and wrote one word: "FACTS." That year, Messi had won the Copa América with Argentina — the first collective title of his career, widely considered the decisive factor in the voting according to most serious analysis. Instead of accepting the obvious, he chose to validate a conspiracy theory in an Instagram comment.
-
-### Laughing emojis — 2023 Ballon d'Or
-
-Messi won his eighth following a near-perfect World Cup. Tomás Roncero posted a video claiming Messi had "stolen" multiple awards. Ronaldo responded with a row of laughing emojis. By aligning with that kind of content, he placed himself at the level of his own ultras — coming across as bitter, not wronged.
-
-### The unfollow of Rúben Neves
 
 In 2025, an Al-Nassr match was decided by a penalty in the 90+15th minute — so implausible that teammates and opponents alike, including Demiral, Rúben Neves and Mahrez, laughed openly about it on social media. Social media tracking pages recorded that Ronaldo unfollowed Rúben Neves shortly afterwards. The response to colleagues who mocked a dubious penalty that benefited him was not dialogue, not self-reflection, not even silence. It was a quiet unfollow on Instagram. At the age of 40.
 
 _[carousel — screenshots of social media comments]_
 
----
-
-## 8. The Strike — A walkout over a rival transfer
+### The Strike — A walkout over a rival transfer
 
 In February 2026, Ronaldo <span style="color: hsl(var(--accent))">refused to play</span> for three games to protest a rival club's transfer. He was not injured. He was not unpaid. He simply refused.
 
 In late January 2026, Al Hilal signed Karim Benzema. Not Ronaldo's club — the rivals. Ronaldo's response was to make himself unavailable for selection across three consecutive matches.
 
-He was not injured. He trained normally throughout. He simply refused to play. The Saudi Pro League issued a public warning that "no individual determines decisions beyond their own club." He ignored it and missed a second game.
-
-He returned on 14 February after the club met his demands.
+He returned on 14 February after the club met his demands. The specific terms of that agreement were not made public.
 
 What makes this notable:
 
@@ -301,13 +262,11 @@ What makes this notable:
 
 ---
 
-## 9. Ronaldo's Best Quote of All Time — His self-claim meets the data
+## 4. Ronaldo's Best Quote of All Time — His self-claim meets the data
 
 > "<span style="color: hsl(var(--accent))">I'm the best player in football history.</span> I haven't seen anyone better than me, ever."
 > — Cristiano Ronaldo, La Sexta, February 2025
 
 Said voluntarily, unprompted, while playing in the Saudi league. Two years after Lionel Messi won a World Cup and an eighth Ballon d'Or — the highest individual distinction in football.
-
-The numbers do not lie. The problem is that when you compare the two side by side, they consistently point in a different direction from the one Ronaldo prefers. Assists per game, ball progression, goals in decisive Champions League matches, efficiency outside of penalties and free kicks, collective tactical impact — across nearly every advanced metric that separates a great forward from a genuinely transformative player, <span style="color: hsl(var(--accent))">one name dominates consistently</span>.
 
 → [See the full analysis: Why Messi Is Better](#why-messi) _(link to page)_
