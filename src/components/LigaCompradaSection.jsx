@@ -1,6 +1,5 @@
 import React from "react";
-import SectionAccordionList from "./SectionAccordionList";
-import SectionWrapper from "./SectionWrapper";
+import RichText from "./RichText";
 import { useI18n } from "../lib/i18n";
 
 const content = {
@@ -211,116 +210,221 @@ const fallback = (c, lang, key) => c[lang]?.[key] || c["en"][key];
 export default function LigaCompradaSection() {
   const { lang, t } = useI18n();
   const c = (key) => fallback(content, lang, key);
+  const [selectedSection, setSelectedSection] = React.useState("h1");
+
+  const paragraphClass =
+    "mb-0 text-left text-base leading-[1.7] text-zinc-300 [hyphens:auto] [text-align-last:left] md:text-justify";
+  const paragraphs = (value, className = paragraphClass) =>
+    String(value)
+      .split(/\n\n+/)
+      .map((paragraph, index) => (
+        <RichText
+          as="p"
+          key={`${paragraph.slice(0, 24)}-${index}`}
+          className={className}
+        >
+          {paragraph}
+        </RichText>
+      ));
+  const inline = (value) => (
+    <RichText as="span" className="inline">
+      {value}
+    </RichText>
+  );
 
   const items = [
     {
       key: "h1",
+      timelineLabel: c("h1").split(":")[0],
       title: c("h1"),
       content: (
         <>
-          <p>{c("p1")}</p>
-          <p>{c("p2")}</p>
+          {paragraphs(c("p1"))}
+          {paragraphs(c("p2"))}
         </>
       ),
     },
     {
       key: "h2",
+      timelineLabel: c("h2").split(":")[0].replace(/-/g, "–"),
       title: c("h2"),
       content: (
         <>
-          <p>{c("p3")}</p>
-          <h3>{c("h2a")}</h3>
-          <p>{c("p4")}</p>
-          <ul>
-            <li>{c("li1")}</li>
-            <li>{c("li2")}</li>
-            <li>{c("li3")}</li>
+          {paragraphs(c("p3"))}
+          <h3 className="pt-2 text-left text-lg font-semibold text-white">
+            {c("h2a")}
+          </h3>
+          {paragraphs(c("p4"))}
+          <ul className="list-disc space-y-2 pl-5 text-left marker:text-accent">
+            <li>{inline(c("li1"))}</li>
+            <li>{inline(c("li2"))}</li>
+            <li>{inline(c("li3"))}</li>
           </ul>
-          <p>{c("p5")}</p>
-          <h3>{c("h2b")}</h3>
-          <p>{c("p6")}</p>
-          <ul>
-            <li>{c("li4")}</li>
-            <li>{c("li5")}</li>
-            <li>{c("li6")}</li>
+          {paragraphs(c("p5"))}
+          <h3 className="pt-2 text-left text-lg font-semibold text-white">
+            {c("h2b")}
+          </h3>
+          {paragraphs(c("p6"))}
+          <ul className="list-disc space-y-2 pl-5 text-left marker:text-accent">
+            <li>{inline(c("li4"))}</li>
+            <li>{inline(c("li5"))}</li>
+            <li>{inline(c("li6"))}</li>
           </ul>
-          <p>{c("p7")}</p>
+          {paragraphs(c("p7"))}
         </>
       ),
     },
     {
       key: "h3",
+      timelineLabel: c("h3").split(":")[0].replace(/-/g, "–"),
       title: c("h3"),
       content: (
         <>
-          <h3>{c("h3a")}</h3>
-          <p>{c("p8")}</p>
-          <ul>
-            <li>{c("li7")}</li>
-            <li>{c("li8")}</li>
-            <li>{c("li9")}</li>
+          <h3 className="text-left text-lg font-semibold text-white">
+            {c("h3a")}
+          </h3>
+          {paragraphs(c("p8"))}
+          <ul className="list-disc space-y-2 pl-5 text-left marker:text-accent">
+            <li>{inline(c("li7"))}</li>
+            <li>{inline(c("li8"))}</li>
+            <li>{inline(c("li9"))}</li>
           </ul>
-          <p>{c("p9")}</p>
-          <h3>{c("h3b")}</h3>
-          <p>{c("p10")}</p>
-          <ul>
-            <li>{c("li10")}</li>
-            <li>{c("li11")}</li>
-            <li>{c("li12")}</li>
+          {paragraphs(c("p9"))}
+          <h3 className="pt-2 text-left text-lg font-semibold text-white">
+            {c("h3b")}
+          </h3>
+          {paragraphs(c("p10"))}
+          <ul className="list-disc space-y-2 pl-5 text-left marker:text-accent">
+            <li>{inline(c("li10"))}</li>
+            <li>{inline(c("li11"))}</li>
+            <li>{inline(c("li12"))}</li>
           </ul>
-          <p>{c("p11")}</p>
+          {paragraphs(c("p11"))}
         </>
       ),
     },
     {
       key: "h4",
+      timelineLabel: "Globe Soccer",
       title: c("h4"),
       content: (
         <>
-          <p>{c("p12")}</p>
-          <ul>
-            <li>{c("li13")}</li>
-            <li>{c("li14")}</li>
+          {paragraphs(c("p12"))}
+          <ul className="list-disc space-y-2 pl-5 text-left marker:text-accent">
+            <li>{inline(c("li13"))}</li>
+            <li>{inline(c("li14"))}</li>
           </ul>
-          <p>{c("p13")}</p>
-          <ul>
-            <li>{c("li15")}</li>
-            <li>{c("li16")}</li>
+          {paragraphs(c("p13"))}
+          <ul className="list-disc space-y-2 pl-5 text-left marker:text-accent">
+            <li>{inline(c("li15"))}</li>
+            <li>{inline(c("li16"))}</li>
           </ul>
-          <p>{c("p14")}</p>
-          <ul>
-            <li>{c("li17")}</li>
-            <li>{c("li18")}</li>
+          {paragraphs(c("p14"))}
+          <ul className="list-disc space-y-2 pl-5 text-left marker:text-accent">
+            <li>{inline(c("li17"))}</li>
+            <li>{inline(c("li18"))}</li>
           </ul>
-          <p>{c("p15")}</p>
-          <p>{c("p16")}</p>
-        </>
-      ),
-    },
-    {
-      key: "h5",
-      title: c("h5"),
-      content: (
-        <>
-          <ul>
-            <li>{c("li19")}</li>
-            <li>{c("li20")}</li>
-          </ul>
-          <p>{c("p17")}</p>
+          {paragraphs(c("p15"))}
+          {paragraphs(c("p16"))}
         </>
       ),
     },
   ];
 
+  const selectedItem =
+    items.find((item) => item.key === selectedSection) || items[0];
+
   return (
-    <SectionWrapper
+    <section
       id="liga-comprada"
-      label={t("label_liga")}
-      title={c("title")}
-      dark
+      lang={lang}
+      className="bg-zinc-950 py-20 md:py-28"
     >
-      <p>{c("intro")}</p>
-      <SectionAccordionList items={items} dark className="mt-10" />
-    </SectionWrapper>
+      <div className="mx-auto max-w-[60rem] px-5 sm:px-8 lg:px-10">
+        <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 px-3 py-1 text-white/50">
+          <span className="text-xs font-semibold uppercase tracking-widest">
+            {t("label_liga")}
+          </span>
+        </div>
+        <h1 className="mb-6 font-playfair text-4xl font-black leading-tight text-white md:text-5xl">
+          {c("title")}
+        </h1>
+        <div className="mb-8 space-y-4">
+          {paragraphs(
+            c("intro"),
+            "mb-0 text-left text-base leading-[1.7] text-zinc-300 [hyphens:auto] [text-align-last:left] md:text-justify",
+          )}
+        </div>
+
+        <div
+          className="mb-4 overflow-x-auto pb-2"
+          role="tablist"
+          aria-label={c("title")}
+        >
+          <div className="flex min-w-[34rem] gap-3 sm:min-w-0">
+            {items.map((item) => {
+              const isSelected = item.key === selectedItem.key;
+
+              return (
+                <button
+                  key={item.key}
+                  id={`liga-comprada-tab-${item.key}`}
+                  type="button"
+                  role="tab"
+                  aria-controls={`liga-comprada-panel-${item.key}`}
+                  aria-pressed={isSelected}
+                  aria-selected={isSelected}
+                  onClick={() => setSelectedSection(item.key)}
+                  className={`flex min-h-12 min-w-32 flex-1 items-center justify-center rounded-xl border px-4 py-2 text-center text-sm font-semibold outline-none transition-colors focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 ${
+                    isSelected
+                      ? "border-accent bg-accent text-accent-foreground"
+                      : "border-white/10 bg-zinc-900 text-zinc-400 hover:border-white/30 hover:bg-zinc-800 hover:text-white"
+                  }`}
+                >
+                  {item.timelineLabel}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <div
+          id={`liga-comprada-panel-${selectedItem.key}`}
+          role="tabpanel"
+          aria-labelledby={`liga-comprada-tab-${selectedItem.key}`}
+          className="rounded-[14px] border border-white/[0.08] bg-[#171717] p-5 shadow-sm md:p-7"
+        >
+          <div className="mb-5 border-b border-white/10 pb-5">
+            <p className="mb-1 text-xs font-semibold uppercase tracking-[0.18em] text-zinc-400">
+              {selectedItem.timelineLabel}
+            </p>
+            <h2 className="font-playfair text-2xl font-bold text-white md:text-3xl">
+              {selectedItem.title}
+            </h2>
+          </div>
+          <div className="space-y-4 text-base leading-[1.7] text-zinc-300 [&>h3]:text-left [&>h3]:text-lg [&>h3]:font-semibold [&>h3]:text-white [&>ul]:list-disc [&>ul]:space-y-2 [&>ul]:pl-5 [&>ul]:text-left [&>ul]:marker:text-accent">
+            {selectedItem.content}
+          </div>
+        </div>
+
+        <section className="mt-8">
+          <div className="rounded-[14px] border border-white/[0.08] bg-[#171717] p-5 md:p-7">
+            <h2 className="mb-5 font-playfair text-2xl font-bold text-white md:text-3xl">
+              {c("h5")}
+            </h2>
+            <ul className="mb-4 list-disc space-y-2 pl-5 text-left text-base leading-[1.7] text-zinc-300 marker:text-accent">
+              <li>{inline(c("li19"))}</li>
+              <li>{inline(c("li20"))}</li>
+            </ul>
+            <div className="border-l-2 border-accent pl-4 text-left">
+              {paragraphs(
+                c("p17"),
+                "mb-0 text-left text-base font-semibold leading-[1.7] text-white",
+              )}
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
   );
 }
