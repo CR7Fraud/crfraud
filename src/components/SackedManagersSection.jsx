@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import RichText from "./RichText";
-import SectionWrapper from "./SectionWrapper";
 import { useI18n } from "../lib/i18n";
 
 const clubsEn = [
@@ -509,113 +508,165 @@ const sectionContent = {
 const fallback = (c, lang, key) => c[lang]?.[key] || c["en"][key];
 
 export default function SackedManagersSection() {
-  const [openClub, setOpenClub] = useState(0);
+  const [selectedClub, setSelectedClub] = useState(0);
   const { lang, t } = useI18n();
   const c = (key) => fallback(sectionContent, lang, key);
   const clubs = clubsByLang[lang] || clubsEn;
 
-  const text = (value) => <RichText as="p">{value}</RichText>;
-  const span = (value) => (
-    <RichText as="span" className="inline">
+  const text = (value, className = "") => (
+    <RichText
+      as="p"
+      className={`mb-0 text-left text-base leading-[1.7] text-foreground/80 [hyphens:auto] [text-align-last:left] md:text-justify ${className}`}
+    >
       {value}
     </RichText>
   );
+  const selectedClubData = clubs[selectedClub] || clubs[0];
+  const selectedClubParts = selectedClubData.name.match(
+    /^(.*?)\s*\(([^)]+)\)$/,
+  );
+  const selectedClubName = selectedClubParts?.[1] || selectedClubData.name;
+  const selectedClubPeriod = selectedClubParts?.[2];
 
   return (
-    <SectionWrapper
+    <section
       id="sacked-managers"
-      label={t("label_managers")}
-      title={c("title")}
+      lang={lang}
+      className="bg-background py-20 md:py-28"
     >
-      <h2>{c("h1")}</h2>
-      {text(c("p1"))}
-      {text(c("p2"))}
+      <div className="mx-auto max-w-[60rem] px-5 sm:px-8 lg:px-10">
+        <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-muted-foreground">
+          <span className="text-xs font-semibold uppercase tracking-widest">
+            {t("label_managers")}
+          </span>
+        </div>
+        <h1 className="mb-10 font-playfair text-4xl font-black leading-tight text-foreground md:text-5xl">
+          {c("title")}
+        </h1>
 
-      <div className="section-divider" />
+        <div className="mb-8 space-y-4">
+          <h2 className="font-playfair text-2xl font-bold text-foreground">
+            {c("h1")}
+          </h2>
+          {text(c("p1"))}
+          {text(c("p2"))}
+        </div>
 
-      <div className="space-y-6">
-        {clubs.map((club, ci) => (
-          <div
-            key={ci}
-            className="border border-border rounded-xl overflow-hidden"
-          >
-            <button
-              onClick={() => setOpenClub(openClub === ci ? -1 : ci)}
-              className="w-full flex items-center justify-between px-6 py-5 bg-muted/30 hover:bg-muted/60 transition-colors text-left"
-            >
-              <div>
-                <p className="font-semibold text-foreground text-lg">
-                  {span(club.name)}
-                </p>
-                <p className="text-muted-foreground text-sm mt-0.5">
-                  {span(club.subtitle)}
-                </p>
-              </div>
-              <span className="text-2xl text-muted-foreground">
-                {openClub === ci ? "−" : "+"}
-              </span>
-            </button>
-            {openClub === ci && (
-              <div className="px-6 py-6 space-y-4">
-                {club.intro && (
-                  <RichText
-                    as="p"
-                    className="text-foreground/75 leading-relaxed text-sm"
-                  >
-                    {club.intro}
-                  </RichText>
-                )}
-                {club.managers.map((m, mi) => (
-                  <div
-                    key={mi}
-                    className="border-l-4 border-amber-500 pl-4 py-1"
-                  >
-                    <p className="font-semibold text-foreground">
-                      {span(m.name)}
+        <div
+          className="mb-8 overflow-x-auto pb-2"
+          role="tablist"
+          aria-label={c("title")}
+        >
+          <div className="flex min-w-[42rem] gap-3 sm:min-w-0">
+            {clubs.map((club, index) => {
+              const clubParts = club.name.match(/^(.*?)\s*\(([^)]+)\)$/);
+              const clubName = clubParts?.[1] || club.name;
+              const clubPeriod = clubParts?.[2];
+              const isSelected = selectedClub === index;
+
+              return (
+                <button
+                  key={club.name}
+                  id={`sacked-managers-tab-${index}`}
+                  type="button"
+                  role="tab"
+                  aria-controls={`sacked-managers-panel-${index}`}
+                  aria-pressed={isSelected}
+                  aria-selected={isSelected}
+                  onClick={() => setSelectedClub(index)}
+                  className={`flex min-h-16 min-w-40 flex-1 flex-col items-center justify-center rounded-xl border px-4 py-2 text-center outline-none transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
+                    isSelected
+                      ? "border-foreground bg-foreground text-accent"
+                      : "border-border bg-background text-muted-foreground hover:border-foreground/40 hover:bg-muted/50 hover:text-foreground"
+                  }`}
+                >
+                  <span className="text-sm font-semibold">{clubName}</span>
+                  {clubPeriod && (
+                    <span className="mt-0.5 text-xs opacity-75">
+                      {clubPeriod}
+                    </span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <div
+          id={`sacked-managers-panel-${selectedClub}`}
+          role="tabpanel"
+          aria-labelledby={`sacked-managers-tab-${selectedClub}`}
+          className="rounded-[14px] border border-border bg-white p-5 shadow-sm md:p-7"
+        >
+          <div className="mb-5 border-b border-border pb-5">
+            <p className="mb-1 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+              {selectedClubPeriod}
+            </p>
+            <h2 className="font-playfair text-2xl font-bold text-foreground md:text-3xl">
+              {selectedClubName}
+            </h2>
+            <p className="mt-2 text-base font-medium text-muted-foreground">
+              {selectedClubData.subtitle}
+            </p>
+          </div>
+
+          <div className="space-y-4 text-base leading-[1.7] text-foreground/80">
+            {selectedClubData.intro && text(selectedClubData.intro)}
+
+            <div className="relative ml-1 border-l border-accent/70 pl-6">
+              <div className="space-y-6">
+                {selectedClubData.managers.map((manager) => (
+                  <div key={manager.name} className="relative">
+                    <span
+                      aria-hidden="true"
+                      className="absolute -left-[1.78rem] top-2 h-2.5 w-2.5 rounded-full bg-accent"
+                    />
+                    <p className="mb-1 text-left text-lg font-semibold text-foreground">
+                      {manager.name}
                     </p>
-                    <RichText
-                      as="p"
-                      className="text-foreground/65 text-sm mt-1 leading-relaxed"
-                    >
-                      {m.detail}
-                    </RichText>
+                    {text(manager.detail)}
                   </div>
                 ))}
-                {club.quotes && (
-                  <div className="bg-muted/40 rounded-xl p-5 space-y-3 mt-4">
-                    {club.quotes.map((q, qi) => (
-                      <div key={qi}>
-                        <RichText
-                          as="p"
-                          className="italic text-foreground/70 text-sm"
-                        >
-                          {q.text}
-                        </RichText>
-                        <p className="text-xs text-muted-foreground mt-1">
-                          - {span(q.person)}
-                        </p>
-                      </div>
-                    ))}
+              </div>
+            </div>
+
+            {selectedClubData.quotes && (
+              <div className="space-y-4 border-l-2 border-accent/60 bg-amber-50/60 px-4 py-3">
+                {selectedClubData.quotes.map((quote) => (
+                  <div key={quote.person}>
+                    <RichText
+                      as="p"
+                      className="mb-1 text-left text-base leading-[1.7] text-foreground/75 italic"
+                    >
+                      {quote.text}
+                    </RichText>
+                    <p className="text-left text-sm text-muted-foreground">
+                      - {quote.person}
+                    </p>
                   </div>
-                )}
-                {club.balance && (
-                  <div className="mt-4 p-5 bg-red-50 border border-red-100 rounded-xl">
-                    {club.balance.split("\n\n").map((p, pi) => (
-                      <RichText
-                        as="p"
-                        key={pi}
-                        className="text-foreground/75 text-sm mb-2 last:mb-0"
-                      >
-                        {p}
-                      </RichText>
-                    ))}
-                  </div>
-                )}
+                ))}
+              </div>
+            )}
+
+            {selectedClubData.balance && (
+              <div className="border-l-2 border-accent/70 bg-muted/30 px-4 py-3">
+                <div className="space-y-4">
+                  {selectedClubData.balance
+                    .split("\n\n")
+                    .map((paragraph, index, paragraphs) =>
+                      text(
+                        paragraph,
+                        index === paragraphs.length - 1
+                          ? "font-semibold text-foreground"
+                          : "",
+                      ),
+                    )}
+                </div>
               </div>
             )}
           </div>
-        ))}
+        </div>
       </div>
-    </SectionWrapper>
+    </section>
   );
 }

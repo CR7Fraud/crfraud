@@ -1,7 +1,5 @@
 import React from "react";
 import RichText from "./RichText";
-import SectionAccordionList from "./SectionAccordionList";
-import SectionWrapper from "./SectionWrapper";
 import { useI18n } from "../lib/i18n";
 
 const assetPath = (file) => `${import.meta.env.BASE_URL}assets/${file}`;
@@ -24,10 +22,29 @@ const tableSummary = [
 ];
 
 export default function BallonDorSection() {
-  const { t } = useI18n();
+  const { lang, t } = useI18n();
+  const [selectedYear, setSelectedYear] = React.useState("2008");
 
-  const text = (value) => <RichText as="p">{value}</RichText>;
-  const quote = (value) => <RichText as="blockquote">{value}</RichText>;
+  const analysisLabel =
+    { en: "Analysis", es: "Análisis", fr: "Analyse", pt: "Análise" }[lang] ||
+    "Analysis";
+
+  const text = (value, className = "") => (
+    <RichText
+      as="p"
+      className={`mb-0 text-left text-base leading-[1.65] text-foreground/80 [hyphens:auto] [text-align-last:left] md:text-justify [&_strong]:font-semibold [&_strong]:text-foreground ${className}`}
+    >
+      {value}
+    </RichText>
+  );
+  const quote = (value) => (
+    <RichText
+      as="blockquote"
+      className="my-2 border-l-4 border-accent bg-amber-50 px-5 py-4 text-base leading-[1.65] text-foreground/80 italic [&_strong]:font-semibold [&_strong]:text-foreground"
+    >
+      {value}
+    </RichText>
+  );
 
   const items = [
     {
@@ -45,7 +62,7 @@ export default function BallonDorSection() {
           {text(t("bdor_2013_p1"))}
           {text(t("bdor_2013_p2"))}
 
-          <div className="my-8 overflow-x-auto rounded-xl border border-border">
+          <div className="my-8 rounded-xl border border-border">
             <img
               src={assetPath("2013-Bdor.png")}
               alt="Ballon d'Or 2013 Statistics"
@@ -124,47 +141,154 @@ export default function BallonDorSection() {
     },
   ];
 
+  const selectedItem =
+    items.find((item) => item.key === selectedYear) || items[0];
+  const selectedContentId = `ballon-dor-content-${selectedItem.key}`;
+  const summaryConclusion = t("bdor_summary_conclusion");
+  const conclusionBoundaries = {
+    en: ["The conclusion is not", "Ronaldo stands out"],
+    es: ["La conclusión no es", "Ronaldo destaca en"],
+    fr: ["La conclusion n'est pas", "Ronaldo se distingue"],
+    pt: ["A conclusão não é", "Ronaldo destaca-se"],
+  }[lang] || ["The conclusion is not", "Ronaldo stands out"];
+  const conclusionParagraphs = summaryConclusion.split(
+    new RegExp(` (?=${conclusionBoundaries.join("|")}|<strong>)`),
+  );
+
   return (
-    <SectionWrapper
+    <section
       id="ballon-dor"
-      label={t("label_ballon")}
-      title={t("title_ballon")}
+      lang={lang}
+      className="bg-background py-20 md:py-28"
     >
-      <SectionAccordionList items={items} />
+      <div className="mx-auto max-w-[60rem] px-5 sm:px-8 lg:px-10">
+        <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-muted-foreground">
+          <span className="text-xs font-semibold uppercase tracking-widest">
+            {t("label_ballon")}
+          </span>
+        </div>
+        <h1 className="mb-10 font-playfair text-4xl font-black leading-tight text-foreground md:text-5xl">
+          {t("title_ballon")}
+        </h1>
 
-      <div className="section-divider" />
+        <div className="mb-10">
+          <div
+            className="overflow-x-auto pb-2"
+            role="tablist"
+            aria-label={t("label_ballon")}
+          >
+            <div className="relative flex min-w-[30rem] items-center justify-between px-2 sm:min-w-0 sm:px-4">
+              <div
+                aria-hidden="true"
+                className="absolute left-10 right-10 top-1/2 border-t border-border"
+              />
+              {items.map((item) => {
+                const isSelected = item.key === selectedItem.key;
 
-      <h2 className="font-playfair text-2xl md:text-3xl font-bold text-foreground mt-12 mb-4">
-        {t("bdor_summary_title")}
-      </h2>
-      {text(t("bdor_summary_p"))}
+                return (
+                  <button
+                    key={item.key}
+                    id={`ballon-dor-tab-${item.key}`}
+                    type="button"
+                    role="tab"
+                    aria-controls={selectedContentId}
+                    aria-pressed={isSelected}
+                    onClick={() => setSelectedYear(item.key)}
+                    className={`relative z-10 flex h-11 min-w-20 items-center justify-center rounded-xl border px-4 text-sm font-semibold outline-none transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
+                      isSelected
+                        ? "border-foreground bg-foreground text-accent"
+                        : "border-border bg-background text-muted-foreground hover:border-foreground/40 hover:bg-muted/50 hover:text-foreground"
+                    }`}
+                  >
+                    <span>{item.title}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
 
-      <div className="overflow-x-auto rounded-xl border border-border my-8">
-        <table className="data-table">
-          <thead>
-            <tr>
-              <th>{t("bdor_col_player")}</th>
-              <th>{t("bdor_col_with_cl")}</th>
-              <th>{t("bdor_col_years_with")}</th>
-              <th>{t("bdor_col_without_cl")}</th>
-              <th>{t("bdor_col_years_without")}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {tableSummary.map((r, i) => (
-              <tr key={i}>
-                <td className="font-semibold">{r.player}</td>
-                <td>{r.withCL}</td>
-                <td className="text-muted-foreground">{r.yearsWith}</td>
-                <td>{r.withoutCL}</td>
-                <td className="text-muted-foreground">{r.yearsWithout}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+          <div
+            id={selectedContentId}
+            role="tabpanel"
+            aria-labelledby={`ballon-dor-tab-${selectedItem.key}`}
+            className="rounded-2xl border border-border bg-white p-6 shadow-sm md:p-8"
+          >
+            <div className="mb-6 border-b border-border pb-5">
+              <p className="mb-1 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                {analysisLabel}
+              </p>
+              <h2 className="font-playfair text-3xl font-bold text-foreground">
+                {selectedItem.title}
+              </h2>
+            </div>
+            <div className="space-y-5">{selectedItem.content}</div>
+          </div>
+        </div>
+
+        <section className="mt-14 border-t border-border pt-10">
+          <h2 className="mb-4 font-playfair text-2xl font-bold text-foreground md:text-3xl">
+            {t("bdor_summary_title")}
+          </h2>
+          <div className="text-base leading-[1.65] text-foreground/80">
+            {text(t("bdor_summary_p"))}
+          </div>
+
+          <div className="my-8 overflow-x-auto rounded-2xl border border-border bg-white">
+            <table className="min-w-[42rem] w-full text-sm">
+              <thead>
+                <tr className="bg-foreground text-left text-background">
+                  <th className="px-5 py-4 font-semibold">
+                    {t("bdor_col_player")}
+                  </th>
+                  <th className="px-5 py-4 font-semibold">
+                    {t("bdor_col_with_cl")}
+                  </th>
+                  <th className="px-5 py-4 font-semibold">
+                    {t("bdor_col_years_with")}
+                  </th>
+                  <th className="px-5 py-4 font-semibold">
+                    {t("bdor_col_without_cl")}
+                  </th>
+                  <th className="px-5 py-4 font-semibold">
+                    {t("bdor_col_years_without")}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {tableSummary.map((r, i) => (
+                  <tr
+                    key={i}
+                    className="border-b border-border last:border-b-0 even:bg-muted/30"
+                  >
+                    <td className="px-5 py-5 font-semibold">{r.player}</td>
+                    <td className="px-5 py-5">{r.withCL}</td>
+                    <td className="px-5 py-5 text-muted-foreground">
+                      {r.yearsWith}
+                    </td>
+                    <td className="px-5 py-5">{r.withoutCL}</td>
+                    <td className="px-5 py-5 text-muted-foreground">
+                      {r.yearsWithout}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="rounded-xl border border-border bg-white p-5 md:p-7">
+            <div className="space-y-4 text-left text-base leading-[1.7]">
+              {conclusionParagraphs.map((paragraph, index) =>
+                text(
+                  paragraph,
+                  index === conclusionParagraphs.length - 1
+                    ? "border-l-4 border-accent pl-4 font-semibold text-foreground"
+                    : "",
+                ),
+              )}
+            </div>
+          </div>
+        </section>
       </div>
-
-      {text(t("bdor_summary_conclusion"))}
-    </SectionWrapper>
+    </section>
   );
 }

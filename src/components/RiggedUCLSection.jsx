@@ -1,7 +1,5 @@
 // @ts-nocheck
 import React from "react";
-import SectionAccordionList from "./SectionAccordionList";
-import SectionWrapper from "./SectionWrapper";
 import { useI18n } from "../lib/i18n";
 
 const en = {
@@ -308,11 +306,11 @@ const SourceLinkCard = ({
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="source-link-card"
+    className="my-6 block min-w-0 border-l-2 border-amber-400/60 pl-4 text-left transition-colors hover:border-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
   >
-    <div className="flex items-center justify-between gap-3">
-      <div className="flex flex-wrap items-center gap-2 text-[10px] font-bold uppercase tracking-[0.24em] text-zinc-400">
-        <span>{source}</span>
+    <div className="flex min-w-0 flex-wrap items-center justify-between gap-x-3 gap-y-1">
+      <div className="flex min-w-0 flex-wrap items-center gap-x-2 gap-y-1 text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-400">
+        <span className="text-amber-300">{source}</span>
         <span>{site}</span>
         <span>{format}</span>
       </div>
@@ -320,9 +318,15 @@ const SourceLinkCard = ({
         ↗
       </span>
     </div>
-    <h3 className="mt-2 text-sm font-semibold text-white">{title}</h3>
-    <p className="mt-1 text-sm leading-relaxed text-zinc-300">{description}</p>
-    <span className="source-link-card-cta">{cta}</span>
+    <h3 className="mt-2 break-words text-sm font-semibold text-white">
+      {title}
+    </h3>
+    <p className="mt-1 break-words text-sm leading-relaxed text-zinc-300">
+      {description}
+    </p>
+    <span className="mt-3 inline-flex text-[10px] font-bold uppercase tracking-[0.24em] text-amber-300">
+      {cta} ↗
+    </span>
   </a>
 );
 
@@ -345,6 +349,7 @@ export default function RiggedUCLSection() {
   const items = [
     {
       key: "case1",
+      timelineLabel: "2016 · Final",
       title: `${c("case1_year")}: ${c("case1_title")}`,
       content: (
         <>
@@ -357,6 +362,9 @@ export default function RiggedUCLSection() {
               src={`${import.meta.env.BASE_URL}assets/ramos-offside-analysis.png`}
               alt={c("case1_img_alt")}
               className="block w-full"
+              onError={(event) => {
+                event.currentTarget.hidden = true;
+              }}
             />
             <figcaption className="border-t border-white/10 bg-black/85 px-5 py-4 text-sm font-medium leading-snug text-zinc-200">
               {c("case1_figcaption")}
@@ -371,6 +379,7 @@ export default function RiggedUCLSection() {
     },
     {
       key: "case2",
+      timelineLabel: "2017 · Bayern",
       title: `${c("case2_year")}: ${c("case2_title")}`,
       content: (
         <>
@@ -390,6 +399,9 @@ export default function RiggedUCLSection() {
               src={`${import.meta.env.BASE_URL}assets/2017-bayern-offside.png`}
               alt={c("case2_img_alt")}
               className="block w-full"
+              onError={(event) => {
+                event.currentTarget.hidden = true;
+              }}
             />
             <figcaption className="border-t border-white/10 bg-black/85 px-5 py-4 text-sm font-medium leading-snug text-zinc-200">
               {c("case2_figcaption")}
@@ -400,6 +412,7 @@ export default function RiggedUCLSection() {
     },
     {
       key: "case3",
+      timelineLabel: "2018 · PSG",
       title: `${c("case3_year")}: ${c("case3_title")}`,
       content: (
         <>
@@ -414,6 +427,7 @@ export default function RiggedUCLSection() {
     },
     {
       key: "case4",
+      timelineLabel: "2018 · Juventus",
       title: `${c("case4_year")}: ${c("case4_title")}`,
       content: (
         <>
@@ -429,37 +443,111 @@ export default function RiggedUCLSection() {
         </>
       ),
     },
-    {
-      key: "conclusion",
-      title: c("conclusion_h"),
-      content: (
-        <>
-          <p>{c("conclusion_p1")}</p>
-          <ul>
-            <li>{c("conclusion_li1")}</li>
-            <li>{c("conclusion_li2")}</li>
-            <li>{c("conclusion_li3")}</li>
-            <li>{c("conclusion_li4")}</li>
-          </ul>
-          <p>{c("conclusion_p2")}</p>
-          <p>{c("conclusion_p3")}</p>
-          <p>{c("conclusion_p4")}</p>
-        </>
-      ),
-    },
   ];
 
+  const conclusionContent = (
+    <>
+      <p>{c("conclusion_p1")}</p>
+      <ul>
+        <li>{c("conclusion_li1")}</li>
+        <li>{c("conclusion_li2")}</li>
+        <li>{c("conclusion_li3")}</li>
+        <li>{c("conclusion_li4")}</li>
+      </ul>
+      <p>{c("conclusion_p2")}</p>
+      <p>{c("conclusion_p3")}</p>
+    </>
+  );
+
+  const [selectedCase, setSelectedCase] = React.useState(items[0].key);
+  const selectedItem =
+    items.find((item) => item.key === selectedCase) || items[0];
+  const selectedContentId = `rigged-ucl-content-${selectedItem.key}`;
+
   return (
-    <SectionWrapper
-      id="rigged-ucl"
-      label={t("label_ucl")}
-      title={c("title")}
-      dark
-    >
-      <div className="space-y-10">
-        {contextIntro}
-        <SectionAccordionList items={items} dark />
+    <section id="rigged-ucl" lang={lang} className="bg-zinc-950 py-20 md:py-28">
+      <div className="mx-auto max-w-[60rem] px-5 sm:px-8 lg:px-10">
+        <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 px-3 py-1 text-white/50">
+          <span className="text-xs font-semibold uppercase tracking-widest">
+            {t("label_ucl")}
+          </span>
+        </div>
+        <h1 className="mb-10 font-playfair text-4xl font-black leading-tight text-white md:text-5xl">
+          {c("title")}
+        </h1>
+
+        <div className="mb-8 space-y-4 text-base leading-[1.65] text-zinc-300 [&>p]:text-left [&>p]:[hyphens:auto] [&>p]:[text-align-last:left] md:[&>p]:text-justify">
+          <h2 className="font-playfair text-2xl font-bold text-white/90">
+            {c("context_h")}
+          </h2>
+          <p>{c("context_p1")}</p>
+          <p>{c("context_p2")}</p>
+        </div>
+
+        <div className="mb-10">
+          <div
+            className="overflow-x-auto pb-1"
+            role="tablist"
+            aria-label={c("title")}
+          >
+            <div className="flex min-w-[38rem] gap-3 sm:min-w-0">
+              {items.map((item) => {
+                const isSelected = item.key === selectedItem.key;
+
+                return (
+                  <button
+                    key={item.key}
+                    id={`rigged-ucl-tab-${item.key}`}
+                    type="button"
+                    role="tab"
+                    aria-controls={selectedContentId}
+                    aria-pressed={isSelected}
+                    aria-selected={isSelected}
+                    onClick={() => setSelectedCase(item.key)}
+                    className={`flex min-h-12 min-w-28 flex-1 items-center justify-center rounded-xl border px-4 py-2 text-center text-sm font-semibold outline-none transition-colors focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 ${
+                      isSelected
+                        ? "border-accent bg-accent text-accent-foreground"
+                        : "border-white/10 bg-zinc-900 text-zinc-400 hover:border-white/30 hover:bg-zinc-800 hover:text-white"
+                    }`}
+                  >
+                    {item.timelineLabel}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <div
+            id={selectedContentId}
+            role="tabpanel"
+            aria-labelledby={`rigged-ucl-tab-${selectedItem.key}`}
+            className="mt-4 rounded-[14px] border border-white/[0.08] bg-[#171717] p-5 shadow-sm md:p-7"
+          >
+            <div className="mb-5 border-b border-white/10 pb-5">
+              <h2 className="font-playfair text-2xl font-bold text-white md:text-3xl">
+                {selectedItem.title}
+              </h2>
+            </div>
+            <div className="space-y-4 text-base leading-[1.65] text-zinc-300 [&>blockquote]:border-l-4 [&>blockquote]:border-accent [&>blockquote]:bg-amber-400/10 [&>blockquote]:px-4 [&>blockquote]:py-3 [&>blockquote]:text-left [&>blockquote]:italic [&>ul]:list-disc [&>ul]:space-y-2 [&>ul]:pl-5 [&>ul]:text-left [&>p]:text-left [&>p]:[hyphens:auto] [&>p]:[text-align-last:left] md:[&>p]:text-justify">
+              {selectedItem.content}
+            </div>
+          </div>
+        </div>
+
+        <section className="border-t border-white/10 pt-8">
+          <h2 className="mb-5 font-playfair text-2xl font-bold text-white md:text-3xl">
+            {c("conclusion_h")}
+          </h2>
+          <div className="rounded-[14px] border border-white/[0.08] bg-[#171717] p-5 md:p-7">
+            <div className="space-y-4 text-base leading-[1.7] text-zinc-300 [&>ul]:list-disc [&>ul]:space-y-2 [&>ul]:pl-5 [&>ul]:text-left [&>p]:text-left [&>p]:[hyphens:auto] [&>p]:[text-align-last:left] md:[&>p]:text-justify">
+              {conclusionContent}
+            </div>
+            <div className="mt-4 border-l-4 border-accent pl-4 text-left text-base font-semibold leading-[1.7] text-white">
+              {c("conclusion_p4")}
+            </div>
+          </div>
+        </section>
       </div>
-    </SectionWrapper>
+    </section>
   );
 }

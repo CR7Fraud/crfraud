@@ -57,6 +57,21 @@ const tournamentsEn = [
       "International coverage was clear: Portugal surprised France and won the Euros despite Ronaldo's injury, thanks to Éder's goal and Patrício's heroics. The claim that Ronaldo 'carried' Portugal doesn't match the chronology of the match.",
   },
   {
+    year: "World Cup 2018",
+    title:
+      "four goals in two games, none in the next two — eliminated in the round of 16",
+    content:
+      "Russia 2018 is the most nuanced chapter in Ronaldo's international record. He finished as the tournament's joint top scorer with four goals — all in the group stage, all in the first two games. Portugal reached the round of 16, beaten by Uruguay, and went home. The campaign divides into two halves: a dazzling opening act and a fading conclusion.",
+    points: [
+      "Portugal 3–3 Spain: the defining performance. Ronaldo scored three times — a converted penalty (4'), a close-range finish made possible by De Gea's error (44'), and a 88th-minute free kick that levelled at 3-3. He also had a role in the build-up to Guedes's goal, with a combination involving Bernardo Silva. Spain had dismissed manager Julen Lopetegui two days before the game and replaced him hastily with Fernando Hierro — context worth noting, but one that does not diminish a genuine performance. Source: ESPN, UEFA match report.",
+      "Portugal 1–0 Morocco: a 4th-minute headed goal from a Moutinho cross. The only goal of the match; Ronaldo named Man of the Match by FIFA. Portugal had 10 attempts to Morocco's 16, with Rui Patrício producing a decisive save. A decisive but not dominant performance: the goal mattered, the defence held. Source: FIFA, Total Football Analysis.",
+      "Portugal 1–1 Iran: Quaresma scored Portugal's goal. Ronaldo won a VAR-reviewed penalty, converted by him — saved by Beiranvand. He also struck an Iranian player in an off-the-ball incident; the referee showed yellow after review; Iran's coach Carlos Queiroz said it should have been a red. Iran equalised at 90+3' from a disputed penalty. Portugal finished second in the group: both teams and Spain finished on 5 points; Spain advanced as group winners having scored 6 goals to Portugal's 5 — the missed penalty was a direct cost. Source: DW, Zhihu match data.",
+      "Portugal 1–2 Uruguay: Cavani scored at 7' and 62'; Pepe equalised at 55'. Ronaldo played all 90 minutes — 6 attempts, 1 on target, no goal, no assist. Portugal had 20 attempts to Uruguay's 6, with 61% possession. He participated in the build-up sequence before Pepe's equaliser but did not create directly. Uruguay's block, led by Godín and Giménez, neutralised him throughout. Source: ESPN, FBref.",
+    ],
+    conclusion:
+      "Russia 2018 does not support the claim that Ronaldo was carried through the tournament. His hat-trick against Spain and winner against Morocco were central to Portugal reaching the knockouts. But his impact then declined: a missed penalty against Iran, no goal or assist against Uruguay. Four goals in the first two games. None in the last two. Another World Cup exit in the round of 16.",
+  },
+  {
     year: "Nations League 2019",
     title: "title goal is Guedes, the play is Bernardo",
     content:
@@ -170,6 +185,21 @@ const tournamentsPt = [
     ],
     conclusion:
       'Crónicas internacionais foram diretas: Portugal "surpreendeu a França e ganhou o Euro apesar da lesão de Ronaldo, graças ao golo de Éder e à exibição heroica de Patrício".',
+  },
+  {
+    year: "World Cup 2018",
+    title:
+      "quatro golos em dois jogos, nenhum nos dois seguintes — eliminado nos oitavos",
+    content:
+      "A Rússia 2018 é o capítulo mais matizado do percurso internacional de Ronaldo. Terminou como co-melhor marcador do torneio com quatro golos — todos na fase de grupos, todos nos primeiros dois jogos. Portugal chegou aos oitavos de final, perdeu com o Uruguai e regressou a casa. A campanha divide-se em dois atos: uma abertura deslumbrante e um epílogo apagado.",
+    points: [
+      "Portugal 3–3 Espanha: a exibição de referência. Ronaldo marcou três vezes — um penálti convertido (4'), uma finalização de curta distância facilitada por erro flagrante de De Gea (44') e um livre aos 88' que fixou o 3-3. Participou igualmente na combinação que antecedeu o golo de Guedes, em jogada com Bernardo Silva. A Espanha havia despedido o selecionador Julen Lopetegui dois dias antes e improvisou com Fernando Hierro — contexto a registar, mas que não diminui a qualidade da exibição. Fonte: ESPN, relatório UEFA.",
+      "Portugal 1–0 Marrocos: golo de cabeça ao 4', após cruzamento de Moutinho. Único golo do encontro; Ronaldo nomeado Man of the Match pela FIFA. Portugal realizou 10 remates contra 16 de Marrocos, com Rui Patrício a realizar uma defesa decisiva. Uma performance determinante, mas não dominante. Fonte: FIFA, Total Football Analysis.",
+      "Portugal 1–1 Irão: Quaresma marcou o golo português. Ronaldo conquistou um penálti validado pelo VAR e foi ele próprio a bater — Beiranvand defendeu. Atingiu ainda um jogador iraniano num lance fora do jogo; o árbitro mostrou amarelo após revisão; Carlos Queiroz disse que deveria ter sido vermelho. O Irão empatou aos 90+3' com um penálti igualmente polémico. Portugal ficou em segundo: Espanha avançou como vencedora do grupo com seis golos marcados, contra cinco de Portugal — o penálti falhado custou diretamente o primeiro lugar. Fonte: DW, dados de jogo.",
+      "Portugal 1–2 Uruguai: Cavani marcou aos 7' e 62'; Pepe empatou aos 55'. Ronaldo jogou os 90 minutos — 6 remates, 1 enquadrado, zero golos, zero assistências. Portugal teve 20 remates contra seis do Uruguai e 61% de posse. Participou na sequência que antecedeu o empate de Pepe, sem criar diretamente. O bloco do Uruguai, liderado por Godín e Giménez, anulou-o ao longo de todo o jogo. Fonte: ESPN, FBref.",
+    ],
+    conclusion:
+      "A Rússia 2018 não sustenta a tese de que Ronaldo foi carregado durante o torneio. O hat-trick contra a Espanha e o golo contra Marrocos foram determinantes para Portugal passar da fase de grupos. Mas o impacto caiu a seguir: penálti falhado contra o Irão, zero golos ou assistências contra o Uruguai. Quatro golos nos primeiros dois jogos. Nenhum nos dois seguintes. Mais um Mundial com eliminação nos oitavos de final.",
   },
   {
     year: "Nations League 2019",
@@ -286,6 +316,21 @@ const tournamentsEs = [
       'Las crónicas internacionales fueron claras: Portugal "sorprendió a Francia y ganó la Euro pese a la lesión de Ronaldo, gracias al gol de Éder y a la actuación heroica de Patrício". La idea de que "llevó a Portugal al título" no resiste la cronología del partido.',
   },
   {
+    year: "World Cup 2018",
+    title:
+      "cuatro goles en dos partidos, ninguno en los dos siguientes — eliminado en octavos",
+    content:
+      "Rusia 2018 es el capítulo más matizado del historial internacional de Ronaldo. Terminó como máximo goleador compartido del torneo con cuatro goles — todos en la fase de grupos, todos en los dos primeros partidos. Portugal llegó a los octavos de final, perdió ante Uruguay y volvió a casa. La campaña se divide en dos actos: una apertura deslumbrante y un final apagado.",
+    points: [
+      "Portugal 3–3 España: la actuación de referencia. Ronaldo marcó tres veces — un penalti convertido (min. 4), una finalización de corta distancia facilitada por el error flagrante de De Gea (min. 44) y un libre directo en el minuto 88 que igualó a 3-3. También participó en la combinación previa al gol de Guedes. España había destituido a Lopetegui dos días antes y recurrió a Hierro de emergencia — contexto a tener en cuenta, pero que no reduce la calidad de la actuación. Fuente: ESPN, informe UEFA.",
+      "Portugal 1–0 Marruecos: gol de cabeza en el minuto 4, tras centro de Moutinho. Único tanto del partido; Ronaldo nombrado Mejor Jugador por la FIFA. Portugal realizó 10 remates frente a 16 de Marruecos, con Rui Patrício salvando con una parada crucial. Una actuación decisiva pero no dominante. Fuente: FIFA, Total Football Analysis.",
+      "Portugal 1–1 Irán: Quaresma marcó el gol de Portugal. Ronaldo ganó un penalti revisado por el VAR y lo ejecutó él mismo — detenido por Beiranvand. También golpeó a un jugador iraní en un lance sin balón; el árbitro mostró amarilla tras revisión; el seleccionador Carlos Queiroz dijo que debería haber sido roja. Irán igualó en el 90+3 con otro penalti igualmente polémico. Portugal terminó segundo: España avanzó como primera del grupo con seis goles, frente a cinco de Portugal — el penalti fallado costó directamente el primer puesto. Fuente: DW, datos del partido.",
+      "Portugal 1–2 Uruguay: Cavani marcó en los minutos 7 y 62; Pepe igualó en el 55. Ronaldo jugó los 90 minutos — 6 remates, 1 a puerta, sin gol ni asistencia. Portugal tuvo 20 remates frente a seis de Uruguay y el 61% de posesión. Participó en la secuencia previa al gol de Pepe sin crear directamente. El bloque de Uruguay, liderado por Godín y Giménez, lo anuló durante todo el partido. Fuente: ESPN, FBref.",
+    ],
+    conclusion:
+      "Rusia 2018 no respalda la tesis de que Ronaldo fue cargado a lo largo del torneo. El hat-trick ante España y el gol ante Marruecos fueron centrales para que Portugal pasara de grupos. Pero su impacto disminuyó a continuación: penalti fallado ante Irán, sin gol ni asistencia ante Uruguay. Cuatro goles en los dos primeros partidos. Ninguno en los dos siguientes. Otra eliminación en octavos de un Mundial.",
+  },
+  {
     year: "Nations League 2019",
     title: "Liga de Naciones 2019",
     content:
@@ -397,6 +442,21 @@ const tournamentsFr = [
       "Finale vs France : Ronaldo sorti, Éder marque en prolongation.",
     ],
     conclusion: "Le titre collectif n'est pas uniquement grâce à Ronaldo.",
+  },
+  {
+    year: "World Cup 2018",
+    title:
+      "quatre buts en deux matches, aucun dans les deux suivants — éliminé en huitièmes",
+    content:
+      "La Russie 2018 est le chapitre le plus nuancé du parcours international de Ronaldo. Il a terminé co-meilleur buteur du tournoi avec quatre buts — tous en phase de groupes, tous lors des deux premiers matches. Le Portugal a atteint les huitièmes de finale, perdu contre l'Uruguay, et est rentré à la maison. La campagne se divise en deux actes : une ouverture éblouissante et une conclusion en demi-teinte.",
+    points: [
+      "Portugal 3–3 Espagne : la performance de référence. Ronaldo a marqué trois fois — un penalty converti (4e), une reprise facilitée par la bourde flagrante de De Gea (44e) et un coup franc direct à la 88e qui rétablissait l'égalité à 3-3. Il a aussi participé à la combinaison avant le but de Guedes. L'Espagne avait limogé Lopetegui deux jours avant et improvisé avec Hierro — contexte à noter, mais qui ne diminue pas la qualité de la prestation. Source : ESPN, rapport UEFA.",
+      "Portugal 1–0 Maroc : but de la tête à la 4e minute sur un centre de Moutinho. Seul but du match ; Ronaldo élu homme du match par la FIFA. Le Portugal a cadré 10 tentatives face à 16 pour le Maroc, Rui Patrício réalisant un arrêt décisif. Une prestation déterminante, mais pas dominante. Source : FIFA, Total Football Analysis.",
+      "Portugal 1–1 Iran : Quaresma a marqué le but portugais. Ronaldo a obtenu un penalty revu par la VAR et l'a tiré lui-même — arrêté par Beiranvand. Il a aussi frappé un joueur iranien hors du jeu ; l'arbitre a montré jaune après révision ; l'entraîneur Carlos Queiroz a déclaré que cela aurait dû être rouge. L'Iran a égalisé à la 90+3e sur un penalty tout aussi contesté. Le Portugal a terminé deuxième : l'Espagne est sortie première du groupe avec six buts marqués, contre cinq pour le Portugal — le penalty manqué a directement coûté la première place. Source : DW.",
+      "Portugal 1–2 Uruguay : Cavani a marqué aux 7e et 62e ; Pepe a égalisé à la 55e. Ronaldo a joué les 90 minutes — 6 tentatives, 1 cadre, aucun but ni passe décisive. Le Portugal a eu 20 tentatives contre 6 pour l'Uruguay et 61 % de possession. Il a participé à la séquence avant l'égalisation de Pepe sans créer directement. Le bloc uruguayen, mené par Godín et Giménez, l'a neutralisé tout au long du match. Source : ESPN, FBref.",
+    ],
+    conclusion:
+      "La Russie 2018 ne soutient pas la thèse selon laquelle Ronaldo a été porté tout au long du tournoi. Son triplé contre l'Espagne et son but contre le Maroc ont été déterminants pour la qualification du Portugal. Mais son impact a ensuite décliné : un penalty manqué contre l'Iran, aucun but ni passe décisive contre l'Uruguay. Quatre buts lors des deux premiers matches. Aucun dans les deux suivants. Encore une élimination en huitièmes de finale d'une Coupe du monde.",
   },
   {
     year: "Nations League 2019",
