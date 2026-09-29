@@ -521,69 +521,69 @@ const content = {
     title: "Portugal Carried Ronaldo",
     intro:
       "Ronaldo has played for Portugal in ten major tournaments. He has never scored a goal in a knockout game at a World Cup. The narrative that he carried the national team for a decade doesn't survive contact with the match timeline.",
-    summary_h: "Ten tournaments. Three titles.",
+    summary_h:
+      "{count} tournaments. Three titles — different decisive contributions.",
     summary_intro:
-      "The winning goals: Éder, Guedes - and in 2025, finally, a Ronaldo equaliser that kept Portugal alive in extra time, with Rúben Neves scoring the penalty that sealed it.",
-    summary_li1: "The pattern held for most of a decade.",
+      "Portugal’s three titles in the tournaments analysed came at Euro 2016 and the Nations League in 2019 and 2025. Each depended on decisive contributions from different players.",
+    summary_li1:
+      "Euro 2016 — Éder scored the winner against France in the 109th minute, securing a 1–0 victory after Cristiano Ronaldo had left the final injured.",
     summary_li2:
-      "In 2025 it shifted - slightly. Ronaldo scored more, contributed in bigger moments, and finished as top scorer in the competition.",
+      "Nations League 2019 — Gonçalo Guedes scored the only goal against the Netherlands, following a combination with Bernardo Silva. Ronaldo had scored a hat-trick against Switzerland in the semi-final.",
     summary_li3:
-      "But even then, the title rested on Nuno Mendes, Diogo Costa and Rúben Neves.",
-    summary_li4: "The engine was still the team.",
-    summary_li5: "The finishing touch was his.",
+      "Nations League 2025 — Nuno Mendes and Cristiano Ronaldo scored Portugal’s equalisers against Spain in the 2–2 final. Diogo Costa saved Álvaro Morata’s penalty, and Rúben Neves converted the kick that secured the 5–3 shootout victory.",
     summary_p:
-      "That is not nothing. But it is also not carrying a team. It never was.",
+      "Ronaldo made important contributions, including the 2019 semi-final hat-trick and the 2025 final equaliser. But those contributions should not be confused with winning the titles single-handedly: Portugal’s success depended on goals, saves and performances across the team.",
   },
   pt: {
     title: "Portugal carregou Ronaldo",
     intro:
       "Ronaldo jogou por Portugal em dez grandes torneios. Nunca marcou num jogo a eliminar num Mundial. A narrativa de que carregou a seleção durante uma década não resiste ao cronograma dos jogos.",
-    summary_h: "Dez torneios. Três títulos.",
+    summary_h:
+      "{count} torneios. Três títulos — contribuições decisivas diferentes.",
     summary_intro:
-      "Os golos da vitória: Éder, Guedes — e em 2025, finalmente, um empate de Ronaldo que manteve Portugal vivo no prolongamento, com Rúben Neves a marcar o penálti que selou tudo.",
-    summary_li1: "O padrão manteve-se durante quase toda a década.",
+      "Os três títulos de Portugal nos torneios analisados foram conquistados no Euro 2016 e na Liga das Nações de 2019 e 2025. Cada um dependeu de contribuições decisivas de jogadores diferentes.",
+    summary_li1:
+      "Euro 2016 — Éder marcou o golo da vitória contra a França aos 109 minutos, garantindo um triunfo por 1–0 depois de Cristiano Ronaldo ter saído lesionado da final.",
     summary_li2:
-      "Em 2025 isso mudou — ligeiramente. Ronaldo marcou mais, apareceu em momentos maiores e terminou como melhor marcador da competição.",
+      "Liga das Nações 2019 — Gonçalo Guedes marcou o único golo contra os Países Baixos, após uma combinação com Bernardo Silva. Ronaldo tinha marcado um hat-trick contra a Suíça na meia-final.",
     summary_li3:
-      "Mesmo assim, o título ficou nas mãos de Nuno Mendes, Diogo Costa e Rúben Neves.",
-    summary_li4: "O motor continuou a ser a equipa.",
-    summary_li5: "O toque final foi dele.",
+      "Liga das Nações 2025 — Nuno Mendes e Cristiano Ronaldo marcaram os golos do empate de Portugal contra a Espanha na final que terminou 2–2. Diogo Costa defendeu o penálti de Álvaro Morata, e Rúben Neves converteu o penálti que garantiu a vitória por 5–3 no desempate.",
     summary_p:
-      "Isso não é pouco. Mas também não é carregar uma equipa. Nunca foi.",
+      "Ronaldo teve contribuições importantes, incluindo o hat-trick na meia-final de 2019 e o golo do empate na final de 2025. Mas essas contribuições não devem ser confundidas com ganhar os títulos sozinho: o sucesso de Portugal dependeu de golos, defesas e exibições de toda a equipa.",
   },
   es: {
     title: "Portugal llevó a Ronaldo",
     intro:
       "Ronaldo ha jugado para Portugal en diez torneos importantes. Nunca ha marcado un gol en un partido de eliminación directa de un Mundial. La narrativa de que cargó con la selección durante una década no resiste el cronograma de los partidos.",
-    summary_h: "Diez torneos. Tres títulos.",
+    summary_h:
+      "{count} torneos. Tres títulos — contribuciones decisivas diferentes.",
     summary_intro:
-      "Los goles del título: Éder, Guedes — y en 2025, por fin, un empate de Ronaldo que mantuvo a Portugal con vida en la prórroga, con Rúben Neves marcando el penalti que lo selló.",
-    summary_li1: "El patrón se mantuvo durante casi una década.",
+      "Los tres títulos de Portugal en los torneos analizados llegaron en la Euro 2016 y en la Nations League de 2019 y 2025. Cada uno dependió de contribuciones decisivas de jugadores diferentes.",
+    summary_li1:
+      "Euro 2016 — Éder marcó el gol de la victoria contra Francia en el minuto 109, asegurando un triunfo por 1–0 después de que Cristiano Ronaldo abandonara lesionado la final.",
     summary_li2:
-      "En 2025 cambió - un poco. Ronaldo marcó más, apareció en momentos más grandes y terminó como máximo goleador de la competición.",
+      "Nations League 2019 — Gonçalo Guedes marcó el único gol contra los Países Bajos, tras una combinación con Bernardo Silva. Ronaldo había marcado un hat-trick contra Suiza en la semifinal.",
     summary_li3:
-      "Aun así, el título siguió descansando en Nuno Mendes, Diogo Costa y Rúben Neves.",
-    summary_li4: "El motor seguía siendo el equipo.",
-    summary_li5: "El toque final fue suyo.",
+      "Nations League 2025 — Nuno Mendes y Cristiano Ronaldo marcaron los goles del empate de Portugal contra España en la final, que terminó 2–2. Diogo Costa detuvo el penalti de Álvaro Morata, y Rúben Neves convirtió el lanzamiento que aseguró la victoria por 5–3 en la tanda de penaltis.",
     summary_p:
-      "Eso no es poco. Pero tampoco es cargar a un equipo. Nunca lo fue.",
+      "Ronaldo hizo contribuciones importantes, incluido el hat-trick de la semifinal de 2019 y el gol del empate en la final de 2025. Pero esas contribuciones no deben confundirse con ganar los títulos en solitario: el éxito de Portugal dependió de goles, paradas y actuaciones de todo el equipo.",
   },
   fr: {
     title: "Le Portugal a porté Ronaldo",
     intro:
       "Ronaldo a joué pour le Portugal dans dix grands tournois. Il n’a jamais marqué dans un match à élimination directe en Coupe du monde. Le récit selon lequel il a porté la sélection pendant une décennie ne résiste pas à la chronologie des matches.",
-    summary_h: "Dix tournois. Trois titres.",
+    summary_h:
+      "{count} tournois. Trois titres — des contributions décisives différentes.",
     summary_intro:
-      "Les buts décisifs : Éder, Guedes - et en 2025, enfin, une égalisation de Ronaldo qui a maintenu le Portugal en vie en prolongation, avant le penalty victorieux de Rúben Neves.",
-    summary_li1: "Le schéma a duré presque toute une décennie.",
+      "Les trois titres du Portugal dans les tournois analysés sont venus à l’Euro 2016 et en Ligue des Nations en 2019 et 2025. Chacun a dépendu de contributions décisives de joueurs différents.",
+    summary_li1:
+      "Euro 2016 — Éder a marqué le but de la victoire contre la France à la 109e minute, assurant un succès 1–0 après que Cristiano Ronaldo a quitté la finale sur blessure.",
     summary_li2:
-      "En 2025, cela a légèrement changé. Ronaldo a marqué davantage, a pesé dans de plus grands moments et a terminé meilleur buteur de la compétition.",
+      "Ligue des Nations 2019 — Gonçalo Guedes a marqué l’unique but contre les Pays-Bas, à la suite d’une combinaison avec Bernardo Silva. Ronaldo avait inscrit un triplé contre la Suisse en demi-finale.",
     summary_li3:
-      "Même alors, le titre reposait sur Nuno Mendes, Diogo Costa et Rúben Neves.",
-    summary_li4: "Le moteur restait l’équipe.",
-    summary_li5: "La touche finale était la sienne.",
+      "Ligue des Nations 2025 — Nuno Mendes et Cristiano Ronaldo ont marqué les égalisations du Portugal contre l’Espagne en finale, conclue sur le score de 2–2. Diogo Costa a arrêté le penalty d’Álvaro Morata, et Rúben Neves a transformé le tir qui a assuré la victoire 5–3 aux tirs au but.",
     summary_p:
-      "Ce n’est pas rien. Mais ce n’est pas non plus porter une équipe. Ça ne l’a jamais été.",
+      "Ronaldo a apporté des contributions importantes, notamment son triplé en demi-finale en 2019 et l’égalisation en finale en 2025. Mais ces contributions ne doivent pas être confondues avec le fait d’avoir gagné les titres seul : le succès du Portugal a dépendu des buts, des arrêts et des performances de toute l’équipe.",
   },
 };
 
@@ -601,6 +601,18 @@ export default function CarriedByNationalTeamSection() {
   const c = (key) => fallback(content, lang, key);
   const tournaments = tournamentsByLang[lang] || tournamentsEn;
   const [selectedTournament, setSelectedTournament] = React.useState(0);
+  const countWord =
+    lang === "pt"
+      ? "Dez"
+      : lang === "es"
+        ? "Diez"
+        : lang === "fr"
+          ? "Dix"
+          : "Ten";
+  const summaryTitle = c("summary_h").replace(
+    "{count}",
+    tournaments.length === 10 ? countWord : String(tournaments.length),
+  );
 
   const paragraphClass =
     "mb-0 text-left text-base leading-[1.7] text-foreground/80 [hyphens:auto] [text-align-last:left] md:text-justify";
@@ -735,7 +747,7 @@ export default function CarriedByNationalTeamSection() {
 
         <section className="mt-12 border-t border-border pt-8">
           <h2 className="mb-5 font-playfair text-2xl font-bold text-foreground md:text-3xl">
-            {c("summary_h")}
+            {summaryTitle}
           </h2>
           <div className="space-y-4">
             {paragraphs(c("summary_intro"))}
@@ -743,8 +755,6 @@ export default function CarriedByNationalTeamSection() {
               <li>{inline(c("summary_li1"))}</li>
               <li>{inline(c("summary_li2"))}</li>
               <li>{inline(c("summary_li3"))}</li>
-              <li>{inline(c("summary_li4"))}</li>
-              <li>{inline(c("summary_li5"))}</li>
             </ul>
             <div className="border-l-2 border-accent bg-muted/30 px-4 py-3">
               {paragraphs(
